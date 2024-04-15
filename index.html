@@ -128,18 +128,37 @@
             shuffleArray(goals);
             let showGames = games.length > 1;
             let indexUsed = [];
+            let groupUsed = [];
             let gamesCount = {};
             for (let game of games) {
                 gamesCount[game] = 0;
             }
             let output = [];
+            let leniency = 0;
+            let changed = false;
+            let i = -1;
             for (let row = 0; row < 5; row++) {
                 for (let col = 0; col < 5; col++) {
-                    for (let i = 0; i < goals.length; i++) {
-                        if (indexUsed.indexOf(i) > 0) {
+                    while (true) {
+                        i += 1;
+                        if (i >= goals.length) {
+                            if (!changed) {
+                                leniency += 1;
+                                if (leniency > 1) {
+                                    document.getElementById("result_box").value = "没有足够的符合条件的任务（";
+                                    throw new Error("No available goal");
+                                }
+                            }
+                            changed = false;
+                            i = 0;
+                        }
+                        if (indexUsed.indexOf(i) >= 0) {
                             continue;
                         }
                         let goal = goals[i];
+                        if (leniency < 1 && goal["groups"].length > 0 && isSubset(goal["groups"], groupUsed)) {
+                            continue;
+                        }
                         if (goal["diff"] != diffMatrix[row][col]) {
                             continue;
                         }
@@ -159,14 +178,13 @@
                             }
                         }
                         indexUsed.push(i);
+                        groupUsed = groupUsed.concat(goal["groups"]);
+                        changed = true;
                         let suffix = goal["games"].join(",").repeat(showGames) + "#".repeat(goal["password"]);
                         if (suffix.length > 0) {
                             suffix = "(" + suffix + ")";
                         }
-                        output.push({
-                            "name": "*".repeat(goal["diff"]) + goal["name"].replace("，", ",").replace("（", "(").replace("）", ")") + suffix,
-                            "types": goal["groups"]
-                        });
+                        output.push({ "name": "*".repeat(goal["diff"]) + goal["name"].replace(/[，。]/, " ").replace("（", "(").replace("）", ")") + suffix });
                         break;
                     }
                 }
