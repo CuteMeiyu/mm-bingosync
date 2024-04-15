@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bingosync Board 生成工具</title>
+    <title>Bingosync版面生成工具</title>
 </head>
 
 <body>
@@ -24,22 +24,33 @@
 
     <textarea id="result_box" rows="10" cols="50" readonly></textarea>
     <button onclick="copyResult()">复制</button>
+    <br>
+
+    <a href="https://bingosync.com/" target="_blank">Bingosync</a><br>
 
     <script>
+        var data;
+        var randomSeed = Date.now();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(d => { data = d });
+        });
+
         function copyResult() {
             var copyText = document.getElementById("result_box");
             copyText.select();
             document.execCommand("copy");
         }
 
-        var data;
-        var randomSeed = Date.now();
-        document.addEventListener('DOMContentLoaded', function () {
-            fetch('data.json')
-                .then(response => response.json())
-                .then(d => { data = d })
-                .catch(error => console.error('读取JSON时发生错误:', error));
-        });
+        function random() {
+            const a = 1664525;
+            const c = 1013904223;
+            const m = Math.pow(2, 32);
+            randomSeed = (a * randomSeed + c) % m;
+            return randomSeed / m;
+        }
 
         function swapRows(matrix, row1, row2) {
             let temp = matrix[row1];
@@ -53,14 +64,6 @@
                 matrix[i][col1] = matrix[i][col2];
                 matrix[i][col2] = temp;
             }
-        }
-
-        function random() {
-            const a = 1664525;
-            const c = 1013904223;
-            const m = Math.pow(2, 32);
-            randomSeed = (a * randomSeed + c) % m;
-            return randomSeed / m;
         }
 
         function shuffleArray(array) {
