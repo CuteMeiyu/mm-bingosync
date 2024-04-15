@@ -96,7 +96,7 @@
             let diffs = document.getElementById("diffs").value.split(/[,，]\s*/).map(function (item) {
                 return parseInt(item);
             });
-            shuffleArray(diffs)
+            shuffleArray(diffs);
             let games = document.getElementById("games").value.split(/[,，]\s*/);
             let step = 1 + Math.floor(random() * 4);
             let offset;
@@ -155,12 +155,14 @@
                             }
                         }
                         indexUsed.push(i);
-                        let suffix = games.join(",").repeat(showGames) + "#".repeat(goal["password"]);
+                        let suffix = goal["games"].join(",").repeat(showGames) + "#".repeat(goal["password"]);
                         if (suffix.length > 0) {
                             suffix = "(" + suffix + ")";
                         }
-                        let name = "*".repeat(["diff"]) + goal["name"] + suffix
-                        output.push({ "name": name, "types": goal["types"] });
+                        output.push({
+                            "name": "*".repeat(goal["diff"]) + goal["name"] + suffix,
+                            "types": goal["types"]
+                        });
                         break;
                     }
                 }
