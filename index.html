@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bingosync Board 生成工具</title>
+</head>
+
+<body>
+    <label for="games">哪代游戏：</label>
+    <input type="text" id="games" name="games" , value="9,10" required><br>
+    <label for="diffs">卡片难度：</label>
+    <input type="text" id="diffs" name="diffs" , value="1,2" required><br>
+    <label for="seed">随机种子：</label>
+    <input type="number" id="seed" name="seed">
+    <input type="checkbox" id="lock_seed" name="lock_seed"><label for="lock_seed">固定随机种子</label><br>
+    <label for="balance_games">平衡多代：</label>
+    <input type="checkbox" id="balance_games" name="balance_games" , checked><br>
+    <label for="center_hardest">中心最难：</label>
+    <input type="checkbox" id="center_hardest" name="center_hardest"><br>
+    <button type="button" id="generate-btn" , onclick="generate()">生成</button>
+    <br>
+
+    <textarea id="result_box" rows="10" cols="50" readonly></textarea>
+    <button onclick="copyResult()">复制</button>
+
+    <script>
+        function copyResult() {
+            var copyText = document.getElementById("result_box");
+            copyText.select();
+            document.execCommand("copy");
+        }
+
+        var data;
+        var randomSeed = Date.now();
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(d => { data = d })
+                .catch(error => console.error('读取JSON时发生错误:', error));
+        });
+
+        function swapRows(matrix, row1, row2) {
+            let temp = matrix[row1];
+            matrix[row1] = matrix[row2];
+            matrix[row2] = temp;
+        }
+
+        function swapColumns(matrix, col1, col2) {
+            for (let i = 0; i < matrix.length; i++) {
+                let temp = matrix[i][col1];
+                matrix[i][col1] = matrix[i][col2];
+                matrix[i][col2] = temp;
+            }
+        }
+
+        function random() {
+            const a = 1664525;
+            const c = 1013904223;
+            const m = Math.pow(2, 32);
+            randomSeed = (a * randomSeed + c) % m;
+            return randomSeed / m;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // A是B的子集
+        function isSubset(setA, setB) {
+            for (let elem of setA) {
+                if (setB.indexOf(elem) < 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function generate() {
+            let diffMatrix = [];
+            for (let i = 0; i < 5; i++) {
+                diffMatrix[i] = [];
+                for (let j = 0; j < 5; j++) {
+                    diffMatrix[i][j] = 0;
+                }
+            };
+            let seed = document.getElementById("seed");
+            if (seed.value.length == 0 || !document.getElementById("lock_seed").checked) {
+                seed.value = Math.floor(Math.random() * 1000000).toString();
+            }
+            randomSeed = parseInt(seed.value);
+            let diffs = document.getElementById("diffs").value.split(/[,，]\s*/).map(function (item) {
+                return parseInt(item);
+            });
+            shuffleArray(diffs)
+            let games = document.getElementById("games").value.split(/[,，]\s*/);
+            let step = 1 + Math.floor(random() * 4);
+            let offset;
+            if (document.getElementById("center_hardest").checked) {
+                offset = 8 - step * diffs.indexOf(Math.max(...diffs));
+            } else {
+                offset = Math.floor(random() * 5);
+            }
+            let col = offset % 5;
+            for (let row = 0; row < 5; row++) {
+                for (let i = 0; i < diffs.length; i++) {
+                    diffMatrix[row][(col + i * step) % 5] = diffs[i];
+                }
+                col = (col + 2) % 5;
+            }
+            if (random() < 0.5) {
+                swapRows(diffMatrix, 0, 4);
+                swapColumns(diffMatrix, 0, 4);
+            }
+            if (random() < 0.5) {
+                swapRows(diffMatrix, 1, 3);
+                swapColumns(diffMatrix, 1, 3);
+            }
+            let goals = [...data];
+            shuffleArray(goals);
+            let showGames = games.length > 1;
+            let indexUsed = [];
+            let gamesCount = {};
+            for (let game of games) {
+                gamesCount[game] = 0;
+            }
+            let output = [];
+            for (let row = 0; row < 5; row++) {
+                for (let col = 0; col < 5; col++) {
+                    for (let i = 0; i < goals.length; i++) {
+                        if (indexUsed.indexOf(i) > 0) {
+                            continue;
+                        }
+                        let goal = goals[i];
+                        if (goal["diff"] != diffMatrix[row][col]) {
+                            continue;
+                        }
+                        if (!isSubset(goal["games"], games)) {
+                            continue;
+                        }
+                        if (document.getElementById("balance_games").checked) {
+                            for (let game of goal["games"]) {
+                                gamesCount[game] += 1;
+                            }
+                            gamesCountValues = Object.values(gamesCount)
+                            if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
+                                for (let game of goal["games"]) {
+                                    gamesCount[game] -= 1;
+                                }
+                                continue;
+                            }
+                        }
+                        indexUsed.push(i);
+                        let suffix = games.join(",").repeat(showGames) + "#".repeat(goal["password"]);
+                        if (suffix.length > 0) {
+                            suffix = "(" + suffix + ")";
+                        }
+                        output.push({ "name": goal["name"] + suffix, "types": goal["types"] });
+                        break;
+                    }
+                }
+            }
+            document.getElementById("result_box").value = JSON.stringify(output, null, 2);
+        }
+    </script>
+</body>
+
+</html>
