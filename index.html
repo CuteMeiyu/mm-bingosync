@@ -159,7 +159,8 @@
                         if (suffix.length > 0) {
                             suffix = "(" + suffix + ")";
                         }
-                        output.push({ "name": goal["name"] + suffix, "types": goal["types"] });
+                        let name = "*".repeat(["diff"]) + goal["name"] + suffix
+                        output.push({ "name": name, "types": goal["types"] });
                         break;
                     }
                 }
