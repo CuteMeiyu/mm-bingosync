@@ -1,7 +1,7 @@
 [
     {
         "name": "在两关收集放置1up",
-        "types": [
+        "groups": [
             "mm9placed1up"
         ],
         "diff": 0,
@@ -12,7 +12,7 @@
     },
     {
         "name": "插头关全收集",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -21,7 +21,7 @@
     },
     {
         "name": "击败一个抓着你的竹蜻蜓",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -30,7 +30,7 @@
     },
     {
         "name": "无伤跳过压饼机器人",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -39,7 +39,7 @@
     },
     {
         "name": "收集一个必用蜜蜂的放置拾取品",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -47,8 +47,8 @@
         "password": false
     },
     {
-        "name": "踏足插头关每个闪现砖块(除了天花板那个)",
-        "types": [],
+        "name": "踏足插头关每个闪现砖块（除了天花板那个）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -57,7 +57,7 @@
     },
     {
         "name": "干掉一个扫地机器人",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -66,7 +66,7 @@
     },
     {
         "name": "收集并消费50螺丝",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -75,7 +75,7 @@
     },
     {
         "name": "被比特救一命",
-        "types": [
+        "groups": [
             "9beat"
         ],
         "diff": 0,
@@ -86,7 +86,7 @@
     },
     {
         "name": "被比特或钉鞋救一命",
-        "types": [
+        "groups": [
             "9beat"
         ],
         "diff": 0,
@@ -96,8 +96,8 @@
         "password": false
     },
     {
-        "name": "熄灭大火龙(用风/黑洞)",
-        "types": [],
+        "name": "熄灭大火龙（用风/黑洞）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -106,7 +106,7 @@
     },
     {
         "name": "一发风吹走至少6个怪",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -115,7 +115,7 @@
     },
     {
         "name": "站在水泥人的水泥上击败水泥人",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -123,8 +123,8 @@
         "password": false
     },
     {
-        "name": "通关银河人关卡(和平主义)",
-        "types": [
+        "name": "和平主义通关银河人关卡",
+        "groups": [
             "galaxy"
         ],
         "diff": 0,
@@ -135,7 +135,7 @@
     },
     {
         "name": "从插头关1up位置反跑到开局",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -143,8 +143,8 @@
         "password": false
     },
     {
-        "name": "从银河关BOSS门口反跑到重生点(的后面)",
-        "types": [],
+        "name": "从银河关BOSS门口反跑到重生点（的后面）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -153,7 +153,7 @@
     },
     {
         "name": "用水泥凝固一个抓着你的竹蜻蜓",
-        "types": [
+        "groups": [
             "bunbycatcher"
         ],
         "diff": 0,
@@ -163,8 +163,8 @@
         "password": false
     },
     {
-        "name": "被银河关全部6个竹蜻蜓抓着跑一遍(你俩都不死)",
-        "types": [
+        "name": "被银河关全部6个竹蜻蜓抓着跑一遍（你俩都不死）",
+        "groups": [
             "bunbycatcher"
         ],
         "diff": 0,
@@ -175,7 +175,7 @@
     },
     {
         "name": "穿过水泥关的每一个假砖",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -184,7 +184,7 @@
     },
     {
         "name": "蜜蜂关全收集",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -192,8 +192,8 @@
         "password": false
     },
     {
-        "name": "龙卷风关全收集(有个E罐藏在云里)",
-        "types": [],
+        "name": "龙卷风关全收集（有个E罐藏在云里）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -202,7 +202,7 @@
     },
     {
         "name": "用水泥凝固一个怪，踩上去凝固另一个怪",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -210,8 +210,8 @@
         "password": false
     },
     {
-        "name": "在两关击败一个安全帽(银河风电)",
-        "types": [],
+        "name": "在两关击败一个安全帽（银河风电）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -219,8 +219,8 @@
         "password": false
     },
     {
-        "name": "收集一个E罐(风电堡12)",
-        "types": [],
+        "name": "收集一个E罐（风电堡12）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -228,8 +228,8 @@
         "password": false
     },
     {
-        "name": "在两关击败一个炮台(泥钻电)",
-        "types": [],
+        "name": "在两关击败一个炮台（泥钻电）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -237,8 +237,8 @@
         "password": false
     },
     {
-        "name": "通关插头人关卡(和平主义)",
-        "types": [],
+        "name": "和平主义通关插头人关卡",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -247,7 +247,7 @@
     },
     {
         "name": "堡1全收集",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -255,8 +255,8 @@
         "password": false
     },
     {
-        "name": "用一发黑洞打爆两个推推球(堡1BOSS)",
-        "types": [
+        "name": "用一发黑洞打爆两个推推球（堡1BOSS）",
+        "groups": [
             "spikepushers"
         ],
         "diff": 0,
@@ -266,8 +266,8 @@
         "password": false
     },
     {
-        "name": "清理熔岩关全部蹦蹦车(2+4+3=9)",
-        "types": [],
+        "name": "清理熔岩关全部蹦蹦车（2+4+3=9）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -276,7 +276,7 @@
     },
     {
         "name": "一火三杀",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -284,8 +284,8 @@
         "password": false
     },
     {
-        "name": "蜜蜂关击败三种花盆(仙人掌/刺球/火焰)",
-        "types": [],
+        "name": "蜜蜂关击败三种花盆（仙人掌/刺球/火焰）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -293,8 +293,8 @@
         "password": false
     },
     {
-        "name": "单关的每面都放一次狗(包括BOSS房/走廊)",
-        "types": [],
+        "name": "单关的每面都放一次狗（包括BOSS房/走廊）",
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -303,7 +303,7 @@
     },
     {
         "name": "无伤连续跳过一个复制人9次",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -312,7 +312,7 @@
     },
     {
         "name": "用蜜蜂拾取1up",
-        "types": [
+        "groups": [
             "hornetchaser"
         ],
         "diff": 0,
@@ -323,7 +323,7 @@
     },
     {
         "name": "用蜜蜂分别拾取血和能量",
-        "types": [
+        "groups": [
             "hornetchaser"
         ],
         "diff": 0,
@@ -334,7 +334,7 @@
     },
     {
         "name": "用黑洞吸收累计4种子弹",
-        "types": [
+        "groups": [
             "9projectile"
         ],
         "diff": 0,
@@ -345,7 +345,7 @@
     },
     {
         "name": "用钻石盾抵挡累计4种子弹",
-        "types": [
+        "groups": [
             "9projectile"
         ],
         "diff": 0,
@@ -356,7 +356,7 @@
     },
     {
         "name": "用钻石盾干掉小泥人+分裂出的小小泥人",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -365,7 +365,7 @@
     },
     {
         "name": "被石头脸震晕但是不受到伤害",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -374,7 +374,7 @@
     },
     {
         "name": "在人鱼关第一个分路走右路后拾取1up",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
@@ -383,7 +383,7 @@
     },
     {
         "name": "卡一个掉落品到墙里",
-        "types": [
+        "groups": [
             "9dropsolidobject"
         ],
         "diff": 0,
@@ -394,7 +394,7 @@
     },
     {
         "name": "用蜜蜂卡一个放置1up到墙里",
-        "types": [
+        "groups": [
             "9dropsolidobject",
             "hornetchaser"
         ],
@@ -406,761 +406,16 @@
     },
     {
         "name": "击败三种能弹开P弹的小兵",
-        "types": [],
+        "groups": [],
         "diff": 0,
         "games": [
             "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "在堡1踩到每根岩浆柱",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "通关水泥人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关熔岩人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关蜜蜂人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关银河人关卡",
-        "types": [
-            "galaxy"
-        ],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关宝石人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关插头人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关人鱼人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关龙卷风人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关城堡1",
-        "types": [
-            "spikepushers"
-        ],
-        "diff": 0,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "让艾迪，比特，莱西团聚",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "踏足摩托关最后一面的每个小坑",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集并消费50螺丝",
-        "types": [
-            "screws10"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "把太阳关每个火球机都打掉一个小火球",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "踏足绵羊关每个闪现砖块(不是羊砖)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用云落下的闪电击败BOSS(除了水泵)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在冷冻关从BOSS门口反跑到存档点",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在绵羊关踩遍每个节节高且不击杀他们",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用一发云击败4个独立敌人",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "全程不踩卡车抵达摩托BOSS门",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "引爆摩托关所有定时炸弹",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "不激活地雷抵达指令BOSS门",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "打爆棒球关每个小兵投出的球一次",
-        "types": [
-            "strikepacifist"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "纯背身通过指令关最后一次沙尘暴",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "破坏飞刀关所有可破坏墙壁",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "不踩移动平台击败小城堡(飞刀小BOSS)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集棒球关所有放置拾取品(要齿轮或飞狗)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "摧毁冷冻关所有冰块",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "击败水泵关所有管道怪(会堵路那个。要走上路)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "钻入水泵关每个泡泡机产出的泡泡(要走上路)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "让一只蜘蛛落坑(水泵，飞刀)",
-        "types": [
-            "darspiderpit"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "冻结一个倒挂的蜘蛛，让他掉下来",
-        "types": [
-            "chillspike"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "全清棒球关的鞋柜(4+7+8=19)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "打爆4个足球后再干掉守门员(棒球小BOSS)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "让绵羊关所有的羊砖消失",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集绵羊关所有放置拾取品(小心羊砖)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "击败3个独立压饼机器人(冰/炸弹/城堡)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "击败变成羊毛的绵羊人",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在两关收集一个1up",
-        "types": [
-            "placed1up10"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集两个放置E罐(水火车炸)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集两个放置W罐(冰车刀羊)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "让4个被冻结敌人同屏",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "冻结一个正在转向的飞盾，看到独特造型",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "一发泡泡盾击败5个独立敌人",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用爆开的泡泡盾击败任意BOSS，除了太阳",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "空中冻结压饼机器人",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用齿轮在两道墙之间反复横跳，浮空10秒",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "全清冷冻关所有飞盾+眼睛怪(1代同款)",
-        "types": [
-            "chillenemies"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "全清冷冻关(包括天上的鸟)",
-        "types": [
-            "chillenemies"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "全清太阳关，除了小火球",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "反跑水泵关第一个横向版面",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "从太阳关BOSS门口反跑到存档点",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "击败一个扫地机器人(球刀堡23，弱冰炸)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "炸弹拆墙",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "摧毁大灯泡时先击败10个小怪(羊小BOSS)",
-        "types": [
-            "sheeppacifist"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用一次钉鞋",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "让压饼机反跑指令关存档面(到左边陆地即可)",
-        "types": [
-            "tsuraresand"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集堡1的E罐(岔路右-右)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "纯火击败木头人",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "纯水击败榴弹人(堡1五代BOSS)",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "用爆开的泡泡盾击败火焰人(堡1六代BOSS)",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "通关水泵人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关太阳人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关冷冻人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关摩托人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关指令人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关飞刀人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关棒球人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关绵羊人关卡",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "击败小火球+大火龙(9熔岩小BOSS，10太阳)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "分别在9代10代击败一个蜘蛛",
-        "types": [
-            "spider9and10"
-        ],
-        "diff": 0,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "击败小章鱼+章鱼灯泡(10羊小BOSS，9人鱼)",
-        "types": [
-            "seaanimal9and10"
-        ],
-        "diff": 0,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "分别在9代10代击败盾牌飞行器",
-        "types": [
-            "shieldattacker7-10"
-        ],
-        "diff": 0,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用闪光弹球击败一个敌人(弹最大次数)",
-        "types": [
-            "reboundskill"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用被敌人弹回来的球击败一个敌人",
-        "types": [
-            "reboundskill"
-        ],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "让特武子弹变色(被冻)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关前八两个首字母相同的关(C/S)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关9代10代首字母相同的一关(前八)",
-        "types": [],
-        "diff": 0,
-        "games": [
-            "9",
-            "10"
         ],
         "password": false
     },
     {
         "name": "在三关收集一个放置1up",
-        "types": [
+        "groups": [
             "mm9placed1up"
         ],
         "diff": 1,
@@ -1170,8 +425,8 @@
         "password": false
     },
     {
-        "name": "让艾迪，比特，莱西团聚(花100螺丝)",
-        "types": [],
+        "name": "让艾迪，比特，莱西团聚（花100螺丝）",
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1179,8 +434,17 @@
         "password": false
     },
     {
+        "name": "在堡1踩到每根岩浆柱",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
         "name": "不打小蜜蜂击败蜜蜂BOSS",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1189,7 +453,7 @@
     },
     {
         "name": "凝固两根岩浆柱，然后一发三叉戟贯穿",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1198,7 +462,7 @@
     },
     {
         "name": "纯电通关水泥人关卡",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1207,7 +471,7 @@
     },
     {
         "name": "在你被凝固时让水泥人爆炸",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1216,7 +480,7 @@
     },
     {
         "name": "用钻石弹反击败一个敌人",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1225,7 +489,7 @@
     },
     {
         "name": "纯火通关宝石人关卡",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1234,7 +498,7 @@
     },
     {
         "name": "不激活水雷通关人鱼关",
-        "types": [
+        "groups": [
             "okosutobon"
         ],
         "diff": 1,
@@ -1244,8 +508,8 @@
         "password": false
     },
     {
-        "name": "踏足人鱼关全部泡泡(5x5=25)",
-        "types": [],
+        "name": "踏足人鱼关全部泡泡（5x5=25）",
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1254,7 +518,7 @@
     },
     {
         "name": "反方向攻击击败一个BOSS",
-        "types": [
+        "groups": [
             "facingaway"
         ],
         "diff": 1,
@@ -1265,7 +529,7 @@
     },
     {
         "name": "逆克制击败一个BOSS",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1273,8 +537,8 @@
         "password": false
     },
     {
-        "name": "水泥关全收集(要蜜蜂)",
-        "types": [],
+        "name": "水泥关全收集（要蜜蜂）",
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1283,7 +547,7 @@
     },
     {
         "name": "用一发黑洞吸收两种小兵",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1292,7 +556,7 @@
     },
     {
         "name": "单关用水泥凝固16个独立小兵",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1301,7 +565,7 @@
     },
     {
         "name": "单关用黑洞吸收15个独立小兵",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1309,8 +573,8 @@
         "password": false
     },
     {
-        "name": "空中击杀石头脸(宝石小BOSS)",
-        "types": [
+        "name": "空中击杀石头脸（宝石小BOSS）",
+        "groups": [
             "stonehead"
         ],
         "diff": 1,
@@ -1320,8 +584,8 @@
         "password": false
     },
     {
-        "name": "清理插头关所有电球(弱钻/黑洞/风)",
-        "types": [],
+        "name": "清理插头关所有电球（弱钻/黑洞/风）",
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1330,7 +594,7 @@
     },
     {
         "name": "纯电球反向攻击击败龙卷风人",
-        "types": [
+        "groups": [
             "facingaway"
         ],
         "diff": 1,
@@ -1340,8 +604,8 @@
         "password": false
     },
     {
-        "name": "纯三叉戟击败任意BOSS(除了水泥)",
-        "types": [],
+        "name": "纯三叉戟击败任意BOSS（除了水泥）",
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1350,7 +614,7 @@
     },
     {
         "name": "用一发钻石盾把能量从0补满",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1359,7 +623,7 @@
     },
     {
         "name": "人鱼BOSS战击败30只小鱼鱼再击败BOSS",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1368,7 +632,7 @@
     },
     {
         "name": "用本关BOSS武器干掉本关小BOSS",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1377,7 +641,7 @@
     },
     {
         "name": "用蜜蜂卡一个1up，血，能量，螺丝进墙",
-        "types": [
+        "groups": [
             "9dropsolidobject",
             "hornetchaser"
         ],
@@ -1389,7 +653,7 @@
     },
     {
         "name": "在龙卷风关所有电池平台上转一圈",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
@@ -1398,7 +662,7 @@
     },
     {
         "name": "在堡2禁狗抵达BOSS门",
-        "types": [
+        "groups": [
             "mm9wily2restricted"
         ],
         "diff": 1,
@@ -1408,8 +672,8 @@
         "password": true
     },
     {
-        "name": "在堡2禁狗/三叉戟抵达存档点(小BOSS下)",
-        "types": [
+        "name": "在堡2禁狗/三叉戟抵达存档点（小BOSS下）",
+        "groups": [
             "mm9wily2restricted"
         ],
         "diff": 1,
@@ -1420,408 +684,16 @@
     },
     {
         "name": "在堡1一发风吹动4个上升平台",
-        "types": [],
+        "groups": [],
         "diff": 1,
         "games": [
             "9"
         ],
         "password": true
-    },
-    {
-        "name": "通关城堡2",
-        "types": [
-            "megamechshark"
-        ],
-        "diff": 1,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "不踩手臂击败两个守门员(棒球小BOSS)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "从摩托关1up位置反跑回开局(不用吃)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "以困难模式完成一关",
-        "types": [
-            "hardmode"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "以困难模式完成一个任务",
-        "types": [
-            "hardmode"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集并消费100螺丝",
-        "types": [
-            "screws10"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "和平主义通关指令人关卡",
-        "types": [
-            "pacifist10"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "和平主义通关摩托人关卡",
-        "types": [
-            "pacifist10"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "冻结一关全部可冻敌人(包括岔路)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "让太阳人头上的火反复变大变小两次",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用旅行齿轮击败飞刀人(要滚出去)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "从棒球关1up房反跑到小BOSS下(需刀/轮外的特武)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "纯齿轮击败棒球人",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用爆开的泡泡盾同时击败双火鸟(每只20血，泡泡2血)",
-        "types": [
-            "suzakfenix"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在三关收集一个放置1up(每关都有)",
-        "types": [
-            "placed1up10"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在指令关存档面让压饼机器人踩进所有地雷坑",
-        "types": [
-            "tsuraresand"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "把5个敌人变成1up(满血满能磕M)",
-        "types": [
-            "10mtank"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在前八把一个压饼机器人变成1up(满血满能磕M)",
-        "types": [
-            "10mtank"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "把三种敌人变成1up(满血满能磕M)",
-        "types": [
-            "10mtank"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在太阳关一击摧毁4个小火球(炸水火电)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "以左到右顺序击败兵器库(堡1BOSS)",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "堡2全收集(有个藏在BOSS门上)",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "用齿轮登顶堡2所有压饼机",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "先毁蟹爪，再干蟹身",
-        "types": [
-            "crabpuncher"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "在堡2一命抵达BOSS门且让传送带变向3次",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "纯飞刀击败堡1所有BOSS",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "纯闪电击败双子人",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "纯炸弹击败利爪人",
-        "types": [
-            "weaponsarchive"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "通关堡2",
-        "types": [
-            "crabpuncher"
-        ],
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "分别全清9代10代一关的蜘蛛(要有蜘蛛)",
-        "types": [
-            "spider9and10"
-        ],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "分别在9代10代击败压饼机器人",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关9代和10代的火关",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关9代和10代的水关",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关9代和10代的电关",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "用三重烈火或飞刀无克制击败一个BOSS",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "通关特殊关卡",
-        "types": [],
-        "diff": 1,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "在无尽模式击败一个BOSS",
-        "types": [
-            "endless9and10"
-        ],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "在无尽模式进入5个传送门",
-        "types": [
-            "endless9and10"
-        ],
-        "diff": 1,
-        "games": [
-            "9",
-            "10"
-        ],
-        "password": false
     },
     {
         "name": "在水泥关不触发红绿平台抵达BOSS门",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1829,8 +701,8 @@
         "password": false
     },
     {
-        "name": "击败每种小BOSS一次(4种)",
-        "types": [],
+        "name": "击败每种小BOSS一次（4种）",
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1839,7 +711,7 @@
     },
     {
         "name": "用墨汁洛克人击败人鱼BOSS",
-        "types": [
+        "groups": [
             "ink",
             "okosutobon"
         ],
@@ -1850,8 +722,8 @@
         "password": false
     },
     {
-        "name": "纯P击败石头脸，但每轮只打一下(15下)",
-        "types": [
+        "name": "纯P击败石头脸，但每轮只打一下（15下）",
+        "groups": [
             "stonehead"
         ],
         "diff": 2,
@@ -1862,7 +734,7 @@
     },
     {
         "name": "在四关收集一个放置1up",
-        "types": [
+        "groups": [
             "mm9placed1up"
         ],
         "diff": 2,
@@ -1873,7 +745,7 @@
     },
     {
         "name": "纯电击败人鱼人",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1882,7 +754,7 @@
     },
     {
         "name": "收集200螺丝给萝露买一套新衣服",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1890,8 +762,8 @@
         "password": false
     },
     {
-        "name": "通关龙卷风关卡(和平主义)",
-        "types": [],
+        "name": "和平主义通关龙卷风关卡",
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1900,7 +772,7 @@
     },
     {
         "name": "纯用三种武器分别击败水泥关三只大象",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1909,7 +781,7 @@
     },
     {
         "name": "用三种特武击败三只独立的竹蜻蜓",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1918,7 +790,7 @@
     },
     {
         "name": "在蜜蜂BOSS战中，一发黑洞吸收6只小蜜蜂",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1927,7 +799,7 @@
     },
     {
         "name": "获取飞狗",
-        "types": [
+        "groups": [
             "rushjet9"
         ],
         "diff": 2,
@@ -1937,8 +809,8 @@
         "password": false
     },
     {
-        "name": "在蜜蜂关破坏全部地板(小BOSS上方)",
-        "types": [],
+        "name": "在蜜蜂关破坏全部地板（小BOSS上方）",
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1947,7 +819,7 @@
     },
     {
         "name": "不触发花卷平台通关蜜蜂关",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1955,8 +827,8 @@
         "password": false
     },
     {
-        "name": "用绕圈电球击败小花花(蜜蜂小BOSS，至少绕半圈)",
-        "types": [],
+        "name": "用绕圈电球击败小花花（蜜蜂小BOSS，至少绕半圈）",
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1965,7 +837,7 @@
     },
     {
         "name": "堡2全收集，禁蜜蜂",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1974,7 +846,7 @@
     },
     {
         "name": "纯用三种武器分别击败鲨鱼三个阶段",
-        "types": [
+        "groups": [
             "megamechshark"
         ],
         "diff": 2,
@@ -1985,7 +857,7 @@
     },
     {
         "name": "堡2全清敌人",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -1994,7 +866,7 @@
     },
     {
         "name": "堡3全收集",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9"
@@ -2003,7 +875,7 @@
     },
     {
         "name": "禁狗抵达堡1BOSS门",
-        "types": [
+        "groups": [
             "mm9wily1restricted"
         ],
         "diff": 2,
@@ -2014,7 +886,7 @@
     },
     {
         "name": "在堡3让一个压饼机器人落坑",
-        "types": [
+        "groups": [
             "mm9wily3pacifist"
         ],
         "diff": 2,
@@ -2025,7 +897,7 @@
     },
     {
         "name": "堡1收集两个1up，禁蜜蜂",
-        "types": [
+        "groups": [
             "mm9wily1restricted"
         ],
         "diff": 2,
@@ -2035,8 +907,276 @@
         "password": true
     },
     {
+        "name": "不戴头盔完成一关",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "达到命数上限（9条命）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集6个放置1up（泥1火1蜂2钻1鱼1电2风1）",
+        "groups": [
+            "mm9placed1up"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集前八所有放置1up（泥1火1蜂2钻1鱼1电2风1）",
+        "groups": [
+            "mm9placed1up"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "在每个平台上对小花花造成伤害后击败（蜜蜂小BOSS）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "纯P击败鲨鱼（允许用狗）",
+        "groups": [
+            "megamechshark"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "用墨汁洛克人击败鲨鱼",
+        "groups": [
+            "ink",
+            "megamechshark"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "用每种武器打爆一次推推球后击败（堡1BOSS）",
+        "groups": [
+            "spikepushers"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "禁狗禁风抵达堡1BOSS门",
+        "groups": [
+            "mm9wily1restricted"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "和平主义抵达堡3BOSS门",
+        "groups": [
+            "mm9wily3pacifist"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "反跑堡3最后的大炮面",
+        "groups": [
+            "mm9wily3pacifist"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "纯黑洞+水泥击败堡3所有小泥人和小小泥人",
+        "groups": [
+            "mm9wily3pacifist"
+        ],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "用每种武器都造成伤害后击败双子泥",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "把假1up变真（满血满能磕M）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "用BOSS武器击败这个BOSS",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "通关",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "用所有武器打中逃生舱（威利3阶段）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "通关水泥人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关熔岩人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关蜜蜂人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关银河人关卡",
+        "groups": [
+            "galaxy"
+        ],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关宝石人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关插头人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关人鱼人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关龙卷风人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关城堡1",
+        "groups": [
+            "spikepushers"
+        ],
+        "diff": 0,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
+        "name": "通关城堡2",
+        "groups": [
+            "megamechshark"
+        ],
+        "diff": 1,
+        "games": [
+            "9"
+        ],
+        "password": true
+    },
+    {
         "name": "通关城堡3",
-        "types": [
+        "groups": [
             "twindevil"
         ],
         "diff": 2,
@@ -2046,8 +1186,766 @@
         "password": true
     },
     {
+        "name": "让艾迪，比特，莱西团聚",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "踏足摩托关最后一面的每个小坑",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集并消费50螺丝",
+        "groups": [
+            "screws10"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "把太阳关每个火球机都打掉一个小火球",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "踏足绵羊关每个闪现砖块（不是羊砖）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用云落下的闪电击败BOSS（除了水泵）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在冷冻关从BOSS门口反跑到存档点",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在绵羊关踩遍每个节节高且不击杀他们",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用一发云击败4个独立敌人",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "全程不踩卡车抵达摩托BOSS门",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "引爆摩托关所有定时炸弹",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "不激活地雷抵达指令BOSS门",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "打爆棒球关每个小兵投出的球一次",
+        "groups": [
+            "strikepacifist"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "纯背身通过指令关最后一次沙尘暴",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "破坏飞刀关所有可破坏墙壁",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "不踩移动平台击败小城堡（飞刀小BOSS）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "棒球关全收集（要齿轮或飞狗）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "摧毁冷冻关所有冰块",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "击败水泵关所有管道怪（会堵路那个。要走上路）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "钻入水泵关每个泡泡机产出的泡泡（要走上路）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "让一只蜘蛛落坑（水泵，飞刀）",
+        "groups": [
+            "darspiderpit"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "冻结一个倒挂的蜘蛛，让他掉下来",
+        "groups": [
+            "chillspike"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "全清棒球关的鞋柜（4+7+8=19）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "打爆4个足球后再干掉守门员（棒球小BOSS）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "让绵羊关所有的羊砖消失",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集绵羊关所有放置拾取品（小心羊砖）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "击败3个独立压饼机器人（冰/炸弹/城堡）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "击败变成羊毛的绵羊人",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在两关收集一个1up",
+        "groups": [
+            "placed1up10"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集两个放置E罐（水火车炸）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集两个放置W罐（冰车刀羊）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "让4个被冻结敌人同屏",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "冻结一个正在转向的飞盾，看到独特造型",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "一发泡泡盾击败5个独立敌人",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用爆开的泡泡盾击败任意BOSS，除了太阳",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "空中冻结压饼机器人",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用齿轮在两道墙之间反复横跳，浮空10秒",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "全清冷冻关所有飞盾+眼睛怪（1代同款）",
+        "groups": [
+            "chillenemies"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "全清冷冻关（包括天上的鸟）",
+        "groups": [
+            "chillenemies"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "全清太阳关，除了小火球",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "反跑水泵关第一个横向版面",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "从太阳关BOSS门口反跑到存档点",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "击败一个扫地机器人（球刀堡23，弱冰炸）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "炸弹拆墙",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "摧毁大灯泡时先击败10个小怪（羊小BOSS）",
+        "groups": [
+            "sheeppacifist"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用一次钉鞋",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "让压饼机反跑指令关存档面（到左边陆地即可）",
+        "groups": [
+            "tsuraresand"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集堡1的E罐（岔路右-右）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "纯火击败木头人",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "纯水击败榴弹人（堡1五代BOSS）",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "用爆开的泡泡盾击败火焰人（堡1六代BOSS）",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "不踩手臂击败两个守门员（棒球小BOSS）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "从摩托关1up位置反跑回开局（不用吃）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "以困难模式完成一关",
+        "groups": [
+            "hardmode"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "以困难模式完成一个任务",
+        "groups": [
+            "hardmode"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集并消费100螺丝",
+        "groups": [
+            "screws10"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "和平主义通关指令人关卡",
+        "groups": [
+            "pacifist10"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "和平主义通关摩托人关卡",
+        "groups": [
+            "pacifist10"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "冻结一关全部可冻敌人（包括岔路）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "让太阳人头上的火反复变大变小两次",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用旅行齿轮击败飞刀人（要滚出去）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "从棒球关1up房反跑到小BOSS下（需刀/轮外的特武）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "纯齿轮击败棒球人",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "用爆开的泡泡盾同时击败双火鸟（每只20血，泡泡2血）",
+        "groups": [
+            "suzakfenix"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在三关收集一个放置1up（每关都有）",
+        "groups": [
+            "placed1up10"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在指令关存档面让压饼机器人踩进所有地雷坑",
+        "groups": [
+            "tsuraresand"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "把5个敌人变成1up（满血满能磕M）",
+        "groups": [
+            "10mtank"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在前八把一个压饼机器人变成1up（满血满能磕M）",
+        "groups": [
+            "10mtank"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "把三种敌人变成1up（满血满能磕M）",
+        "groups": [
+            "10mtank"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "在太阳关一击摧毁4个小火球（炸水火电）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "以左到右顺序击败兵器库（堡1BOSS）",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "堡2全收集（有个藏在BOSS门上）",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "用齿轮登顶堡2所有压饼机",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "先毁蟹爪，再干蟹身",
+        "groups": [
+            "crabpuncher"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "在堡2一命抵达BOSS门且让传送带变向3次",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "纯飞刀击败堡1所有BOSS",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "纯闪电击败双子人",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "纯炸弹击败利爪人",
+        "groups": [
+            "weaponsarchive"
+        ],
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
         "name": "纯用两种特武分别击败棒球关两个小BOSS",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2055,8 +1953,8 @@
         "password": false
     },
     {
-        "name": "让水泵关所有安全帽为你加油(要走上路)",
-        "types": [],
+        "name": "让水泵关所有安全帽为你加油（要走上路）",
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2064,8 +1962,8 @@
         "password": false
     },
     {
-        "name": "在三关让狗落到刺上(水冰车刀羊)",
-        "types": [],
+        "name": "在三关让狗落到刺上（水冰车刀羊）",
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2073,8 +1971,8 @@
         "password": false
     },
     {
-        "name": "比特把你扔刺上(羊刀堡23)",
-        "types": [],
+        "name": "比特把你扔刺上（羊刀堡23）",
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2083,7 +1981,7 @@
     },
     {
         "name": "纯背身通过两场沙尘暴",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2091,8 +1989,8 @@
         "password": false
     },
     {
-        "name": "在4关收集一个1up(每关都有)",
-        "types": [
+        "name": "在4关收集一个1up（每关都有）",
+        "groups": [
             "placed1up10"
         ],
         "diff": 2,
@@ -2102,8 +2000,8 @@
         "password": false
     },
     {
-        "name": "纯弹球击败双火鸟(推荐备个W罐)",
-        "types": [
+        "name": "纯弹球击败双火鸟（推荐备个W罐）",
+        "groups": [
             "suzakfenix"
         ],
         "diff": 2,
@@ -2114,7 +2012,7 @@
     },
     {
         "name": "让4辆卡车同屏",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2122,8 +2020,8 @@
         "password": false
     },
     {
-        "name": "不触发跷跷板抵达飞刀BOSS门(要狗/鸟)",
-        "types": [
+        "name": "不触发跷跷板抵达飞刀BOSS门（要狗/鸟）",
+        "groups": [
             "noseesaws"
         ],
         "diff": 2,
@@ -2133,8 +2031,8 @@
         "password": false
     },
     {
-        "name": "和平主义通关棒球关(不能打球)",
-        "types": [
+        "name": "和平主义通关棒球关（不能打球）",
+        "groups": [
             "pacifist10",
             "strikepacifist"
         ],
@@ -2145,8 +2043,8 @@
         "password": false
     },
     {
-        "name": "和平主义通关水泵关(允许且必须冻结)",
-        "types": [
+        "name": "和平主义通关水泵关（允许且必须冻结）",
+        "groups": [
             "pacifist10"
         ],
         "diff": 2,
@@ -2157,7 +2055,7 @@
     },
     {
         "name": "和平主义通关绵羊关",
-        "types": [
+        "groups": [
             "pacifist10",
             "sheeppacifist"
         ],
@@ -2169,7 +2067,7 @@
     },
     {
         "name": "从绵羊关闪现平台版面末尾反跑到存档点",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2178,7 +2076,7 @@
     },
     {
         "name": "获取飞狗",
-        "types": [
+        "groups": [
             "rushjet10"
         ],
         "diff": 2,
@@ -2189,7 +2087,7 @@
     },
     {
         "name": "在冷冻关最后一面不摧毁冰块抵达BOSS门",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2198,7 +2096,7 @@
     },
     {
         "name": "通关堡1且BOSS每次下来你只能按一下攻击",
-        "types": [
+        "groups": [
             "weaponsarchive"
         ],
         "diff": 2,
@@ -2209,7 +2107,7 @@
     },
     {
         "name": "纯用三种武器分别击败堡1的三面BOSS",
-        "types": [
+        "groups": [
             "weaponsarchive"
         ],
         "diff": 2,
@@ -2220,7 +2118,7 @@
     },
     {
         "name": "摧毁堡2的所有冰块",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "10"
@@ -2228,8 +2126,8 @@
         "password": true
     },
     {
-        "name": "用闪电击败砖块恶魔(堡3BOSS)",
-        "types": [
+        "name": "用闪电击败砖块恶魔（堡3BOSS）",
+        "groups": [
             "blockdevil"
         ],
         "diff": 2,
@@ -2239,11 +2137,262 @@
         "password": true
     },
     {
-        "name": "让砖块恶魔的眼睛在地板下被击败(堡3BOSS)",
-        "types": [
+        "name": "让砖块恶魔的眼睛在地板下被击败（堡3BOSS）",
+        "groups": [
             "blockdevil"
         ],
         "diff": 2,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "无头盔完成一关",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "收集6个放置1up",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "和平主义抵达飞刀BOSS门",
+        "groups": [
+            "pacifist10",
+            "bladepacifist"
+        ],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "反跑飞刀关最后一面（需飞狗或两只鸟）",
+        "groups": [
+            "bladepacifist"
+        ],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "禁跳跃键抵达太阳小BOSS门（需齿轮飞狗）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "让飞刀最后一面的第一只蜘蛛落坑",
+        "groups": [
+            "darspiderpit",
+            "noseesaws"
+        ],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "纯电云击败摩托人（需W罐，推荐两罐）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "纯弹球击败两种小BOSS",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "反跑堡2最后的压饼机版面",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "在堡3第一个电梯上击败一个安全帽",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "用齿轮爬上堡3BOSS房的外墙（需比特）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "禁方向键击败飞船1形态",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "堡4全收集",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "堡5全收集",
+        "groups": [
+            "mm10wily5restricted2"
+        ],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "通关",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "堡5禁跳跃键抵达BOSS门",
+        "groups": [
+            "mm10wily5restricted",
+            "mm10wily5restricted2"
+        ],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "堡5收集最后的E罐后，反跑到开局",
+        "groups": [
+            "mm10wily5restricted"
+        ],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": true
+    },
+    {
+        "name": "通关水泵人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关太阳人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关冷冻人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关摩托人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关指令人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关飞刀人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关棒球人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关绵羊人关卡",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关堡2",
+        "groups": [
+            "crabpuncher"
+        ],
+        "diff": 1,
         "games": [
             "10"
         ],
@@ -2251,7 +2400,7 @@
     },
     {
         "name": "通关堡3",
-        "types": [
+        "groups": [
             "blockdevil"
         ],
         "diff": 2,
@@ -2261,8 +2410,85 @@
         "password": true
     },
     {
+        "name": "收集前八所有放置1up（水泵两路。其他每关1个）",
+        "groups": [],
+        "diff": 3,
+        "games": [
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "分别全清9代10代一关的蜘蛛（要有蜘蛛）",
+        "groups": [
+            "spider9and10"
+        ],
+        "diff": 1,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "击败小火球+大火龙（9熔岩小BOSS，10太阳）",
+        "groups": [],
+        "diff": 0,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "分别在9代10代击败一个蜘蛛",
+        "groups": [
+            "spider9and10"
+        ],
+        "diff": 0,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "击败小章鱼+章鱼灯泡（10羊小BOSS，9人鱼）",
+        "groups": [
+            "seaanimal9and10"
+        ],
+        "diff": 0,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "分别在9代10代击败盾牌飞行器",
+        "groups": [
+            "shieldattacker7-10"
+        ],
+        "diff": 0,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "分别在9代10代击败压饼机器人",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
         "name": "分别使用困难和超级英雄难度过一关",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9",
@@ -2271,8 +2497,38 @@
         "password": false
     },
     {
+        "name": "通关9代和10代的火关",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关9代和10代的水关",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关9代和10代的电关",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
         "name": "在两个游戏中击败龙卷风人",
-        "types": [],
+        "groups": [],
         "diff": 2,
         "games": [
             "9",
@@ -2282,7 +2538,7 @@
     },
     {
         "name": "获取飞狗",
-        "types": [
+        "groups": [
             "rushjet9",
             "rushjet10"
         ],
@@ -2295,7 +2551,7 @@
     },
     {
         "name": "击败三种海生动物",
-        "types": [
+        "groups": [
             "seaanimal9and10"
         ],
         "diff": 2,
@@ -2306,350 +2562,94 @@
         "password": true
     },
     {
-        "name": "不戴头盔完成一关",
-        "types": [],
-        "diff": 3,
+        "name": "用三重烈火或飞刀无克制击败一个BOSS",
+        "groups": [],
+        "diff": 1,
+        "games": [
+            "9",
+            "10"
+        ],
+        "password": false
+    },
+    {
+        "name": "通关特殊关卡",
+        "groups": [],
+        "diff": 1,
         "games": [
             "9"
         ],
         "password": false
     },
     {
-        "name": "达到命数上限(9条命)",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
+        "name": "用闪光弹球击败一个敌人（弹最大次数）",
+        "groups": [
+            "reboundskill"
         ],
-        "password": false
-    },
-    {
-        "name": "收集6个放置1up(泥1火1蜂2钻1鱼1电2风1)",
-        "types": [
-            "mm9placed1up"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "收集前八所有放置1up(泥1火1蜂2钻1鱼1电2风1)",
-        "types": [
-            "mm9placed1up"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "在每个平台上对小花花造成伤害后击败(蜜蜂小BOSS)",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": false
-    },
-    {
-        "name": "纯P击败鲨鱼(允许用狗)",
-        "types": [
-            "megamechshark"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "用墨汁洛克人击败鲨鱼",
-        "types": [
-            "ink",
-            "megamechshark"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "用每种武器打爆一次推推球后击败(堡1BOSS)",
-        "types": [
-            "spikepushers"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "禁狗禁风抵达堡1BOSS门",
-        "types": [
-            "mm9wily1restricted"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "和平主义抵达堡3BOSS门",
-        "types": [
-            "mm9wily3pacifist"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "反跑堡3最后的大炮面",
-        "types": [
-            "mm9wily3pacifist"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "纯黑洞+水泥击败堡3所有小泥人和小小泥人",
-        "types": [
-            "mm9wily3pacifist"
-        ],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "用每种武器都造成伤害后击败双子泥",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "把假1up变真(满血满能磕M)",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "用BOSS武器击败这个BOSS",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "通关",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "用所有武器打中逃生舱(威利3阶段)",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "password": true
-    },
-    {
-        "name": "无头盔完成一关",
-        "types": [],
-        "diff": 3,
+        "diff": 0,
         "games": [
             "10"
         ],
         "password": false
     },
     {
-        "name": "收集6个放置1up",
-        "types": [],
-        "diff": 3,
+        "name": "用被敌人弹回来的球击败一个敌人",
+        "groups": [
+            "reboundskill"
+        ],
+        "diff": 0,
         "games": [
             "10"
         ],
         "password": false
     },
     {
-        "name": "和平主义抵达飞刀BOSS门",
-        "types": [
-            "pacifist10",
-            "bladepacifist"
-        ],
-        "diff": 3,
+        "name": "让特武子弹变色（被冻）",
+        "groups": [],
+        "diff": 0,
         "games": [
             "10"
         ],
         "password": false
     },
     {
-        "name": "反跑飞刀关最后一面(需飞狗或两只鸟)",
-        "types": [
-            "bladepacifist"
-        ],
-        "diff": 3,
+        "name": "通关前八两个首字母相同的关（C/S）",
+        "groups": [],
+        "diff": 0,
         "games": [
             "10"
         ],
         "password": false
     },
     {
-        "name": "禁跳跃键抵达太阳小BOSS门(需齿轮飞狗)",
-        "types": [],
-        "diff": 3,
+        "name": "通关9代10代首字母相同的一关（前八）",
+        "groups": [],
+        "diff": 0,
         "games": [
+            "9",
             "10"
         ],
         "password": false
     },
     {
-        "name": "让飞刀最后一面的第一只蜘蛛落坑",
-        "types": [
-            "darspiderpit",
-            "noseesaws"
+        "name": "在无尽模式击败一个BOSS",
+        "groups": [
+            "endless9and10"
         ],
-        "diff": 3,
+        "diff": 1,
         "games": [
+            "9",
             "10"
         ],
         "password": false
     },
     {
-        "name": "纯电云击败摩托人(需W罐，推荐两罐)",
-        "types": [],
-        "diff": 3,
+        "name": "在无尽模式进入5个传送门",
+        "groups": [
+            "endless9and10"
+        ],
+        "diff": 1,
         "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "纯弹球击败两种小BOSS",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": false
-    },
-    {
-        "name": "反跑堡2最后的压饼机版面",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "在堡3第一个电梯上击败一个安全帽",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "用齿轮爬上堡3BOSS房的外墙(需比特)",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "禁方向键击败飞船1形态",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "堡4全收集",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "堡5全收集",
-        "types": [
-            "mm10wily5restricted2"
-        ],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "通关",
-        "types": [],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "堡5禁跳跃键抵达BOSS门",
-        "types": [
-            "mm10wily5restricted",
-            "mm10wily5restricted2"
-        ],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "堡5收集最后的E罐后，反跑到开局",
-        "types": [
-            "mm10wily5restricted"
-        ],
-        "diff": 3,
-        "games": [
-            "10"
-        ],
-        "password": true
-    },
-    {
-        "name": "收集前八所有放置1up(水泵两路。其他每关1个)",
-        "types": [],
-        "diff": 3,
-        "games": [
+            "9",
             "10"
         ],
         "password": false

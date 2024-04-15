@@ -164,8 +164,8 @@
                             suffix = "(" + suffix + ")";
                         }
                         output.push({
-                            "name": "*".repeat(goal["diff"]) + goal["name"] + suffix,
-                            "types": goal["types"]
+                            "name": "*".repeat(goal["diff"]) + goal["name"].replace("，", ",").replace("（", "(").replace("）", ")") + suffix,
+                            "types": goal["groups"]
                         });
                         break;
                     }
