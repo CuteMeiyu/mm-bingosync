@@ -7,18 +7,19 @@
 </head>
 
 <body>
-    <label for="games">哪代游戏：</label>
-    <input type="text" id="games" name="games" , value="9,10" required><br>
+    <label for="games">作品序数：</label>
+    <input type="text" id="games" name="games" value="9,10" title="多代用逗号隔开。目前只有9和10代（"><br>
     <label for="diffs">卡片难度：</label>
-    <input type="text" id="diffs" name="diffs" , value="1,2" required><br>
+    <input type="text" id="diffs" name="diffs" value="1,2"
+        title="每条线的任务难度。比如1,1,2表示每条线各有两个1级任务和一个2级任务，其余的都是0级。最高3级。"><br>
     <label for="seed">随机种子：</label>
-    <input type="number" id="seed" name="seed">
-    <input type="checkbox" id="lock_seed" name="lock_seed"><label for="lock_seed">固定随机种子</label><br>
+    <input type="number" id="seed" name="seed" title="决定生成结果。默认随机。">
+    <input type="checkbox" id="lock_seed" name="lock_seed" title="让每次生成的结果相同"><label for="lock_seed">固定随机种子</label><br>
     <label for="balance_games">平衡多代：</label>
-    <input type="checkbox" id="balance_games" name="balance_games" , checked><br>
+    <input type="checkbox" id="balance_games" name="balance_games" title="让版面上的每代游戏的数量尽可能相等" checked><br>
     <label for="center_hardest">中心最难：</label>
-    <input type="checkbox" id="center_hardest" name="center_hardest"><br>
-    <button type="button" id="generate-btn" , onclick="generate()">生成</button>
+    <input type="checkbox" id="center_hardest" name="center_hardest" title="把最难的任务放到中心"><br>
+    <button type="button" id="generate-btn" onclick="generate()">生成</button>
     <br>
 
     <textarea id="result_box" rows="10" cols="50" readonly></textarea>
