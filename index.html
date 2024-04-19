@@ -156,10 +156,11 @@
                             continue;
                         }
                         let goal = goals[i];
-                        if (leniency < 1 && goal["groups"].length > 0 && isSubset(goal["groups"], groupUsed)) {
+                        if (leniency < 1 && "groups" in goal && goal["groups"].length > 0 && isSubset(goal["groups"], groupUsed)) {
                             continue;
                         }
-                        if (goal["diff"] != diffMatrix[row][col]) {
+                        let diff = "diff" in goal ? goal["diff"] : 0;
+                        if (diff != diffMatrix[row][col]) {
                             continue;
                         }
                         if (!isSubset(goal["games"], games)) {
@@ -178,13 +179,24 @@
                             }
                         }
                         indexUsed.push(i);
-                        groupUsed = groupUsed.concat(goal["groups"]);
+                        if ("groups" in goal) {
+                            groupUsed = groupUsed.concat(goal["groups"]);
+                        }
                         changed = true;
-                        let suffix = goal["games"].join(",").repeat(showGames) + "#".repeat(goal["password"]);
+                        let suffix = goal["games"].join(",").repeat(showGames)
+                        if ("password" in goal && goal["password"]) {
+                            suffix += "#";
+                        }
                         if (suffix.length > 0) {
                             suffix = "(" + suffix + ")";
                         }
-                        output.push({ "name": "*".repeat(goal["diff"]) + goal["name"].replace(/[，。]/g, " ").replace(/（/g, "(").replace(/）/g, ")") + suffix });
+                        let name = goal["name"];
+                        if ("short_notes" in goal) {
+                            name += "(" + goal["short_notes"] + ")";
+                        }
+                        name = "*".repeat(diff) + name + suffix;
+                        name = name.replace(/[，。]/g, " ").replace(/（/g, "(").replace(/）/g, ")");
+                        output.push({ "name": name });
                         break;
                     }
                 }
