@@ -3,43 +3,72 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>洛克人Bingosync版面生成工具</title>
+    <title>洛克人Bingo工具</title>
 </head>
 
 <body>
     <label for="games">作品序数：</label>
-    <input type="text" id="games" name="games" value="9,10" title="多代用逗号隔开。目前只有9和10代（"><br>
+    <input type="text" id="games" value="9,10" title="多代用逗号隔开。目前只有9和10代（"><br>
     <label for="diffs">版面难度：</label>
-    <input type="text" id="diffs" name="diffs" value="1,2"
-        title="每条线的任务难度。最低0级，最高3级。比如1,1,2表示每条线各有两个1级任务和一个2级任务，其余的都是0级。"><br>
+    <input type="text" id="diffs" value="1,2" title="每条线的任务难度。最低0级，最高3级。比如1,1,2表示每条线各有两个1级任务和一个2级任务，其余的都是0级。"><br>
     <label for="seed">随机种子：</label>
-    <input type="number" id="seed" name="seed" title="决定生成结果。默认随机。">
-    <input type="checkbox" id="lock_seed" name="lock_seed" title="让每次生成的结果相同"><label for="lock_seed">固定随机种子</label><br>
-    <label for="balance_games">平衡多代：</label>
-    <input type="checkbox" id="balance_games" name="balance_games" title="让版面上的每代游戏的数量尽可能相等" checked><br>
-    <label for="center_hardest">中心最难：</label>
-    <input type="checkbox" id="center_hardest" name="center_hardest" title="把最难的任务放到中心"><br>
-    <button type="button" id="generate-btn" onclick="generate()">生成</button>
+    <input type="number" id="seed" title="决定生成结果。默认随机。">
+    <input type="checkbox" id="lock-seed" title="让每次生成的结果相同"><label for="lock-seed">固定随机种子</label><br>
+    <label for="balance-games">平衡多代：</label>
+    <input type="checkbox" id="balance-games" title="让版面上的每代游戏的数量尽可能相等" checked><br>
+    <label for="center-hardest">中心最难：</label>
+    <input type="checkbox" id="center-hardest" title="把最难的任务放到中心"><br>
+    <button id="generate-board-btn" onclick="generateBoard()">生成</button>
     <br>
 
-    <textarea id="result_box" rows="10" cols="50" readonly></textarea>
+    <textarea id="result-box" rows="10" cols="50" readonly></textarea><br>
     <button onclick="copyResult()">复制</button>
-    <br>
-
+    <button onclick="popup()">弹出</button><br>
     <a href="https://bingosync.com/" target="_blank">Bingosync</a><br>
 
     <script>
         var data;
         var randomSeed = Date.now();
+        var previousGoalList = [];
+        const queryParams = new URLSearchParams(window.location.search);
 
         document.addEventListener('DOMContentLoaded', function () {
             fetch('data.json')
                 .then(response => response.json())
-                .then(d => { data = d });
+                .then(d => {
+                    data = d;
+                    for (let i = 0; i < data.length; i++) {
+                        let item = data[i];
+                        item.index = i;
+                        if (item.groups === undefined) {
+                            item.groups = [];
+                        }
+                        if (item.diff === undefined) {
+                            item.diff = 0;
+                        }
+                    }
+                });
+            for (let [key, value] of queryParams) {
+                key = key.toLowerCase();
+                element = document.getElementById(key);
+                if (!element || value.length == 0) {
+                    continue;
+                }
+                value = value.toUpperCase();
+                if (value == "T") {
+                    element.checked = true;
+                    continue;
+                }
+                if (value == "F") {
+                    element.checked = false;
+                    continue;
+                }
+                element.value = value;
+            }
         });
 
         function copyResult() {
-            var copyText = document.getElementById("result_box");
+            var copyText = document.getElementById("result-box");
             copyText.select();
             document.execCommand("copy");
         }
@@ -84,7 +113,30 @@
             return true;
         }
 
-        function generate() {
+        function updateSeed() {
+            let seed = document.getElementById("seed");
+            if (seed.value.length == 0 || !document.getElementById("lock-seed").checked) {
+                seed.value = Math.floor(Math.random() * 1000000).toString();
+            }
+            randomSeed = parseInt(seed.value);
+        }
+
+        function parseSettings() {
+            let games = document.getElementById("games").value.split(/[,，]\s*/);
+            let diffs = document.getElementById("diffs").value.split(/[,，]\s*/).map(function (item) {
+                return parseInt(item);
+            });
+            let balanceGames = document.getElementById("balance-games").checked;
+            let centerHardest = document.getElementById("center-hardest").checked;
+            return {
+                games: games,
+                diffs: diffs,
+                balanceGames: balanceGames,
+                centerHardest: centerHardest
+            }
+        }
+
+        function generateDiffMatrix(diffs, centerHardest) {
             let diffMatrix = [];
             for (let i = 0; i < 5; i++) {
                 diffMatrix[i] = [];
@@ -92,19 +144,9 @@
                     diffMatrix[i][j] = 0;
                 }
             };
-            let seed = document.getElementById("seed");
-            if (seed.value.length == 0 || !document.getElementById("lock_seed").checked) {
-                seed.value = Math.floor(Math.random() * 1000000).toString();
-            }
-            randomSeed = parseInt(seed.value);
-            let diffs = document.getElementById("diffs").value.split(/[,，]\s*/).map(function (item) {
-                return parseInt(item);
-            });
-            shuffleArray(diffs);
-            let games = document.getElementById("games").value.split(/[,，]\s*/);
             let step = 1 + Math.floor(random() * 4);
             let offset;
-            if (document.getElementById("center_hardest").checked) {
+            if (centerHardest) {
                 offset = 8 - step * diffs.indexOf(Math.max(...diffs));
             } else {
                 offset = Math.floor(random() * 5);
@@ -124,16 +166,19 @@
                 swapRows(diffMatrix, 1, 3);
                 swapColumns(diffMatrix, 1, 3);
             }
+            return diffMatrix
+        }
+
+        function generateGoalList(diffMatrix, games, balanceGames) {
+            let goalList = [];
             let goals = [...data];
             shuffleArray(goals);
-            let showGames = games.length > 1;
             let indexUsed = [];
             let groupUsed = [];
             let gamesCount = {};
             for (let game of games) {
                 gamesCount[game] = 0;
             }
-            let output = [];
             let leniency = 0;
             let changed = false;
             let i = -1;
@@ -145,8 +190,7 @@
                             if (!changed) {
                                 leniency += 1;
                                 if (leniency > 1) {
-                                    document.getElementById("result_box").value = "没有足够的符合条件的任务（";
-                                    throw new Error("No available goal");
+                                    throw new Error("没有足够数量的符合条件的任务");
                                 }
                             }
                             changed = false;
@@ -156,52 +200,85 @@
                             continue;
                         }
                         let goal = goals[i];
-                        if (leniency < 1 && "groups" in goal && goal["groups"].length > 0 && isSubset(goal["groups"], groupUsed)) {
+                        if (leniency < 1 && goal.groups.length > 0 && isSubset(goal.groups, groupUsed)) {
                             continue;
                         }
-                        let diff = "diff" in goal ? goal["diff"] : 0;
-                        if (diff != diffMatrix[row][col]) {
+                        if (goal.diff != diffMatrix[row][col]) {
                             continue;
                         }
-                        if (!isSubset(goal["games"], games)) {
+                        if (!isSubset(goal.games, games)) {
                             continue;
                         }
-                        if (document.getElementById("balance_games").checked) {
-                            for (let game of goal["games"]) {
+                        if (balanceGames) {
+                            for (let game of goal.games) {
                                 gamesCount[game] += 1;
                             }
                             gamesCountValues = Object.values(gamesCount)
                             if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
-                                for (let game of goal["games"]) {
+                                for (let game of goal.games) {
                                     gamesCount[game] -= 1;
                                 }
                                 continue;
                             }
                         }
                         indexUsed.push(i);
-                        if ("groups" in goal) {
-                            groupUsed = groupUsed.concat(goal["groups"]);
-                        }
+                        groupUsed = groupUsed.concat(goal.groups);
                         changed = true;
-                        let suffix = goal["games"].join(",").repeat(showGames)
-                        if ("password" in goal && goal["password"]) {
-                            suffix += "#";
-                        }
-                        if (suffix.length > 0) {
-                            suffix = "(" + suffix + ")";
-                        }
-                        let name = goal["name"];
-                        if ("short_notes" in goal) {
-                            name += "(" + goal["short_notes"] + ")";
-                        }
-                        name = "*".repeat(diff) + name + suffix;
-                        name = name.replace(/[，。]/g, " ").replace(/（/g, "(").replace(/）/g, ")");
-                        output.push({ "name": name });
+                        goalList.push(goal);
                         break;
                     }
                 }
             }
-            document.getElementById("result_box").value = JSON.stringify(output, null, 2);
+            return goalList
+        }
+
+        function convertBingosyncGoalList(goalList, showGames) {
+            let bingosyncGoalList = []
+            for (goal of goalList) {
+                let name = "*".repeat(goal.diff) + goal.name;
+                if (goal.short_notes != undefined) {
+                    name += "(" + goal.short_notes + ")";
+                }
+                name = name.replace(/[,，。]/g, " ");
+                if (showGames) {
+                    name += "[" + goal.games.join(",");
+                }
+                if (goal.password != undefined) {
+                    name += "#";
+                }
+                name += "]";
+                bingosyncGoalList.push({ name: name });
+            }
+            return bingosyncGoalList
+        }
+
+        function generateBoard() {
+            updateSeed();
+            let settings = parseSettings();
+            shuffleArray(settings.diffs);
+            let diffMatrix = generateDiffMatrix(settings.diffs, settings.centerHardest);
+            let goalList;
+            try {
+                goalList = generateGoalList(diffMatrix, settings.games, settings.balanceGames);
+            } catch (error) {
+                document.getElementById("result-box").value = error.message;
+                return;
+            }
+            previousGoalList = goalList;
+
+            let showGames = settings.games.length > 1;
+            let bingosyncGoalList = convertBingosyncGoalList(goalList, showGames);
+            document.getElementById("result-box").value = JSON.stringify(bingosyncGoalList, null, 2);
+        }
+
+        function popup() {
+            if (previousGoalList.length == 0) {
+                return;
+            }
+            params = "?id=" + previousGoalList.map(function (goal) {
+                return goal.index;
+            }).join(",");
+            window.open('popup.html' + params, 'Bingo', 'width=600,height=500');
         }
     </script>
 </body>
