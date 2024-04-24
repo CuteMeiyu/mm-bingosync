@@ -14,104 +14,201 @@
             overflow: hidden;
         }
 
-        .grid-container {
+        .board-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-gap: 2px;
+            grid-gap: 1px;
             width: 100vw;
             height: 100vh;
         }
 
-        .grid-item {
+        .cell {
             position: relative;
             background-color: #aaa;
             border: 1px solid #888;
             cursor: pointer;
         }
 
-        .grid-text {
+        .diff1 {
+            border: 2px solid rgb(237, 255, 73);
+        }
+
+        .diff2 {
+            border: 2px solid rgb(184, 0, 0);
+        }
+
+        .diff3 {
+            border: 2px solid rgb(171, 0, 223);
+        }
+
+        .cell-text {
             position: absolute;
             top: 50%;
             left: 50%;
             width: 90%;
+            height: 100%;
             transform: translate(-50%, -50%);
             text-align: center;
-            visibility: hidden;
             word-break: break-all;
+            user-select: none;
         }
 
-        .lit {
-            background-color: rgb(255, 217, 0) !important;
-            color: rgb(0, 0, 0) !important;
+        .cell-game {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            word-break: break-all;
+            user-select: none;
+        }
+
+        .lit1 {
+            background-color: rgb(17, 143, 0) !important;
+            color: rgb(255, 255, 255) !important;
+        }
+
+        .lit2 {
+            background-color: rgb(0, 123, 145) !important;
+            color: rgb(255, 255, 255) !important;
         }
     </style>
 </head>
 
 <body>
-    <div class="grid-container">
-        <div id="cell_0_0" class="grid-item" onclick="toggleCell('cell_0_0')" <span class="grid-text"></span></div>
-        <div id="cell_0_1" class="grid-item" onclick="toggleCell('cell_0_1')" <span class="grid-text"></span></div>
-        <div id="cell_0_2" class="grid-item" onclick="toggleCell('cell_0_2')" <span class="grid-text"></span></div>
-        <div id="cell_0_3" class="grid-item" onclick="toggleCell('cell_0_3')" <span class="grid-text"></span></div>
-        <div id="cell_0_4" class="grid-item" onclick="toggleCell('cell_0_4')" <span class="grid-text"></span></div>
-        <div id="cell_1_0" class="grid-item" onclick="toggleCell('cell_1_0')" <span class="grid-text"></span></div>
-        <div id="cell_1_1" class="grid-item" onclick="toggleCell('cell_1_1')" <span class="grid-text"></span></div>
-        <div id="cell_1_2" class="grid-item" onclick="toggleCell('cell_1_2')" <span class="grid-text"></span></div>
-        <div id="cell_1_3" class="grid-item" onclick="toggleCell('cell_1_3')" <span class="grid-text"></span></div>
-        <div id="cell_1_4" class="grid-item" onclick="toggleCell('cell_1_4')" <span class="grid-text"></span></div>
-        <div id="cell_2_0" class="grid-item" onclick="toggleCell('cell_2_0')" <span class="grid-text"></span></div>
-        <div id="cell_2_1" class="grid-item" onclick="toggleCell('cell_2_1')" <span class="grid-text"></span></div>
-        <div id="cell_2_2" class="grid-item" onclick="toggleCell('cell_2_2')" <span class="grid-text"></span></div>
-        <div id="cell_2_3" class="grid-item" onclick="toggleCell('cell_2_3')" <span class="grid-text"></span></div>
-        <div id="cell_2_4" class="grid-item" onclick="toggleCell('cell_2_4')" <span class="grid-text"></span></div>
-        <div id="cell_3_0" class="grid-item" onclick="toggleCell('cell_3_0')" <span class="grid-text"></span></div>
-        <div id="cell_3_1" class="grid-item" onclick="toggleCell('cell_3_1')" <span class="grid-text"></span></div>
-        <div id="cell_3_2" class="grid-item" onclick="toggleCell('cell_3_2')" <span class="grid-text"></span></div>
-        <div id="cell_3_3" class="grid-item" onclick="toggleCell('cell_3_3')" <span class="grid-text"></span></div>
-        <div id="cell_3_4" class="grid-item" onclick="toggleCell('cell_3_4')" <span class="grid-text"></span></div>
-        <div id="cell_4_0" class="grid-item" onclick="toggleCell('cell_4_0')" <span class="grid-text"></span></div>
-        <div id="cell_4_1" class="grid-item" onclick="toggleCell('cell_4_1')" <span class="grid-text"></span></div>
-        <div id="cell_4_2" class="grid-item" onclick="toggleCell('cell_4_2')" <span class="grid-text"></span></div>
-        <div id="cell_4_3" class="grid-item" onclick="toggleCell('cell_4_3')" <span class="grid-text"></span></div>
-        <div id="cell_4_4" class="grid-item" onclick="toggleCell('cell_4_4')" <span class="grid-text"></span></div>
+    <div id="board" class="board-container">
+        <div id="cell_0_0" class="cell" onclick="toggleCell('cell_0_0')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_0_1" class="cell" onclick="toggleCell('cell_0_1')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_0_2" class="cell" onclick="toggleCell('cell_0_2')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_0_3" class="cell" onclick="toggleCell('cell_0_3')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_0_4" class="cell" onclick="toggleCell('cell_0_4')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_1_0" class="cell" onclick="toggleCell('cell_1_0')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_1_1" class="cell" onclick="toggleCell('cell_1_1')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_1_2" class="cell" onclick="toggleCell('cell_1_2')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_1_3" class="cell" onclick="toggleCell('cell_1_3')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_1_4" class="cell" onclick="toggleCell('cell_1_4')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_2_0" class="cell" onclick="toggleCell('cell_2_0')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_2_1" class="cell" onclick="toggleCell('cell_2_1')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_2_2" class="cell" onclick="toggleCell('cell_2_2')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_2_3" class="cell" onclick="toggleCell('cell_2_3')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_2_4" class="cell" onclick="toggleCell('cell_2_4')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_3_0" class="cell" onclick="toggleCell('cell_3_0')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_3_1" class="cell" onclick="toggleCell('cell_3_1')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_3_2" class="cell" onclick="toggleCell('cell_3_2')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_3_3" class="cell" onclick="toggleCell('cell_3_3')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_3_4" class="cell" onclick="toggleCell('cell_3_4')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_4_0" class="cell" onclick="toggleCell('cell_4_0')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_4_1" class="cell" onclick="toggleCell('cell_4_1')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_4_2" class="cell" onclick="toggleCell('cell_4_2')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_4_3" class="cell" onclick="toggleCell('cell_4_3')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
+        <div id="cell_4_4" class="cell" onclick="toggleCell('cell_4_4')"><span class="cell-text"></span><span
+                class="cell-game"></span></div>
     </div>
 
     <script>
         function toggleCell(id) {
             var cell = document.getElementById(id);
-            if (cell.classList.contains("lit")) {
-                cell.classList.remove('lit');
+            if (cell.classList.contains("lit1")) {
+                cell.classList.remove('lit1');
+                cell.classList.add('lit2');
+            } else if (cell.classList.contains("lit2")) {
+                cell.classList.remove('lit2');
             } else {
-                cell.classList.add('lit');
+                cell.classList.add('lit1');
             }
         }
     </script>
 
     <script>
+        var data;
+        const queryParams = new URLSearchParams(window.location.search);
+
+        function resizeTextToFitGrid() {
+            var cellTexts = document.querySelectorAll('.cell-text');
+            cellTexts.forEach(function (cellText) {
+                var cell = cellText.closest('.cell');
+                var cellGame = cell.children[1];
+                var cellWidth = cell.offsetWidth;
+                var cellHeight = cell.offsetHeight;
+                var fontSize = 125;
+                var textWidth, textHeight;
+
+                do {
+                    cellText.style.fontSize = fontSize + '%';
+                    cellGame.style.fontSize = Math.floor(fontSize * 0.5) + '%';
+                    textWidth = cellText.offsetWidth;
+                    textHeight = cellText.offsetHeight;
+                    fontSize -= 1;
+                } while ((textWidth > cellWidth || textHeight > cellHeight) && fontSize > 0);
+            });
+        }
+
         window.addEventListener('resize', function () {
             resizeTextToFitGrid();
         });
 
-        function resizeTextToFitGrid() {
-            var gridTexts = document.querySelectorAll('.grid-text');
-            gridTexts.forEach(function (gridText) {
-                var gridItem = gridText.closest('.grid-item');
-                var gridWidth = gridItem.offsetWidth;
-                var gridHeight = gridItem.offsetHeight;
-                var fontSize = 100;
-                var textWidth, textHeight;
-
-                do {
-                    gridText.style.fontSize = fontSize + '%';
-                    textWidth = gridText.offsetWidth;
-                    textHeight = gridText.offsetHeight;
-                    fontSize -= 1;
-                } while ((textWidth > gridWidth || textHeight > gridHeight) && fontSize > 0);
-            });
-        }
-
         window.addEventListener('DOMContentLoaded', function () {
-            resizeTextToFitGrid();
+            fetch('data.json')
+                .then(response => response.json())
+                .then(d => {
+                    data = d;
+                    let indexes = queryParams.get('id').split(',').map(function (item) {
+                        return parseInt(item);
+                    });
+                    let showGames = false;
+                    let previousGame = null;
+                    for (let i = 0; i < indexes.length; i++) {
+                        let goal = data[indexes[i]];
+                        let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
+                        if (goal.diff > 0) {
+                            cell.classList.add('diff' + goal.diff);
+                        }
+                        if (goal.notes != undefined) {
+                            cell.title = goal.notes;
+                        }
+
+                        let cellText = cell.childNodes[0];
+                        cellText.innerHTML = goal.name;
+
+                        let cellGame = cell.childNodes[1];
+                        cellGame.innerHTML = "MM" + goal.games.join(',');
+                        if (previousGame != null && previousGame != cellGame.innerHTML) {
+                            showGames = true;
+                        }
+                        previousGame = cellGame.innerHTML;
+                    }
+                    if (!showGames) {
+                        for (let cellGame of document.querySelectorAll('.cell-game')) {
+                            cellGame.style.display = 'none';
+                        }
+                    }
+                    resizeTextToFitGrid();
+                });
         });
     </script>
 </body>
