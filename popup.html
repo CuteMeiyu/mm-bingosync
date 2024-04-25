@@ -18,13 +18,13 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-gap: 1px;
-            width: 100vw;
-            height: 100vh;
+            width: min(100vw, 120vh);
+            height: min(83vw, 100vh);
         }
 
         .cell {
             position: relative;
-            background-color: #aaa;
+            background-color: #bbb;
             border: 1px solid #888;
             cursor: pointer;
         }
@@ -46,7 +46,6 @@
             top: 50%;
             left: 50%;
             width: 90%;
-            height: 100%;
             transform: translate(-50%, -50%);
             text-align: center;
             word-break: break-all;
@@ -64,70 +63,190 @@
             user-select: none;
         }
 
+        .cell-info {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            word-break: break-all;
+            user-select: none;
+        }
+
+        .cell-password {
+            position: absolute;
+            top: 10%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            word-break: break-all;
+            user-select: none;
+        }
+
         .lit1 {
-            background-color: rgb(17, 143, 0) !important;
-            color: rgb(255, 255, 255) !important;
+            background-color: rgb(120, 174, 185) !important;
+            color: rgb(0, 0, 0) !important;
         }
 
         .lit2 {
-            background-color: rgb(0, 123, 145) !important;
-            color: rgb(255, 255, 255) !important;
+            background-color: rgb(143, 214, 133) !important;
+            color: rgb(0, 0, 0) !important;
         }
     </style>
 </head>
 
 <body>
     <div id="board" class="board-container">
-        <div id="cell_0_0" class="cell" onclick="toggleCell('cell_0_0')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_0_1" class="cell" onclick="toggleCell('cell_0_1')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_0_2" class="cell" onclick="toggleCell('cell_0_2')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_0_3" class="cell" onclick="toggleCell('cell_0_3')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_0_4" class="cell" onclick="toggleCell('cell_0_4')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_1_0" class="cell" onclick="toggleCell('cell_1_0')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_1_1" class="cell" onclick="toggleCell('cell_1_1')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_1_2" class="cell" onclick="toggleCell('cell_1_2')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_1_3" class="cell" onclick="toggleCell('cell_1_3')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_1_4" class="cell" onclick="toggleCell('cell_1_4')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_2_0" class="cell" onclick="toggleCell('cell_2_0')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_2_1" class="cell" onclick="toggleCell('cell_2_1')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_2_2" class="cell" onclick="toggleCell('cell_2_2')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_2_3" class="cell" onclick="toggleCell('cell_2_3')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_2_4" class="cell" onclick="toggleCell('cell_2_4')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_3_0" class="cell" onclick="toggleCell('cell_3_0')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_3_1" class="cell" onclick="toggleCell('cell_3_1')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_3_2" class="cell" onclick="toggleCell('cell_3_2')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_3_3" class="cell" onclick="toggleCell('cell_3_3')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_3_4" class="cell" onclick="toggleCell('cell_3_4')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_4_0" class="cell" onclick="toggleCell('cell_4_0')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_4_1" class="cell" onclick="toggleCell('cell_4_1')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_4_2" class="cell" onclick="toggleCell('cell_4_2')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_4_3" class="cell" onclick="toggleCell('cell_4_3')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
-        <div id="cell_4_4" class="cell" onclick="toggleCell('cell_4_4')"><span class="cell-text"></span><span
-                class="cell-game"></span></div>
+        <div id="cell_0_0" class="cell" onclick="toggleCell('cell_0_0')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_0_1" class="cell" onclick="toggleCell('cell_0_1')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_0_2" class="cell" onclick="toggleCell('cell_0_2')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_0_3" class="cell" onclick="toggleCell('cell_0_3')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_0_4" class="cell" onclick="toggleCell('cell_0_4')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_1_0" class="cell" onclick="toggleCell('cell_1_0')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_1_1" class="cell" onclick="toggleCell('cell_1_1')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_1_2" class="cell" onclick="toggleCell('cell_1_2')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_1_3" class="cell" onclick="toggleCell('cell_1_3')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_1_4" class="cell" onclick="toggleCell('cell_1_4')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_2_0" class="cell" onclick="toggleCell('cell_2_0')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_2_1" class="cell" onclick="toggleCell('cell_2_1')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_2_2" class="cell" onclick="toggleCell('cell_2_2')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_2_3" class="cell" onclick="toggleCell('cell_2_3')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_2_4" class="cell" onclick="toggleCell('cell_2_4')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_3_0" class="cell" onclick="toggleCell('cell_3_0')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_3_1" class="cell" onclick="toggleCell('cell_3_1')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_3_2" class="cell" onclick="toggleCell('cell_3_2')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_3_3" class="cell" onclick="toggleCell('cell_3_3')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_3_4" class="cell" onclick="toggleCell('cell_3_4')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_4_0" class="cell" onclick="toggleCell('cell_4_0')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_4_1" class="cell" onclick="toggleCell('cell_4_1')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_4_2" class="cell" onclick="toggleCell('cell_4_2')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_4_3" class="cell" onclick="toggleCell('cell_4_3')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
+        <div id="cell_4_4" class="cell" onclick="toggleCell('cell_4_4')">
+            <span class="cell-text"></span>
+            <span class="cell-game"></span>
+            <span class="cell-info"></span>
+            <span class="cell-password"></span>
+        </div>
     </div>
 
     <script>
@@ -152,10 +271,10 @@
             var cellTexts = document.querySelectorAll('.cell-text');
             cellTexts.forEach(function (cellText) {
                 var cell = cellText.closest('.cell');
-                var cellGame = cell.children[1];
+                var cellGame = cell.querySelector('.cell-game');
                 var cellWidth = cell.offsetWidth;
                 var cellHeight = cell.offsetHeight;
-                var fontSize = 125;
+                var fontSize = 100;
                 var textWidth, textHeight;
 
                 do {
@@ -192,15 +311,28 @@
                             cell.title = goal.notes;
                         }
 
-                        let cellText = cell.childNodes[0];
+                        let cellText = cell.querySelector(".cell-text");
                         cellText.innerHTML = goal.name;
 
-                        let cellGame = cell.childNodes[1];
+                        let cellGame = cell.querySelector(".cell-game");
                         cellGame.innerHTML = "MM" + goal.games.join(',');
-                        if (previousGame != null && previousGame != cellGame.innerHTML) {
+                        if (!showGames && previousGame != null && previousGame != cellGame.innerHTML) {
                             showGames = true;
                         }
-                        previousGame = cellGame.innerHTML;
+                        if (previousGame == null) {
+                            previousGame = cellGame.innerHTML;
+                        }
+
+                        let cellInfo = cell.querySelector(".cell-info");
+                        if (goal.notes != undefined) {
+                            cellInfo.innerHTML = "[i]";
+                        }
+
+                        let cellPassword = cell.querySelector(".cell-password");
+                        if (goal.password != undefined) {
+                            cellPassword.innerHTML = "#";
+                            cellPassword.title = "允许使用城堡1存档/密码"
+                        }
                     }
                     if (!showGames) {
                         for (let cellGame of document.querySelectorAll('.cell-game')) {
