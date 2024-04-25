@@ -36,7 +36,7 @@
         const queryParams = new URLSearchParams(window.location.search);
 
         document.addEventListener('DOMContentLoaded', function () {
-            fetch('data.json')
+            fetch('data.json?' + new Date().getTime())
                 .then(response => response.json())
                 .then(d => {
                     data = d;
@@ -236,8 +236,8 @@
             let bingosyncGoalList = []
             for (goal of goalList) {
                 let name = "*".repeat(goal.diff) + goal.name;
-                if (goal.short_notes != undefined && showNotes) {
-                    name += "(" + goal.short_notes + ")";
+                if (goal.shortNotes != undefined && showNotes) {
+                    name += "(" + goal.shortNotes + ")";
                 }
                 name = name.replace(/[,，。]/g, " ");
                 if (showGames) {

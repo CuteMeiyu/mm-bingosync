@@ -292,7 +292,7 @@
         });
 
         window.addEventListener('DOMContentLoaded', function () {
-            fetch('data.json')
+            fetch('data.json?' + new Date().getTime())
                 .then(response => response.json())
                 .then(d => {
                     data = d;
