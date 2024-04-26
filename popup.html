@@ -65,9 +65,6 @@
 
         .cell-info {
             position: absolute;
-            top: 10%;
-            left: 10%;
-            transform: translate(-50%, -50%);
             text-align: center;
             word-break: break-all;
             user-select: none;
@@ -75,9 +72,7 @@
 
         .cell-password {
             position: absolute;
-            top: 10%;
-            left: 90%;
-            transform: translate(-50%, -50%);
+            right: 0%;
             text-align: center;
             word-break: break-all;
             user-select: none;
@@ -94,31 +89,23 @@
         }
 
         .tooltip {
-            visibility: hidden;
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
-            text-align: center;
             border-radius: 4px;
-
             position: absolute;
             z-index: 1;
-            left: 5%;
-            bottom: 5%;
-            margin-left: 5%;
-            margin-right: 5%;
-
             opacity: 0;
-            transition: opacity 0.3s;
+            padding: 4px;
         }
 
         .show {
-            visibility: visible;
             opacity: 1;
         }
     </style>
 </head>
 
 <body>
+    <span id="tooltip" class="tooltip"></span>
     <div id="board" class="board-container">
         <div id="cell_0_0" class="cell" onclick="toggleCell('cell_0_0')">
             <span class="cell-text"></span>
@@ -314,11 +301,44 @@
             resizeTextToFitGrid();
         });
 
+        function onMouseIn(event) {
+            let tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = event.currentTarget.dataset.tooltip.replace(/\n/g, '<br />');
+            tooltip.style.left = "0px";
+            tooltip.style.top = "0px";
+
+            let newX = event.clientX + 15;
+            let newY = event.clientY + 30;
+            let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+            if (newX + tooltip.offsetWidth > vw) {
+                newX = Math.max(0, vw - tooltip.offsetWidth);
+            }
+            if (newY + tooltip.offsetHeight > vh) {
+                newY = Math.max(0, event.clientY - tooltip.offsetHeight - 15);
+            }
+
+            tooltip.style.left = newX + "px";
+            tooltip.style.top = newY + "px";
+
+            tooltip.classList.add('show');
+        }
+
+        function onMouseOut(event) {
+            let tooltip = document.getElementById('tooltip');
+            tooltip.classList.remove('show');
+            tooltip.innerHTML = "";
+        }
+
         for (let cellInfo of document.querySelectorAll('.cell-info')) {
-            cellInfo.addEventListener('mouseover', function (event) {
-                let cellTooltip = cellInfo.closest('.cell').querySelector('.cell-tooltip');
-                cellTooltip.classList.add('show');
-            });
+            cellInfo.addEventListener('mousemove', onMouseIn);
+            cellInfo.addEventListener('mouseout', onMouseOut);
+        }
+
+        for (let cellPassword of document.querySelectorAll('.cell-password')) {
+            cellPassword.addEventListener('mousemove', onMouseIn);
+            cellPassword.addEventListener('mouseout', onMouseOut);
         }
 
         window.addEventListener('DOMContentLoaded', function () {
@@ -352,15 +372,14 @@
 
                         let cellInfo = cell.querySelector(".cell-info");
                         if (goal.notes != undefined) {
-                            cellInfo.innerHTML = "<pre>[i]</pre>"
-                            let cellTooltip = cell.querySelector(".cell-tooltip");
-                            cellTooltip.innerHTML = goal.notes;
+                            cellInfo.innerHTML = "<img src='img/info.png'/>";
+                            cellInfo.dataset.tooltip = goal.notes;
                         }
 
                         let cellPassword = cell.querySelector(".cell-password");
                         if (goal.password != undefined) {
-                            cellPassword.innerHTML = "<pre>#</pre>";
-                            cellPassword.title = "允许使用城堡1存档/密码"
+                            cellPassword.innerHTML = "<img src='img/pw.png'/>";
+                            cellPassword.dataset.tooltip = "允许使用城堡1存档/密码"
                         }
                     }
                     if (!showGames) {

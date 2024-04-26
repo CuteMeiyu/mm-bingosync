@@ -6,8 +6,8 @@
         "groups": [
             "mm9placed1up"
         ],
-        "name": "在两关收集放置1up",
-        "notes": "Concrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1), Wily 1 (2), Wily 2 (2), Wily 3 (1?), Wily 4 (1)"
+        "name": "在两关各收集一个放置1up",
+        "notes": "“放置”指的是预先放置在地图上的物品。小怪爆的不算。\nConcrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1), Wily 1 (2), Wily 2 (2), Wily 3 (1?), Wily 4 (1)"
     },
     {
         "games": [
@@ -19,35 +19,39 @@
         "games": [
             "9"
         ],
-        "name": "击败一个抓着你的竹蜻蜓"
+        "groups": [
+            "bunbycatcher"
+        ],
+        "name": "击败一个正抓着你的竹蜻蜓",
+        "notes": "<img src=\"img/Bunby_catcher.png\"/>"
     },
     {
         "games": [
             "9"
         ],
         "name": "无伤跳过一个压饼机器人",
-        "notes": "插头关卡BOSS门口那种碰一下掉很多血的大机器"
+        "notes": "<img src=\"img/MM9BigStomperOrange.png\"/>"
     },
     {
         "games": [
             "9"
         ],
-        "name": "收集一个只能用蜜蜂拾取的放置拾取品"
+        "name": "收集一个只能用蜜蜂拾取的放置拾取品",
+        "notes": "“放置”指的是预先放置在地图上的物品。小怪爆的不算。"
     },
     {
         "games": [
             "9"
         ],
         "name": "踏足插头关每个闪现砖块",
-        "notes": "有个顶到天花板上的可以不踩",
-        "shortNotes": "除了天花板那个"
+        "notes": "有个顶到天花板上的可以不踩"
     },
     {
         "games": [
             "9"
         ],
         "name": "干掉一个扫地机器人",
-        "notes": "可以用水泥，吹风，黑洞"
+        "notes": "<img src=\"img/Gagabyoall.png\"/>\n可以用水泥，吹风，黑洞"
     },
     {
         "games": [
@@ -78,8 +82,7 @@
             "9"
         ],
         "name": "熄灭大火龙",
-        "notes": "使用吹风或黑洞对熔岩关小BOSS产生的特殊交互",
-        "shortNotes": "用风/黑洞"
+        "notes": "<img src=\"img/Changkey_dragon.png\"/>\n使用吹风或黑洞对大火龙产生的特殊交互。\n将大火龙身上的火全部吹灭。"
     },
     {
         "games": [
@@ -112,7 +115,8 @@
         "games": [
             "9"
         ],
-        "name": "从银河关BOSS门口反跑到存档点后版面"
+        "name": "从银河关BOSS门口反跑到存档点的下一版面",
+        "notes": "从BOSS门口的平台开始反跑，直到无法继续返回的版面为止。\n也就是存档点右边的那个版面。"
     },
     {
         "games": [
@@ -121,7 +125,8 @@
         "groups": [
             "bunbycatcher"
         ],
-        "name": "用水泥凝固一个抓着你的竹蜻蜓"
+        "name": "用水泥凝固一个抓着你的竹蜻蜓",
+        "notes": "<img src=\"img/Bunby_catcher.png\"/>"
     },
     {
         "games": [
@@ -130,15 +135,14 @@
         "groups": [
             "bunbycatcher"
         ],
-        "name": "被银河关全部竹蜻蜓抓着跑一遍",
-        "notes": "总共6个，不能主动打掉他们，且你必须在他们离开屏幕时保持存活",
-        "shortNotes": "共6个，你俩都不死"
+        "name": "从银河关所有的竹蜻蜓爪中活下来",
+        "notes": "<img src=\"img/Bunby_catcher.png\"/>\n总共6个，需要被他们抓住。\n不能主动打掉。"
     },
     {
         "games": [
             "9"
         ],
-        "name": "穿过水泥关的每一个假砖"
+        "name": "穿过水泥关的每一块假砖"
     },
     {
         "games": [
@@ -151,20 +155,13 @@
             "9"
         ],
         "name": "龙卷风关全收集",
-        "notes": "有一个E罐藏在第一个下雨版面的左上角的云里",
-        "shortNotes": "有个藏在云里"
+        "notes": "有一个E罐藏在第一个下雨版面的左上角的云里"
     },
     {
         "games": [
             "9"
         ],
-        "name": "用水泥凝固一个怪，踩上去凝固另一个怪"
-    },
-    {
-        "games": [
-            "9"
-        ],
-        "name": "在两关击败一个安全帽",
+        "name": "在两关各击败一个安全帽",
         "notes": "银河，龙卷风，插头"
     },
     {
@@ -178,8 +175,8 @@
         "games": [
             "9"
         ],
-        "name": "在两关击败一个炮台",
-        "notes": "水泥，宝石，插头"
+        "name": "在两关各击败一个炮台",
+        "notes": "<img src=\"img/MM9RedClassicalCannon.png\"/>\n水泥，宝石，插头"
     },
     {
         "games": [
@@ -201,6 +198,7 @@
             "spikepushers"
         ],
         "name": "用一发黑洞打爆两个推推球",
+        "notes": "<img src=\"img/MM9WilyBoss1B.png\"/><img src=\"img/MM9WilyBoss1R.png\"/>\n不一定要最后一击，只要打爆一次就行。",
         "password": true
     },
     {
@@ -208,8 +206,7 @@
             "9"
         ],
         "name": "清理熔岩关全部蹦蹦车",
-        "notes": "第一面有2个，存档面有4个，最后一面有3个",
-        "shortNotes": "2+4+3=9"
+        "notes": "<img src=\"img/MM9GreenJumpRoller.png\"/><img src=\"img/MM9-JumpRoller-Sprite.png\"/>\n第一面有2个，存档面有4个，最后一面有3个"
     },
     {
         "games": [
@@ -221,33 +218,21 @@
         "games": [
             "9"
         ],
-        "name": "蜜蜂关击败三种花盆",
-        "notes": "仙人掌 / 刺球 / 火焰",
-        "shortNotes": "仙人掌/刺球/火焰"
+        "name": "清空蜜蜂关所有花盆"
     },
     {
         "games": [
             "9"
         ],
-        "name": "单关的每面都放一次狗",
-        "notes": "每次切屏就算一面，包括BOSS走廊和BOSS房",
-        "shortNotes": "包括BOSS房/走廊"
+        "name": "在任意关卡的每个版面都放一次狗",
+        "notes": "每次切屏就算一面，包括BOSS走廊和BOSS房"
     },
     {
         "games": [
             "9"
         ],
-        "name": "无伤连续跳过一个复制人9次"
-    },
-    {
-        "games": [
-            "9"
-        ],
-        "groups": [
-            "hornetchaser"
-        ],
-        "name": "用蜜蜂拾取1up",
-        "notes": "不一定是放置1up。掉落1up也算。"
+        "name": "无伤连续跳过一个复制人9次",
+        "notes": "<img src=\"img/ShadowMegaMan.png\"/>"
     },
     {
         "games": [
@@ -256,7 +241,16 @@
         "groups": [
             "hornetchaser"
         ],
-        "name": "用蜜蜂分别拾取血和能量"
+        "name": "用蜜蜂拾取一个1up"
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "hornetchaser"
+        ],
+        "name": "用蜜蜂分别拾取一次血和能量"
     },
     {
         "games": [
@@ -266,7 +260,7 @@
             "9projectile"
         ],
         "name": "用黑洞吸收累计4种子弹",
-        "notes": "可以分开完成。需要4种拥有不同贴图的子弹。不同种小怪发出的相同子弹也被视为同一种。"
+        "notes": "可以分开完成。\n需要4种拥有不同贴图的子弹。\n不同种小怪发出的相同子弹也被视为同一种。"
     },
     {
         "games": [
@@ -276,26 +270,28 @@
             "9projectile"
         ],
         "name": "用钻石盾抵挡累计4种子弹",
-        "notes": "可以分开完成。弹开或吸收都算抵挡。需要4种拥有不同贴图的子弹。不同种小怪发出的相同子弹也被视为同一种。"
+        "notes": "可以分开完成。\n需要4种拥有不同贴图的子弹。\n不同种小怪发出的相同子弹也被视为同一种。\n弹开或吸收都算抵挡。"
     },
     {
         "games": [
             "9"
         ],
-        "name": "用钻石盾干掉小泥人+分裂出的小小泥人"
+        "name": "用钻石盾干掉小泥人+分裂出的小小泥人",
+        "notes": "<img src=\"img/PetitDevilYellow.png\"/>"
     },
     {
         "games": [
             "9"
         ],
-        "name": "被石头脸震晕但是不受到伤害"
+        "name": "被石头脸震晕然后躲掉他接下来的冲撞",
+        "notes": "<img src=\"img/StoneHead.png\"/>"
     },
     {
         "games": [
             "9"
         ],
         "name": "在人鱼关第一个分路走右路后拾取1up",
-        "notes": "分路在第二个版面往下跳那里，需要靠右下去"
+        "notes": "分路在第二个版面往下跳的地方，需要靠右下去"
     },
     {
         "games": [
@@ -304,7 +300,7 @@
         "groups": [
             "9dropsolidobject"
         ],
-        "name": "卡一个掉落品到墙里",
+        "name": "把一个掉落品卡到墙里",
         "notes": "可以引一个小怪到墙里。也可以用蜜蜂。"
     },
     {
@@ -315,7 +311,8 @@
             "9dropsolidobject",
             "hornetchaser"
         ],
-        "name": "用蜜蜂卡一个放置1up到墙里"
+        "name": "用蜜蜂把一个放置1up卡进墙里",
+        "notes": "“放置”指的是预先放置在地图上的物品。小怪爆的不算。"
     },
     {
         "games": [
@@ -331,7 +328,8 @@
         "groups": [
             "mm9placed1up"
         ],
-        "name": "在三关收集一个放置1up"
+        "name": "在三关各收集一个放置1up",
+        "notes": "Concrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1), Wily 1 (2), Wily 2 (2), Wily 3 (1?), Wily 4 (1)"
     },
     {
         "diff": 1,
@@ -339,8 +337,7 @@
             "9"
         ],
         "name": "让艾迪，比特，莱西团聚",
-        "notes": "需要花100螺丝购买艾迪和比特",
-        "shortNotes": "花100螺丝"
+        "notes": "需要花100螺丝购买艾迪和比特"
     },
     {
         "games": [
@@ -401,7 +398,7 @@
             "okosutobon"
         ],
         "name": "不激活水雷通关人鱼关",
-        "notes": "需要用龙卷风来移开某些水雷。也可以用黑洞吸收。如果不慎激活，可以退回去让他重新刷新。"
+        "notes": "<img src=\"img/Okosutobon.png\" width=\"36\" height=\"36\"/>\n需要用龙卷风来移开某些水雷。\n也可以用黑洞吸收。\n如果不慎激活，可以退回一段距离让他重新刷新。"
     },
     {
         "diff": 1,
@@ -409,8 +406,7 @@
             "9"
         ],
         "name": "踏足人鱼关全部泡泡",
-        "notes": "每一面3小2大，共5面，25个泡泡",
-        "shortNotes": "5x5=25"
+        "notes": "每一面3小2大，共5面，25个泡泡"
     },
     {
         "diff": 1,
@@ -437,29 +433,15 @@
             "9"
         ],
         "name": "水泥关全收集",
-        "notes": "需要蜜蜂",
-        "shortNotes": "要蜜蜂"
+        "notes": "需要蜜蜂"
     },
     {
         "diff": 1,
         "games": [
             "9"
         ],
-        "name": "用一发黑洞吸收两种小兵"
-    },
-    {
-        "diff": 1,
-        "games": [
-            "9"
-        ],
-        "name": "单关用水泥凝固16个独立小兵"
-    },
-    {
-        "diff": 1,
-        "games": [
-            "9"
-        ],
-        "name": "单关用黑洞吸收15个独立小兵"
+        "name": "用一发黑洞吸收两种小兵",
+        "notes": "两种不同种类的小兵。\n一般要求贴图不同。"
     },
     {
         "diff": 1,
@@ -470,8 +452,7 @@
             "stonehead"
         ],
         "name": "击败天花板上的石头脸",
-        "notes": "宝石关小BOSS。需要能够向上攻击的武器：吹风，黑洞，火，蜜蜂",
-        "shortNotes": "宝石小BOSS"
+        "notes": "<img src=\"img/StoneHead.png\"/>\n需要能够攻击到天花板的武器：吹风，黑洞，火，蜜蜂"
     },
     {
         "diff": 1,
@@ -479,8 +460,7 @@
             "9"
         ],
         "name": "清理插头关所有电球",
-        "notes": "可以用：钻石、黑洞、吹风",
-        "shortNotes": "弱钻/黑洞/风"
+        "notes": "可以用：钻石、黑洞、吹风"
     },
     {
         "diff": 1,
@@ -519,8 +499,7 @@
             "9"
         ],
         "name": "用BOSS武器干掉本关小BOSS",
-        "notes": "如果某个小BOSS也在城堡出现，那么也可以在城堡完成",
-        "shortNotes": "城堡也可"
+        "notes": "如果某个小BOSS也在城堡出现，那么也可以在城堡完成"
     },
     {
         "diff": 1,
@@ -531,7 +510,8 @@
             "9dropsolidobject",
             "hornetchaser"
         ],
-        "name": "用蜜蜂卡一个1up，血，能量，螺丝进墙"
+        "name": "用蜜蜂把每种拾取品各塞一个进墙",
+        "notes": "共4种：1up，血，能量，螺丝"
     },
     {
         "diff": 1,
@@ -560,8 +540,7 @@
             "mm9wily2restricted"
         ],
         "name": "堡2禁狗/三叉戟抵达存档点",
-        "password": true,
-        "shortNotes": "小BOSS下"
+        "password": true
     },
     {
         "diff": 1,
@@ -585,9 +564,8 @@
         "games": [
             "9"
         ],
-        "name": "击败每种小BOSS一次",
-        "notes": "大象、小花花、大火龙、石头脸",
-        "shortNotes": "4种"
+        "name": "击败每种小BOSS各一次",
+        "notes": "<table style=\"text-align: center;\"><tr><td colspan=\"2\"><img src=\"img/Changkey_dragon.png\" /></td></tr><tr><td rowspan=\"2\"><img src=\"img/Paozo.png\" /></td><td><img src=\"img/StoneHead.png\" /></td></tr><tr><td><img src=\"img/MM9-Hanabiran-Sprite.png\" /></td></tr></table>"
     },
     {
         "diff": 2,
@@ -610,8 +588,7 @@
             "stonehead"
         ],
         "name": "纯P击败石头脸，但每轮只打一下",
-        "notes": "15 HP",
-        "shortNotes": "15HP"
+        "notes": "<img src=\"img/StoneHead.png\"/>\n15 HP"
     },
     {
         "diff": 2,
@@ -651,14 +628,15 @@
             "9"
         ],
         "name": "纯用三种武器分别击败三只大象",
-        "notes": "钻石能量是不够的"
+        "notes": "<img src=\"img/Paozo.png\"/>\n钻石能量是不够的。"
     },
     {
         "diff": 2,
         "games": [
             "9"
         ],
-        "name": "用三种特武击败三只独立的竹蜻蜓"
+        "name": "用三种特武击败三只独立的竹蜻蜓",
+        "notes": "<img src=\"img/Bunby_catcher.png\"/>"
     },
     {
         "diff": 2,
@@ -683,8 +661,7 @@
             "9"
         ],
         "name": "在蜜蜂关破坏全部地板",
-        "notes": "小BOSS上方的三个版面。有个能投弹破坏地板的机器。",
-        "shortNotes": "小BOSS上方"
+        "notes": "<img src=\"img/MM9-Bokazurah-Sprite.png\"/>\n能投弹破坏地板的机器。\n需要总共三个版面的全部地板。"
     },
     {
         "diff": 2,
@@ -700,7 +677,7 @@
             "9"
         ],
         "name": "用绕圈电球击败小花花",
-        "shortNotes": "至少绕半圈"
+        "notes": "<img src=\"img/MM9-Hanabiran-Sprite.png\" />\n电球需要经过平台下方"
     },
     {
         "diff": 2,
@@ -727,7 +704,7 @@
             "9"
         ],
         "name": "堡2全清敌人",
-        "notes": "注意不要让飞碟逃跑了",
+        "notes": "注意不要让<img src=\"img/MM9-Adamski-Sprite.png\"/>逃跑了",
         "password": true
     },
     {
@@ -759,6 +736,7 @@
             "mm9wily3pacifist"
         ],
         "name": "在堡3让一个压饼机器人落坑",
+        "notes": "<img src=\"img/MM9BigStomperOrange.png\"/>",
         "password": true
     },
     {
@@ -787,8 +765,7 @@
             "9"
         ],
         "name": "达到命数上限",
-        "notes": "到商店买命只能用你自己捡的螺丝，不能用存档里的",
-        "shortNotes": "9条命"
+        "notes": "到商店买命只能用你自己捡的螺丝，不能用存档里的"
     },
     {
         "diff": 3,
@@ -810,15 +787,15 @@
             "mm9placed1up"
         ],
         "name": "收集前八所有放置1up",
-        "notes": "Concrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1)",
-        "shortNotes": "共9个"
+        "notes": "Concrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1)"
     },
     {
         "diff": 3,
         "games": [
             "9"
         ],
-        "name": "在每个平台上对小花花造成伤害后击败"
+        "name": "在每个平台上对小花花造成伤害后击败",
+        "notes": "<img src=\"img/MM9-Hanabiran-Sprite.png\" />"
     },
     {
         "diff": 3,
@@ -853,7 +830,8 @@
         "groups": [
             "spikepushers"
         ],
-        "name": "用每种武器打爆一次推推球后击败",
+        "name": "用每种武器各打爆一次推推球并完成战斗",
+        "notes": "<img src=\"img/MM9WilyBoss1B.png\"/><img src=\"img/MM9WilyBoss1R.png\"/>\n武器包括P弹。",
         "password": true
     },
     {
@@ -888,7 +866,7 @@
             "mm9wily3pacifist"
         ],
         "name": "反跑堡3最后的大炮面",
-        "notes": "从最右端跑到最左端楼梯那里",
+        "notes": "从最右端<img src=\"img/MM9BigStomperOrange.png\"/>的位置跑到最左端楼梯",
         "password": true
     },
     {
@@ -896,20 +874,8 @@
         "games": [
             "9"
         ],
-        "groups": [
-            "mm9wily3pacifist"
-        ],
-        "name": "纯黑洞+水泥击败堡3所有小泥人和小小泥人",
-        "notes": "可以分多次完成",
-        "password": true
-    },
-    {
-        "diff": 3,
-        "games": [
-            "9"
-        ],
-        "name": "用所有武器打中双子泥",
-        "notes": "可以分多次完成",
+        "name": "用每种武器打中双子泥一次",
+        "notes": "<img src=\"img/MM9-TwinDevil-Sprite.png\"/>\n武器包括P弹。\n可以分多次完成。",
         "password": true
     },
     {
@@ -918,9 +884,8 @@
             "9"
         ],
         "name": "把假1up变真",
-        "notes": "假1up只在城堡3出现。在满血所有武器全满能量的情况下使用M罐，会把屏幕上所有的敌人转化成1up",
-        "password": true,
-        "shortNotes": "满血满能磕M"
+        "notes": "假1up只在城堡3出现。\n在满血所有武器全满能量的情况下使用M罐，会把屏幕上所有的敌人转化成1up",
+        "password": true
     },
     {
         "diff": 3,
@@ -928,7 +893,7 @@
             "9"
         ],
         "name": "用BOSS武器击败这个BOSS",
-        "notes": "只能在BR完成。这些BOSS可以不用M罐：人鱼、插头、火",
+        "notes": "只能在BR完成。\n推荐这些BOSS可以不用W罐：人鱼、插头、火",
         "password": true
     },
     {
@@ -944,10 +909,9 @@
         "games": [
             "9"
         ],
-        "name": "用所有武器打中威利逃生舱",
-        "notes": "可以分多次完成",
-        "password": true,
-        "shortNotes": "第3阶段"
+        "name": "用每种武器打中威利逃生舱一次",
+        "notes": "威利第三形态。\n武器包括P弹。\n可以分多次完成。",
+        "password": true
     },
     {
         "games": [
@@ -1058,15 +1022,15 @@
         "games": [
             "10"
         ],
-        "name": "把太阳关每个火球机都打掉一个小火球"
+        "name": "把太阳关每个火球机都打掉一个小火球",
+        "notes": "<img src=\"img/MM9Changkey.png\"/>"
     },
     {
         "games": [
             "10"
         ],
         "name": "踏足绵羊关每个闪现砖块",
-        "notes": "指的是每代都有的那种定时出现定时消失的砖块（优酷砖），不是踩上去就消失的（羊砖）",
-        "shortNotes": "不是羊砖"
+        "notes": "指的是每代都有的那种定时出现定时消失的砖块（优酷砖）\n不是踩上去就消失的（羊砖）"
     },
     {
         "games": [
@@ -1085,13 +1049,14 @@
         "games": [
             "10"
         ],
-        "name": "在绵羊关踩遍每个节节高且不击杀他们"
+        "name": "在绵羊关压矮每个节节高且不击杀他们",
+        "notes": "<img src=\"img/BariIII.png\"/>"
     },
     {
         "games": [
             "10"
         ],
-        "name": "用一发云击败4个独立敌人"
+        "name": "用一发羊毛击败4个敌人"
     },
     {
         "games": [
@@ -1124,7 +1089,7 @@
         "games": [
             "10"
         ],
-        "name": "纯背身通过指令关最后一次沙尘暴"
+        "name": "反跑指令关最后一次沙尘暴"
     },
     {
         "games": [
@@ -1137,16 +1102,14 @@
             "10"
         ],
         "name": "不踩移动平台击败小城堡",
-        "notes": "飞刀关卡的小BOSS",
-        "shortNotes": "飞刀小BOSS"
+        "notes": "<img src=\"img/TricastleSprite.png\"/>"
     },
     {
         "games": [
             "10"
         ],
         "name": "棒球关全收集",
-        "notes": "最后一面要齿轮或飞狗",
-        "shortNotes": "要齿轮或飞狗"
+        "notes": "最后一面要齿轮或飞狗"
     },
     {
         "games": [
@@ -1159,16 +1122,14 @@
             "10"
         ],
         "name": "击败水泵关所有管道怪",
-        "notes": "会堵路那个小怪。必须走上路。",
-        "shortNotes": "要走上路"
+        "notes": "<img src=\"img/MM10HaikerNSide.png\"/>\n必须走上路。"
     },
     {
         "games": [
             "10"
         ],
         "name": "钻入水泵关每个泡泡机产出的泡泡",
-        "notes": "必须走下路",
-        "shortNotes": "要走下路"
+        "notes": "必须走下路"
     },
     {
         "games": [
@@ -1178,8 +1139,7 @@
             "darspiderpit"
         ],
         "name": "让一只蜘蛛落坑",
-        "notes": "可以在水泵或飞刀关卡完成",
-        "shortNotes": "水泵/飞刀"
+        "notes": "可以在水泵或飞刀关卡完成"
     },
     {
         "games": [
@@ -1188,44 +1148,43 @@
         "groups": [
             "chillspike"
         ],
-        "name": "冻结一个倒挂的蜘蛛，让他掉下来"
+        "name": "冻结一个倒挂的蜘蛛，让他掉下来",
+        "notes": "Blade, Pump, Wily 1, Wily 3"
     },
     {
         "games": [
             "10"
         ],
         "name": "全清棒球关的鞋柜",
-        "notes": "第一面有4个，小BOSS后面7个，最后一面8个",
-        "shortNotes": "4+7+8=19"
+        "notes": "<img src=\"img/Dockalocker.png\"/>\n第一面有4个，小BOSS后面7个，最后一面8个"
     },
     {
         "games": [
             "10"
         ],
         "name": "打爆4个足球后再干掉守门员",
-        "shortNotes": "棒球小BOSS"
+        "notes": "<img src=\"img/MM10TheKeeper.png\"/>\n棒球关卡的小BOSS。\n这关有两个小BOSS，你需要在其中一场战斗中完成。"
     },
     {
         "games": [
             "10"
         ],
-        "name": "让绵羊关所有的羊砖消失"
+        "name": "让绵羊关所有的羊砖消失",
+        "notes": "羊砖：踩上去就会消失的"
     },
     {
         "games": [
             "10"
         ],
         "name": "收集绵羊关所有放置拾取品",
-        "notes": "小心有的拾取品如果羊砖踩得不好会掉到刺上",
-        "shortNotes": "小心羊砖"
+        "notes": "注意：有的拾取品会因为羊砖消失掉到刺上"
     },
     {
         "games": [
             "10"
         ],
-        "name": "击败3个独立压饼机器人",
-        "notes": "冷冻关有1个，指令关有2个，城堡123都有",
-        "shortNotes": "冰/炸弹/城堡"
+        "name": "击败3个独立的压饼机器人",
+        "notes": "<img src=\"img/TsurareStamp.png\"/>\n冷冻关有1个，指令关有2个，城堡123都有"
     },
     {
         "games": [
@@ -1267,26 +1226,28 @@
         "games": [
             "10"
         ],
-        "name": "冻结一个正在转向的飞盾，看到独特造型"
+        "name": "冻结一个正在转向的飞盾，看到独特造型",
+        "notes": "<img src=\"img/MM10ShieldAttacker.png\"/>"
     },
     {
         "games": [
             "10"
         ],
         "name": "一发泡泡盾击败5个独立敌人",
-        "notes": "重复刷的小兵只能算一次"
+        "notes": "\"独立\"指的是重复刷的小兵只能算一个"
     },
     {
         "games": [
             "10"
         ],
-        "name": "用爆开的泡泡盾击败任意BOSS，除了太阳"
+        "name": "用爆开的泡泡盾击败任意机器人BOSS，除了太阳"
     },
     {
         "games": [
             "10"
         ],
-        "name": "空中冻结压饼机器人"
+        "name": "空中冻结压饼机器人",
+        "notes": "<img src=\"img/TsurareStamp.png\"/>\n冷冻关有1个，指令关有2个，城堡123都有"
     },
     {
         "games": [
@@ -1302,7 +1263,8 @@
         "groups": [
             "chillenemies"
         ],
-        "name": "全清冷冻关所有飞盾+方形眼睛怪"
+        "name": "全清冷冻关所有飞盾+方形眼睛怪",
+        "notes": "<img src=\"img/MM10ShieldAttacker.png\"/><img src=\"img/MM10Suzy.png\"/>"
     },
     {
         "games": [
@@ -1312,16 +1274,14 @@
             "chillenemies"
         ],
         "name": "全清冷冻关",
-        "notes": "最后一面的鸟只打一只即可",
-        "shortNotes": "最后面的鸟只用打1只"
+        "notes": "最后一面的<img src=\"img/Swallowegg.png\"/>只需要打一只"
     },
     {
         "games": [
             "10"
         ],
         "name": "全清太阳关",
-        "notes": "小火球不算",
-        "shortNotes": "小火球不算"
+        "notes": "<img src=\"img/MM9Changkey.png\"/>不算"
     },
     {
         "games": [
@@ -1356,7 +1316,7 @@
             "sheeppacifist"
         ],
         "name": "摧毁大灯泡时先击败10个小怪",
-        "shortNotes": "羊小BOSS"
+        "notes": "<img src=\"img/MM10Octobulb.png\"/>"
     },
     {
         "games": [
@@ -1373,17 +1333,15 @@
             "tsuraresand"
         ],
         "name": "让压饼机反跑指令关存档面",
-        "notes": "只要让他踩到最左边的陆地即可",
-        "shortNotes": "引到左边陆地"
+        "notes": "<img src=\"img/TsurareStamp.png\"/>\n只要让他踩到最左边的陆地即可"
     },
     {
         "games": [
             "10"
         ],
         "name": "收集堡1的E罐",
-        "notes": "岔路必须走：右->右",
-        "password": true,
-        "shortNotes": "岔路右-右"
+        "notes": "岔路需要走：右->右",
+        "password": true
     },
     {
         "games": [
@@ -1421,8 +1379,7 @@
             "10"
         ],
         "name": "不踩手臂击败两个守门员",
-        "notes": "棒球关卡的小BOSS",
-        "shortNotes": "棒球小BOSS"
+        "notes": "<img src=\"img/MM10TheKeeper.png\"/>\n棒球关卡的两个小BOSS。"
     },
     {
         "diff": 1,
@@ -1430,8 +1387,7 @@
             "10"
         ],
         "name": "从摩托关1up位置反跑回开局",
-        "notes": "不需要吃那个1up。跑到屏幕最边缘跑不动为止。",
-        "shortNotes": "不用吃"
+        "notes": "不需要吃那个1up。跑到屏幕最边缘跑不动为止。"
     },
     {
         "diff": 1,
@@ -1482,7 +1438,8 @@
         "groups": [
             "pacifist10"
         ],
-        "name": "和平主义通关摩托人关卡"
+        "name": "和平主义通关摩托人关卡",
+        "notes": "小怪发射的子弹也不能打"
     },
     {
         "diff": 1,
@@ -1490,8 +1447,7 @@
             "10"
         ],
         "name": "冻结一关全部可冻敌人",
-        "notes": "如果你选择水泵或指令关卡，就要打两遍，岔路也要完成。",
-        "shortNotes": "包括岔路"
+        "notes": "如果你选择水泵或指令关卡，就要打两遍，岔路也要完成。"
     },
     {
         "diff": 1,
@@ -1514,8 +1470,7 @@
             "10"
         ],
         "name": "从棒球关1up房反跑到小BOSS下",
-        "notes": "你需要飞刀和齿轮以外的特武来移开头顶的足球",
-        "shortNotes": "需刀/轮外的特武"
+        "notes": "你需要能向上攻击的特武来移开头顶的足球。\n飞刀和齿轮不行。"
     },
     {
         "diff": 1,
@@ -1533,8 +1488,7 @@
             "suzakfenix"
         ],
         "name": "用爆开的泡泡盾同时击败双火鸟",
-        "notes": "每只鸟20血。一个泡泡2血。你需要用别的武器计算好血线。",
-        "shortNotes": "每只20血，泡泡2血"
+        "notes": "每只鸟20血。一个泡泡2血。\n你需要用别的武器压好血线。\n（这个任务比较折磨）"
     },
     {
         "diff": 1,
@@ -1545,8 +1499,7 @@
             "placed1up10"
         ],
         "name": "在三关收集一个放置1up",
-        "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1). 城堡每关都有1个",
-        "shortNotes": "每关都有"
+        "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1). 城堡每关都有1个"
     },
     {
         "diff": 1,
@@ -1557,7 +1510,7 @@
             "tsuraresand"
         ],
         "name": "在指令关存档面让压饼机器人踩进所有地雷坑",
-        "notes": "空中冻结可以直接让他们垂直下落。不然需要算好距离。"
+        "notes": "空中冻结可以直接让他们垂直下落。\n不然需要算好距离。"
     },
     {
         "diff": 1,
@@ -1568,8 +1521,7 @@
             "10mtank"
         ],
         "name": "把5个敌人变成1up",
-        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up",
-        "shortNotes": "满血满能磕M"
+        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up"
     },
     {
         "diff": 1,
@@ -1580,8 +1532,7 @@
             "10mtank"
         ],
         "name": "在前八把一个压饼机器人变成1up",
-        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up。这个任务不能用存档的钱买M罐完成！",
-        "shortNotes": "满血满能磕M"
+        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up。\n这个任务不能用存档的钱买M罐完成！"
     },
     {
         "diff": 1,
@@ -1592,8 +1543,7 @@
             "10mtank"
         ],
         "name": "把三种敌人变成1up",
-        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up",
-        "shortNotes": "满血满能磕M"
+        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up"
     },
     {
         "diff": 1,
@@ -1601,7 +1551,7 @@
             "10"
         ],
         "name": "在太阳关一发攻击摧毁4个小火球",
-        "notes": "可以用炸弹、泡泡盾、羊毛或火完成"
+        "notes": "<img src=\"img/MM9Changkey.png\"/>\n可以用炸弹、泡泡盾、羊毛或火完成"
     },
     {
         "diff": 1,
@@ -1613,8 +1563,7 @@
         ],
         "name": "以左到右顺序击败兵器库",
         "notes": "Elec -> Wood -> Gemini -> Ring -> Napalm -> Flame -> Slash -> Frost -> Tornado",
-        "password": true,
-        "shortNotes": "堡1BOSS"
+        "password": true
     },
     {
         "diff": 1,
@@ -1623,15 +1572,6 @@
         ],
         "name": "堡2全收集",
         "notes": "有一个藏在BOSS门上的Dr. Wily标志里",
-        "password": true,
-        "shortNotes": "有个藏在BOSS门上"
-    },
-    {
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "name": "用齿轮登顶堡2所有压饼机",
         "password": true
     },
     {
@@ -1651,6 +1591,7 @@
             "10"
         ],
         "name": "在堡2一命抵达BOSS门且让传送带变向3次",
+        "notes": "你需要被<img src=\"img/Searchy.png\"/>的灯光照射。\n这个怪拖不出来，错过了只能复活重来。",
         "password": true
     },
     {
@@ -1662,7 +1603,7 @@
             "weaponsarchive"
         ],
         "name": "纯飞刀击败堡1所有BOSS",
-        "notes": "需要补补能量。每场BOSS战最少准备18发飞刀。",
+        "notes": "需要补补能量。\n每场BOSS战需要准备18发飞刀。",
         "password": true
     },
     {
@@ -1673,7 +1614,7 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "纯闪电击败双子人",
+        "name": "纯闪电击败3代双子人",
         "password": true
     },
     {
@@ -1684,7 +1625,7 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "纯炸弹击败利爪人",
+        "name": "纯炸弹击败7代利爪人",
         "notes": "爆炸能造成2点伤害",
         "password": true
     },
@@ -1693,8 +1634,8 @@
         "games": [
             "10"
         ],
-        "name": "纯用两种特武分别击败棒球关两个小BOSS",
-        "notes": "比如用飞刀打1号守门员，炸弹打2号守门员。"
+        "name": "纯用两种特武分别击败棒球关的两个守门员",
+        "notes": "<img src=\"img/MM10TheKeeper.png\"/>\n棒球关卡的两个小BOSS。\n比如用飞刀打1号守门员，炸弹打2号守门员。"
     },
     {
         "diff": 2,
@@ -1702,8 +1643,7 @@
             "10"
         ],
         "name": "让水泵关所有安全帽为你加油",
-        "notes": "要走上路。下路的那一个安全帽可以不算",
-        "shortNotes": "要走上路"
+        "notes": "要走上路。\n下路的那一个安全帽可以不算。"
     },
     {
         "diff": 2,
@@ -1726,7 +1666,7 @@
         "games": [
             "10"
         ],
-        "name": "纯背身通过两场沙尘暴"
+        "name": "反跑指令关的两场沙尘暴"
     },
     {
         "diff": 2,
@@ -1737,8 +1677,7 @@
             "placed1up10"
         ],
         "name": "在4关收集一个1up",
-        "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1)",
-        "shortNotes": "每关都有"
+        "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1)"
     },
     {
         "diff": 2,
@@ -1767,8 +1706,7 @@
             "noseesaws"
         ],
         "name": "不触发跷跷板抵达飞刀BOSS门",
-        "notes": "需要飞狗或至少1只鸟",
-        "shortNotes": "要狗/鸟"
+        "notes": "需要飞狗或至少1只鸟"
     },
     {
         "diff": 2,
@@ -1780,8 +1718,7 @@
             "strikepacifist"
         ],
         "name": "和平主义通关棒球关",
-        "notes": "小怪发出的子弹也不能打",
-        "shortNotes": "不能打球"
+        "notes": "小怪发出的子弹也不能打"
     },
     {
         "diff": 2,
@@ -1792,8 +1729,7 @@
             "pacifist10"
         ],
         "name": "和平主义通关水泵关",
-        "notes": "小怪发出的子弹也不能打。需要在管道怪堵路之前给他冻上。",
-        "shortNotes": "允许且必须冻结"
+        "notes": "小怪发出的子弹也不能打。\n需要在管道怪堵路之前给他冻上。"
     },
     {
         "diff": 2,
@@ -1811,7 +1747,8 @@
         "games": [
             "10"
         ],
-        "name": "从绵羊关闪现平台版面末尾反跑到存档点"
+        "name": "从绵羊关闪现平台版面末尾反跑到存档点",
+        "notes": "从<img src=\"img/Pointan.png\"/>的位置开始反跑\n直到两个<img src=\"img/BariIII.png\"/>的位置"
     },
     {
         "diff": 2,
@@ -1829,7 +1766,7 @@
             "10"
         ],
         "name": "在冷冻关最后一面不摧毁冰块抵达BOSS门",
-        "notes": "可以裂开，但不能碎掉。复活后冰块会刷新。"
+        "notes": "可以裂开，但不能碎掉。\n复活后冰块会刷新。"
     },
     {
         "diff": 2,
@@ -1852,7 +1789,7 @@
             "weaponsarchive"
         ],
         "name": "纯用三种武器分别击败堡1的三面BOSS",
-        "notes": "比如齿轮打1-3（第一面），火打4-6（第二面），冰打7-9（第三面）。P弹也算一种武器。",
+        "notes": "比如：\n齿轮打1-3（第一面）\n火打4-6（第二面）\n冰打7-9（第三面）\nP弹也算一种武器。",
         "password": true
     },
     {
@@ -1872,8 +1809,8 @@
             "blockdevil"
         ],
         "name": "用闪电击败砖块恶魔",
-        "password": true,
-        "shortNotes": "堡3BOSS"
+        "notes": "<img src=\"img/Blockdevil.PNG.png\"/>",
+        "password": true
     },
     {
         "diff": 2,
@@ -1884,16 +1821,16 @@
             "blockdevil"
         ],
         "name": "让砖块恶魔的眼睛在地板下被击败",
-        "notes": "你得等他重组再分裂",
-        "password": true,
-        "shortNotes": "堡3BOSS"
+        "notes": "<img src=\"img/Blockdevil.PNG.png\"/>\n你得等他重组再分裂",
+        "password": true
     },
     {
         "diff": 3,
         "games": [
             "10"
         ],
-        "name": "无头盔完成一关"
+        "name": "无头盔完成一关",
+        "notes": "需要到商店摘下头盔"
     },
     {
         "diff": 3,
@@ -1924,8 +1861,7 @@
             "bladepacifist"
         ],
         "name": "反跑飞刀关最后一面",
-        "notes": "如果没飞狗，那至少得两只比特",
-        "shortNotes": "需飞狗或两只鸟"
+        "notes": "如果没飞狗，至少需要两只比特"
     },
     {
         "diff": 3,
@@ -1933,8 +1869,7 @@
             "10"
         ],
         "name": "禁跳跃键抵达太阳小BOSS门",
-        "notes": "需要齿轮+飞狗。飞狗不是必要的，但非常难。",
-        "shortNotes": "需齿轮飞狗"
+        "notes": "需要齿轮+飞狗。飞狗不是必要的，但非常难。"
     },
     {
         "diff": 3,
@@ -1946,16 +1881,15 @@
             "noseesaws"
         ],
         "name": "让飞刀最后一面的第一只蜘蛛落坑",
-        "notes": "E罐不是必要的，但推荐准备一个 "
+        "notes": "推荐准备一个E罐"
     },
     {
         "diff": 3,
         "games": [
             "10"
         ],
-        "name": "纯电云击败摩托人",
-        "notes": "推荐准备俩W罐",
-        "shortNotes": "推荐准备俩W罐"
+        "name": "纯电击败摩托人",
+        "notes": "推荐准备俩W罐"
     },
     {
         "diff": 3,
@@ -1980,7 +1914,7 @@
             "10"
         ],
         "name": "在堡3第一个电梯上击败一个安全帽",
-        "notes": "可能没你想象中那么简单",
+        "notes": "可能没想象中那么简单",
         "password": true
     },
     {
@@ -1989,9 +1923,8 @@
             "10"
         ],
         "name": "用齿轮爬上堡3BOSS房的外墙",
-        "notes": "需要比特鸟。推荐买两只，避免飞过去的时候掉到坑里了。",
-        "password": true,
-        "shortNotes": "需比特"
+        "notes": "需要比特鸟。",
+        "password": true
     },
     {
         "diff": 3,
@@ -2126,8 +2059,8 @@
         "games": [
             "10"
         ],
-        "name": "收集前八所有放置1up（水泵两路。其他每关1个）",
-        "notes": "Both paths in Pump have a 1up, you only need to play one of them for this goal. There is one 1up in every other stage."
+        "name": "收集前八所有放置1up",
+        "notes": "水泵关卡两条路都有1up，所以要打两遍。其他关卡每关1个。"
     },
     {
         "diff": 1,
@@ -2140,8 +2073,7 @@
         ],
         "mixType": "all",
         "name": "分别全清9代10代一关的蜘蛛",
-        "notes": "必须是有蜘蛛的关卡\n9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3",
-        "shortNotes": "要有蜘蛛"
+        "notes": "必须是有蜘蛛的关卡\n9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3"
     },
     {
         "games": [
@@ -2149,9 +2081,8 @@
             "10"
         ],
         "mixType": "all",
-        "name": "击败小火球+大火龙",
-        "notes": "大火龙：9代熔岩关或城堡1的小BOSS\n小火球：就是大火龙身上的那些火，1代同款。10代太阳关有出现。",
-        "shortNotes": "9熔岩小BOSS，10太阳"
+        "name": "击败10代小火球+9代大火龙",
+        "notes": "<img src=\"img/Changkey_dragon.png”/>\n<img src=\"img/MM9Changkey.png\"/>"
     },
     {
         "games": [
@@ -2174,9 +2105,8 @@
             "seaanimal9and10"
         ],
         "mixType": "all",
-        "name": "击败小章鱼+章鱼灯泡",
-        "notes": "章鱼灯泡：10代绵羊关小BOSS\n小章鱼：9代人鱼关喷墨汁的那个",
-        "shortNotes": "10羊小BOSS，9人鱼"
+        "name": "击败9代小章鱼+10代章鱼灯泡",
+        "notes": "<img src=\"img/MM10Octobulb.png\"/>\n<img src=\"img/Octone.png\"/>"
     },
     {
         "games": [
@@ -2187,7 +2117,8 @@
             "shieldattacker7-10"
         ],
         "mixType": "all",
-        "name": "分别在9代10代击败盾牌飞行器"
+        "name": "分别在9代10代击败盾牌飞行器",
+        "notes": "<img src=\"img/MM10ShieldAttacker.png\"/>\nMM9: Galaxy, Tornado, Wily 3\nMM10: Commando, Sheep, Wily 1"
     },
     {
         "diff": 1,
@@ -2196,7 +2127,8 @@
             "10"
         ],
         "mixType": "all",
-        "name": "分别在9代10代击败压饼机器人"
+        "name": "分别在9代10代击败压饼机器人",
+        "notes": "<img src=\"img/MM9BigStomperOrange.png\"/><img src=\"img/TsurareStamp.png\"/>\nMM9: Hornet, Jewel, Plug, Wily 2,3\nMM10: Chill, Commando, Wily 1,2,3"
     },
     {
         "diff": 2,
@@ -2241,8 +2173,7 @@
             "10"
         ],
         "mixType": "all",
-        "name": "在两个游戏中击败龙卷风人",
-        "notes": "9代：本体\n10代：城堡1的迷你版"
+        "name": "在两个游戏中击败龙卷风人"
     },
     {
         "diff": 2,
@@ -2256,20 +2187,6 @@
         ],
         "mixType": "all",
         "name": "获取飞狗"
-    },
-    {
-        "diff": 2,
-        "games": [
-            "9",
-            "10"
-        ],
-        "groups": [
-            "seaanimal9and10"
-        ],
-        "mixType": "all",
-        "name": "击败三个不同门类的海生动物",
-        "notes": "鱼类: 剑鱼 (9)、人鱼BOSS召唤的小鱼鱼 (9)\n章鱼: 墨汁章鱼 (9)、章鱼灯泡（绵羊关小BOSS） (10)\n虾: 水泵关的虾 (10)\n螃蟹: 城堡2的BOSS大螃蟹 (10)",
-        "password": true
     },
     {
         "diff": 1,
@@ -2288,22 +2205,15 @@
     },
     {
         "games": [
-            "10"
+            "9"
         ],
-        "groups": [
-            "reboundskill"
-        ],
-        "name": "用闪光弹球击败一个敌人",
-        "notes": "弹球每反弹一次伤害+1，弹到最大伤害时会闪光",
-        "shortNotes": "弹最大次数"
+        "name": "用载着货的蜜蜂击败一个敌人"
     },
     {
         "games": [
             "10"
         ],
-        "groups": [
-            "reboundskill"
-        ],
-        "name": "用被敌人弹回来的球击败一个敌人"
+        "name": "用闪光弹球击败一个敌人",
+        "notes": "弹球每反弹一次伤害+1，弹到最大伤害时会闪光"
     }
 ]
