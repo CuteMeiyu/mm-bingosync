@@ -15,7 +15,7 @@
     <input type="number" id="seed" title="决定生成结果。默认随机。">
     <input type="checkbox" id="lock-seed" title="让每次生成的结果相同"><label for="lock-seed">固定</label><br>
     <label for="balance-games">平衡多代</label>
-    <input type="checkbox" id="balance-games" title="让版面上的每代游戏的数量尽可能相等" checked><br>
+    <input type="checkbox" id="balance-games" title="让版面上的每代游戏的数量尽可能相等"><br>
     <label for="center-hardest">中心最难</label>
     <input type="checkbox" id="center-hardest" title="把最难的任务放到中心"><br>
     <button id="generate-board-btn" onclick="generateBoard()">生成</button>
@@ -26,6 +26,7 @@
     <button onclick="popup()">弹出</button><br>
     <a href="https://bingosync.com/" target="_blank">Bingosync</a><br>
     <a href="https://revned77.github.io/" target="_blank">地图</a><br>
+    <a id="share-link" href=""></a><br>
 
     <script>
         var data;
@@ -48,25 +49,47 @@
                             item.diff = 0;
                         }
                     }
+                    for (let [key, value] of queryParams) {
+                        key = key.toLowerCase();
+                        element = document.getElementById(key);
+                        if (!element) {
+                            continue;
+                        }
+                        if (element.type == "checkbox") {
+                            element.checked = true;
+                            continue;
+                        }
+                        value = value.toUpperCase();
+                        element.value = value;
+                    }
+                    if (queryParams.has("gen")) {
+                        generateBoard();
+                    }
                 });
-            for (let [key, value] of queryParams) {
-                key = key.toLowerCase();
-                element = document.getElementById(key);
-                if (!element || value.length == 0) {
-                    continue;
-                }
-                value = value.toUpperCase();
-                if (value == "T") {
-                    element.checked = true;
-                    continue;
-                }
-                if (value == "F") {
-                    element.checked = false;
-                    continue;
-                }
-                element.value = value;
-            }
         });
+
+        for (let input of document.getElementsByTagName("input")) {
+            input.addEventListener("input", onInput);
+        }
+
+        function onInput() {
+            let shareLink = document.getElementById("share-link");
+            let query = "?";
+            for (let input of document.getElementsByTagName("input")) {
+                if (input.type == "checkbox") {
+                    if (input.checked) {
+                        query += input.id + "&";
+                    }
+                    continue;
+                }
+                if (input.value.length > 0) {
+                    query += input.id + "=" + input.value + "&";
+                }
+            }
+            query += "gen"
+            shareLink.href = window.location.origin + window.location.pathname + query;
+            shareLink.innerHTML = shareLink.href.replace(/&/g, "&amp;");
+        }
 
         function copyResult() {
             var copyText = document.getElementById("result-box");
@@ -115,11 +138,6 @@
         }
 
         function updateSeed() {
-            let seed = document.getElementById("seed");
-            if (seed.value.length == 0 || !document.getElementById("lock-seed").checked) {
-                seed.value = Math.floor(Math.random() * 1000000).toString();
-            }
-            randomSeed = parseInt(seed.value);
         }
 
         function parseSettings() {
@@ -249,7 +267,12 @@
         }
 
         function generateBoard() {
-            updateSeed();
+            let seed = document.getElementById("seed");
+            if (seed.value.length == 0 || !document.getElementById("lock-seed").checked && previousGoalList.length > 0) {
+                seed.value = Math.floor(Math.random() * 1000000).toString();
+            }
+            onInput();
+            randomSeed = parseInt(seed.value);
             let settings = parseSettings();
             shuffleArray(settings.diffs);
             let diffMatrix = generateDiffMatrix(settings.diffs, settings.centerHardest);
