@@ -18,8 +18,6 @@
     <input type="checkbox" id="balance-games" title="让版面上的每代游戏的数量尽可能相等" checked><br>
     <label for="center-hardest">中心最难</label>
     <input type="checkbox" id="center-hardest" title="把最难的任务放到中心"><br>
-    <label for="show-notes">显示备注</label>
-    <input type="checkbox" id="show-notes" title="在Bingosync任务名末尾添加一个括号内短备注"><br>
     <button id="generate-board-btn" onclick="generateBoard()">生成</button>
     <br>
 
@@ -131,8 +129,7 @@
                     return parseInt(item);
                 }),
                 balanceGames: document.getElementById("balance-games").checked,
-                centerHardest: document.getElementById("center-hardest").checked,
-                showNotes: document.getElementById("show-notes").checked
+                centerHardest: document.getElementById("center-hardest").checked
             }
         }
 
@@ -232,13 +229,10 @@
             return goalList
         }
 
-        function convertBingosyncGoalList(goalList, showGames, showNotes) {
+        function convertBingosyncGoalList(goalList, showGames) {
             let bingosyncGoalList = []
             for (goal of goalList) {
                 let name = "*".repeat(goal.diff) + goal.name;
-                if (goal.shortNotes != undefined && showNotes) {
-                    name += "(" + goal.shortNotes + ")";
-                }
                 name = name.replace(/[,，。]/g, " ");
                 if (showGames) {
                     name += "[" + goal.games.join(",");
@@ -246,7 +240,9 @@
                 if (goal.password != undefined) {
                     name += "#";
                 }
-                name += "]";
+                if (showGames) {
+                    name += "]";
+                }
                 bingosyncGoalList.push({ name: name });
             }
             return bingosyncGoalList
@@ -267,7 +263,7 @@
             previousGoalList = goalList;
 
             let showGames = settings.games.length > 1;
-            let bingosyncGoalList = convertBingosyncGoalList(goalList, showGames, settings.showNotes);
+            let bingosyncGoalList = convertBingosyncGoalList(goalList, showGames);
             document.getElementById("result-box").value = JSON.stringify(bingosyncGoalList, null, 2);
         }
 
