@@ -1049,7 +1049,7 @@
         "games": [
             "10"
         ],
-        "name": "在绵羊关压矮每个节节高且不击杀他们",
+        "name": "在绵羊关踩过每个节节高且不击杀他们",
         "notes": "<img src=\"img/BariIII.png\"/>"
     },
     {
@@ -1488,7 +1488,7 @@
             "suzakfenix"
         ],
         "name": "用爆开的泡泡盾同时击败双火鸟",
-        "notes": "每只鸟20血。一个泡泡2血。\n你需要用别的武器压好血线。\n（这个任务比较折磨）"
+        "notes": "<img src=\"img/Mm10Suzak1.png\"/><img src=\"img/Mm10Fenix.png\"/>\n每只鸟20血。一个泡泡2血。\n你需要用别的武器压好血线。\n（这个任务比较折磨）"
     },
     {
         "diff": 1,
@@ -1688,7 +1688,7 @@
             "suzakfenix"
         ],
         "name": "纯弹球击败双火鸟",
-        "notes": "你需要几何攻击来提升伤害，不然能量不够。推荐备个W罐"
+        "notes": "<img src=\"img/Mm10Suzak1.png\"/><img src=\"img/Mm10Fenix.png\"/>\n你需要几何攻击来提升伤害，不然能量不够。推荐备个W罐"
     },
     {
         "diff": 2,
