@@ -92,6 +92,29 @@
             background-color: rgb(143, 214, 133) !important;
             color: rgb(0, 0, 0) !important;
         }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+
+            position: absolute;
+            z-index: 1;
+            left: 5%;
+            bottom: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .show {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -279,17 +302,24 @@
 
                 do {
                     cellText.style.fontSize = fontSize + '%';
-                    cellGame.style.fontSize = Math.floor(fontSize * 0.5) + '%';
+                    cellGame.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
                     textWidth = cellText.offsetWidth;
                     textHeight = cellText.offsetHeight;
                     fontSize -= 1;
-                } while ((textWidth > cellWidth || textHeight > cellHeight) && fontSize > 0);
+                } while ((textWidth > cellWidth || textHeight > cellHeight * 0.9) && fontSize > 0);
             });
         }
 
         window.addEventListener('resize', function () {
             resizeTextToFitGrid();
         });
+
+        for (let cellInfo of document.querySelectorAll('.cell-info')) {
+            cellInfo.addEventListener('mouseover', function (event) {
+                let cellTooltip = cellInfo.closest('.cell').querySelector('.cell-tooltip');
+                cellTooltip.classList.add('show');
+            });
+        }
 
         window.addEventListener('DOMContentLoaded', function () {
             fetch('data.json?' + new Date().getTime())
@@ -307,9 +337,6 @@
                         if (goal.diff > 0) {
                             cell.classList.add('diff' + goal.diff);
                         }
-                        if (goal.notes != undefined) {
-                            cell.title = goal.notes;
-                        }
 
                         let cellText = cell.querySelector(".cell-text");
                         cellText.innerHTML = goal.name;
@@ -325,12 +352,14 @@
 
                         let cellInfo = cell.querySelector(".cell-info");
                         if (goal.notes != undefined) {
-                            cellInfo.innerHTML = "[i]";
+                            cellInfo.innerHTML = "<pre>[i]</pre>"
+                            let cellTooltip = cell.querySelector(".cell-tooltip");
+                            cellTooltip.innerHTML = goal.notes;
                         }
 
                         let cellPassword = cell.querySelector(".cell-password");
                         if (goal.password != undefined) {
-                            cellPassword.innerHTML = "#";
+                            cellPassword.innerHTML = "<pre>#</pre>";
                             cellPassword.title = "允许使用城堡1存档/密码"
                         }
                     }
