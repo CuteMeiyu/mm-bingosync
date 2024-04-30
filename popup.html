@@ -373,7 +373,7 @@
                         let cellInfo = cell.querySelector(".cell-info");
                         if (goal.notes != undefined) {
                             cellInfo.innerHTML = "<img src='img/info.png'/>";
-                            cellInfo.dataset.tooltip = goal.notes;
+                            cellInfo.dataset.tooltip = goal.notes.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
                         }
 
                         let cellPassword = cell.querySelector(".cell-password");
