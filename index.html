@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>洛克人Bingo工具</title>
+    <style>
+        .missing {
+            border: 1px solid red;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,19 +18,18 @@
     <input type="text" id="diffs" value="1,2" title="每条线的任务难度星级。最低0星，最高3星。比如：1,1,2表示每条线各有两个1星任务和一个2星任务，其余的都是0星。"><br>
     <label for="seed">随机种子</label>
     <input type="number" id="seed" title="决定生成结果。默认随机。">
-    <input type="checkbox" id="lock-seed" title="让每次生成的结果相同"><label for="lock-seed">固定</label><br>
+    <button onclick="rollSeed()">重投</button><br>
     <label for="balance-games">平衡多代</label>
     <input type="checkbox" id="balance-games" title="让版面上的每代游戏的数量尽可能相等"><br>
     <label for="center-hardest">中心最难</label>
     <input type="checkbox" id="center-hardest" title="把最难的任务放到中心"><br>
-    <button id="generate-board-btn" onclick="generateBoard()">生成</button>
     <br>
 
-    <textarea id="result-box" rows="10" cols="50" readonly></textarea><br>
-    <button onclick="copyResult()">复制</button>
-    <button onclick="popup()">弹出</button><br>
-    <a href="https://bingosync.com/" target="_blank">Bingosync</a><br>
-    <a href="https://revned77.github.io/" target="_blank">地图</a><br>
+    <label for="color">玩家颜色</label>
+    <input type="color" id="color" name="color"><br>
+    <label for="room-name">房间名</label>
+    <input type="text" id="room-name"><br>
+    <button onclick="createOrJoinRoom()">创建/加入房间</button><br>
     <a id="share-link" href=""></a><br>
 
     <script>
@@ -49,6 +53,7 @@
                             item.diff = 0;
                         }
                     }
+
                     for (let [key, value] of queryParams) {
                         key = key.toLowerCase();
                         element = document.getElementById(key);
@@ -59,23 +64,41 @@
                             element.checked = true;
                             continue;
                         }
-                        value = value.toUpperCase();
+                        if (element.id != "room-name") {
+                            value = value.toUpperCase();
+                        }
                         element.value = value;
                     }
-                    if (queryParams.has("gen")) {
-                        generateBoard();
+
+                    let seed = document.getElementById("seed");
+                    if (seed.value.length == 0) {
+                        rollSeed();
                     }
                 });
         });
 
         for (let input of document.getElementsByTagName("input")) {
+            if (input.type == "color") {
+                continue;
+            }
             input.addEventListener("input", onInput);
         }
 
-        function onInput() {
+        function onInput(event) {
+            let target;
+            if (event === undefined) {
+                target = document.getElementById("seed");
+            } else {
+                target = event.target;
+            }
+            target.classList.remove("missing");
+
             let shareLink = document.getElementById("share-link");
             let query = "?";
             for (let input of document.getElementsByTagName("input")) {
+                if (input.type == "color") {
+                    continue;
+                }
                 if (input.type == "checkbox") {
                     if (input.checked) {
                         query += input.id + "&";
@@ -86,15 +109,9 @@
                     query += input.id + "=" + input.value + "&";
                 }
             }
-            query += "gen"
+            query = query.substring(0, query.length - 1);
             shareLink.href = window.location.origin + window.location.pathname + query;
             shareLink.innerHTML = shareLink.href.replace(/&/g, "&amp;");
-        }
-
-        function copyResult() {
-            var copyText = document.getElementById("result-box");
-            copyText.select();
-            document.execCommand("copy");
         }
 
         function random() {
@@ -103,6 +120,13 @@
             const m = Math.pow(2, 32);
             randomSeed = (a * randomSeed + c) % m;
             return randomSeed / m;
+        }
+
+        function rollSeed() {
+            let seed = document.getElementById("seed");
+            seed.value = Math.floor(Math.random() * 1000000).toString();
+            randomSeed = parseInt(seed.value);
+            onInput();
         }
 
         function swapRows(matrix, row1, row2) {
@@ -135,20 +159,6 @@
                 }
             }
             return true;
-        }
-
-        function updateSeed() {
-        }
-
-        function parseSettings() {
-            return {
-                games: document.getElementById("games").value.split(/[,，]\s*/),
-                diffs: document.getElementById("diffs").value.split(/[,，]\s*/).map(function (item) {
-                    return parseInt(item);
-                }),
-                balanceGames: document.getElementById("balance-games").checked,
-                centerHardest: document.getElementById("center-hardest").checked
-            }
         }
 
         function generateDiffMatrix(diffs, centerHardest) {
@@ -260,32 +270,25 @@
             return goalList
         }
 
-        function convertBingosyncGoalList(goalList, showGames) {
-            let bingosyncGoalList = []
-            for (goal of goalList) {
-                let name = "*".repeat(goal.diff) + goal.name;
-                name = name.replace(/[,，。]/g, " ");
-                if (showGames) {
-                    name += "[" + goal.games.join(",");
-                }
-                if (goal.password != undefined) {
-                    name += "#";
-                }
-                if (showGames) {
-                    name += "]";
-                }
-                bingosyncGoalList.push({ name: name });
+        const regularFuncs = {
+            "games": function (x) { return x.value.split(/[,，]\s*/); },
+            "diffs": function (x) { return x.value.split(/[,，]\s*/).map(function (item) { return parseInt(item); }); },
+            "seed": function (x) { return parseInt(x.value); },
+            "balance-games": function (x) { return x.checked; },
+            "center-hardest": function (x) { return x.checked; },
+            "room-name": function (x) { return x.value; },
+            "color": function (x) { return x.value; }
+        };
+
+        function parseSettings() {
+            let settings = {};
+            for (let [setting, regularFunc] of regularFuncs) {
+                let element = document.getElementById(setting);
+                
             }
-            return bingosyncGoalList
         }
 
         function generateBoard() {
-            let seed = document.getElementById("seed");
-            if (seed.value.length == 0 || !document.getElementById("lock-seed").checked && previousGoalList.length > 0) {
-                seed.value = Math.floor(Math.random() * 1000000).toString();
-            }
-            onInput();
-            randomSeed = parseInt(seed.value);
             let settings = parseSettings();
             shuffleArray(settings.diffs);
             let diffMatrix = generateDiffMatrix(settings.diffs, settings.centerHardest);
@@ -303,7 +306,7 @@
             document.getElementById("result-box").value = JSON.stringify(bingosyncGoalList, null, 2);
         }
 
-        function popup() {
+        function createOrJoinRoom() {
             if (previousGoalList.length == 0) {
                 return;
             }
