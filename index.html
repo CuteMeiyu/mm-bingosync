@@ -29,7 +29,8 @@
     <input type="color" id="color" name="color"><br>
     <label for="room-name">房间名</label>
     <input type="text" id="room-name"><br>
-    <button onclick="createOrJoinRoom()">创建/加入房间</button><br>
+    <button onclick="createOrJoinRoom()">创建/加入房间</button>
+    <span id="error" style="color: red;"></span><br>
     <a id="share-link" href=""></a><br>
 
     <script>
@@ -74,13 +75,11 @@
                     if (seed.value.length == 0) {
                         rollSeed();
                     }
+                    onInput();
                 });
         });
 
         for (let input of document.getElementsByTagName("input")) {
-            if (input.type == "color") {
-                continue;
-            }
             input.addEventListener("input", onInput);
         }
 
@@ -92,6 +91,7 @@
                 target = event.target;
             }
             target.classList.remove("missing");
+            document.getElementById("error").innerHTML = "";
 
             let shareLink = document.getElementById("share-link");
             let query = "?";
@@ -282,38 +282,49 @@
 
         function parseSettings() {
             let settings = {};
-            for (let [setting, regularFunc] of regularFuncs) {
+            for (let setting in regularFuncs) {
+                let regularFunc = regularFuncs[setting];
                 let element = document.getElementById(setting);
-                
+                if (element.type == "text" && element.value.length == 0) {
+                    let associatedLabel = document.querySelector(`label[for="${setting}"]`);
+                    let error = document.getElementById("error");
+                    error.innerHTML = "*" + associatedLabel.innerText + "必填";
+                    element.classList.add("missing");
+                    return;
+                }
+                if (element.type == "color" && element.value == "#000000") {
+                    let error = document.getElementById("error");
+                    error.innerHTML = "*必须选择一种颜色";
+                    element.classList.add("missing");
+                    return;
+                }
+                settings[setting] = regularFunc(element);
             }
-        }
-
-        function generateBoard() {
-            let settings = parseSettings();
-            shuffleArray(settings.diffs);
-            let diffMatrix = generateDiffMatrix(settings.diffs, settings.centerHardest);
-            let goalList;
-            try {
-                goalList = generateGoalList(diffMatrix, settings.games, settings.balanceGames);
-            } catch (error) {
-                document.getElementById("result-box").value = error.message;
-                return;
-            }
-            previousGoalList = goalList;
-
-            let showGames = settings.games.length > 1;
-            let bingosyncGoalList = convertBingosyncGoalList(goalList, showGames);
-            document.getElementById("result-box").value = JSON.stringify(bingosyncGoalList, null, 2);
+            return settings
         }
 
         function createOrJoinRoom() {
-            if (previousGoalList.length == 0) {
+            let settings = parseSettings();
+            if (settings === undefined) {
                 return;
             }
-            params = "?id=" + previousGoalList.map(function (goal) {
-                return goal.index;
-            }).join(",");
-            window.open('popup.html' + params, 'Bingo', 'width=780,height=650');
+            randomSeed = settings["seed"];
+            let diffMatrix = generateDiffMatrix(settings["diffs"], settings["center-hardest"]);
+            let goalList;
+            try {
+                goalList = generateGoalList(diffMatrix, settings["games"], settings["balance-games"]);
+            } catch (error) {
+                document.getElementById("error").innerHTML = "*" + error.message;
+                return;
+            }
+            params = {
+                "id": goalList.map(function (goal) {
+                    return goal.index
+                }).join(","),
+                "room": settings["room-name"],
+                "color": settings["color"]
+            }
+            window.open('popup.html?' + new URLSearchParams(params).toString(), 'Bingo', 'width=780,height=650');
         }
     </script>
 </body>

@@ -20,25 +20,27 @@
             grid-gap: 1px;
             width: min(100vw, 120vh);
             height: min(83vw, 100vh);
+            background-color: black;
         }
 
         .cell {
             position: relative;
-            background-color: #bbb;
-            border: 1px solid #888;
+            background-color: #2c2c2c;
+            border: 1px solid #666;
             cursor: pointer;
+            color: #fff;
         }
 
         .diff1 {
-            border: 2px solid rgb(237, 255, 73);
+            border: 2px solid rgb(255, 255, 0);
         }
 
         .diff2 {
-            border: 2px solid rgb(184, 0, 0);
+            border: 2px solid rgb(255, 0, 0);
         }
 
         .diff3 {
-            border: 2px solid rgb(171, 0, 223);
+            border: 2px solid rgb(192, 0, 255);
         }
 
         .cell-text {
@@ -107,151 +109,151 @@
 <body>
     <span id="tooltip" class="tooltip"></span>
     <div id="board" class="board-container">
-        <div id="cell_0_0" class="cell" onclick="toggleCell('cell_0_0')">
+        <div id="cell_0_0" class="cell" onclick="onCellClick('cell_0_0')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_0_1" class="cell" onclick="toggleCell('cell_0_1')">
+        <div id="cell_0_1" class="cell" onclick="onCellClick('cell_0_1')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_0_2" class="cell" onclick="toggleCell('cell_0_2')">
+        <div id="cell_0_2" class="cell" onclick="onCellClick('cell_0_2')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_0_3" class="cell" onclick="toggleCell('cell_0_3')">
+        <div id="cell_0_3" class="cell" onclick="onCellClick('cell_0_3')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_0_4" class="cell" onclick="toggleCell('cell_0_4')">
+        <div id="cell_0_4" class="cell" onclick="onCellClick('cell_0_4')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_1_0" class="cell" onclick="toggleCell('cell_1_0')">
+        <div id="cell_1_0" class="cell" onclick="onCellClick('cell_1_0')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_1_1" class="cell" onclick="toggleCell('cell_1_1')">
+        <div id="cell_1_1" class="cell" onclick="onCellClick('cell_1_1')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_1_2" class="cell" onclick="toggleCell('cell_1_2')">
+        <div id="cell_1_2" class="cell" onclick="onCellClick('cell_1_2')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_1_3" class="cell" onclick="toggleCell('cell_1_3')">
+        <div id="cell_1_3" class="cell" onclick="onCellClick('cell_1_3')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_1_4" class="cell" onclick="toggleCell('cell_1_4')">
+        <div id="cell_1_4" class="cell" onclick="onCellClick('cell_1_4')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_2_0" class="cell" onclick="toggleCell('cell_2_0')">
+        <div id="cell_2_0" class="cell" onclick="onCellClick('cell_2_0')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_2_1" class="cell" onclick="toggleCell('cell_2_1')">
+        <div id="cell_2_1" class="cell" onclick="onCellClick('cell_2_1')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_2_2" class="cell" onclick="toggleCell('cell_2_2')">
+        <div id="cell_2_2" class="cell" onclick="onCellClick('cell_2_2')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_2_3" class="cell" onclick="toggleCell('cell_2_3')">
+        <div id="cell_2_3" class="cell" onclick="onCellClick('cell_2_3')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_2_4" class="cell" onclick="toggleCell('cell_2_4')">
+        <div id="cell_2_4" class="cell" onclick="onCellClick('cell_2_4')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_3_0" class="cell" onclick="toggleCell('cell_3_0')">
+        <div id="cell_3_0" class="cell" onclick="onCellClick('cell_3_0')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_3_1" class="cell" onclick="toggleCell('cell_3_1')">
+        <div id="cell_3_1" class="cell" onclick="onCellClick('cell_3_1')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_3_2" class="cell" onclick="toggleCell('cell_3_2')">
+        <div id="cell_3_2" class="cell" onclick="onCellClick('cell_3_2')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_3_3" class="cell" onclick="toggleCell('cell_3_3')">
+        <div id="cell_3_3" class="cell" onclick="onCellClick('cell_3_3')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_3_4" class="cell" onclick="toggleCell('cell_3_4')">
+        <div id="cell_3_4" class="cell" onclick="onCellClick('cell_3_4')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_4_0" class="cell" onclick="toggleCell('cell_4_0')">
+        <div id="cell_4_0" class="cell" onclick="onCellClick('cell_4_0')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_4_1" class="cell" onclick="toggleCell('cell_4_1')">
+        <div id="cell_4_1" class="cell" onclick="onCellClick('cell_4_1')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_4_2" class="cell" onclick="toggleCell('cell_4_2')">
+        <div id="cell_4_2" class="cell" onclick="onCellClick('cell_4_2')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_4_3" class="cell" onclick="toggleCell('cell_4_3')">
+        <div id="cell_4_3" class="cell" onclick="onCellClick('cell_4_3')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
             <span class="cell-password"></span>
         </div>
-        <div id="cell_4_4" class="cell" onclick="toggleCell('cell_4_4')">
+        <div id="cell_4_4" class="cell" onclick="onCellClick('cell_4_4')">
             <span class="cell-text"></span>
             <span class="cell-game"></span>
             <span class="cell-info"></span>
@@ -259,23 +261,95 @@
         </div>
     </div>
 
+    <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
-        function toggleCell(id) {
-            var cell = document.getElementById(id);
-            if (cell.classList.contains("lit1")) {
-                cell.classList.remove('lit1');
-                cell.classList.add('lit2');
-            } else if (cell.classList.contains("lit2")) {
-                cell.classList.remove('lit2');
-            } else {
-                cell.classList.add('lit1');
+        const queryParams = new URLSearchParams(window.location.search);
+        var playerColor = queryParams.get('color');
+        var roomName = queryParams.get('room');
+        var connected = false;
+
+        const drone = new Scaledrone('DO4LDJ74Bp80Kcso');
+        drone.on('open', error => {
+            if (error) {
+                return console.error(error);
             }
+            console.log('Connected to Server');
+        });
+
+        const room = drone.subscribe(roomName);
+        room.on('open', error => {
+            if (error) {
+                console.error(error);
+            } else {
+                console.log('Connected to room');
+                connected = true;
+            }
+        });
+
+        room.on('message', message => {
+            console.log(message.data);
+            toggleCell(message.data.id, message.data.color);
+        });
+
+        drone.on('error', error => {
+            console.error('Error with connection:', error);
+        });
+        drone.on('close', event => {
+            console.log('Connection closed:', event);
+        });
+
+    </script>
+
+    <script>
+        function setBackground(id, colors) {
+            let element = document.getElementById(id);
+            if (colors.length == 0) {
+                element.style.background = null;
+            }
+            let width = element.offsetWidth;
+            let height = element.offsetHeight;
+            let degree = (Math.atan(height / width) * 180.0 / Math.PI + 90.0) * 0.5;
+            let gradient = `linear-gradient(${Math.floor(degree)}deg`;
+            colors.forEach(function (color, index) {
+                let start = (100 / colors.length) * index;
+                let end = (100 / colors.length) * (index + 1);
+                gradient += `, ${color} ${start}%, ${color} ${end}%`;
+            });
+            gradient += ')';
+            element.style.background = gradient;
+        }
+
+        function onCellClick(id) {
+            if (!connected) {
+                return;
+            }
+            let cell = document.getElementById(id);
+            let message = {
+                id: id,
+                color: playerColor
+            }
+            drone.publish({
+                room: roomName,
+                message: message
+            });
+        }
+
+        function toggleCell(id, color) {
+            let cell = document.getElementById(id);
+            if (cell.colors === undefined) {
+                cell.colors = [color];
+            } else if (cell.colors.indexOf(color) == -1) {
+                cell.colors.push(color);
+            } else {
+                cell.colors.splice(cell.colors.indexOf(color), 1);
+            }
+            cell.colors.sort();
+            setBackground(id, cell.colors);
         }
     </script>
 
     <script>
         var data;
-        const queryParams = new URLSearchParams(window.location.search);
 
         function resizeTextToFitGrid() {
             var cellTexts = document.querySelectorAll('.cell-text');
