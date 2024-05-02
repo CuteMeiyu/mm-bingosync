@@ -289,14 +289,20 @@
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
         const queryParams = new URLSearchParams(window.location.search);
+        const syncTimeout = 10000;
         var playerColor = queryParams.get('color');
         var roomName = queryParams.get('room');
         var connected = false;
-        var version = 0;
+        var sync = false;
         var drone;
         var room;
+        var historyMessages = [];
+        var syncMembers = [];
+        var syncTimer;
+        var syncId;
 
         if (roomName != null) {
+            roomName = `observable-${roomName}`
             drone = new Scaledrone('DO4LDJ74Bp80Kcso');
             room = drone.subscribe(roomName);
             registerEvents();
@@ -319,37 +325,81 @@
                 } else {
                     console.log('Connected to room');
                     connected = true;
-
                     let modalOverlay = document.getElementById('modal-overlay');
                     modalOverlay.style.display = 'none';
+                }
+            });
 
+            function askForSync(timeout) {
+                while (syncMembers.length > 0) {
+                    member = syncMembers.pop();
+                    if (member.id === drone.clientId) {
+                        continue;
+                    }
+                    syncId = member.id;
                     drone.publish({
                         room: roomName,
-                        message: { sync: "" }
+                        message: { syncId: syncId }
                     });
+                    console.log(`Waiting for sync from ${syncId}`);
+                    syncTimer = setTimeout(askForSync, timeout, timeout);
+                    return;
+                }
+                console.log("No sync member");
+                sync = true;
+            }
+
+            room.on('members', function (members) {
+                console.log(members);
+                syncMembers = members;
+                askForSync(syncTimeout);
+            });
+
+            room.on('member_leave', function (member) {
+                console.log(`Member left: ${member.id}`);
+                if (syncMembers.includes(member.id)) {
+                    syncMembers.splice(syncMembers.indexOf(member.id), 1);
                 }
             });
 
             room.on('message', message => {
-                console.log(message.data);
-                if (message.data.sync != undefined) {
+                console.log(message);
+                if (message.data.color !== undefined) {
+                    if (!syncMembers.includes(message.member.id)) {
+                        syncMembers.push(message.member.id);
+                    }
+                    historyMessages.push(message);
+                    toggleCellColor(message.data.id, message.data.color);
+                    return;
+                }
+                if (message.data.syncId === drone.clientId) {
                     drone.publish({
                         room: roomName,
                         message: {
-                            board: getBoardColors(),
-                            version: version
+                            board: sync ? getBoardColors() : null
                         }
                     });
-                } else if (message.data.board != undefined) {
-                    if (version < message.data.version) {
-                        version = message.data.version;
-                        setBoardColors(message.data.board);
+                    return;
+                }
+                if (message.data.board === undefined || sync || message.member.id !== syncId) {
+                    return;
+                }
+                clearTimeout(syncTimer);
+                if (message.data.board === null) {
+                    console.log(`Empty sync data from ${message.member.id}`);
+                    askForSync(syncTimeout);
+                    return;
+                }
+                sync = true;
+                syncMembers = [];
+                setBoardColors(message.data.board);
+                for (let historyMessage of historyMessages) {
+                    if (historyMessage.timestamp < message.timestamp) {
+                        continue;
                     }
+                    toggleCellColor(historyMessage.data.id, historyMessage.data.color);
                 }
-                else if (message.data.color != undefined) {
-                    version++;
-                    toggleCellColor(message.data.id, message.data.color);
-                }
+                console.log(`Successful sync from ${message.member.id}`);
             });
 
             drone.on('error', error => {
@@ -364,16 +414,14 @@
                 let modalOverlay = document.getElementById('modal-overlay');
                 modalOverlay.style.display = 'flex';
                 connected = false;
+                sync = false;
             });
             drone.on('reconnect', () => {
                 console.log('Connection reestablished');
                 let modalOverlay = document.getElementById('modal-overlay');
                 modalOverlay.style.display = 'none';
                 connected = true;
-                drone.publish({
-                    room: roomName,
-                    message: { sync: "" }
-                });
+                askForSync(syncTimeout);
             });
         }
 
