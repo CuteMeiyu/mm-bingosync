@@ -285,7 +285,7 @@
             for (let setting in regularFuncs) {
                 let regularFunc = regularFuncs[setting];
                 let element = document.getElementById(setting);
-                if (element.type == "text" && element.value.length == 0) {
+                if (element.type == "text" && element.value.length == 0 && setting != "room-name") {
                     let associatedLabel = document.querySelector(`label[for="${setting}"]`);
                     let error = document.getElementById("error");
                     error.innerHTML = "*" + associatedLabel.innerText + "必填";
@@ -321,8 +321,10 @@
                 "id": goalList.map(function (goal) {
                     return goal.index
                 }).join(","),
-                "room": settings["room-name"],
                 "color": settings["color"]
+            }
+            if (settings["room-name"].length > 0) {
+                params["name"] = settings["room-name"];
             }
             window.open('popup.html?' + new URLSearchParams(params).toString(), 'Bingo', 'width=780,height=650');
         }

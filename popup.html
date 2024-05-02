@@ -293,78 +293,107 @@
         var roomName = queryParams.get('room');
         var connected = false;
         var version = 0;
+        var drone;
+        var room;
 
-        const drone = new Scaledrone('DO4LDJ74Bp80Kcso');
-        drone.on('open', error => {
-            if (error) {
-                return console.error(error);
-            }
-            console.log('Connected to server');
-        });
+        if (roomName != null) {
+            drone = new Scaledrone('DO4LDJ74Bp80Kcso');
+            room = drone.subscribe(roomName);
+            registerEvents();
+        } else {
+            let modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.style.display = 'none';
+        }
 
-        const room = drone.subscribe(roomName);
-        room.on('open', error => {
-            if (error) {
-                console.error(error);
-            } else {
-                console.log('Connected to room');
-                connected = true;
+        function registerEvents() {
+            drone.on('open', error => {
+                if (error) {
+                    return console.error(error);
+                }
+                console.log('Connected to server');
+            });
 
+            room.on('open', error => {
+                if (error) {
+                    console.error(error);
+                } else {
+                    console.log('Connected to room');
+                    connected = true;
+
+                    let modalOverlay = document.getElementById('modal-overlay');
+                    modalOverlay.style.display = 'none';
+
+                    drone.publish({
+                        room: roomName,
+                        message: { sync: "" }
+                    });
+                }
+            });
+
+            room.on('message', message => {
+                console.log(message.data);
+                if (message.data.sync != undefined) {
+                    drone.publish({
+                        room: roomName,
+                        message: {
+                            board: getBoardColors(),
+                            version: version
+                        }
+                    });
+                } else if (message.data.board != undefined) {
+                    if (version < message.data.version) {
+                        version = message.data.version;
+                        setBoardColors(message.data.board);
+                    }
+                }
+                else if (message.data.color != undefined) {
+                    version++;
+                    toggleCellColor(message.data.id, message.data.color);
+                }
+            });
+
+            drone.on('error', error => {
+                console.error('Error with connection:', error);
+            });
+            drone.on('close', event => {
+                console.log('Connection closed:', event);
+            });
+
+            drone.on('disconnect', () => {
+                console.log('Connection lost');
+                let modalOverlay = document.getElementById('modal-overlay');
+                modalOverlay.style.display = 'flex';
+                connected = false;
+            });
+            drone.on('reconnect', () => {
+                console.log('Connection reestablished');
                 let modalOverlay = document.getElementById('modal-overlay');
                 modalOverlay.style.display = 'none';
-
+                connected = true;
                 drone.publish({
                     room: roomName,
                     message: { sync: "" }
                 });
-            }
-        });
+            });
+        }
 
-        room.on('message', message => {
-            console.log(message.data);
-            if (message.data.sync != undefined) {
-                drone.publish({
-                    room: roomName,
-                    message: {
-                        board: getBoardColors(),
-                        version: version
-                    }
-                });
-            } else if (message.data.board != undefined) {
-                if (version < message.data.version) {
-                    version = message.data.version;
-                    setBoardColors(message.data.board);
-                }
+        function onCellClick(id) {
+            if (roomName == null) {
+                toggleCellColor(id, playerColor);
+                return;
             }
-            else if (message.data.color != undefined) {
-                version++;
-                toggleCellColor(message.data.id, message.data.color);
+            if (!connected) {
+                return;
             }
-        });
-
-        drone.on('error', error => {
-            console.error('Error with connection:', error);
-        });
-        drone.on('close', event => {
-            console.log('Connection closed:', event);
-        });
-        drone.on('disconnect', () => {
-            console.log('Connection lost');
-            let modalOverlay = document.getElementById('modal-overlay');
-            modalOverlay.style.display = 'flex';
-            connected = false;
-        });
-        drone.on('reconnect', () => {
-            console.log('Connection reestablished');
-            let modalOverlay = document.getElementById('modal-overlay');
-            modalOverlay.style.display = 'none';
-            connected = true;
+            let cell = document.getElementById(id);
             drone.publish({
                 room: roomName,
-                message: { sync: "" }
+                message: {
+                    id: id,
+                    color: playerColor
+                }
             });
-        });
-
+        }
     </script>
 
     <script>
@@ -413,20 +442,6 @@
             });
             gradient += ')';
             element.style.background = gradient;
-        }
-
-        function onCellClick(id) {
-            if (!connected) {
-                return;
-            }
-            let cell = document.getElementById(id);
-            drone.publish({
-                room: roomName,
-                message: {
-                    id: id,
-                    color: playerColor
-                }
-            });
         }
 
         function toggleCellColor(id, color) {
