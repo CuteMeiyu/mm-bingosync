@@ -324,7 +324,7 @@
                 "color": settings["color"]
             }
             if (settings["room-name"].length > 0) {
-                params["name"] = settings["room-name"];
+                params["room"] = settings["room-name"];
             }
             window.open('popup.html?' + new URLSearchParams(params).toString(), 'Bingo', 'width=780,height=650');
         }
