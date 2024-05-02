@@ -206,7 +206,7 @@
             "9"
         ],
         "name": "清理熔岩关全部蹦蹦车",
-        "notes": "<img src=\"img/MM9GreenJumpRoller.png\"/><img src=\"img/MM9-JumpRoller-Sprite.png\"/>\n第一面有2个，存档面有4个，最后一面有3个"
+        "notes": "<img src=\"img/MM9-JumpRoller-Sprite.png\"/>\n第一面有2个，存档面有4个，最后一面有3个"
     },
     {
         "games": [
@@ -460,7 +460,7 @@
             "9"
         ],
         "name": "清理插头关所有电球",
-        "notes": "可以用：钻石、黑洞、吹风"
+        "notes": "<img src=\"img/Smaplar.png\"/>\n可以用：钻石、黑洞、吹风"
     },
     {
         "diff": 1,
@@ -757,7 +757,7 @@
             "9"
         ],
         "name": "不戴头盔完成一关",
-        "notes": "如果玩的布鲁斯模式，就在不死且不补血的情况下完成任意一关即可"
+        "notes": "需要到商店摘下头盔\n如果玩的布鲁斯模式，就在不死且不补血的情况下完成任意一关即可"
     },
     {
         "diff": 3,
@@ -1300,7 +1300,7 @@
             "10"
         ],
         "name": "击败一个扫地机器人",
-        "notes": "Strike, Blade, Wily 2, Wily 3, Wily 1 Hard. 可以用冰或炸弹造成伤害"
+        "notes": "<img src=\"img/MM10Spring.png\"/>\nStrike, Blade, Wily 2, Wily 3, Wily 1 Hard\n可以用冰或炸弹造成伤害"
     },
     {
         "games": [
@@ -1315,8 +1315,8 @@
         "groups": [
             "sheeppacifist"
         ],
-        "name": "摧毁大灯泡时先击败10个小怪",
-        "notes": "<img src=\"img/MM10Octobulb.png\"/>"
+        "name": "摧毁大灯泡时先击败10个小灯泡",
+        "notes": "<img src=\"img/MM10Octobulb.png\"/><img src=\"img/MM10LittlePachipachi.png\"/>\n大灯泡：绵羊人关卡的小BOSS\n小灯泡：这个小BOSS召唤出来的小怪"
     },
     {
         "games": [
@@ -1748,7 +1748,7 @@
             "10"
         ],
         "name": "从绵羊关闪现平台版面末尾反跑到存档点",
-        "notes": "从<img src=\"img/Pointan.png\"/>的位置开始反跑\n直到两个<img src=\"img/BariIII.png\"/>的位置"
+        "notes": "从<img src=\"img/Pointan.png\"/>的位置开始反跑\n直到小BOSS门下"
     },
     {
         "diff": 2,
@@ -2201,19 +2201,7 @@
         "games": [
             "9"
         ],
-        "name": "通关特殊关卡"
-    },
-    {
-        "games": [
-            "9"
-        ],
-        "name": "用载着货的蜜蜂击败一个敌人"
-    },
-    {
-        "games": [
-            "10"
-        ],
-        "name": "用闪光弹球击败一个敌人",
-        "notes": "弹球每反弹一次伤害+1，弹到最大伤害时会闪光"
+        "name": "通关特殊关卡",
+        "notes": "你可以顺便把其他任务串联到特殊关卡中完成！"
     }
 ]
