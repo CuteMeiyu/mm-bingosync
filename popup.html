@@ -103,10 +103,45 @@
         .show {
             opacity: 1;
         }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #fff;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="spinner"></div>
+    </div>
     <span id="tooltip" class="tooltip"></span>
     <div id="board" class="board-container">
         <div id="cell_0_0" class="cell" onclick="onCellClick('cell_0_0')">
@@ -267,13 +302,14 @@
         var playerColor = queryParams.get('color');
         var roomName = queryParams.get('room');
         var connected = false;
+        var version = 0;
 
         const drone = new Scaledrone('DO4LDJ74Bp80Kcso');
         drone.on('open', error => {
             if (error) {
                 return console.error(error);
             }
-            console.log('Connected to Server');
+            console.log('Connected to server');
         });
 
         const room = drone.subscribe(roomName);
@@ -283,12 +319,37 @@
             } else {
                 console.log('Connected to room');
                 connected = true;
+
+                let modalOverlay = document.getElementById('modal-overlay');
+                modalOverlay.style.display = 'none';
+
+                drone.publish({
+                    room: roomName,
+                    message: { sync: "" }
+                });
             }
         });
 
         room.on('message', message => {
             console.log(message.data);
-            toggleCell(message.data.id, message.data.color);
+            if (message.data.sync != undefined) {
+                drone.publish({
+                    room: roomName,
+                    message: {
+                        board: getBoardColors(),
+                        version: version
+                    }
+                });
+            } else if (message.data.board != undefined) {
+                if (version < message.data.version) {
+                    version = message.data.version;
+                    setBoardColors(message.data.board);
+                }
+            }
+            else if (message.data.color != undefined) {
+                version++;
+                toggleCellColor(message.data.id, message.data.color);
+            }
         });
 
         drone.on('error', error => {
@@ -297,12 +358,57 @@
         drone.on('close', event => {
             console.log('Connection closed:', event);
         });
+        drone.on('disconnect', () => {
+            console.log('Connection lost');
+            let modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.style.display = 'flex';
+            connected = false;
+        });
+        drone.on('reconnect', () => {
+            console.log('Connection reestablished');
+            let modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.style.display = 'none';
+            connected = true;
+            drone.publish({
+                room: roomName,
+                message: { sync: "" }
+            });
+        });
 
     </script>
 
     <script>
+        function setBoardColors(boardColors) {
+            for (let row = 0; row < 5; row++) {
+                for (let col = 0; col < 5; col++) {
+                    setBackground(`cell_${row}_${col}`, []);
+                }
+            }
+            for (let i = 0; i < boardColors.length; i++) {
+                let colors = boardColors[i].colors;
+                let id = boardColors[i].id;
+                setBackground(id, colors);
+            }
+        }
+
+        function getBoardColors() {
+            let boardColors = [];
+            for (let row = 0; row < 5; row++) {
+                for (let col = 0; col < 5; col++) {
+                    let id = `cell_${row}_${col}`
+                    let cell = document.getElementById(id);
+                    let colors = cell.colors;
+                    if (colors != undefined && colors.length > 0) {
+                        boardColors.push({ id: id, colors: cell.colors });
+                    }
+                }
+            }
+            return boardColors;
+        }
+
         function setBackground(id, colors) {
             let element = document.getElementById(id);
+            element.colors = colors;
             if (colors.length == 0) {
                 element.style.background = null;
             }
@@ -324,17 +430,16 @@
                 return;
             }
             let cell = document.getElementById(id);
-            let message = {
-                id: id,
-                color: playerColor
-            }
             drone.publish({
                 room: roomName,
-                message: message
+                message: {
+                    id: id,
+                    color: playerColor
+                }
             });
         }
 
-        function toggleCell(id, color) {
+        function toggleCellColor(id, color) {
             let cell = document.getElementById(id);
             if (cell.colors === undefined) {
                 cell.colors = [color];
