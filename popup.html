@@ -350,23 +350,23 @@
             }
 
             room.on('members', function (members) {
-                console.log(members);
+                console.log("Members", members);
                 syncMembers = members;
                 askForSync(syncTimeout);
             });
 
             room.on('member_leave', function (member) {
-                console.log(`Member left: ${member.id}`);
+                console.log("Member left", member);
                 if (syncMembers.includes(member.id)) {
                     syncMembers.splice(syncMembers.indexOf(member.id), 1);
                 }
             });
 
             room.on('message', message => {
-                console.log(message);
+                console.log("Message", message);
                 if (message.data.color !== undefined) {
-                    if (!syncMembers.includes(message.member.id)) {
-                        syncMembers.push(message.member.id);
+                    if (!syncMembers.includes(message.member)) {
+                        syncMembers.push(message.member);
                     }
                     historyMessages.push(message);
                     toggleCellColor(message.data.id, message.data.color);
@@ -379,6 +379,7 @@
                             board: sync ? getBoardColors() : null
                         }
                     });
+                    console.log(`Answered sync from ${message.member.id}`);
                     return;
                 }
                 if (message.data.board === undefined || sync || message.member.id !== syncId) {
