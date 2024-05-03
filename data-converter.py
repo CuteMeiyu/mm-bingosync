@@ -34,7 +34,12 @@ def get_regular_goal_list(df: pd.DataFrame):
 
 
 def main():
-    df = pd.read_excel("bingo.xlsx", sheet_name="7-11任务表")
+    df = pd.concat(
+        [
+            pd.read_excel("bingo.xlsx", sheet_name="7-11任务表"),
+            pd.read_excel("bingo.xlsx", sheet_name="1-6任务表"),
+        ]
+    )
     goal_list = get_regular_goal_list(df)
 
     with open("data.json", "w", encoding="utf-8") as f:

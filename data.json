@@ -2202,6 +2202,2752 @@
             "9"
         ],
         "name": "通关特殊关卡",
-        "notes": "你可以顺便把其他任务串联到特殊关卡中完成！"
+        "notes": "你可以顺便把其他任务串联到特殊关卡中完成！",
+        "password": "可以进入特殊关卡"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "击败每代的一个安全帽",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "每代击败三种不同的小兵",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "击败每代的一个压饼机器人",
+        "notes": "<img src=\"img/stompers.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "击败每代的一个狙击手乔",
+        "notes": "<img src=\"img/sniperjoes.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "乘坐每代的移动平台一次",
+        "notes": "<img src=\"img/multi-platforms.png\"/>\n踩上去就算",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "拾取每代的一个1up",
+        "notes": "小怪掉落1up或地图预置1up皆可",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "击败每代的一个BOSS",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "拾取每代的一个E罐",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "spikes"
+        ],
+        "name": "每代完成一次碰刺不死",
+        "notes": "一些有刺的关卡：\n2代：Bubble\n3代：Top, Spark",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "spikes"
+        ],
+        "name": "每代碰刺爆炸一次",
+        "notes": "一些有刺的关卡：\n1代：Bomb\n2代：Bubble\n3代：Top, Spark",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "noslide"
+        ],
+        "name": "每代禁滑铲完成一关",
+        "notes": "允许在必须滑铲的地方滑铲最短距离",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "square"
+        ],
+        "name": "完成每代选关界面相同位置的关卡",
+        "notes": "比如←方向：Elec, Heat, Hard, Pharaoh, Charge, Plant.\n1代上/下方向的两关可以二选一",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "name": "每代用特武拆墙一次",
+        "notes": "3代的墙最早出现在城堡1\n4代的墙最早出现在哥萨克2",
+        "password": "<img src=\"img/mm3+4.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "从0补满一个特武或道具能量",
+        "type": "any4"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "被打进BOSS门"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "从梯子上被击落，空中重新抓住梯子",
+        "notes": "1代禁暂停大法\n期间脚不能碰地"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "完成一个没有楼梯的关卡",
+        "notes": "1代：Guts, Ice\n2代：Bubble, Flash, Air, Quick, Metal\n3代：Shadow\n4代：Pharaoh, Toad\n5代：Wave",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "完成一个没有坑的关卡",
+        "notes": "如果跳下去产生了爆炸特效就不算坑\n必须是玩家能正常能够得到的才算\n2代：Flash, Crash, Quick\n3代：Hard\n4代：Dive\n5代：Star, Charge, Wave\n6代：Knight",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "underwater"
+        ],
+        "name": "完成一个有水下区域的关卡",
+        "notes": "必须是有水下物理效果的关卡。所以波浪人不算。\n1代：Ice, W3\n2代：Bubble, W3, W5\n3代：Gemini, Doc Gemini, W1\n4代：Dive, Toad, W1, W3\n5代：W2\n6代：Centaur, W3",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "2",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "skycolor",
+            "memory"
+        ],
+        "name": "完成一个天空会变色的关卡",
+        "notes": "2代：Crash\n4代：Skull, Ring, Cossack 1\n5代：Crystal\n6代：Tomahawk, Yamato, Knight",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "skycolor",
+            "memory"
+        ],
+        "name": "完成一个天空有星星的关卡",
+        "notes": "2代：Crash\n3代：Gemini, Doc Gemini, Doc Needle\n4代：Ring, Cossack 1, Cossack 4\n5代：Star, Dark 3\n6代：Mr. X-1, Mr. X-2",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "noslide",
+            "noslide4",
+            "noslide5",
+            "noslide6"
+        ],
+        "name": "禁滑铲完成一关",
+        "notes": "允许在必须滑铲的地方滑铲最短距离",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "分别用走路人和滑铲人击败一个机器人BOSS",
+        "notes": "走路人：1-2代\n滑铲人：3-6代\n机器人BOSS：特指前八BOSS外加3代四天王。",
+        "type": "all"
+    },
+    {
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "movingceilings"
+        ],
+        "name": "在两个游戏中各完成一个天花板或地板会上下移动的关卡",
+        "notes": "4代：Dive, Dust\n5代：Star, Wily 1\n6代：Centaur, Blizzard, Knight.",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "non-aerial"
+        ],
+        "name": "击败一个不会跳/飞的机器人BOSS",
+        "notes": "Fire, Heat, Top, Dive, Charge, Centaur",
+        "type": "any4"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "frozen"
+        ],
+        "name": "被一个机器人BOSS冻住(暂停)",
+        "notes": "Flash, Doc Flash, Bright, Centaur",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "name": "在水下区域用火或电命中一个敌人",
+        "notes": "1代关卡：Ice, W3。武器：Elec, Fire\n2代关卡：Bubble, W3, W5。武器：Heat\n3代关卡：Gemini, Doc Gemini, W1。武器：Spark\n4代关卡：Dive, Toad, W1, W3。武器：Pharaoh\n6代关卡：Centaur, W3。武器：Flame",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "在一个游戏中用光前八BOSS的全部特武能量",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "纯用一种特武完成一个关卡",
+        "notes": "Hard, Gemini关卡中强制使用狗的地方可以例外"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "memory"
+        ],
+        "name": "在3个游戏中被敌人弹反P弹",
+        "notes": "必须是活的敌人，墙之类的东西不算",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "6"
+        ],
+        "groups": [
+            "breakable"
+        ],
+        "name": "拆一道墙",
+        "notes": "1代：气力人搬砖或闪电拆墙\n2代：炸弹拆墙\n6代：力量装甲拆墙或火焰穿冰",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "skycolor",
+            "memory"
+        ],
+        "name": "在两个游戏中完成天空会变色的一关",
+        "notes": "2代：Crash\n4代：Skull, Ring, Cossack 1\n5代：Crystal\n6代：Tomahawk, Yamato, Knight",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "skycolor",
+            "memory"
+        ],
+        "name": "在两个游戏中完成天上有星星的一关",
+        "notes": "2代：Crash, Wily 6\n3代：Gemini, Doc Gemini, Doc Needle\n4代：Ring, Cossack 1, Cossack 4\n5代：Star, Dark 3\n6代：Mr. X-1, Mr. X-2",
+        "password": "<img src=\"img/multi-allpasswords-docs.png\"/>",
+        "type": "any3"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "用BOSS武器击败这个BOSS",
+        "notes": "1代或6代可以在前八完成\n其他代只能在BR完成",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "movingceilings"
+        ],
+        "name": "完成每一作前八所有天花板或地板会上下移动的房间",
+        "notes": "4代：Dive(水面), Dust(压饼机)\n5代：Star(漂浮平台)\n6代：Centaur(水面), Blizzard(潜艇), Knight(吊刺)",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2"
+        ],
+        "name": "完整乘坐Guts和Crash所有过山车一圈",
+        "notes": "<img src=\"img/multi-gutscrashplatforms.gif\"/>\n可以跳，但不能掉下去，也不能用道具辅助。",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "3"
+        ],
+        "name": "分别击败一个1代和3代的工人",
+        "notes": "<img src=\"img/multi-pickelmen.png\"/>\n1代：Guts\n3代：Top, Hard, Shadow",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "4"
+        ],
+        "name": "分别乘坐一次1代和4代的平台怪",
+        "notes": "<img src=\"img/multi-footolderhover.png\"/>\n1代：Ice, W1\n4代：Pharaoh",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "5"
+        ],
+        "name": "分别击败一个冒出来的剪刀和导弹",
+        "notes": "1代剪刀：<img src=\"img/1-supercutter.png\"/>在Cut关卡\n5代导弹：<img src=\"img/5-mizzile.png\"/>在Star和Napalm关卡",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "6"
+        ],
+        "name": "分别在1代和6代击败两个位于不同版面的火球怪",
+        "notes": "<img src=\"img/multi-changkeyfiretelly.png\"/>\n1代：Fire\n6代：Flame",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "3"
+        ],
+        "name": "乘坐2代和3代的所有云朵平台",
+        "notes": "<img src=\"img/multi-cloudplatforms23.png\"/>\n2代：Air\n3代：Snake",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "3"
+        ],
+        "groups": [
+            "mm2docrobo"
+        ],
+        "name": "击败一个2代BOSS和他的3代复制体",
+        "password": "<img src=\"img/mm3-docs-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "3"
+        ],
+        "name": "分别击败一只大猫和大狗",
+        "notes": "<img src=\"img/multi-friendertama.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "4"
+        ],
+        "groups": [
+            "allfrogs"
+        ],
+        "name": "击败2代泡泡关所有大青蛙和4代蛤蟆人",
+        "notes": "<img src=\"img/2-kerog.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "5"
+        ],
+        "groups": [
+            "chickens"
+        ],
+        "name": "在2代和5代各击败一只鸡",
+        "notes": "<img src=\"img/multi-chickens.png\"/>\n2代：Wood\n5代：Charge, Gyro, W1, W2",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "5"
+        ],
+        "groups": [
+            "lookalikes"
+        ],
+        "name": "分别击败一个假空气人和假重力人",
+        "notes": "<img src=\"img/multi-fakeairgravity.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "5"
+        ],
+        "name": "躲进空气关和旋翼关存档点的云里",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "6"
+        ],
+        "name": "在2代和6代各击败一只扔火球的怪",
+        "notes": "<img src=\"img/multi-changkeyfireboy.png\"/>\n2代：Quick\n6代：Flame",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "4"
+        ],
+        "name": "在3代和4代各打爆一块从天而降的石头",
+        "notes": "<img src=\"img/multi-junkboulder.png\"/>\n3代：Spark, Doc Spark\n4代：Drill",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "4"
+        ],
+        "name": "分别用潜水导弹和磁铁的跟踪效果击败一个你头上的敌人",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "5"
+        ],
+        "groups": [
+            "protodark"
+        ],
+        "name": "击败真假布鲁斯",
+        "notes": "3代：关卡中途出现的布鲁斯\n5代：假布鲁斯城堡的任意一个BOSS皆可",
+        "password": "<img src=\"img/mm5-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "5"
+        ],
+        "name": "分别乘坐陀螺平台和波浪泡泡升到屏幕顶部",
+        "notes": "<img src=\"img/multi-topbubble.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "5"
+        ],
+        "groups": [
+            "babies"
+        ],
+        "name": "用3代陀螺兵或5代大白鸡刷一个1up",
+        "notes": "<img src=\"img/multi-generators2.png\"/>",
+        "type": "any"
+    },
+    {
+        "games": [
+            "3",
+            "6"
+        ],
+        "name": "击败企鹅下仔器和安全帽下仔器",
+        "notes": "<img src=\"img/multi-penpenmetall.gif\"/>\n3代：Gemini\n5代：Tomahawk",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "6"
+        ],
+        "groups": [
+            "bombflier",
+            "submarineflier"
+        ],
+        "name": "分别击败3代和6代的一只伪装成云的怪",
+        "notes": "<img src=\"img/multi-bomb+submarineflier.png\"/>\n3代：Snake\n6代：Centaur",
+        "type": "all"
+    },
+    {
+        "games": [
+            "4",
+            "5"
+        ],
+        "groups": [
+            "catandmouse"
+        ],
+        "name": "在4代和5代各击败一只老鼠",
+        "notes": "<img src=\"img/multi-rattonmouse.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "4",
+            "6"
+        ],
+        "name": "在4代和6代各击败一只骷髅",
+        "notes": "<img src=\"img/multi-skullmetskullwalker.png\"/>\n4代：Skull\n6代：Tomahawk, Knight, X-1, X-2.",
+        "type": "all"
+    },
+    {
+        "games": [
+            "5",
+            "6"
+        ],
+        "name": "在5代和6代各击败一个大脚机器",
+        "notes": "<img src=\"img/multi-dachone.png\"/>\n5代：Star, Dark1, Wily4\n6代：Yamato（上路）",
+        "type": "all"
+    },
+    {
+        "games": [
+            "5",
+            "6"
+        ],
+        "groups": [
+            "rounder"
+        ],
+        "name": "击败一个圆眼飞碟",
+        "notes": "<img src=\"img/rounder1and2.png\"/>\n5代：Dark1的末尾。\n6代：X1的BOSS。",
+        "password": "<img src=\"img/mm5+6-pw.png\"/>",
+        "type": "any"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "6"
+        ],
+        "groups": [
+            "monkey"
+        ],
+        "name": "在两个游戏中各击败一只猴子",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "5"
+        ],
+        "groups": [
+            "babies"
+        ],
+        "name": "击败三种下仔器各10只仔",
+        "notes": "<img src=\"img/multi-generators.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "4",
+            "5"
+        ],
+        "groups": [
+            "catandmouse"
+        ],
+        "name": "分别击败一次猫和老鼠，且不在同一作中完成",
+        "notes": "<img src=\"img/multi-catandmouse.png\"/>\n比如3代打猫，4代打老鼠",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "在3,4,5代中分别拆掉一个能用P弹打掉的砖块",
+        "notes": "<img src=\"img/multi-shootabletiles.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "shieldattacker"
+        ],
+        "name": "分别在两个游戏中击败一次盾牌飞行器",
+        "notes": "<img src=\"img/shieldattackers.png\"/>\n4代：Dust, Skull\n5代：Crystal\n6代：Blizzard, Tomahawk\n还有4代和6代的各个城堡",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "eddie"
+        ],
+        "name": "拾取艾迪的补给",
+        "notes": "4代：Ring, Dust, Skull, Dive, Wily 2\n5代：Crystal, Napalm, Stone\n6代：Knight, Centaur, Plant, Tomahawk, Wily 4",
+        "type": "all"
+    },
+    {
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "eddie"
+        ],
+        "name": "在两个游戏中拾取艾迪的补给",
+        "notes": "4代：Ring, Dust, Skull, Dive, Wily 2\n5代：Crystal, Napalm, Stone\n6代：Knight, Centaur, Plant, Tomahawk, Wily 4",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2"
+        ],
+        "name": "把1代压饼机器人和2代装甲狙击手乔冻结在空中",
+        "notes": "<img src=\"img/1-bigeye.png\"/><img src=\"img/2-sniperarmor.png\"/>\n需要冰和时停。",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "5"
+        ],
+        "name": "分别连续踩上3个不同的激光桥和飞箭",
+        "notes": "激光桥：1代M道具\n也就是在空中三连搭桥",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "5"
+        ],
+        "groups": [
+            "suzyg"
+        ],
+        "name": "在1代和5代各击败8个独眼",
+        "notes": "<img src=\"img/multi-suzys.png\"/>\n1代：剪刀(16个), 炸弹(8个)\n5代：重力(10个)",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3"
+        ],
+        "name": "获取回旋镖和尖刺武器，并用一发攻击键用光能量",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3"
+        ],
+        "groups": [
+            "springer"
+        ],
+        "name": "击败弹簧扫地机器人和他的巨型版本",
+        "notes": "<img src=\"img/multi-springergiantspringer.png\"/>\n2代：Metal, Heat, Quick, W1\n3代：Magnet, Doc Spark, Doc Needle.",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3"
+        ],
+        "groups": [
+            "mm2docrobo"
+        ],
+        "name": "击败两个2代BOSS和对应的3代复制体",
+        "password": "<img src=\"img/mm3-docs-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "6"
+        ],
+        "groups": [
+            "monkey"
+        ],
+        "name": "击败所有猴子",
+        "notes": "<img src=\"img/multi-monkeys.png\"/>\n2代：Metal关卡4只\n3代：Hard关卡4只\n6代：Plant关卡2只",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "4"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "分别用满蓄的火和法老球击败一个敌人",
+        "notes": "Heat, Pharaoh",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "4"
+        ],
+        "groups": [
+            "mothraya",
+            "mechadragon"
+        ],
+        "name": "击败大龙和大蝴蝶",
+        "notes": "2代和4代的第一个城堡BOSS",
+        "password": "<img src=\"img/mm2-pw.png\"/><img src=\"img/mm4-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "5"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "一次性消耗整管2号道具能量和飞箭能量",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4",
+            "6"
+        ],
+        "groups": [
+            "wallblaster"
+        ],
+        "name": "击败前八所有的挂壁大炮",
+        "notes": "<img src=\"img/multi-wallblasters.png\"/>\n4代：Ring\n6代：Flame, Centaur",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4",
+            "6"
+        ],
+        "groups": [
+            "shieldattacker"
+        ],
+        "name": "击败前八所有的盾牌飞行器",
+        "notes": "<img src=\"img/shieldattackers.png\"/>\n4代：Dust, Skull（不要忘了艾迪上方的隐藏房间）\n6代：Blizzard, Tomahaw！",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "5",
+            "6"
+        ],
+        "groups": [
+            "rounder",
+            "rounderii"
+        ],
+        "name": "击败5代和6代的圆眼飞碟",
+        "notes": "<img src=\"img/rounder1and2.png\"/>\n5代：Dark1关卡末尾\n6代：X1BOSS",
+        "password": "<img src=\"img/mm5+6.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "击败前八所有会藏起来的BOSS",
+        "notes": "Drill, Gyro, Centaur",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "3",
+            "5",
+            "6"
+        ],
+        "name": "击败前八所有会无敌冲锋的BOSS",
+        "notes": "Top, Charge, Blizzard",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "3",
+            "5"
+        ],
+        "name": "击败前八所有会引发地震的BOSS",
+        "notes": "Guts, Hard, Stone",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "3",
+            "4",
+            "6"
+        ],
+        "name": "击败前八所有会吸人的BOSS",
+        "notes": "Magnet, Dust, Wind",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "3",
+            "4",
+            "5"
+        ],
+        "groups": [
+            "rushjet"
+        ],
+        "name": "击败前八所有飞狗BOSS",
+        "notes": "Needle, Drill, Gyro",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "frozen"
+        ],
+        "name": "被前八所有BOSS定住一次",
+        "notes": "Flash, Bright, Centaur\n不包括3代的四天王",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "non-aerial"
+        ],
+        "name": "击败3个不会跳/飞的机器人BOSS",
+        "notes": "Fire, Heat, Top, Dive, Charge, Centaur",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "eddie"
+        ],
+        "name": "在4个关卡遇见艾迪",
+        "notes": "4代：Ring, Dust, Skull, Dive, Wily 2\n5代：Crystal, Napalm, Stone\n6代：Knight, Centaur, Plant, Tomahawk, Wily 4",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "eddie"
+        ],
+        "name": "在3个游戏遇见艾迪",
+        "notes": "4代：Ring, Dust, Skull, Dive, Wily 2\n5代：Crystal, Napalm, Stone\n6代：Knight, Centaur, Plant, Tomahawk, Wily 4",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "4",
+            "6"
+        ],
+        "name": "在两个游戏击败扫地机器人",
+        "notes": "<img src=\"img/spines.png\"/>",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "underwater"
+        ],
+        "name": "完成3个有水下区域的关卡",
+        "notes": "1代：Ice, Wily 3\n2代：Bubble, Wily 3, Wily 5\n3代：Gemini, Doc Gemini, Wily 1\n4代：Dive, Toad, Wily 1, Wily 3\n5代：Wily 2\n6代Centaur, Wily 3",
+        "type": "any4"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "ownweapon"
+        ],
+        "name": "纯用一种BOSS武器完成他自身的关卡",
+        "notes": "通常需要打一个关卡两次\n1代还需要把BOSS再打一遍",
+        "type": "any"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "持有6个人头",
+        "type": "any"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "shieldattacker"
+        ],
+        "name": "击败每一作前八所有盾牌飞行器",
+        "notes": "<img src=\"img/shieldattackers.png\"/>\n4代：Dust, Skull（不要忘了艾迪上方的隐藏房间）\n6代：Blizzard, Tomahaw！",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2"
+        ],
+        "groups": [
+            "gutstank",
+            "gutsman"
+        ],
+        "name": "击败气力人和气力坦克",
+        "notes": "气力坦克：2代的城堡3BOSS",
+        "password": "<img src=\"img/mm2-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2"
+        ],
+        "name": "分别纯用剪刀和齿轮在一个关卡中抵达BOSS门",
+        "notes": "只需要从关卡开头全程使用该武器抵达BOSS门\n不一定要用这个武器打BOSS",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2",
+            "4"
+        ],
+        "name": "分别在2代和4代时停一个BOSS",
+        "notes": "2代闪光定时器可以暂停任何BOSS\n但4代的只能暂停法老人",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "3",
+            "5"
+        ],
+        "groups": [
+            "protodark"
+        ],
+        "name": "击败真假布鲁斯各两次",
+        "notes": "3代：关卡中途出现的布鲁斯\n5代：假布鲁斯城堡的任意一个BOSS皆可",
+        "password": "<img src=\"img/mm5-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "4",
+            "5"
+        ],
+        "groups": [
+            "catandmouse",
+            "catandmouse2"
+        ],
+        "name": "在4代和5代前八灭掉所有老鼠",
+        "notes": "<img src=\"img/multi-rattonmouse.png\"/>\n4代：Toad\n5代：Charge, Stone, Crystal.",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "memory"
+        ],
+        "name": "在每代各击败一次带盾大炮",
+        "notes": "<img src=\"img/multi-shieldedturrets.png\"/>\n1代：Cut, Bomb, Wily 2\n3代：Needle, Doc Needle\n4代：Drill, Cossack 3&4\n5代：Gyro, Stone, Dark 3, Wily 1\n6代：Knight, X-1, Wily 1",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "robotwice"
+        ],
+        "name": "击败同一个机器人BOSS两次",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "3"
+        ],
+        "name": "击败两个黄恶魔",
+        "password": "<img src=\"img/mm3-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "5"
+        ],
+        "groups": [
+            "suzyg",
+            "allsuzys"
+        ],
+        "name": "击败所有独眼",
+        "notes": "<img src=\"img/multi-suzys.png\"/>\n1代：Cut (16), Ice (2), Bomb (8)\n5代：Gravity (10)",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "3"
+        ],
+        "groups": [
+            "mm2docrobo"
+        ],
+        "name": "击败4个2代BOSS和对应的复制体",
+        "password": "<img src=\"img/mm3-docs-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "6"
+        ],
+        "name": "击败两条大龙BOSS",
+        "password": "<img src=\"img/mm2-pw.png\"/><img src=\"img/mm6-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "3",
+            "4"
+        ],
+        "groups": [
+            "metalldaddy"
+        ],
+        "name": "分别击败3代和4代的大安全帽",
+        "notes": "3代：Doc Needle\n4代：W1 BOSS ",
+        "password": "<img src=\"img/mm3-docs-pw.png\"/><img src=\"img/mm4-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "3",
+            "5"
+        ],
+        "groups": [
+            "protodark"
+        ],
+        "name": "击败真假布鲁斯各4次",
+        "notes": "3代：关卡中途出现的布鲁斯\n5代：假布鲁斯城堡的任意一个BOSS皆可",
+        "password": "<img src=\"img/mm3-break.png\"/><img src=\"img/mm5-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "eddie"
+        ],
+        "name": "遇见所有艾迪",
+        "notes": "4代：Ring, Dust, Skull, Dive\n5代：Crystal, Napalm, Stone\n6代：Plant, Tomahawk, Knight, Centaur",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "4",
+            "6"
+        ],
+        "name": "击败每种扫地机器人各一次",
+        "notes": "<img src=\"img/spines.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "5",
+            "6"
+        ],
+        "name": "通关前八所有有树的关卡",
+        "notes": "Ice, Wood, Napalm, Plant",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "allfrogs"
+        ],
+        "name": "击败所有青蛙",
+        "notes": "<img src=\"img/multi-allfrogs.gif\"/>\n2代：Bubble\n3代：Gemini, Shadow, Top\n4代：Toad Man\n6代：Yamato",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "在3个游戏中遇见布鲁斯",
+        "notes": "必须可见地出现在关卡中\n3代双子关卡不要跳过",
+        "password": "<img src=\"img/mm4-pw.png\"/><img src=\"img/mm5-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "name": "获取所有回旋镖武器",
+        "notes": "Cut, Quick, Shadow, Ring, Knight",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "non-aerial"
+        ],
+        "name": "击败所有不会跳/飞的机器人BOSS",
+        "notes": "从来不会离开地板的BOSS。\nFire, Heat, Top, Dive, Charge, Centaur",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "击败所有绿色机器人BOSS",
+        "notes": "Bubble, Snake, Toad, Gyro, Centaur",
+        "type": "all"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "miniboss"
+        ],
+        "name": "在两个游戏中击败小BOSS",
+        "notes": "<img src=\"img/miniboss.gif\"/>",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "skipminiboss"
+        ],
+        "name": "跳过一个小BOSS",
+        "notes": "<img src=\"img/miniboss-skippable(some).gif\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "skipminiboss"
+        ],
+        "name": "在两个游戏中跳过小BOSS",
+        "notes": "<img src=\"img/miniboss-skippable(some).gif\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "miniboss"
+        ],
+        "name": "击败8个小BOSS",
+        "notes": "<img src=\"img/miniboss.gif\"/>",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "miniboss"
+        ],
+        "name": "击败5种小BOSS",
+        "notes": "<img src=\"img/miniboss.gif\"/>",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "miniboss2",
+            "miniboss3",
+            "miniboss4",
+            "miniboss6",
+            "everymini"
+        ],
+        "name": "击败一个游戏前八所有小BOSS",
+        "notes": "<img src=\"img/miniboss-2346.gif\"/>",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "skipminiboss"
+        ],
+        "name": "在3个游戏中跳过小BOSS",
+        "notes": "<img src=\"img/miniboss-skippable(some).gif\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "3",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "miniboss3",
+            "miniboss4",
+            "miniboss6",
+            "everymini"
+        ],
+        "name": "击败一个游戏前八所有小BOSS",
+        "notes": "<img src=\"img/miniboss-346.gif\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "miniboss"
+        ],
+        "name": "每个游戏击败一个小BOSS",
+        "notes": "<img src=\"img/miniboss.gif\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "skipminiboss"
+        ],
+        "name": "跳过每种可跳过小BOSS",
+        "notes": "<img src=\"img/miniboss-skippable(all).gif\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "miniboss"
+        ],
+        "name": "击败每种小BOSS一次",
+        "notes": "<img src=\"img/miniboss.gif\"/>",
+        "password": "<img src=\"img/mm3-docs-pw.png\"/>",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得一个能耗大于1的武器",
+        "notes": "蓄力和闪光也算"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "weapon",
+            "boomerangreturning"
+        ],
+        "name": "用回旋武器的返程击败一个敌人",
+        "notes": "Cut, Quick, Shadow, Ring, Knight.\n允许用往程命中敌人，但必须用返程的那段伤害击败敌人"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "用特武冻结一个敌人",
+        "notes": "Ice, Flash, Spark, Bright"
+    },
+    {
+        "games": [
+            "2",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得一个护盾型武器",
+        "notes": "Wood, Skull, Star, Plant"
+    },
+    {
+        "games": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得一个贴地武器",
+        "notes": "Bubble, Snake, Wave, Wind"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "4",
+            "5"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得一个炸弹武器",
+        "notes": "Bomb, Crash, Drill, Napalm"
+    },
+    {
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得一个全屏攻击武器",
+        "notes": "Toad, Gravity, Centaur"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得两个定身武器",
+        "notes": "Ice, Flash, Spark, Bright",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得两个护盾武器",
+        "notes": "Wood, Skull, Star, Plant",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得两个贴地武器",
+        "notes": "Bubble, Snake, Wave, Wind",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "4",
+            "5"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得两个炸弹武器",
+        "notes": "Bomb, Crash, Drill, Napalm",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得两个回旋武器",
+        "notes": "Cut, Quick, Shadow, Ring, Knight",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon"
+        ],
+        "name": "获得两个全屏攻击武器",
+        "notes": "Flash, Toad, Gravity, Centaur",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon2"
+        ],
+        "name": "获得全部贴地武器",
+        "notes": "Bubble, Snake, Wave, Wind",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "4",
+            "5"
+        ],
+        "groups": [
+            "weapon2"
+        ],
+        "name": "获得全部炸弹武器",
+        "notes": "Bomb, Crash, Drill, Napalm",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon2"
+        ],
+        "name": "获得全部全屏攻击武器",
+        "notes": "Flash, Toad, Gravity, Centaur",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "weapon2"
+        ],
+        "name": "获得4种护盾武器并抵挡一次攻击",
+        "notes": "飞叶盾, 骷髅盾, 星星盾, 植物盾",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "groups": [
+            "weapon2"
+        ],
+        "name": "每代让敌人定身一次",
+        "notes": "Ice, Flash, Spark, Bright",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "在任意关卡的每一面都放一次狗",
+        "notes": "每次切屏。包括BOSS房和BOSS走廊。",
+        "type": "any"
+    },
+    {
+        "games": [
+            "2",
+            "4"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "分别乘坐1号道具和气球道具一次",
+        "type": "all"
+    },
+    {
+        "games": [
+            "3",
+            "4"
+        ],
+        "groups": [
+            "rushmarine"
+        ],
+        "name": "用潜水狗击败一个敌人"
+    },
+    {
+        "games": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "获取飞狗",
+        "notes": "Needle, Drill, Gyro, Flame",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic",
+            "supportitem"
+        ],
+        "name": "获取一个行动道具",
+        "notes": "<img src=\"img/supportitems.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "在两个游戏中获取飞狗并乘坐",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "在两个游戏中获取行动道具",
+        "notes": "<img src=\"img/supportitems.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "获取4个行动道具",
+        "notes": "<img src=\"img/supportitems.png\"/>",
+        "type": "any4"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "获取6个行动道具",
+        "notes": "<img src=\"img/supportitems.png\"/>",
+        "type": "any5"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "在每个游戏中获取一个行动道具",
+        "notes": "<img src=\"img/supportitems.png\"/>",
+        "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "supportitem"
+        ],
+        "name": "获取每种行动道具",
+        "notes": "<img src=\"img/supportitems.png\"/>\n飞狗和潜水狗只要在某一代拿到一次就行，不需要每代都拿\n飞行装甲也视为飞狗",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "完成同一个任务两次",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic"
+        ],
+        "name": "不重启连续完成4个关卡",
+        "type": "any4"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic"
+        ],
+        "name": "在一个游戏中击败4个BOSS",
+        "type": "any4"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic",
+            "square"
+        ],
+        "name": "在两个游戏中击败选关界面相同位置的BOSS",
+        "notes": "<img src=\"img/multi-stageselect.gif\"/>\n比如←方向: Elec, Heat, Hard, Pharaoh, Charge, Plant. \n1代上/下方向可以二选一",
+        "type": "any3"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "用主克制击败一个机器人BOSS",
+        "notes": "Metal Man = Quick or Metal.\nQuick Man = Crash or Flash.\nWood Man = Heat.\nMagnet Man = Spark or Shadow.\nPharaoh Man = Bright.",
+        "type": "any2"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "逆克制击败一个BOSS",
+        "notes": "比如：蛇打尖刺, 环打法老\n注意有的BOSS免疫逆克制武器",
+        "type": "any4"
+    },
+    {
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic"
+        ],
+        "name": "纯特武完成一个关卡",
+        "notes": "包括BOSS\n可以切换多种特武，但不能用P弹\n不能用特殊道具"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic",
+            "square"
+        ],
+        "name": "击败一个游戏选关界面上下左右的4个BOSS",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic",
+            "square"
+        ],
+        "name": "击败一个游戏选关界面斜角的4个BOSS",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic",
+            "castle"
+        ],
+        "name": "在单个游戏中完成3个城堡关卡",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>",
+        "type": "any4"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic"
+        ],
+        "name": "在两个游戏中各完成两个城堡关卡",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>",
+        "type": "any4"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic"
+        ],
+        "name": "完成5个城堡关卡",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>",
+        "type": "any4"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "groups": [
+            "generic",
+            "castle"
+        ],
+        "name": "完成一个城堡的所有关卡",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "5",
+            "6"
+        ],
+        "name": "击败C开头的3个机器人BOSS",
+        "notes": "Cut, Crash, Charge, Crystal, Centaur",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "3",
+            "5"
+        ],
+        "name": "击败G开头的3个机器人BOSS",
+        "notes": "Guts, Gemini, Gravity, Gyro",
+        "type": "all"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "击败S开头的3个机器人BOSS",
+        "notes": "Snake, Spark, Shadow, Skull, Star, Stone",
+        "type": "any2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "4",
+            "6"
+        ],
+        "name": "击败B开头的3个机器人BOSS",
+        "notes": "Bomb, Bubble, Bright, Blizzard",
+        "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "4"
+        ],
+        "name": "击败D开头的3个机器人BOSS",
+        "notes": "Dust, Dive, Drill",
+        "type": "all"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到1w分"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到3w分"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到5w分"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到8w分"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到12w分"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "击败一个价值800分以上的敌人",
+        "notes": "BOSS也算\n是击败小怪直接加的分，而不是小怪掉的球加的分"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "完成一关时累计获取了30个分数球"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "每一面拾取一个小火球掉落的分数球",
+        "notes": "<img src=\"img/MM9Changkey.png\"/>"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "获取M道具"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "冻结火关的所有火柱"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "bombpacifist"
+        ],
+        "name": "收集一个八向攻击球掉落的分数球",
+        "notes": "<img src=\"img/1-mambu.png\"/>"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "击败25个飞行炸弹",
+        "notes": "<img src=\"img/1-killerbomb.png\"/>\nFire, Bomb, W3"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "击败25个飞行企鹅",
+        "notes": "<img src=\"img/1-pepe.png\"/>\nIce, W3"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "gabyoall1"
+        ],
+        "name": "击败一个扫地机器人",
+        "notes": "<img src=\"img/1-gabyoall.png\"/>"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "在两个关卡击败方形小眼睛",
+        "notes": "<img src=\"img/1-suzy.png\"/>\nCut, Bomb"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "击败一个压饼机器人",
+        "notes": "<img src=\"img/1-bigeye.png\"/>"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "yoku1"
+        ],
+        "name": "踏足冰关所有优酷格",
+        "notes": "会定时出现和消失的砖块"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "电关全收集"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "收集一个放置1up",
+        "notes": "Ice, Bomb, Guts, Wily 2, Wily 4"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "placedhealth1"
+        ],
+        "name": "收集一个放置大血",
+        "notes": "前六每关都有，城堡1有"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "placedhealth1"
+        ],
+        "name": "在两关各收集一个放置大血",
+        "notes": "前六每关都有，城堡1有"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "cut"
+        ],
+        "name": "全清剪刀关",
+        "notes": "无限生成的怪只用打一只\n包括<img src=\"img/1-supercutter.png\"/>那个一直吐剪刀的房子吐出来的剪刀"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "收集一个掉落1up"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "同屏出现6个敌方剪刀"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "让气力人三个移动平台同屏出现",
+        "notes": "<img src=\"img/1-gutsplatforms.png\"/>"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到20w分"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到25w分"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "乘坐气力人关卡的最下层过山车一个来回",
+        "notes": "只要两个方向的每段路程都乘坐了即可，不限定起点和终点。"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "gabyoall1"
+        ],
+        "name": "击败单关所有扫地机器人",
+        "notes": "Elec (11), Ice (6), Fire (3), Bomb (3). 可以用Cut, Elec, Fire, Bomb造成伤害。"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "搬掉电人关卡BOSS之外的6块石头"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "用一发剪刀对一个机器人BOSS造成两次伤害",
+        "notes": "禁暂停"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "让6个冻结的小火球同屏出现",
+        "notes": "火关从岩浆中冒出来然后从天上飘下来的那种敌人"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "击败火关每处冒出来的小火球至少3个",
+        "notes": "火关从岩浆中冒出来然后从天上飘下来的那种敌人。共7处"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "用石头砸一下电人"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "guts"
+        ],
+        "name": "用火焰的反方向攻击击败气力人",
+        "notes": "使用护盾伤害，禁暂停"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "escortquest1"
+        ],
+        "name": "带领炸弹关的狙击手乔到右边楼梯位置"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "搬掉剪刀关的所有石头",
+        "notes": "共19块，包括BOSS房的2块。需要补能量。"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "escortquest1"
+        ],
+        "name": "让气力关开局的安全帽子弹横穿右边整个版面",
+        "notes": "需要M"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "escortquest1"
+        ],
+        "name": "让冰关开局的4个拆分怪离开屏幕"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "从炸弹关存档点反跑到开局",
+        "notes": "需要M"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "从反跑气力关卡的整个第一面",
+        "notes": "需要M"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "搬掉两关各一道墙"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "冻结炸弹关所有敌人",
+        "notes": "无限生成的只用冻结一只"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "placedhealth1"
+        ],
+        "name": "在三关各拾取一个放置大血",
+        "notes": "前六和W1"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到35w分",
+        "notes": "Don't Game Over!"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到40w分",
+        "notes": "Don't Game Over!"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points"
+        ],
+        "name": "达到50w分",
+        "notes": "Don't Game Over!"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "单关获取累计20w分",
+        "notes": "可以重复进入同一关刷"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "收集累计60个分数球",
+        "notes": "每关通关时可以看到本关收集的分数球数量"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "gabyoall1"
+        ],
+        "name": "全清两关的扫地机器人",
+        "notes": "Elec (11), Ice (6), Fire (3), Bomb (3). 可以用Cut, Elec, Fire, Bomb造成伤害"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "让电人关卡6个看楼梯的绿色放电怪同屏冻结",
+        "notes": "The green eye enemies in Elec Man.\nHint: You can re-apply the frozen status to frozen enemies by hitting them again."
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "bombpacifist",
+            "bombpacifist2",
+            "bombpacifist3",
+            "bombpacifist4"
+        ],
+        "name": "和平主义抵达炸弹BOSS门",
+        "notes": "禁暂停"
     }
 ]
