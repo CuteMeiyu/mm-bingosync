@@ -162,6 +162,10 @@
             return true;
         }
 
+        function hasIntersection(setA, setB) {
+            return setA.some(item => setB.includes(item));
+        }
+
         function generateDiffMatrix(diffs, centerHardest) {
             let diffMatrix;
             if (random() < 0.5) {
@@ -239,7 +243,7 @@
                             continue;
                         }
                         let goal = goals[i];
-                        if (leniency < 1 && goal.groups.length > 0 && isSubset(goal.groups, groupUsed)) {
+                        if (leniency < 1 && goal.groups.length > 0 && hasIntersection(goal.groups, groupUsed)) {
                             continue;
                         }
                         if (goal.diff != diffMatrix[row][col]) {
