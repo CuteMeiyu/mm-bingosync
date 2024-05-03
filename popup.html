@@ -612,7 +612,11 @@
                         let cellPassword = cell.querySelector(".cell-password");
                         if (goal.password != undefined) {
                             cellPassword.innerHTML = "<img src='img/pw.png'/>";
-                            cellPassword.dataset.tooltip = "允许使用城堡1存档/密码"
+                            if (goal.password == "y") {
+                                cellPassword.dataset.tooltip = "可以从城堡1开始"
+                            } else {
+                                cellPassword.dataset.tooltip = goal.password.replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
+                            }
                         }
                     }
                     if (!showGames) {

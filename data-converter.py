@@ -24,9 +24,9 @@ def get_regular_goal_list(df: pd.DataFrame):
         if not pd.isna(row["group"]):
             goal["groups"] = [part.strip() for part in str(row["group"]).replace("，", ",").split(",")]
         if not pd.isna(row["type"]):
-            goal["mixType"] = str(row["type"])
-        if not pd.isna(row["pw"]) and str(row["pw"]).lower() == "y":
-            goal["password"] = True
+            goal["type"] = str(row["type"])
+        if not pd.isna(row["pw"]):
+            goal["password"] = str(row["pw"])
         if not pd.isna(row["notes"]):
             goal["notes"] = str(row["notes"])
         goal_list.append(goal)

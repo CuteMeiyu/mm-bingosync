@@ -199,7 +199,7 @@
         ],
         "name": "用一发黑洞打爆两个推推球",
         "notes": "<img src=\"img/MM9WilyBoss1B.png\"/><img src=\"img/MM9WilyBoss1R.png\"/>\n不一定要最后一击，只要打爆一次就行。",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -344,7 +344,7 @@
             "9"
         ],
         "name": "在堡1踩到每根岩浆柱",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -529,7 +529,7 @@
             "mm9wily2restricted"
         ],
         "name": "堡2禁狗抵达BOSS门",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -540,7 +540,7 @@
             "mm9wily2restricted"
         ],
         "name": "堡2禁狗/三叉戟抵达存档点",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -549,7 +549,7 @@
         ],
         "name": "堡1一发风吹动4个上升平台",
         "notes": "不需要完全升上去，只要看到动了即可",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -685,7 +685,7 @@
             "9"
         ],
         "name": "堡2禁蜜蜂全收集",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -696,7 +696,7 @@
             "megamechshark"
         ],
         "name": "纯用三种武器分别击败鲨鱼三个阶段",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -705,7 +705,7 @@
         ],
         "name": "堡2全清敌人",
         "notes": "注意不要让<img src=\"img/MM9-Adamski-Sprite.png\"/>逃跑了",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -713,7 +713,7 @@
             "9"
         ],
         "name": "堡3全收集",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -725,7 +725,7 @@
         ],
         "name": "禁狗抵达堡1BOSS门",
         "notes": "有钉鞋会容易得多，但不是必要的",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -737,7 +737,7 @@
         ],
         "name": "在堡3让一个压饼机器人落坑",
         "notes": "<img src=\"img/MM9BigStomperOrange.png\"/>",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -749,7 +749,7 @@
         ],
         "name": "堡1禁蜜蜂收集小BOSS后面的放置1up",
         "notes": "跳狗接吹风",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -807,7 +807,7 @@
         ],
         "name": "纯P击败鲨鱼（允许用狗）",
         "notes": "推荐备个E罐。也允许用狗打出来的子弹造成伤害。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -820,7 +820,7 @@
         ],
         "name": "用墨汁洛克人击败鲨鱼",
         "notes": "按菜单或去世会刷掉墨汁状态！",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -832,7 +832,7 @@
         ],
         "name": "用每种武器各打爆一次推推球并完成战斗",
         "notes": "<img src=\"img/MM9WilyBoss1B.png\"/><img src=\"img/MM9WilyBoss1R.png\"/>\n武器包括P弹。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -844,7 +844,7 @@
         ],
         "name": "堡1禁狗禁风抵达BOSS门",
         "notes": "有钉鞋会容易得多，但不是必要的",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -855,7 +855,7 @@
             "mm9wily3pacifist"
         ],
         "name": "堡3和平主义抵达BOSS门",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -867,7 +867,7 @@
         ],
         "name": "反跑堡3最后的大炮面",
         "notes": "从最右端<img src=\"img/MM9BigStomperOrange.png\"/>的位置跑到最左端楼梯",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -876,7 +876,7 @@
         ],
         "name": "用每种武器打中双子泥一次",
         "notes": "<img src=\"img/MM9-TwinDevil-Sprite.png\"/>\n武器包括P弹。\n可以分多次完成。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -885,7 +885,7 @@
         ],
         "name": "把假1up变真",
         "notes": "假1up只在城堡3出现。\n在满血所有武器全满能量的情况下使用M罐，会把屏幕上所有的敌人转化成1up",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -894,7 +894,7 @@
         ],
         "name": "用BOSS武器击败这个BOSS",
         "notes": "只能在BR完成。\n推荐这些BOSS可以不用W罐：人鱼、插头、火",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -902,7 +902,7 @@
             "9"
         ],
         "name": "通关",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -911,7 +911,7 @@
         ],
         "name": "用每种武器打中威利逃生舱一次",
         "notes": "威利第三形态。\n武器包括P弹。\n可以分多次完成。",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -972,7 +972,7 @@
             "spikepushers"
         ],
         "name": "通关城堡1",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -983,7 +983,7 @@
             "megamechshark"
         ],
         "name": "通关城堡2",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -994,7 +994,7 @@
             "twindevil"
         ],
         "name": "通关城堡3",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -1341,7 +1341,7 @@
         ],
         "name": "收集堡1的E罐",
         "notes": "岔路需要走：右->右",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -1351,7 +1351,7 @@
             "weaponsarchive"
         ],
         "name": "纯火击败2代木头人",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -1361,7 +1361,7 @@
             "weaponsarchive"
         ],
         "name": "纯水击败5代榴弹人",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -1371,7 +1371,7 @@
             "weaponsarchive"
         ],
         "name": "用爆开的泡泡盾击败6代火焰人",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1563,7 +1563,7 @@
         ],
         "name": "以左到右顺序击败兵器库",
         "notes": "Elec -> Wood -> Gemini -> Ring -> Napalm -> Flame -> Slash -> Frost -> Tornado",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1572,7 +1572,7 @@
         ],
         "name": "堡2全收集",
         "notes": "有一个藏在BOSS门上的Dr. Wily标志里",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1583,7 +1583,7 @@
             "crabpuncher"
         ],
         "name": "先毁蟹爪，再干蟹身",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1592,7 +1592,7 @@
         ],
         "name": "在堡2一命抵达BOSS门且让传送带变向3次",
         "notes": "你需要被<img src=\"img/Searchy.png\"/>的灯光照射。\n这个怪拖不出来，错过了只能复活重来。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1604,7 +1604,7 @@
         ],
         "name": "纯飞刀击败堡1所有BOSS",
         "notes": "需要补补能量。\n每场BOSS战需要准备18发飞刀。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1615,7 +1615,7 @@
             "weaponsarchive"
         ],
         "name": "纯闪电击败3代双子人",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 1,
@@ -1627,7 +1627,7 @@
         ],
         "name": "纯炸弹击败7代利爪人",
         "notes": "爆炸能造成2点伤害",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -1778,7 +1778,7 @@
         ],
         "name": "通关堡1且BOSS每次下来你只能按一下攻击",
         "notes": "从BOSS下来到回去这段时间只能按1下攻击键",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -1790,7 +1790,7 @@
         ],
         "name": "纯用三种武器分别击败堡1的三面BOSS",
         "notes": "比如：\n齿轮打1-3（第一面）\n火打4-6（第二面）\n冰打7-9（第三面）\nP弹也算一种武器。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -1798,7 +1798,7 @@
             "10"
         ],
         "name": "摧毁堡2的所有冰块",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -1810,7 +1810,7 @@
         ],
         "name": "用闪电击败砖块恶魔",
         "notes": "<img src=\"img/Blockdevil.PNG.png\"/>",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -1822,7 +1822,7 @@
         ],
         "name": "让砖块恶魔的眼睛在地板下被击败",
         "notes": "<img src=\"img/Blockdevil.PNG.png\"/>\n你得等他重组再分裂",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1906,7 +1906,7 @@
         ],
         "name": "反跑堡2最后的压饼机版面",
         "notes": "不要走过头切屏了，不然回不去了",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1915,7 +1915,7 @@
         ],
         "name": "在堡3第一个电梯上击败一个安全帽",
         "notes": "可能没想象中那么简单",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1924,7 +1924,7 @@
         ],
         "name": "用齿轮爬上堡3BOSS房的外墙",
         "notes": "需要比特鸟。",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1932,7 +1932,7 @@
             "10"
         ],
         "name": "禁方向键击败飞船1形态",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1940,7 +1940,7 @@
             "10"
         ],
         "name": "堡4全收集",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1951,7 +1951,7 @@
             "mm10wily5restricted2"
         ],
         "name": "堡5全收集",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1959,7 +1959,7 @@
             "10"
         ],
         "name": "通关",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1971,7 +1971,7 @@
             "mm10wily5restricted2"
         ],
         "name": "堡5禁跳跃键抵达BOSS门",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -1982,7 +1982,7 @@
             "mm10wily5restricted"
         ],
         "name": "堡5收集最后的E罐后，反跑到开局",
-        "password": true
+        "password": "y"
     },
     {
         "games": [
@@ -2041,7 +2041,7 @@
             "crabpuncher"
         ],
         "name": "通关堡2",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 2,
@@ -2052,7 +2052,7 @@
             "blockdevil"
         ],
         "name": "通关堡3",
-        "password": true
+        "password": "y"
     },
     {
         "diff": 3,
@@ -2071,18 +2071,18 @@
         "groups": [
             "spider9and10"
         ],
-        "mixType": "all",
         "name": "分别全清9代10代一关的蜘蛛",
-        "notes": "必须是有蜘蛛的关卡\n9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3"
+        "notes": "必须是有蜘蛛的关卡\n9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3",
+        "type": "all"
     },
     {
         "games": [
             "9",
             "10"
         ],
-        "mixType": "all",
         "name": "击败10代小火球+9代大火龙",
-        "notes": "<img src=\"img/Changkey_dragon.png”/>\n<img src=\"img/MM9Changkey.png\"/>"
+        "notes": "<img src=\"img/Changkey_dragon.png”/>\n<img src=\"img/MM9Changkey.png\"/>",
+        "type": "all"
     },
     {
         "games": [
@@ -2092,9 +2092,9 @@
         "groups": [
             "spider9and10"
         ],
-        "mixType": "all",
         "name": "分别在9代10代击败一个蜘蛛",
-        "notes": "9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3"
+        "notes": "9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3",
+        "type": "all"
     },
     {
         "games": [
@@ -2104,9 +2104,9 @@
         "groups": [
             "seaanimal9and10"
         ],
-        "mixType": "all",
         "name": "击败9代小章鱼+10代章鱼灯泡",
-        "notes": "<img src=\"img/MM10Octobulb.png\"/>\n<img src=\"img/Octone.png\"/>"
+        "notes": "<img src=\"img/MM10Octobulb.png\"/>\n<img src=\"img/Octone.png\"/>",
+        "type": "all"
     },
     {
         "games": [
@@ -2116,9 +2116,9 @@
         "groups": [
             "shieldattacker7-10"
         ],
-        "mixType": "all",
         "name": "分别在9代10代击败盾牌飞行器",
-        "notes": "<img src=\"img/MM10ShieldAttacker.png\"/>\nMM9: Galaxy, Tornado, Wily 3\nMM10: Commando, Sheep, Wily 1"
+        "notes": "<img src=\"img/MM10ShieldAttacker.png\"/>\nMM9: Galaxy, Tornado, Wily 3\nMM10: Commando, Sheep, Wily 1",
+        "type": "all"
     },
     {
         "diff": 1,
@@ -2126,9 +2126,9 @@
             "9",
             "10"
         ],
-        "mixType": "all",
         "name": "分别在9代10代击败压饼机器人",
-        "notes": "<img src=\"img/MM9BigStomperOrange.png\"/><img src=\"img/TsurareStamp.png\"/>\nMM9: Hornet, Jewel, Plug, Wily 2,3\nMM10: Chill, Commando, Wily 1,2,3"
+        "notes": "<img src=\"img/MM9BigStomperOrange.png\"/><img src=\"img/TsurareStamp.png\"/>\nMM9: Hornet, Jewel, Plug, Wily 2,3\nMM10: Chill, Commando, Wily 1,2,3",
+        "type": "all"
     },
     {
         "diff": 2,
@@ -2136,8 +2136,8 @@
             "9",
             "10"
         ],
-        "mixType": "all",
-        "name": "分别使用困难和超级英雄难度过一关"
+        "name": "分别使用困难和超级英雄难度过一关",
+        "type": "all"
     },
     {
         "diff": 1,
@@ -2145,8 +2145,8 @@
             "9",
             "10"
         ],
-        "mixType": "all",
-        "name": "通关9代和10代的火关"
+        "name": "通关9代和10代的火关",
+        "type": "all"
     },
     {
         "diff": 1,
@@ -2154,8 +2154,8 @@
             "9",
             "10"
         ],
-        "mixType": "all",
-        "name": "通关9代和10代的水关"
+        "name": "通关9代和10代的水关",
+        "type": "all"
     },
     {
         "diff": 1,
@@ -2163,8 +2163,8 @@
             "9",
             "10"
         ],
-        "mixType": "all",
-        "name": "通关9代和10代的电关"
+        "name": "通关9代和10代的电关",
+        "type": "all"
     },
     {
         "diff": 2,
@@ -2172,8 +2172,8 @@
             "9",
             "10"
         ],
-        "mixType": "all",
-        "name": "在两个游戏中击败龙卷风人"
+        "name": "在两个游戏中击败龙卷风人",
+        "type": "all"
     },
     {
         "diff": 2,
@@ -2185,8 +2185,8 @@
             "rushjet9",
             "rushjet10"
         ],
-        "mixType": "all",
-        "name": "获取飞狗"
+        "name": "获取飞狗",
+        "type": "all"
     },
     {
         "diff": 1,
@@ -2194,8 +2194,8 @@
             "9",
             "10"
         ],
-        "mixType": "all",
-        "name": "用三重烈火或飞刀无克制击败一个BOSS"
+        "name": "用三重烈火或飞刀无克制击败一个BOSS",
+        "type": "all"
     },
     {
         "games": [
