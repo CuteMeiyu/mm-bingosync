@@ -548,11 +548,11 @@
             if (newX + tooltip.offsetWidth > vw) {
                 newX = Math.max(0, vw - tooltip.offsetWidth);
             }
-            if (newY + tooltip.offsetHeight > vh) {
-                newY = Math.max(0, event.clientY - tooltip.offsetHeight - 15);
-            }
-
             tooltip.style.left = newX + "px";
+
+            if (newY + tooltip.offsetHeight > vh) {
+                newY = event.clientY - tooltip.offsetHeight - 15;
+            }
             tooltip.style.top = newY + "px";
 
             tooltip.classList.add('show');
