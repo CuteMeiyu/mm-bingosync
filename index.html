@@ -152,14 +152,8 @@
             return array;
         }
 
-        // A是B的子集
-        function isSubset(setA, setB) {
-            for (let elem of setA) {
-                if (setB.indexOf(elem) < 0) {
-                    return false;
-                }
-            }
-            return true;
+        function hasIntersection(setA, setB) {
+            return setA.some(item => setB.includes(item));
         }
 
         function generateDiffMatrix(diffs, centerHardest) {
@@ -218,6 +212,9 @@
             for (let game of games) {
                 gamesCount[game] = 0;
             }
+            let conditions = [
+                "允许同分组的任务同时出现"
+            ];
             let leniency = 0;
             let changed = false;
             let i = -1;
@@ -227,10 +224,11 @@
                         i += 1;
                         if (i >= goals.length) {
                             if (!changed) {
-                                leniency += 1;
-                                if (leniency > 1) {
+                                if (leniency >= conditions.length) {
                                     throw new Error("没有足够数量的符合条件的任务");
                                 }
+                                console.log("任务数量不足，已放宽条件：", conditions[leniency]);
+                                leniency += 1;
                             }
                             changed = false;
                             i = 0;
@@ -239,13 +237,13 @@
                             continue;
                         }
                         let goal = goals[i];
-                        if (leniency < 1 && goal.groups.length > 0 && isSubset(goal.groups, groupUsed)) {
+                        if (leniency < 1 && goal.groups.length > 0 && hasIntersection(goal.groups, groupUsed)) {
                             continue;
                         }
                         if (goal.diff != diffMatrix[row][col]) {
                             continue;
                         }
-                        if (!isSubset(goal.games, games)) {
+                        if (!hasIntersection(goal.games, games)) {
                             continue;
                         }
                         if (balanceGames) {
