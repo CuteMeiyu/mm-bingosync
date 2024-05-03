@@ -398,7 +398,7 @@
             "okosutobon"
         ],
         "name": "不激活水雷通关人鱼关",
-        "notes": "<img src=\"img/Okosutobon.png\" width=\"36\" height=\"36\"/>\n需要用龙卷风来移开某些水雷。\n也可以用黑洞吸收。\n如果不慎激活，可以退回一段距离让他重新刷新。"
+        "notes": "<img src=\"img/Okosutobon.png\"/>\n需要用龙卷风来移开某些水雷。\n也可以用黑洞吸收。\n如果不慎激活，可以退回一段距离让他重新刷新。"
     },
     {
         "diff": 1,
@@ -4551,20 +4551,13 @@
         "games": [
             "1"
         ],
-        "name": "击败一个价值800分以上的敌人",
-        "notes": "BOSS也算\n是击败小怪直接加的分，而不是小怪掉的球加的分"
-    },
-    {
-        "games": [
-            "1"
-        ],
         "name": "完成一关时累计获取了30个分数球"
     },
     {
         "games": [
             "1"
         ],
-        "name": "每一面拾取一个小火球掉落的分数球",
+        "name": "在火关的每个版面拾取一个小火球掉落的分数球",
         "notes": "<img src=\"img/MM9Changkey.png\"/>"
     },
     {
@@ -4586,7 +4579,7 @@
         "groups": [
             "bombpacifist"
         ],
-        "name": "收集一个八向攻击球掉落的分数球",
+        "name": "收集一个飞壳儿掉落的分数球",
         "notes": "<img src=\"img/1-mambu.png\"/>"
     },
     {
@@ -4647,7 +4640,7 @@
         "games": [
             "1"
         ],
-        "name": "收集一个放置1up",
+        "name": "收集一个放置的1up",
         "notes": "Ice, Bomb, Guts, Wily 2, Wily 4"
     },
     {
@@ -4657,7 +4650,7 @@
         "groups": [
             "placedhealth1"
         ],
-        "name": "收集一个放置大血",
+        "name": "收集一个放置的大血",
         "notes": "前六每关都有，城堡1有"
     },
     {
@@ -4674,11 +4667,18 @@
         "games": [
             "1"
         ],
+        "name": "全清剪刀和炸弹关所有的挂壁炮台",
+        "notes": "<img src=\"img/Mm1beaksprite.png\"/>"
+    },
+    {
+        "games": [
+            "1"
+        ],
         "groups": [
             "cut"
         ],
         "name": "全清剪刀关",
-        "notes": "无限生成的怪只用打一只\n包括<img src=\"img/1-supercutter.png\"/>那个一直吐剪刀的房子吐出来的剪刀"
+        "notes": "无限生成的怪只用打一只\n包括<img src=\"img/1-supercutter.png\"/>里吐出来的剪刀\n（弱点是石头和炸弹）"
     },
     {
         "games": [
@@ -4690,7 +4690,8 @@
         "games": [
             "1"
         ],
-        "name": "同屏出现6个敌方剪刀"
+        "name": "同屏出现6个敌方剪刀",
+        "notes": "<img src=\"img/1-supercutter.png\"/>"
     },
     {
         "games": [
@@ -4736,7 +4737,7 @@
             "gabyoall1"
         ],
         "name": "击败单关所有扫地机器人",
-        "notes": "Elec (11), Ice (6), Fire (3), Bomb (3). 可以用Cut, Elec, Fire, Bomb造成伤害。"
+        "notes": "<img src=\"img/1-gabyoall.png\"/>\nElec (11), Ice (6), Fire (3), Bomb (3)\n可以用Cut, Elec, Fire, Bomb造成伤害。"
     },
     {
         "diff": 1,
@@ -4759,15 +4760,7 @@
             "1"
         ],
         "name": "让6个冻结的小火球同屏出现",
-        "notes": "火关从岩浆中冒出来然后从天上飘下来的那种敌人"
-    },
-    {
-        "diff": 1,
-        "games": [
-            "1"
-        ],
-        "name": "击败火关每处冒出来的小火球至少3个",
-        "notes": "火关从岩浆中冒出来然后从天上飘下来的那种敌人。共7处"
+        "notes": "<img src=\"img/1-6changkeys.png\"/>"
     },
     {
         "diff": 1,
@@ -4784,8 +4777,8 @@
         "groups": [
             "guts"
         ],
-        "name": "用火焰的反方向攻击击败气力人",
-        "notes": "使用护盾伤害，禁暂停"
+        "name": "用火焰武器反方向攻击击败气力人",
+        "notes": "禁暂停"
     },
     {
         "diff": 1,
@@ -4795,7 +4788,8 @@
         "groups": [
             "escortquest1"
         ],
-        "name": "带领炸弹关的狙击手乔到右边楼梯位置"
+        "name": "把炸弹关的乔带到右边楼梯位置",
+        "notes": "<img src=\"img/1-sniperjoeladder.png\"/>"
     },
     {
         "diff": 1,
@@ -4803,7 +4797,7 @@
             "1"
         ],
         "name": "搬掉剪刀关的所有石头",
-        "notes": "共19块，包括BOSS房的2块。需要补能量。"
+        "notes": "共19块，包括BOSS房的2块\n需要补能量。"
     },
     {
         "diff": 1,
@@ -4813,7 +4807,7 @@
         "groups": [
             "escortquest1"
         ],
-        "name": "让气力关开局的安全帽子弹横穿右边整个版面",
+        "name": "让气力关开局的安全帽子弹向右横穿整个版面",
         "notes": "需要M"
     },
     {
@@ -4824,7 +4818,8 @@
         "groups": [
             "escortquest1"
         ],
-        "name": "让冰关开局的4个拆分怪离开屏幕"
+        "name": "让冰关开局的4个分头行动怪离开屏幕",
+        "notes": "<img src=\"img/Mm1crazyrazysprite.png\"/>"
     },
     {
         "diff": 1,
@@ -4839,15 +4834,15 @@
         "games": [
             "1"
         ],
-        "name": "从反跑气力关卡的整个第一面",
-        "notes": "需要M"
+        "name": "反跑气力关的第一个版面",
+        "notes": "需要M\n从最后一个<img src=\"img/1-pickelman.png\"/>的位置跑到开局三个安全帽的位置"
     },
     {
         "diff": 1,
         "games": [
             "1"
         ],
-        "name": "搬掉两关各一道墙"
+        "name": "在两关各搬掉一块石头"
     },
     {
         "diff": 1,
@@ -4855,7 +4850,7 @@
             "1"
         ],
         "name": "冻结炸弹关所有敌人",
-        "notes": "无限生成的只用冻结一只"
+        "notes": "无限生成的敌人只用冻结一次"
     },
     {
         "diff": 1,
@@ -4865,8 +4860,8 @@
         "groups": [
             "placedhealth1"
         ],
-        "name": "在三关各拾取一个放置大血",
-        "notes": "前六和W1"
+        "name": "在三个不同关卡各拾取一个放置大血",
+        "notes": "前六和城堡1都有"
     },
     {
         "diff": 2,
@@ -4877,7 +4872,7 @@
             "points"
         ],
         "name": "达到35w分",
-        "notes": "Don't Game Over!"
+        "notes": "不要续关！"
     },
     {
         "diff": 2,
@@ -4888,7 +4883,7 @@
             "points"
         ],
         "name": "达到40w分",
-        "notes": "Don't Game Over!"
+        "notes": "不要续关！"
     },
     {
         "diff": 2,
@@ -4899,15 +4894,7 @@
             "points"
         ],
         "name": "达到50w分",
-        "notes": "Don't Game Over!"
-    },
-    {
-        "diff": 2,
-        "games": [
-            "1"
-        ],
-        "name": "单关获取累计20w分",
-        "notes": "可以重复进入同一关刷"
+        "notes": "不要续关！"
     },
     {
         "diff": 2,
@@ -4915,7 +4902,7 @@
             "1"
         ],
         "name": "收集累计60个分数球",
-        "notes": "每关通关时可以看到本关收集的分数球数量"
+        "notes": "<img src=\"img/1-bonusball.png\"/>\n每关通关时可以看到本关收集的分数球数量"
     },
     {
         "diff": 2,
@@ -4926,15 +4913,15 @@
             "gabyoall1"
         ],
         "name": "全清两关的扫地机器人",
-        "notes": "Elec (11), Ice (6), Fire (3), Bomb (3). 可以用Cut, Elec, Fire, Bomb造成伤害"
+        "notes": "Elec (11), Ice (6), Fire (3), Bomb (3)\n可以用Cut, Elec, Fire, Bomb造成伤害"
     },
     {
         "diff": 2,
         "games": [
             "1"
         ],
-        "name": "让电人关卡6个看楼梯的绿色放电怪同屏冻结",
-        "notes": "The green eye enemies in Elec Man.\nHint: You can re-apply the frozen status to frozen enemies by hitting them again."
+        "name": "在电关同屏冻结6个监视者",
+        "notes": "<img src=\"img/1-icewatchers.png\"/>\n提示：你可以重复冻结一个敌人，刷新冻结时间"
     },
     {
         "diff": 2,
@@ -4947,7 +4934,1326 @@
             "bombpacifist3",
             "bombpacifist4"
         ],
-        "name": "和平主义抵达炸弹BOSS门",
-        "notes": "禁暂停"
+        "name": "和平主义抵达炸弹BOSS门（禁暂停）",
+        "notes": "和平主义：不伤害任何小怪"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "footholder"
+        ],
+        "name": "禁M通过冰关漂浮平台版面",
+        "notes": "<img src=\"img/footholder.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "把一个炸弹放置到被冻结的火柱上面",
+        "notes": "Hint: some are easier than others"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "使用炸弹命中一次电人"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "反跑电关",
+        "notes": "从BOSS门口的大机器位置反跑到开局\n反跑时不能通过死亡直接返回到重生点"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "escortquest1",
+            "fleacircus"
+        ],
+        "name": "把一个炸弹关开头的一个蹦蹦带到最右边大能量的位置",
+        "notes": "<img src=\"img/1-bombflea.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "反跑火关",
+        "notes": "从BOSS门口两个火柱前方开始反跑到开局\n反跑时不能通过死亡直接返回到重生点"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "用剪刀击败火人（禁暂停）",
+        "notes": "拾取过关球结算"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "ice"
+        ],
+        "name": "用炸弹击败冰人（禁暂停）",
+        "notes": "拾取过关球结算"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "ice"
+        ],
+        "name": "用剪刀击败冰人（禁暂停）",
+        "notes": "拾取过关球结算"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "name": "纯炸弹击败一个压饼机器人",
+        "notes": "<img src=\"img/1-bigeye.png\"/>\n允许冻结"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "mm1boss3different"
+        ],
+        "name": "在一场BOSS战中使用两种不同特武造成伤害"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "bombpacifist3",
+            "allsuzys"
+        ],
+        "name": "清空前八所有的方独眼",
+        "notes": "<img src=\"img/1-suzy.png\"/>\nCut (16), Ice (2), Bomb (8)"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "placedhealth1"
+        ],
+        "name": "在4个不同关卡各拾取一个放置大血",
+        "notes": "前六每关都有，城堡1有"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "robotwice"
+        ],
+        "name": "击败同一个机器人BOSS两次",
+        "notes": "可以重复进入关卡完成，也可以通过BOSS RUSH完成"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points2"
+        ],
+        "name": "达到70w分",
+        "notes": "不要续关！"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "points2"
+        ],
+        "name": "达到80w分",
+        "notes": "不要续关！"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "无伤完成一个关卡",
+        "notes": "可以挂掉然后从复活点开始"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "反跑剪刀关",
+        "notes": "从第一道BOSS门口开始反跑到开局\n反跑时不能通过死亡直接返回到重生点\n爬上通往大血房间的楼梯需要火/电/暂停取消受击"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "把BOSS房内有石头的机器人BOSS全部用房内的石头砸一下",
+        "notes": "Cut, Guts, Elec\n需要造成伤害"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "guts"
+        ],
+        "name": "用剪刀击败气力人（禁暂停）",
+        "notes": "拾取过关球结算"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "mm1boss3different"
+        ],
+        "name": "在一场BOSS战中使用三种不同特武造成伤害"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "gabyoall1",
+            "bombpacifist2"
+        ],
+        "name": "全清前六的扫地机器人",
+        "notes": "<img src=\"img/1-gabyoall.png\"/>\nElec (11), Ice (6), Fire (3), Bomb (3)\n可以用Cut, Elec, Fire, Bomb造成伤害"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "fleacircus"
+        ],
+        "name": "把炸弹关开头的5个蹦蹦全部卡在一个管道中",
+        "notes": "<img src=\"img/1-fleacircus.png\"/>\n在管道内外，冰都非常适合用来控制位置。\n可以通过拖屏来刷新没有卡住的蹦蹦，也可以用来刷能量或血。"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "在4个不同关卡破坏一道墙",
+        "notes": "Cut, Elec, Guts (BOSS房), Wily 1, Wily 3, Wily 4"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "在前六每关收集一个放置大血"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "全收集城堡1和2"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "bigeye"
+        ],
+        "name": "使用全部武器命中一个压饼机器人并击败他",
+        "notes": "<img src=\"img/1-bigeye.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "bigeye"
+        ],
+        "name": "把城堡1开头的三台压饼机器人带到城堡屋檐下",
+        "notes": "<img src=\"img/1-3bigeyes.png“/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "bigeye"
+        ],
+        "name": "全清压饼机器人",
+        "notes": "<img src=\"img/1-bigeye.png\"/>\nGuts, Elec, Ice, Cut各有1台\n城堡1有3台"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "yellowdevil1"
+        ],
+        "name": "纯P击败黄恶魔"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "copyrobot"
+        ],
+        "name": "用炸弹击败复制人"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "用每种武器各击败一台泡泡机（除了冰）",
+        "notes": "<img src=\"img/Mm1cwu01psprite.png\"/>\n包括P弹\n冰无法对泡泡机造成伤害，故排除"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "纯炸弹击败一台泡泡机",
+        "notes": "<img src=\"img/Mm1cwu01psprite.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "拿到风车"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "1"
+        ],
+        "name": "用冰击败威利1阶段（禁暂停）"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "通关剪刀人关卡"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "通关电人关卡"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "通关火人关卡"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "name": "通关炸弹人关卡"
+    },
+    {
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "gutsman"
+        ],
+        "name": "通关气力人关卡"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1"
+        ],
+        "name": "通关冰人关卡"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "yellowdevil1"
+        ],
+        "name": "通关城堡1"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1"
+        ],
+        "groups": [
+            "copyrobot"
+        ],
+        "name": "通关城堡2"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "纯齿轮完成一关",
+        "notes": "温馨提示：齿轮无法对快速人，破坏人，空气人造成伤害"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "反跑泡泡关的第一个版面"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "woodpacifist3"
+        ],
+        "name": "全清木头关的蝙蝠",
+        "notes": "<img src=\"img/2-batton.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "击败前八任意关卡内所有种类的小怪各一只",
+        "notes": "包括小BOSS，但不包括BOSS"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "yoku2"
+        ],
+        "name": "踏足高热关的所有优酷砖",
+        "notes": "定时出现，定时消失的砖块"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "用飞叶盾击败一条大鱼鱼",
+        "notes": "<img src=\"img/2-anko.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "击败一个蛋爆出来的全部8只小鸟",
+        "notes": "<img src=\"img/2-pipieggs.png\"/>\nCrash, Air, Wood, Wily 1"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "在两个关卡各击败一个叠叠乐",
+        "notes": "<img src=\"img/2-blocky.png\"/>\nFlash, Crash, Metal"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "打垮一个叠叠乐且不受到伤害",
+        "notes": "<img src=\"img/2-blocky.png\"/>\nFlash, Crash, Metal"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "3enemies2"
+        ],
+        "name": "使用火焰一箭三雕"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "3enemies2"
+        ],
+        "name": "使用齿轮一箭三雕（鸟除外）"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "3enemies2"
+        ],
+        "name": "使用任意特武一箭三雕"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "springer"
+        ],
+        "name": "击败一个扫地机器人",
+        "notes": "<img src=\"img/2-springer.png\"/>\n可以用炸弹, 泡泡, 飞叶盾, 回旋镖和满蓄火焰造成伤害."
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "placed",
+            "etank2"
+        ],
+        "name": "收集一个关卡内的所有E罐"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "item3"
+        ],
+        "name": "把一个3号道具放到威利标志上",
+        "notes": "<img src=\"img/2-item3drw.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "item3"
+        ],
+        "name": "让一个3号道具弹跳10次"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "placed"
+        ],
+        "name": "收集一个放置1up",
+        "notes": "Crash(需道具), Flash(需道具), Heat, Metal, Quick\nW1, W2, W4"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "一键清空回旋镖能量",
+        "notes": "完整的一管能量"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "sniperarmor"
+        ],
+        "name": "把闪光关卡的第二台装甲乔卡在右边小黑屋",
+        "notes": "<img src=\"img/2-sniperarmorstuck.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "sniperarmor"
+        ],
+        "name": "把闪光关卡最后的三台装甲乔带到左墙边",
+        "notes": "<img src=\"img/2-3sniperarmors.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "flashmanenemies",
+            "leafshield4"
+        ],
+        "name": "全清闪光人关卡",
+        "notes": "包括这个虫虫喷射器<img src=\"img/Mm2boomerangblowersprite.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "sniperarmor2",
+            "flashmanenemies",
+            "leafshield4"
+        ],
+        "name": "全清闪光关卡的装甲乔",
+        "notes": "<img src=\"img/2-sniperarmor.png\"/>\n总共5个"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "在不触发掉落平台的情况下通过泡泡关的第一个版面",
+        "notes": "可以用时停或2号道具达成\n但也可以用单帧跳达成（"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "name": "触发泡泡关卡的掉落平台，并用时停把它定在半空，然后踩上去"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "tink2"
+        ],
+        "name": "让快速人在房间中央摆特殊Pose",
+        "notes": "<img src=\"img/2-quickpowerpose.png\"/>\n齿轮 / 泡泡 / 飞叶盾 被快速人弹开的特殊动作"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "quickflash"
+        ],
+        "name": "使用时停击败快速人",
+        "notes": "每2格能量造成1点伤害"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "sniperarmor"
+        ],
+        "name": "让两台装甲乔掉出屏幕",
+        "notes": "<img src=\"img/2-sniperarmor.png\"/>"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "用满蓄的火焰击败一个叠叠乐",
+        "notes": "<img src=\"img/2-blocky.png\"/>\nFlash, Crash, Metal"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "用任意特武一箭三雕小小青蛙",
+        "notes": "这个小青蛙<img src=\"img/2-kerog.png\"/>喷出来的三只小小青蛙\n可以用齿轮, 火焰, 空气, 炸弹, 树叶做到"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "在木头关第一个版面一发攻击击败全部10只蝙蝠",
+        "notes": "可以用Heat, Air, Crash, Metal做到"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "在前八任意关卡全清虫虫喷射器",
+        "notes": "<img src=\"img/Mm2boomerangblowersprite.png\"/>\n弱点是齿轮 / 空气 / 飞叶盾\n必须是有虫虫喷射器的关卡：Flash, Quick, Air\nQuick关卡的第二只需要特武"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "leafshieldstage3"
+        ],
+        "name": "全清快速人关卡",
+        "notes": "需要火焰 / 炸弹 / 泡泡 / 树叶来击败<img src=\"img/2-springer.png\"/>\n需要任意特武来击败<img src=\"img/Mm2boomerangblowersprite.png\"/>"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "在两个关卡各收集一个放置1up",
+        "notes": "Heat (1), Flash (1需道具), Crash (1需道具), Quick (3), Metal (1需道具)\nW1, W2, W4"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2placedpowerup2"
+        ],
+        "name": "破坏人关卡全收集"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2placedpowerup2"
+        ],
+        "name": "快速人关卡全收集"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "反跑破坏人关卡",
+        "notes": "不必从BOSS门口开跑（不然需要道具才能回去）\n最后一个楼梯开始反跑，到开局点。"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "miniboss2"
+        ],
+        "name": "击败所有小BOSS",
+        "notes": "<img src=\"img/2-miniboss.png\"/>\n木头关：大狗x3\n泡泡关：大鱼x2"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "woodpacifist"
+        ],
+        "name": "全清前八中任意两关的动物敌人",
+        "notes": "<img src=\"img/2-animals.png\"/>\n反诺亚方舟"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "用炸弹击败闪光人",
+        "notes": "爆炸可以造成多次判定"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "etank2"
+        ],
+        "name": "收集并持有3个E罐",
+        "notes": "Metal (2), Flash (1), Quick (1右路), Crash (1)"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "pacifist2",
+            "bubbleman"
+        ],
+        "name": "和平主义抵达破坏人BOSS门",
+        "notes": "和平主义：不伤害任何小怪"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "使用时停延迟任意BOSS的登场",
+        "notes": "需要在进门前使用时停"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "metalman"
+        ],
+        "name": "和平主义抵达金属人BOSS门",
+        "notes": "和平主义：不伤害任何小怪"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "leafshieldstage1",
+            "leafshieldstage2",
+            "leafshieldstage3",
+            "leafshieldstage4"
+        ],
+        "name": "全程使用树叶盾抵达任意BOSS门"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "无时停通过快速人所有激光版面"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "连续无伤躲过大龙的10次攻击",
+        "notes": "<img src=\"img/2-mechadragon.png\"/>\n一次攻击的定义：大龙一次张口喷出的一串火球",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "picopico"
+        ],
+        "name": "纯泡泡击败变形砖块",
+        "notes": "<img src=\"img/2-picopicokun.png\"/>",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "name": "在城堡3击败一条大鱼",
+        "notes": "<img src=\"img/2-bigfish.png\"/>\n弱点是回旋镖 / 炸弹",
+        "password": "<img src=\"img/mm2.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "etank2"
+        ],
+        "name": "收集并持有4个E罐",
+        "notes": "Metal (2), Flash, Quick, Crash"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "纯齿轮击败高热人"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "让破坏人的炸弹丢到天花板上",
+        "notes": "<img src=\"img/2-crashbombceiling.gif\"/>\n可以用1或3号道具做到\n也可以在BR完成\n破坏人关卡的BOSS房看起来没有天花板，但其实有（"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "heatair2b"
+        ],
+        "name": "无伤进入空气人BOSS门",
+        "notes": "可以挂掉然后从复活点开始"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "escortquest2"
+        ],
+        "name": "把高热人关卡第一面的一个竹蜻蜓带到最右边的陆地上",
+        "notes": "<img src=\"img/2-flyboyheat.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "sniperarmor2",
+            "leafshieldstage1"
+        ],
+        "name": "全清所有装甲乔（包括驾驶员）",
+        "notes": "<img src=\"img/2-sniperarmor.png\"/>\n5 in Flash, 2 in Quick, 1 in Heat"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "拆掉闪光人关卡的所有可破坏墙壁",
+        "notes": "需要1或2号道具"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "和平主义且不借助道具通过破坏人关卡的三个过山车版面",
+        "notes": "和平主义：不伤害任何小怪"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "3differentspecial"
+        ],
+        "name": "用三个不同特武击败分别击败一个青蛙吐出来三只小小青蛙",
+        "notes": "<img src=\"img/2-kerog.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "heatair2a"
+        ],
+        "name": "向左飞行且一次性用光整管2号道具能量"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "tink2"
+        ],
+        "name": "被任意机器人BOSS弹开一发特武"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "escortquest2",
+            "escortquesthard"
+        ],
+        "name": "在木头人关卡让三只兔子同屏",
+        "notes": "<img src=\"img/2-robbit.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "用满蓄火焰分别击败一只大狗和大鱼",
+        "notes": "<img src=\"img/2-miniboss.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "无伤通过金属人关卡的第一个版面（禁zip，禁闪光）"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "禁跳跃键击败任意机器人BOSS"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "heatair2a",
+            "heatair2b",
+            "heatair2c",
+            "heatair2d",
+            "heatair2e"
+        ],
+        "name": "反跑空气人关卡的最后一个版面",
+        "notes": "从BOSS门口开始反跑，到最左边屏幕边缘\n需要至少4发1号道具"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2placedpowerup"
+        ],
+        "name": "城堡1,2全收集",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2placedpowerup"
+        ],
+        "name": "城堡1,2,3全收集",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "帮助一个半血以下的BOSS回满血",
+        "notes": "炸弹可以治疗高热人\n一些BOSS自己的武器也能治疗自己\n外星人可以被泡泡以外的任意武器治疗",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "gutstank"
+        ],
+        "name": "在气力坦克BOSS战中累计击败30个安全帽，并完成BOSS战",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "在两个不同关卡拆墙",
+        "notes": "可以在Flash + Heat完成, 也可以在城堡完成",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "name": "越过大龙的头顶，并安全返回地面",
+        "notes": "<img src=\"img/2-abovemechadragon.gif\"/>",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "woodpacifist",
+            "woodpacifist2",
+            "woodpacifist3",
+            "woodman"
+        ],
+        "name": "和平主义抵达木头人BOSS门",
+        "notes": "和平主义：不伤害任何小怪\n包括三条大狗"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "airpacifist",
+            "heatair2c",
+            "heatair2e",
+            "airman"
+        ],
+        "name": "和平主义抵达空气人BOSS门",
+        "notes": "和平主义：不伤害任何小怪\n需要1号道具通过浮云版面"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "petitgoblintier4",
+            "airpacifist2",
+            "escortquest2",
+            "escortquesthard"
+        ],
+        "name": "把空气人开局的平台产生的一只小怪带到版面最右边",
+        "notes": "<img src=\"img/2-petitgoblin.png\"/>\n没有1号道具的话极度困难\n有1号道具也极度困难（"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "用齿轮击败三个机器人BOSS",
+        "notes": "Bubble, Flash, Heat, Wood, Metal可以受到齿轮伤害"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "heatair2e"
+        ],
+        "name": "无伤+和平主义+禁zip抵达高热人BOSS门",
+        "notes": "和平主义：不伤害任何小怪\n可以挂掉从复活点继续\n需要用闪光过最后一个大机器"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "在一场BOSS战中站上3种道具，并完成BOSS战"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "woodpacifist2",
+            "escortquest2",
+            "escortquesthard"
+        ],
+        "name": "让木头人关卡的4只猴子同屏出现"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "收集武器界面任意一页的全部武器和道具",
+        "notes": "不能跳到城堡关卡自动完成，必须正常收集\n第一页：Heat, Air, Wood, Bubble, Quick\n第二页：Flash, Metal, Crash, Item 1, Item 2, Item 3"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "用齿轮击败金属人",
+        "notes": "有时候我们需要尊重传统（",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "gutstank"
+        ],
+        "name": "用炸弹击败气力坦克",
+        "notes": "在正确的时机把炸弹贴到他的胸上可以让爆炸产生多次判定",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "用炸弹击败大龙",
+        "notes": "把炸弹贴到他的胸上可以让爆炸产生多次判定",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "escortquest2"
+        ],
+        "name": "在城堡2把一个竹蜻蜓带到最右边的墙边",
+        "notes": "<img src=\"img/2-flyboywily2.png\"/>",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2placedpowerup"
+        ],
+        "name": "城堡1,2,3,4全收集",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "flashman"
+        ],
+        "name": "通关闪光人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "heatman"
+        ],
+        "name": "通关高热人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "airman"
+        ],
+        "name": "通关空气人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "crashman"
+        ],
+        "name": "通关破坏人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "quickman"
+        ],
+        "name": "通关快速人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "metalman"
+        ],
+        "name": "通关金属人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "woodman"
+        ],
+        "name": "通关木头人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "bubbleman"
+        ],
+        "name": "通关泡泡人关卡"
+    },
+    {
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2castlebosses",
+            "mechadragon"
+        ],
+        "name": "通关城堡1",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2castlebosses",
+            "picopico"
+        ],
+        "name": "通关城堡2",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2castlebosses",
+            "gutstank"
+        ],
+        "name": "通关城堡3",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2castlebosses",
+            "boobeamtrap"
+        ],
+        "name": "通关城堡4",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "mm2castlebosses"
+        ],
+        "name": "通关",
+        "password": "<img src=\"img/mm2-pw.png\"/>"
     }
 ]
