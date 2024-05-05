@@ -1218,7 +1218,7 @@
             "10"
         ],
         "name": "全清太阳关",
-        "notes": "<img src=\"img/MM9Changkey.png\"/>不算"
+        "notes": "不包括<img src=\"img/MM9Changkey.png\"/>"
     },
     {
         "games": [
@@ -1238,12 +1238,6 @@
         ],
         "name": "击败一个扫地机器人",
         "notes": "<img src=\"img/MM10Spring.png\"/>\nStrike, Blade, Wily 2, Wily 3, Wily 1 Hard\n可以用冰或炸弹造成伤害"
-    },
-    {
-        "games": [
-            "10"
-        ],
-        "name": "炸弹拆墙"
     },
     {
         "games": [
@@ -1324,7 +1318,7 @@
             "10"
         ],
         "name": "从摩托关1up位置反跑回开局",
-        "notes": "不需要吃那个1up。跑到屏幕最边缘跑不动为止。"
+        "notes": "不需要吃那个1up"
     },
     {
         "diff": 1,
@@ -1406,7 +1400,7 @@
         "games": [
             "10"
         ],
-        "name": "从棒球关1up房反跑到小BOSS下",
+        "name": "从棒球关1up房反跑到小BOSS下方",
         "notes": "你需要能向上攻击的特武来移开头顶的足球。\n飞刀和齿轮不行。"
     },
     {
@@ -1435,7 +1429,7 @@
         "groups": [
             "placed1up10"
         ],
-        "name": "在三关收集一个放置1up",
+        "name": "在三个不同关卡各收集一个放置1up",
         "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1). 城堡每关都有1个"
     },
     {
@@ -1446,7 +1440,7 @@
         "groups": [
             "tsuraresand"
         ],
-        "name": "在指令关存档面让压饼机器人踩进所有地雷坑",
+        "name": "在指令关存档面让压饼机器人踩进每一个地雷坑",
         "notes": "空中冻结可以直接让他们垂直下落。\n不然需要算好距离。"
     },
     {
@@ -1458,7 +1452,7 @@
             "10mtank"
         ],
         "name": "把5个敌人变成1up",
-        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up"
+        "notes": "血量和所有武器能量全满的情况下磕M罐\n可以把全屏敌人变成1up"
     },
     {
         "diff": 1,
@@ -1469,7 +1463,7 @@
             "10mtank"
         ],
         "name": "在前八把一个压饼机器人变成1up",
-        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up。\n这个任务不能用存档的钱买M罐完成！"
+        "notes": "血量和所有武器能量全满的情况下磕M罐\n可以把全屏敌人变成1up\n这个任务不能用跳关存档的钱买M罐完成！"
     },
     {
         "diff": 1,
@@ -1480,7 +1474,7 @@
             "10mtank"
         ],
         "name": "把三种敌人变成1up",
-        "notes": "血量和所有武器能量全满的情况下磕M罐可以把全屏敌人变成1up"
+        "notes": "血量和所有武器能量全满的情况下磕M罐\n可以把全屏敌人变成1up"
     },
     {
         "diff": 1,
@@ -1498,8 +1492,8 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "以左到右顺序击败兵器库",
-        "notes": "Elec -> Wood -> Gemini -> Ring -> Napalm -> Flame -> Slash -> Frost -> Tornado",
+        "name": "从左到右顺序击败兵器库",
+        "notes": "Elec -> Wood -> Gemini\nRing -> Napalm -> Flame\nSlash -> Frost -> Tornado",
         "password": "y"
     },
     {
@@ -1519,7 +1513,7 @@
         "groups": [
             "crabpuncher"
         ],
-        "name": "先毁蟹爪，再干蟹身",
+        "name": "先毁蟹爪，再爆蟹身",
         "password": "y"
     },
     {
@@ -1571,7 +1565,7 @@
         "games": [
             "10"
         ],
-        "name": "纯用两种特武分别击败棒球关的两个守门员",
+        "name": "纯用两种特武分别击败两个守门员",
         "notes": "<img src=\"img/MM10TheKeeper.png\"/>\n棒球关卡的两个小BOSS。\n比如用飞刀打1号守门员，炸弹打2号守门员。"
     },
     {
@@ -1580,14 +1574,14 @@
             "10"
         ],
         "name": "让水泵关所有安全帽为你加油",
-        "notes": "要走上路。\n下路的那一个安全帽可以不算。"
+        "notes": "要走上路。\n不包括下路的那一个安全帽。"
     },
     {
         "diff": 2,
         "games": [
             "10"
         ],
-        "name": "在三关让狗落到刺上",
+        "name": "在三个不同关卡中让狗落到刺上",
         "notes": "Pump, Chill, Nitro, Blade, Sheep, Wily 1, Wily 2, Wily 3"
     },
     {
@@ -1595,7 +1589,7 @@
         "games": [
             "10"
         ],
-        "name": "比特把你扔刺上",
+        "name": "让比特把你扔到刺上触发钉鞋",
         "notes": "Sheep, Blade, Wily 2, and Wily 3 (?)"
     },
     {
@@ -1603,7 +1597,7 @@
         "games": [
             "10"
         ],
-        "name": "反跑指令关的两场沙尘暴"
+        "name": "反跑指令关的任意两个沙尘暴版面"
     },
     {
         "diff": 2,
@@ -1613,7 +1607,7 @@
         "groups": [
             "placed1up10"
         ],
-        "name": "在4关收集一个1up",
+        "name": "在四个不同关卡各收集一个放置1up",
         "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1)"
     },
     {
@@ -1702,7 +1696,7 @@
         "games": [
             "10"
         ],
-        "name": "在冷冻关最后一面不摧毁冰块抵达BOSS门",
+        "name": "在不摧毁冷冻关最后一面任意冰块的情况下抵达BOSS门",
         "notes": "可以裂开，但不能碎掉。\n复活后冰块会刷新。"
     },
     {
@@ -1713,7 +1707,7 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "通关堡1且BOSS每次下来你只能按一下攻击",
+        "name": "通关堡1，BOSS每轮出现只能打一下",
         "notes": "从BOSS下来到回去这段时间只能按1下攻击键",
         "password": "y"
     },
@@ -1725,7 +1719,7 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "纯用三种武器分别击败堡1的三面BOSS",
+        "name": "纯用三种不同武器分别击败堡1三个版面的BOSS",
         "notes": "比如：\n齿轮打1-3（第一面）\n火打4-6（第二面）\n冰打7-9（第三面）\nP弹也算一种武器。",
         "password": "y"
     },
@@ -1734,7 +1728,7 @@
         "games": [
             "10"
         ],
-        "name": "摧毁堡2的所有冰块",
+        "name": "摧毁堡2所有冰块",
         "password": "y"
     },
     {
@@ -1787,7 +1781,7 @@
             "bladepacifist"
         ],
         "name": "和平主义抵达飞刀BOSS门",
-        "notes": "小怪发出的子弹也不能打"
+        "notes": "只能打小BOSS\n小怪发出的子弹也不能打\n可以冻结"
     },
     {
         "diff": 3,
@@ -1798,7 +1792,7 @@
             "bladepacifist"
         ],
         "name": "反跑飞刀关最后一面",
-        "notes": "如果没飞狗，至少需要两只比特"
+        "notes": "需要飞狗或两只比特"
     },
     {
         "diff": 3,
@@ -1806,7 +1800,7 @@
             "10"
         ],
         "name": "禁跳跃键抵达太阳小BOSS门",
-        "notes": "需要齿轮+飞狗。飞狗不是必要的，但非常难。"
+        "notes": "需要齿轮+飞狗\n飞狗不是必要的，但不用飞狗非常难"
     },
     {
         "diff": 3,
@@ -1817,8 +1811,8 @@
             "darspiderpit",
             "noseesaws"
         ],
-        "name": "让飞刀最后一面的第一只蜘蛛落坑",
-        "notes": "推荐准备一个E罐"
+        "name": "让飞刀关最后一面的第一只蜘蛛落坑",
+        "notes": "健康管理很重要\n推荐准备一个E罐"
     },
     {
         "diff": 3,
@@ -1851,7 +1845,6 @@
             "10"
         ],
         "name": "在堡3第一个电梯上击败一个安全帽",
-        "notes": "可能没想象中那么简单",
         "password": "y"
     },
     {
@@ -1997,7 +1990,7 @@
             "10"
         ],
         "name": "收集前八所有放置1up",
-        "notes": "水泵关卡两条路都有1up，所以要打两遍。其他关卡每关1个。"
+        "notes": "水泵关两条路都有1up，所以要打两遍。\n其他关每关1个。"
     },
     {
         "diff": 1,
@@ -2017,7 +2010,7 @@
             "9",
             "10"
         ],
-        "name": "击败10代小火球+9代大火龙",
+        "name": "击败9代大火龙+10代小火球",
         "notes": "<img src=\"img/Changkey_dragon.png”/>\n<img src=\"img/MM9Changkey.png\"/>",
         "type": "all"
     },
@@ -2053,7 +2046,7 @@
         "groups": [
             "shieldattacker7-10"
         ],
-        "name": "分别在9代10代击败盾牌飞行器",
+        "name": "分别在9代10代击败一个盾牌飞行器",
         "notes": "<img src=\"img/MM10ShieldAttacker.png\"/>\nMM9: Galaxy, Tornado, Wily 3\nMM10: Commando, Sheep, Wily 1",
         "type": "all"
     },
@@ -2063,7 +2056,7 @@
             "9",
             "10"
         ],
-        "name": "分别在9代10代击败压饼机器人",
+        "name": "分别在9代10代击败一个压饼机器人",
         "notes": "<img src=\"img/MM9BigStomperOrange.png\"/><img src=\"img/TsurareStamp.png\"/>\nMM9: Hornet, Jewel, Plug, Wily 2,3\nMM10: Chill, Commando, Wily 1,2,3",
         "type": "all"
     },
@@ -2131,7 +2124,7 @@
             "9",
             "10"
         ],
-        "name": "用三重烈火或飞刀无克制击败一个BOSS",
+        "name": "用火或刀无克制击败一个BOSS",
         "type": "all"
     },
     {
@@ -2139,7 +2132,7 @@
             "9"
         ],
         "name": "通关特殊关卡",
-        "notes": "你可以顺便把其他任务串联到特殊关卡中完成！",
+        "notes": "你可以顺便在特殊关卡中并行完成其他任务！",
         "password": "可以进入特殊关卡"
     },
     {
