@@ -33,7 +33,7 @@
     <span id="error" style="color: red;"></span><br>
     <a id="share-link" href=""></a><br><br>
     <pre><a href="https://docs.qq.com/sheet/DY0ZiWVZWdVBXeVZU?tab=umfgkn" target="_blank">在线文档</a></pre>
-    <pre>图片资源来自<a href="https://github.com/cleartonic/mm_bingo" target="_blank">mm_bingo</a>和<a href="https://megaman.fandom.com/wiki/Mega_Man_Knowledge_Base" target="_blank">MMKB</a></pre><br>
+    <pre>图片资源来自<a href="https://github.com/cleartonic/mm_bingo" target="_blank">mm_bingo</a>和<a href="https://megaman.fandom.com/wiki/Mega_Man_Knowledge_Base" target="_blank">MMKB</a></pre>
 
     <script>
         var data;
@@ -325,7 +325,7 @@
                     color = hexToHsl(element.value);
                     if (color.s < 0.2 || color.l < 0.2 || color.l > 0.9) {
                         let error = document.getElementById("error");
-                        error.innerHTML = "*请使用更独特的颜色";
+                        error.innerHTML = "*请使用更特别的颜色";
                         element.classList.add("missing");
                         return;
                     }
@@ -349,16 +349,14 @@
                 document.getElementById("error").innerHTML = "*" + error.message;
                 return;
             }
-            params = {
-                "id": goalList.map(function (goal) {
-                    return goal.index
-                }).join(","),
-                "color": settings["color"]
-            }
+            params = "id=" + goalList.map(function (goal) {
+                return goal.index
+            }).join(",");
+            params += "&color=" + settings["color"].substring(1);
             if (settings["room-name"].length > 0) {
-                params["room"] = settings["room-name"];
+                params += "&" + new URLSearchParams({ "room": settings["room-name"] }).toString();
             }
-            window.open('popup.html?' + new URLSearchParams(params).toString(), 'Bingo', 'width=780,height=650');
+            window.open('popup.html?' + params, 'Bingo', 'width=780,height=650');
         }
     </script>
 </body>

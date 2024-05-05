@@ -19,7 +19,7 @@
             grid-template-columns: repeat(5, 1fr);
             grid-gap: 1px;
             width: min(100vw, 120vh);
-            height: min(83vw, 100vh);
+            height: min(100vh, 120vw);
             background-color: black;
         }
 
@@ -290,7 +290,7 @@
     <script>
         const queryParams = new URLSearchParams(window.location.search);
         const syncTimeout = 10000;
-        var playerColor = queryParams.get('color');
+        var playerColor = "#" + queryParams.get('color');
         var roomName = queryParams.get('room');
         var connected = false;
         var sync = false;
