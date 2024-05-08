@@ -163,8 +163,8 @@
             return true;
         }
 
-        function hasIntersection(setA, setB) {
-            return setA.some(item => setB.includes(item));
+        function getIntersection(setA, setB) {
+            return setA.filter(item => setB.includes(item));
         }
 
         function generateDiffMatrix(diffs, centerHardest) {
@@ -244,14 +244,22 @@
                             continue;
                         }
                         let goal = goals[i];
-                        if (leniency < 1 && goal.groups.length > 0 && hasIntersection(goal.groups, groupUsed)) {
+                        if (leniency < 1 && goal.groups.length > 0 && getIntersection(goal.groups, groupUsed).length > 0) {
                             continue;
                         }
                         if (goal.diff != diffMatrix[row][col]) {
                             continue;
                         }
-                        if (!isSubset(goal.games, games)) {
-                            continue;
+                        if (goal.type === undefined || goal.type === "all") {
+                            if (!isSubset(goal.games, games)) {
+                                continue;
+                            }
+                        } else {
+                            minCount = parseInt(goal.type.substring(3));
+                            minCount = isNaN(minCount) ? 1 : minCount;
+                            if (getIntersection(goal.games, games).length < minCount) {
+                                continue;
+                            }
                         }
                         if (balanceGames) {
                             for (let game of goal.games) {
