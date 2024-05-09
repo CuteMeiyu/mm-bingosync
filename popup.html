@@ -331,10 +331,10 @@
         var sync = false;
         var drone;
         var room;
-        var historyMessages = [];
-        var syncMembers = [];
-        var syncTimer;
-        var syncId;
+        var historyEvents = [];
+        var syncMemberIds = [];
+        var syncTimer = 0;
+        var syncSource;
 
         if (roomName != null) {
             roomName = `observable-${roomName}`
@@ -344,6 +344,30 @@
         } else {
             let modalOverlay = document.getElementById('modal-overlay');
             modalOverlay.style.display = 'none';
+        }
+
+        function sendSyncData(cell, color) {
+            let message = {}
+            if (cell != null) {
+                message.cell = cell;
+            }
+            if (color != null) {
+                message.color = color;
+            }
+            message.history = historyEvents;
+            message.sync = sync;
+            drone.publish({
+                room: roomName,
+                message: message
+            })
+        }
+
+        function sendSyncRequest(sourceId) {
+            syncSource = sourceId;
+            drone.publish({
+                room: roomName,
+                message: { syncSource: sourceId }
+            })
         }
 
         function registerEvents() {
@@ -356,28 +380,27 @@
 
             room.on('open', error => {
                 if (error) {
-                    console.error(error);
-                } else {
-                    console.log('Connected to room');
-                    connected = true;
-                    let modalOverlay = document.getElementById('modal-overlay');
-                    modalOverlay.style.display = 'none';
+                    return console.error(error);
                 }
+                console.log('Connected to room');
+                connected = true;
+                let modalOverlay = document.getElementById('modal-overlay');
+                modalOverlay.style.display = 'none';
             });
 
-            function askForSync(timeout) {
-                while (syncMembers.length > 0) {
-                    member = syncMembers.pop();
-                    if (member.id === drone.clientId) {
+            function askFromSyncMembers(timeout) {
+                if (sync) {
+                    return;
+                }
+                while (syncMemberIds.length > 0) {
+                    let memberId = syncMemberIds.pop();
+                    if (memberId === drone.clientId) {
                         continue;
                     }
-                    syncId = member.id;
-                    drone.publish({
-                        room: roomName,
-                        message: { syncId: syncId }
-                    });
-                    console.log(`Waiting for sync from ${syncId}`);
-                    syncTimer = setTimeout(askForSync, timeout, timeout);
+                    sendSyncRequest(memberId);
+                    console.log(`Sent sync request to: ${memberId}`);
+                    clearTimeout(syncTimer);
+                    syncTimer = setTimeout(askFromSyncMembers, timeout, timeout);
                     return;
                 }
                 console.log("No sync member");
@@ -386,56 +409,59 @@
 
             room.on('members', function (members) {
                 console.log("Members", members);
-                syncMembers = members;
-                askForSync(syncTimeout);
+                syncMemberIds = members.map(member => member.id);
+                askFromSyncMembers(syncTimeout);
             });
 
             room.on('member_leave', function (member) {
                 console.log("Member left", member);
-                if (syncMembers.includes(member.id)) {
-                    syncMembers.splice(syncMembers.indexOf(member.id), 1);
+                if (syncMemberIds.includes(member.id)) {
+                    syncMemberIds.splice(syncMemberIds.indexOf(member.id), 1);
                 }
             });
 
+            function historyIncludes(event) {
+                for (let history of historyEvents) {
+                    if (history.id === event.id) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function mergeHistory(events) {
+                for (let event of events) {
+                    if (!historyIncludes(event)) {
+                        historyEvents.push(event);
+                        toggleCellColor(event.cell, event.color);
+                    }
+                }
+            }
+
             room.on('message', message => {
                 console.log("Message", message);
-                if (message.data.color !== undefined) {
-                    if (!syncMembers.includes(message.member)) {
-                        syncMembers.push(message.member);
-                    }
-                    historyMessages.push(message);
-                    toggleCellColor(message.data.id, message.data.color);
-                    return;
-                }
-                if (message.data.syncId === drone.clientId) {
-                    drone.publish({
-                        room: roomName,
-                        message: {
-                            board: sync ? getBoardColors() : null
-                        }
+                if (message.data.color != null && message.data.cell != null) {
+                    toggleCellColor(message.data.cell, message.data.color);
+                    historyEvents.push({
+                        id: message.id,
+                        cell: message.data.cell,
+                        color: message.data.color
                     });
-                    console.log(`Answered sync from ${message.member.id}`);
-                    return;
                 }
-                if (message.data.board === undefined || sync || message.member.id !== syncId) {
-                    return;
+                if (message.data.history !== undefined) {
+                    mergeHistory(message.data.history);
                 }
-                clearTimeout(syncTimer);
-                if (message.data.board === null) {
-                    console.log(`Empty sync data from ${message.member.id}`);
-                    askForSync(syncTimeout);
-                    return;
-                }
-                sync = true;
-                syncMembers = [];
-                setBoardColors(message.data.board);
-                for (let historyMessage of historyMessages) {
-                    if (historyMessage.timestamp < message.timestamp) {
-                        continue;
+                if (message.data.sync === true) {
+                    sync = true;
+                    if (!syncMemberIds.includes(message.member.id)) {
+                        syncMemberIds.push(message.member.id);
                     }
-                    toggleCellColor(historyMessage.data.id, historyMessage.data.color);
                 }
-                console.log(`Successful sync from ${message.member.id}`);
+                if (message.data.syncSource === drone.clientId) {
+                    sendSyncData(null, null)
+                    console.log(`Answered sync request from ${message.member.id}`);
+                    return;
+                }
             });
 
             drone.on('error', error => {
@@ -457,7 +483,8 @@
                 let modalOverlay = document.getElementById('modal-overlay');
                 modalOverlay.style.display = 'none';
                 connected = true;
-                askForSync(syncTimeout);
+                sync = false;
+                askFromSyncMembers(syncTimeout);
             });
         }
 
@@ -473,45 +500,11 @@
             if (!connected) {
                 return;
             }
-            drone.publish({
-                room: roomName,
-                message: {
-                    id: cell.id,
-                    color: playerColor
-                }
-            });
+            sendSyncData(cell.id, playerColor);
         }
     </script>
 
     <script>
-        function setBoardColors(boardColors) {
-            for (let row = 0; row < 5; row++) {
-                for (let col = 0; col < 5; col++) {
-                    setBackground(`cell_${row}_${col}`, []);
-                }
-            }
-            for (let i = 0; i < boardColors.length; i++) {
-                let colors = boardColors[i].colors;
-                let id = boardColors[i].id;
-                setBackground(id, colors);
-            }
-        }
-
-        function getBoardColors() {
-            let boardColors = [];
-            for (let row = 0; row < 5; row++) {
-                for (let col = 0; col < 5; col++) {
-                    let id = `cell_${row}_${col}`
-                    let cell = document.getElementById(id);
-                    let colors = cell.colors;
-                    if (colors != undefined && colors.length > 0) {
-                        boardColors.push({ id: id, colors: cell.colors });
-                    }
-                }
-            }
-            return boardColors;
-        }
-
         function setBackground(id, colors) {
             let element = document.getElementById(id);
             element.colors = colors;
