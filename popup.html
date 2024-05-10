@@ -637,7 +637,11 @@
                         cellText.innerHTML = goal.name;
 
                         let cellGame = cell.querySelector(".cell-game");
-                        cellGame.innerHTML = "MM" + goal.games.join(',');
+                        if (goal.games !== undefined && goal.games.length > 0) {
+                            cellGame.innerHTML = "MM" + goal.games.join(',');
+                        } else {
+                            cellGame.innerHTML = "";
+                        }
                         if (!showGames && previousGame != null && previousGame != cellGame.innerHTML) {
                             showGames = true;
                         }

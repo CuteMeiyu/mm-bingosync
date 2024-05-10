@@ -17,7 +17,9 @@ def get_regular_goal_list(df: pd.DataFrame):
             continue
         if pd.isna(row["rank"]):
             continue
-        goal = {"name": name, "games": [part.strip() for part in str(row["games"]).replace("，", ",").split(",")]}
+        goal = {"name": name}
+        if not pd.isna(row["games"]):
+            goal["games"] = [part.strip() for part in str(row["games"]).replace("，", ",").split(",")]
         diff = int(row["rank"]) - 1
         if diff > 0:
             goal["diff"] = diff
