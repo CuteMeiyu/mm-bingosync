@@ -55,6 +55,15 @@
                         if (item.diff === undefined) {
                             item.diff = 0;
                         }
+                        if (item.weight === undefined) {
+                            item.weight = 1.0;
+                        }
+                        if (item.type !== undefined && item.type.startsWith("any")) {
+                            item.minGameIntersection = parseInt(item.type.substring(3));
+                            item.minGameIntersection = isNaN(item.minGameIntersection) ? 1 : item.minGameIntersection;
+                        } else {
+                            item.minGameIntersection = item.games.length;
+                        }
                     }
 
                     for (let [key, value] of queryParams) {
@@ -147,7 +156,7 @@
 
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(random() * (i + 1));
+                let j = Math.floor(random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
@@ -213,75 +222,84 @@
             return diffMatrix
         }
 
-        function generateGoalList(diffMatrix, games, balanceGames) {
-            let goalList = [];
-            let goals = [...data];
-            shuffleArray(goals);
-            let indexUsed = [];
+        function getDiffIndexes(diffMatrix) {
+            let diffIndexes = [];
+            for (let row = 0; row < 5; row++) {
+                for (let col = 0; col < 5; col++) {
+                    diff = diffMatrix[row][col];
+                    if (diffIndexes[diff] === undefined) {
+                        diffIndexes[diff] = [];
+                    }
+                    diffIndexes[diff].push(row * 5 + col);
+                }
+            }
+            return diffIndexes;
+        }
+
+        function drawGoal(goals) {
+            let totalWeight = 0;
+            for (let goal of goals) {
+                totalWeight += goal.weight;
+            }
+            let weight = random() * totalWeight;
+            for (let i = 0; i < goals.length; i++) {
+                weight -= goals[i].weight;
+                if (weight < 0) {
+                    return goals.splice(i, 1)[0];
+                }
+            }
+        }
+
+        function generateBoardIds(diffMatrix, games, balanceGames) {
+            let diffIndexes = getDiffIndexes(diffMatrix);
+            for (let indexes of diffIndexes) {
+                if (indexes !== undefined) shuffleArray(indexes);
+            }
             let groupUsed = [];
             let gamesCount = {};
             for (let game of games) {
                 gamesCount[game] = 0;
             }
-            let leniency = 0;
-            let changed = false;
-            let i = -1;
-            for (let row = 0; row < 5; row++) {
-                for (let col = 0; col < 5; col++) {
-                    while (true) {
-                        i += 1;
-                        if (i >= goals.length) {
-                            if (!changed) {
-                                leniency += 1;
-                                if (leniency > 1) {
-                                    throw new Error("没有足够数量的符合条件的任务");
-                                }
-                            }
-                            changed = false;
-                            i = 0;
+            let leniencyConditions = ["允许同组任务同时出现"];
+
+            let chooseCount = 0;
+            let boardIds = [];
+            for (let leniency = 0; leniency < leniencyConditions.length; leniency++) {
+                let goals = [...data];
+                while (goals.length > 0) {
+                    let goal = drawGoal(goals);
+                    if (diffIndexes[goal.diff] === undefined || diffIndexes[goal.diff].length === 0) {
+                        continue;
+                    }
+                    if (getIntersection(goal.games, games).length < goal.minGameIntersection) {
+                        continue;
+                    }
+                    if (leniency < 1 && getIntersection(goal.groups, groupUsed).length > 0) {
+                        continue;
+                    }
+                    if (balanceGames) {
+                        for (let game of goal.games) {
+                            gamesCount[game] += 1;
                         }
-                        if (indexUsed.indexOf(i) >= 0) {
-                            continue;
-                        }
-                        let goal = goals[i];
-                        if (leniency < 1 && goal.groups.length > 0 && getIntersection(goal.groups, groupUsed).length > 0) {
-                            continue;
-                        }
-                        if (goal.diff != diffMatrix[row][col]) {
-                            continue;
-                        }
-                        if (goal.type === undefined || goal.type === "all") {
-                            if (!isSubset(goal.games, games)) {
-                                continue;
-                            }
-                        } else {
-                            minCount = parseInt(goal.type.substring(3));
-                            minCount = isNaN(minCount) ? 1 : minCount;
-                            if (getIntersection(goal.games, games).length < minCount) {
-                                continue;
-                            }
-                        }
-                        if (balanceGames) {
+                        gamesCountValues = Object.values(gamesCount)
+                        if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
                             for (let game of goal.games) {
-                                gamesCount[game] += 1;
+                                gamesCount[game] -= 1;
                             }
-                            gamesCountValues = Object.values(gamesCount)
-                            if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
-                                for (let game of goal.games) {
-                                    gamesCount[game] -= 1;
-                                }
-                                continue;
-                            }
+                            continue;
                         }
-                        indexUsed.push(i);
-                        groupUsed = groupUsed.concat(goal.groups);
-                        changed = true;
-                        goalList.push(goal);
-                        break;
+                    }
+                    groupUsed = groupUsed.concat(goal.groups);
+                    let index = diffIndexes[goal.diff].pop();
+                    boardIds[index] = goal.index;
+                    chooseCount += 1;
+                    if (chooseCount >= 25) {
+                        return boardIds;
                     }
                 }
+                console.log(`任务数量不足，尝试放宽条件：${leniencyConditions[leniency]}`);
             }
-            return goalList
+            throw new Error("没有足够数量的符合条件的任务");
         }
 
         const regularFuncs = {
@@ -356,16 +374,14 @@
             }
             randomSeed = settings["seed"];
             let diffMatrix = generateDiffMatrix(settings["diffs"], settings["center-hardest"]);
-            let goalList;
+            let boardIds;
             try {
-                goalList = generateGoalList(diffMatrix, settings["games"], settings["balance-games"]);
+                boardIds = generateBoardIds(diffMatrix, settings["games"], settings["balance-games"]);
             } catch (error) {
                 document.getElementById("error").innerHTML = "*" + error.message;
                 return;
             }
-            params = "id=" + goalList.map(function (goal) {
-                return goal.index
-            }).join(",");
+            params = "id=" + boardIds.map(id => id).join(",");
             params += "&color=" + settings["color"].substring(1);
             if (settings["room-name"].length > 0) {
                 params += "&" + new URLSearchParams({ "room": settings["room-name"] }).toString();

@@ -29,6 +29,8 @@ def get_regular_goal_list(df: pd.DataFrame):
             goal["password"] = str(row["pw"])
         if not pd.isna(row["notes"]):
             goal["notes"] = str(row["notes"])
+        if not pd.isna(row["weight"]):
+            goal["weight"] = float(row["weight"])
         goal_list.append(goal)
     return goal_list
 
