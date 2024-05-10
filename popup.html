@@ -29,6 +29,8 @@
             border: 1px solid #666;
             cursor: pointer;
             color: #fff;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .diff1 {
@@ -51,7 +53,6 @@
             transform: translate(-50%, -50%);
             text-align: center;
             word-break: break-all;
-            user-select: none;
         }
 
         .cell-game {
@@ -60,14 +61,12 @@
             bottom: 0%;
             text-align: center;
             word-break: break-all;
-            user-select: none;
         }
 
         .cell-info {
             position: absolute;
             text-align: center;
             word-break: break-all;
-            user-select: none;
         }
 
         .cell-password {
@@ -75,7 +74,6 @@
             right: 0%;
             text-align: center;
             word-break: break-all;
-            user-select: none;
         }
 
         .cell-star {
@@ -83,7 +81,6 @@
             bottom: 0%;
             text-align: center;
             word-break: break-all;
-            user-select: none;
             opacity: 0;
         }
 
@@ -96,12 +93,12 @@
             padding: 4px;
 
             opacity: 0;
-            scale: 0.0;
+            transform: scale(0.0);
         }
 
         .show {
             opacity: 1;
-            scale: 1.0;
+            transform: scale(1.0);
         }
 
         .modal-overlay {
@@ -664,6 +661,9 @@
                                 cellPassword.dataset.tooltip = goal.password.replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
                             }
                         }
+                    }
+                    for (let img of document.querySelectorAll("img")) {
+                        img.alt = "[图片]";
                     }
                     if (!showGames) {
                         for (let cellGame of document.querySelectorAll('.cell-game')) {
