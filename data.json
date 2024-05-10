@@ -82,7 +82,7 @@
             "9"
         ],
         "name": "扑灭大火龙",
-        "notes": "<img src=\"img/Changkey_dragon.png\"/>\n使用吹风或黑洞对大火龙产生的特殊交互。\n将大火龙身上的火全部吹灭。"
+        "notes": "<img src=\"img/9-Extinguish-Changkey-Dragon.png\"/>\n可以用吹风或黑洞做到"
     },
     {
         "games": [
@@ -126,7 +126,8 @@
             "bunbycatcher"
         ],
         "name": "用水泥块刹车竹蜻蜓",
-        "notes": "<img src=\"img/Bunby_catcher.png\"/>"
+        "notes": "<img src=\"img/Bunby_catcher.png\"/>",
+        "weight": 0.0
     },
     {
         "games": [
@@ -142,6 +143,13 @@
         "games": [
             "9"
         ],
+        "name": "从任意方向穿过水泥关的每个假砖",
+        "weight": 0.0
+    },
+    {
+        "games": [
+            "9"
+        ],
         "name": "蜜蜂关全收集"
     },
     {
@@ -150,6 +158,13 @@
         ],
         "name": "龙卷风关全收集",
         "notes": "有一个E罐藏在第一个下雨版面的左上角的云里"
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "name": "站在凝固了一个敌人的水泥块上凝固另一个敌人",
+        "weight": 0.0
     },
     {
         "games": [
@@ -228,6 +243,48 @@
         ],
         "name": "连续九次无伤跳过复制人",
         "notes": "<img src=\"img/ShadowMegaMan.png\"/>"
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "hornetchaser"
+        ],
+        "name": "用蜜蜂拾取一个1up",
+        "weight": 0.0
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "hornetchaser"
+        ],
+        "name": "用蜜蜂给你补血和能量",
+        "weight": 0.0
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "9projectile"
+        ],
+        "name": "用黑洞捕获4种不同类型的敌方子弹",
+        "notes": "可以分开完成。\n需要4种拥有不同贴图的子弹。\n不同种小怪发出的相同子弹也被视为同一种。",
+        "weight": 0.0
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "9projectile"
+        ],
+        "name": "用钻石盾格挡4种不同类型的敌方子弹",
+        "notes": "可以分开完成。\n需要4种拥有不同贴图的子弹。\n不同种小怪发出的相同子弹也被视为同一种。\n弹开或吸收都算抵挡。",
+        "weight": 0.0
     },
     {
         "games": [
@@ -369,7 +426,8 @@
             "9"
         ],
         "name": "逆克制击败一个BOSS",
-        "notes": "可以用其他武器压血线，然后逆克制补刀"
+        "notes": "可以用其他武器压血线，然后逆克制补刀",
+        "weight": 0.0
     },
     {
         "diff": 1,
@@ -386,6 +444,24 @@
         ],
         "name": "用一发黑洞吸收两个不同类型的小兵",
         "notes": "一般要求贴图不同。"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "9"
+        ],
+        "name": "单关用水泥凝固16个小兵",
+        "notes": "不能拖屏刷同一只怪",
+        "weight": 0.0
+    },
+    {
+        "diff": 1,
+        "games": [
+            "9"
+        ],
+        "name": "单关用黑洞吸收15个小兵",
+        "notes": "不能拖屏刷同一只怪",
+        "weight": 0.0
     },
     {
         "diff": 1,
@@ -427,6 +503,9 @@
         "diff": 1,
         "games": [
             "9"
+        ],
+        "groups": [
+            "fullrefill"
         ],
         "name": "用一发钻石盾把能量从0补满"
     },
@@ -574,6 +653,15 @@
         ],
         "name": "纯用三种不同武器分别击败三只大象",
         "notes": "<img src=\"img/Paozo.png\"/>\n钻石能量是不够的。"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "9"
+        ],
+        "name": "用三种不同特武击败三只竹蜻蜓",
+        "notes": "<img src=\"img/Bunby_catcher.png\"/>\n拖屏重复刷新的视为同一只",
+        "weight": 0.0
     },
     {
         "diff": 2,
@@ -731,7 +819,7 @@
         "games": [
             "9"
         ],
-        "name": "命中每个平台钻出来的小花花至少一次，并击败他",
+        "name": "对每个平台的小花花至少一次造成伤害后完成战斗",
         "notes": "<img src=\"img/MM9-Hanabiran-Sprite.png\" />"
     },
     {
@@ -957,6 +1045,14 @@
             "10"
         ],
         "name": "踏足摩托关最后一面的每个小坑"
+    },
+    {
+        "games": [
+            "10"
+        ],
+        "name": "在摩托关把一台盾车推到右边梯子上",
+        "notes": "那个带盾的可以被子弹击退的小兵",
+        "weight": 0.0
     },
     {
         "games": [
@@ -1204,7 +1300,8 @@
             "10"
         ],
         "name": "在不连续对同一道墙用两次齿轮的情况下浮空10秒",
-        "notes": "不能看到踩地动作\n不能连续两次在同一道墙上用齿轮"
+        "notes": "不能看到踩地动作\n不能连续两次在同一道墙上用齿轮",
+        "weight": 0.0
     },
     {
         "games": [
@@ -1251,6 +1348,13 @@
         ],
         "name": "击败一个扫地机器人",
         "notes": "<img src=\"img/MM10Spring.png\"/>\nStrike, Blade, Wily 2, Wily 3, Wily 1 Hard\n可以用冰或炸弹造成伤害"
+    },
+    {
+        "games": [
+            "10"
+        ],
+        "name": "炸弹拆墙",
+        "weight": 0.0
     },
     {
         "games": [
@@ -1391,7 +1495,7 @@
             "10"
         ],
         "name": "冻结一关全部可冻敌人",
-        "notes": "如果你选择水泵或指令关卡，就要打两遍，岔路也要完成。"
+        "notes": "有多条路线的关卡只需要完成一条路即可"
     },
     {
         "diff": 1,
@@ -1406,7 +1510,8 @@
         "games": [
             "10"
         ],
-        "name": "用滚出去的齿轮击败飞刀人"
+        "name": "用旅行齿轮击败飞刀人",
+        "notes": "把齿轮滚出去"
     },
     {
         "diff": 1,
@@ -1414,7 +1519,7 @@
             "10"
         ],
         "name": "从棒球关1up房反跑到小BOSS下方",
-        "notes": "你需要能向上攻击的特武来移开头顶的足球。\n飞刀和齿轮不行。"
+        "notes": "你需要能向上攻击的特武来移开头顶的足球\n除了飞刀和齿轮以外的所有特武都可以"
     },
     {
         "diff": 1,
@@ -1505,8 +1610,8 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "从左到右顺序击败兵器库",
-        "notes": "Elec -> Wood -> Gemini\nRing -> Napalm -> Flame\nSlash -> Frost -> Tornado",
+        "name": "按编号依次击败兵器库",
+        "notes": "从1代依次到9代：\nElec -> Wood -> Gemini\nRing -> Napalm -> Flame\nSlash -> Frost -> Tornado\n注意最后一场BOSS战不是从左到右的",
         "password": "y"
     },
     {
@@ -1516,6 +1621,15 @@
         ],
         "name": "堡2全收集",
         "notes": "有一个藏在BOSS门上的Dr. Wily标志里",
+        "password": "y"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "name": "用齿轮攀爬堡2所有压饼机",
+        "notes": "需要到达最高能到达的高度",
         "password": "y"
     },
     {
@@ -1534,8 +1648,8 @@
         "games": [
             "10"
         ],
-        "name": "在堡2一命抵达BOSS门且让传送带变向3次",
-        "notes": "你需要被<img src=\"img/Searchy.png\"/>的灯光照射。\n这个怪拖不出来，错过了只能复活重来。",
+        "name": "在堡2让传送带变向3次后抵达BOSS门",
+        "notes": "你需要被<img src=\"img/Searchy.png\"/>的灯光照射。\n这个怪拖不出来，错过了只能复活重来。\n如果翻车了，需要重新被灯光照射。\n只需要照射复活点之后的灯光即可。",
         "password": "y"
     },
     {
@@ -1546,8 +1660,8 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "纯飞刀击败堡1所有BOSS",
-        "notes": "需要补补能量。\n每场BOSS战需要准备18发飞刀。",
+        "name": "纯飞刀击败所有前作BOSS",
+        "notes": "城堡1的全部BOSS\n路上需要补补能量",
         "password": "y"
     },
     {
@@ -1618,7 +1732,8 @@
             "10"
         ],
         "groups": [
-            "placed1up10"
+            "placed1up10",
+            "placed1up10rank3"
         ],
         "name": "在四个不同关卡各收集一个放置1up",
         "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1)"
@@ -1632,7 +1747,7 @@
             "suzakfenix"
         ],
         "name": "纯弹球击败双火鸟",
-        "notes": "<img src=\"img/Mm10Suzak1.png\"/><img src=\"img/Mm10Fenix.png\"/>\n你需要几何攻击来提升伤害，不然能量不够。推荐备个W罐"
+        "notes": "<img src=\"img/Mm10Suzak1.png\"/><img src=\"img/Mm10Fenix.png\"/>\n你需要几何攻击来提升伤害，不然能量不够\n推荐备个W罐"
     },
     {
         "diff": 2,
@@ -1673,7 +1788,7 @@
             "pacifist10"
         ],
         "name": "和平主义通关水泵关",
-        "notes": "小怪发出的子弹也不能打。\n需要在管道怪堵路之前给他冻上。"
+        "notes": "小怪发出的子弹也不能打\n需要冰\n在管道怪堵路之前给他冻上"
     },
     {
         "diff": 2,
@@ -1720,8 +1835,8 @@
         "groups": [
             "weaponsarchive"
         ],
-        "name": "通关堡1，BOSS每轮出现只能打一下",
-        "notes": "从BOSS下来到回去这段时间只能按1下攻击键",
+        "name": "通关堡1，BOSS每轮出现只能按一下攻击",
+        "notes": "从BOSS下来到回去这段时间只能按1下攻击键\n可以用一发攻击命中多次",
         "password": "y"
     },
     {
@@ -1765,11 +1880,11 @@
             "blockdevil"
         ],
         "name": "让砖块恶魔的眼睛在地板下被击败",
-        "notes": "<img src=\"img/Blockdevil.PNG.png\"/>\n你得等他重组再分裂",
+        "notes": "<img src=\"img/Blockdevil.PNG.png\"/>",
         "password": "y"
     },
     {
-        "diff": 3,
+        "diff": 2,
         "games": [
             "10"
         ],
@@ -1781,8 +1896,11 @@
         "games": [
             "10"
         ],
+        "groups": [
+            "placed1up10rank3"
+        ],
         "name": "收集6个放置1up",
-        "notes": "Pump (2), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1), Wily 1 (2?), Wily 2 (2), Wily 3 (2), Wily 4 (1), Wily 5 (1)"
+        "notes": "Pump (2两条路), Solar (1), Chill (1), Nitro (1), Commando (1), Blade (1), Strike (1), Sheep (1), Wily 1 (2?), Wily 2 (2), Wily 3 (2), Wily 4 (1), Wily 5 (1)"
     },
     {
         "diff": 3,
@@ -1805,7 +1923,7 @@
             "bladepacifist"
         ],
         "name": "反跑飞刀关最后一面",
-        "notes": "需要飞狗或两只比特"
+        "notes": "从BOSS门口出发，到达最左边屏幕边缘\n需要飞狗或比特"
     },
     {
         "diff": 3,
@@ -1813,10 +1931,10 @@
             "10"
         ],
         "name": "禁跳跃键抵达太阳小BOSS门",
-        "notes": "需要齿轮+飞狗\n飞狗不是必要的，但不用飞狗非常难"
+        "notes": "需要齿轮+飞狗\n理论上飞狗可以用跳狗代替，但非常难"
     },
     {
-        "diff": 3,
+        "diff": 2,
         "games": [
             "10"
         ],
@@ -1836,7 +1954,7 @@
         "notes": "推荐准备俩W罐"
     },
     {
-        "diff": 3,
+        "diff": 2,
         "games": [
             "10"
         ],
@@ -1844,7 +1962,7 @@
         "notes": "Solar, Blade, Strike, Sheep"
     },
     {
-        "diff": 3,
+        "diff": 2,
         "games": [
             "10"
         ],
@@ -1853,7 +1971,7 @@
         "password": "y"
     },
     {
-        "diff": 3,
+        "diff": 2,
         "games": [
             "10"
         ],
@@ -1874,8 +1992,12 @@
         "games": [
             "10"
         ],
+        "groups": [
+            "mm10wily5"
+        ],
         "name": "禁方向键击败飞船1形态",
-        "password": "y"
+        "password": "y",
+        "weight": 0.4
     },
     {
         "diff": 3,
@@ -1891,18 +2013,23 @@
             "10"
         ],
         "groups": [
-            "mm10wily5restricted2"
+            "mm10wily5"
         ],
         "name": "堡5全收集",
-        "password": "y"
+        "password": "y",
+        "weight": 0.15
     },
     {
         "diff": 3,
         "games": [
             "10"
+        ],
+        "groups": [
+            "mm10wily5"
         ],
         "name": "通关",
-        "password": "y"
+        "password": "y",
+        "weight": 0.15
     },
     {
         "diff": 3,
@@ -1910,11 +2037,11 @@
             "10"
         ],
         "groups": [
-            "mm10wily5restricted",
-            "mm10wily5restricted2"
+            "mm10wily5"
         ],
         "name": "堡5禁跳跃键抵达BOSS门",
-        "password": "y"
+        "password": "y",
+        "weight": 0.15
     },
     {
         "diff": 3,
@@ -1922,10 +2049,11 @@
             "10"
         ],
         "groups": [
-            "mm10wily5restricted"
+            "mm10wily5"
         ],
         "name": "堡5收集最后的E罐后，反跑到开局",
-        "password": "y"
+        "password": "y",
+        "weight": 0.15
     },
     {
         "games": [
@@ -2002,6 +2130,9 @@
         "games": [
             "10"
         ],
+        "groups": [
+            "placed1up10rank3"
+        ],
         "name": "收集前八所有放置1up",
         "notes": "水泵关两条路都有1up，所以要打两遍。\n其他关每关1个。"
     },
@@ -2014,8 +2145,8 @@
         "groups": [
             "spider9and10"
         ],
-        "name": "分别全清9代10代一关的蜘蛛",
-        "notes": "必须是有蜘蛛的关卡\n9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3",
+        "name": "在两个不同游戏的任意关卡中清理全部蜘蛛",
+        "notes": "必须是有蜘蛛的关卡\n9代：水泥、宝石\n10代：飞刀、水泵（上路）、堡1、堡3",
         "type": "all"
     },
     {
@@ -2023,8 +2154,8 @@
             "9",
             "10"
         ],
-        "name": "击败9代大火龙+10代小火球",
-        "notes": "<img src=\"img/Changkey_dragon.png”/>\n<img src=\"img/MM9Changkey.png\"/>",
+        "name": "击败小火球+大火龙",
+        "notes": "小火球：<img src=\"img/MM9Changkey.png\"/>\n大火龙：<img src=\"img/Changkey_dragon.png”/>",
         "type": "all"
     },
     {
@@ -2035,7 +2166,7 @@
         "groups": [
             "spider9and10"
         ],
-        "name": "分别在9代10代击败一个蜘蛛",
+        "name": "击败两个位于不同游戏中的蜘蛛",
         "notes": "9代：水泥、宝石\n10代：飞刀、水泵、堡1、堡3",
         "type": "all"
     },
@@ -2047,8 +2178,8 @@
         "groups": [
             "seaanimal9and10"
         ],
-        "name": "击败9代小章鱼+10代章鱼灯泡",
-        "notes": "<img src=\"img/MM10Octobulb.png\"/>\n<img src=\"img/Octone.png\"/>",
+        "name": "击败小章鱼+大章鱼",
+        "notes": "小章鱼：<img src=\"img/Octone.png\"/>\n大章鱼：<img src=\"img/MM10Octobulb.png\"/>",
         "type": "all"
     },
     {
@@ -2059,7 +2190,7 @@
         "groups": [
             "shieldattacker7-10"
         ],
-        "name": "分别在9代10代击败一个盾牌飞行器",
+        "name": "击败两个位于不同游戏中的盾牌飞行器",
         "notes": "<img src=\"img/MM10ShieldAttacker.png\"/>\nMM9: Galaxy, Tornado, Wily 3\nMM10: Commando, Sheep, Wily 1",
         "type": "all"
     },
@@ -2069,7 +2200,7 @@
             "9",
             "10"
         ],
-        "name": "分别在9代10代击败一个压饼机器人",
+        "name": "击败两个位于不同游戏中的压饼机器人",
         "notes": "<img src=\"img/MM9BigStomperOrange.png\"/><img src=\"img/TsurareStamp.png\"/>\nMM9: Hornet, Jewel, Plug, Wily 2,3\nMM10: Chill, Commando, Wily 1,2,3",
         "type": "all"
     },
@@ -2088,7 +2219,7 @@
             "9",
             "10"
         ],
-        "name": "通关9代和10代的火关",
+        "name": "通关两个游戏的火关",
         "type": "all"
     },
     {
@@ -2097,7 +2228,7 @@
             "9",
             "10"
         ],
-        "name": "通关9代和10代的水关",
+        "name": "通关两个游戏的水关",
         "type": "all"
     },
     {
@@ -2106,7 +2237,7 @@
             "9",
             "10"
         ],
-        "name": "通关9代和10代的电关",
+        "name": "通关两个游戏的电关",
         "type": "all"
     },
     {
@@ -2128,8 +2259,23 @@
             "rushjet9",
             "rushjet10"
         ],
-        "name": "获取飞狗",
+        "name": "获取一个飞狗",
         "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "9",
+            "10"
+        ],
+        "groups": [
+            "seaanimal9and10"
+        ],
+        "name": "击败三个不同门类的海生动物",
+        "notes": "鱼: 剑鱼 (9)、人鱼人召唤的小鱼鱼 (9)\n章鱼: 墨汁章鱼 (9)、章鱼灯泡（绵羊关小BOSS） (10)\n虾: 水泵关的虾 (10)\n螃蟹: 城堡2的BOSS大螃蟹 (10)",
+        "password": "y",
+        "type": "all",
+        "weight": 0.0
     },
     {
         "diff": 1,
@@ -2142,11 +2288,67 @@
     },
     {
         "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "使用1.5倍速完成任意一个关卡",
+        "password": "可以开启模拟器1.5倍速\n从READY开始加速，到击败BOSS为止\n中途不能恢复原速",
+        "type": "any"
+    },
+    {
+        "games": [
             "9"
         ],
+        "name": "用一发黑洞吸收至少6个东西",
+        "weight": 0.0
+    },
+    {
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "specialstage9"
+        ],
         "name": "通关特殊关卡",
-        "notes": "你可以顺便在特殊关卡中并行完成其他任务！",
         "password": "可以进入特殊关卡"
+    },
+    {
+        "games": [
+            "9",
+            "10"
+        ],
+        "groups": [
+            "specialstage9",
+            "specialstage10"
+        ],
+        "name": "在无尽模式中击败一个机器人BOSS",
+        "password": "可以进入无尽模式",
+        "type": "any"
+    },
+    {
+        "games": [
+            "10"
+        ],
+        "groups": [
+            "reboundskill"
+        ],
+        "name": "在一个关卡中用几何弹球击败三种不同类型的敌人",
+        "notes": "至少需要反弹两次"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "10"
+        ],
+        "groups": [
+            "reboundskill"
+        ],
+        "name": "在一个关卡中用闪光弹球击败两种不同类型的敌人",
+        "notes": "弹球每反弹一次伤害+1\n弹到最大伤害时会闪光"
     },
     {
         "games": [
@@ -2333,27 +2535,15 @@
         "type": "all"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
+        "groups": [
+            "fullrefill"
         ],
-        "name": "从0补满一个特武或道具能量",
-        "type": "any4"
+        "name": "从0补满一个特武或道具能量"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
-        "name": "被打进BOSS门"
+        "name": "被打进BOSS门",
+        "notes": "小BOSS门也可以",
+        "weight": 0.25
     },
     {
         "games": [
@@ -2392,19 +2582,11 @@
         "type": "any3"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
         "groups": [
             "underwater"
         ],
         "name": "完成一个有水下区域的关卡",
-        "notes": "必须是有水下物理效果的关卡。所以波浪人不算。\n1代：Ice, W3\n2代：Bubble, W3, W5\n3代：Gemini, Doc Gemini, W1\n4代：Dive, Toad, W1, W3\n5代：W2\n6代：Centaur, W3",
+        "notes": "必须是有水下物理效果的关卡。所以波浪人不算。\n<table><tr><th>1代</th><td>Ice, W3</td><th>5代</th><td>W2</td></tr><tr><th>2代</th><td>Bubble, W3, W5</td><th>6代</th><td>Centaur, W3</td></tr><tr><th>3代</th><td>Gemini, Doc Gemini, W1</td><th>9代</th><td>Splash, W2</td></tr><tr><th>4代</th><td>Dive, Toad, W1, W3</td><th>10代</th><td>Pump, W3</td></tr></table>",
         "type": "any2"
     },
     {
@@ -2609,6 +2791,19 @@
         "notes": "2代：Crash, Wily 6\n3代：Gemini, Doc Gemini, Doc Needle\n4代：Ring, Cossack 1, Cossack 4\n5代：Star, Dark 3\n6代：Mr. X-1, Mr. X-2",
         "password": "<img src=\"img/multi-allpasswords-docs.png\"/>",
         "type": "any3"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "拥有6个人头",
+        "type": "any4"
     },
     {
         "diff": 2,
@@ -4190,63 +4385,29 @@
         "type": "all"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
-        "name": "完成同一个任务两次",
-        "type": "any3"
+        "name": "完成同一个任务两次"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
         "groups": [
-            "generic"
+            "4bosses"
         ],
         "name": "不重启连续完成4个关卡",
-        "type": "any4"
+        "weight": 0.75
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
         "groups": [
-            "generic"
+            "4bosses"
         ],
         "name": "在一个游戏中击败4个BOSS",
-        "type": "any4"
+        "weight": 0.25
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
         "groups": [
-            "generic",
             "square"
         ],
         "name": "在两个游戏中击败选关界面相同位置的BOSS",
-        "notes": "<img src=\"img/multi-stageselect.gif\"/>\n比如←方向: Elec, Heat, Hard, Pharaoh, Charge, Plant. \n1代上/下方向可以二选一",
-        "type": "any3"
+        "notes": "比如←方向: Elec, Heat, Hard, Pharaoh, Charge, Plant. \n1代上/下方向可以二选一",
+        "type": "any2"
     },
     {
         "games": [
@@ -4262,32 +4423,12 @@
         "type": "any2"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
         "name": "逆克制击败一个BOSS",
-        "notes": "比如：蛇打尖刺, 环打法老\n注意有的BOSS免疫逆克制武器",
-        "type": "any4"
+        "notes": "比如：蛇打尖刺, 环打法老\n注意有的BOSS免疫逆克制武器"
     },
     {
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
-        "groups": [
-            "generic"
-        ],
         "name": "纯特武完成一个关卡",
-        "notes": "包括BOSS\n可以切换多种特武，但不能用P弹\n不能用特殊道具"
+        "notes": "包括BOSS\n可以切换多种特武，但不能用P弹\n不能用特殊道具和狗，除非在游戏中不得不用的地方"
     },
     {
         "diff": 1,
@@ -4299,7 +4440,6 @@
             "6"
         ],
         "groups": [
-            "generic",
             "square"
         ],
         "name": "击败一个游戏选关界面上下左右的4个BOSS",
@@ -4315,7 +4455,6 @@
             "6"
         ],
         "groups": [
-            "generic",
             "square"
         ],
         "name": "击败一个游戏选关界面斜角的4个BOSS",
@@ -4323,21 +4462,11 @@
     },
     {
         "diff": 1,
-        "games": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
-        ],
         "groups": [
-            "generic",
             "castle"
         ],
         "name": "在单个游戏中完成3个城堡关卡",
-        "password": "<img src=\"img/multi-allpasswords.png\"/>",
-        "type": "any4"
+        "password": "<img src=\"img/multi-allpasswords.png\"/>\n1-6代：可以使用上述密码\n7-11代：可以从城堡1开始"
     },
     {
         "diff": 2,
@@ -4350,7 +4479,7 @@
             "6"
         ],
         "groups": [
-            "generic"
+            "castle"
         ],
         "name": "在两个游戏中各完成两个城堡关卡",
         "password": "<img src=\"img/multi-allpasswords.png\"/>",
@@ -4366,7 +4495,7 @@
             "6"
         ],
         "groups": [
-            "generic"
+            "castle"
         ],
         "name": "完成5个城堡关卡",
         "password": "<img src=\"img/multi-allpasswords.png\"/>",
@@ -4383,7 +4512,6 @@
             "6"
         ],
         "groups": [
-            "generic",
             "castle"
         ],
         "name": "完成一个城堡的所有关卡",
@@ -4864,7 +4992,7 @@
             "1"
         ],
         "name": "在电关同屏冻结6个监视者",
-        "notes": "<img src=\"img/1-icewatchers.png\"/>\n提示：你可以重复冻结一个敌人，刷新冻结时间"
+        "notes": "<img src=\"img/1-icewatchers.png\"/>"
     },
     {
         "diff": 2,
@@ -6678,7 +6806,7 @@
             "shadowbackwards"
         ],
         "name": "在暗影关反向完成全息投影和滑翔伞房间",
-        "notes": "<img src=\"imgMm3hologramsprite.png\"/><img src=\"img/Mm3parachutesprite.png\"/>"
+        "notes": "<img src=\"img/Mm3hologramsprite.png\"/><img src=\"img/Mm3parachutesprite.png\"/>"
     },
     {
         "diff": 1,
@@ -7416,7 +7544,7 @@
         "groups": [
             "etank4"
         ],
-        "name": "收集一个E-Tank"
+        "name": "收集一个E罐"
     },
     {
         "games": [
@@ -8434,7 +8562,7 @@
         "groups": [
             "letters"
         ],
-        "name": "收集并持有任意2个字母"
+        "name": "收集并持有2个字母"
     },
     {
         "games": [
@@ -8443,7 +8571,7 @@
         "groups": [
             "letters"
         ],
-        "name": "收集任意3个字母（允许重复）",
+        "name": "收集3个字母",
         "notes": "They do not have to be held simultaneously."
     },
     {
