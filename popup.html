@@ -109,6 +109,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             z-index: 1000;
@@ -121,6 +122,10 @@
             width: 50px;
             height: 50px;
             animation: spin 1s ease-in-out infinite;
+        }
+
+        .spinner-text {
+            color: rgb(255, 255, 255);
         }
 
         @keyframes spin {
@@ -138,6 +143,7 @@
 <body>
     <div class="modal-overlay" id="modal-overlay">
         <div class="spinner"></div>
+        <span class="spinner-text" id="spinner-text">正在加载...</span>
     </div>
     <span id="tooltip" class="tooltip"></span>
     <div id="board" class="board-container">
@@ -317,13 +323,32 @@
             <span class="cell-star">★</span>
         </div>
     </div>
+    <input type="color" style="display: none;" id="color-picker"></input>
 
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
+        function showSpinner(text) {
+            let modalOverlay = document.getElementById('modal-overlay');
+            let spinnerText = document.getElementById('spinner-text');
+            spinnerText.innerHTML = text;
+            modalOverlay.style.display = 'flex';
+        }
+
+        function hideSpinner() {
+            let modalOverlay = document.getElementById('modal-overlay');
+            let spinnerText = document.getElementById('spinner-text');
+            spinnerText.innerHTML = "";
+            modalOverlay.style.display = 'none';
+        }
+    </script>
+    <script>
         const queryParams = new URLSearchParams(window.location.search);
         const syncTimeout = 10000;
-        var playerColor = "#" + queryParams.get('color');
+
+        var playerName = queryParams.get('player');
         var roomName = queryParams.get('room');
+        var playerColors = {};
+
         var connected = false;
         var sync = false;
         var drone;
@@ -334,13 +359,13 @@
         var syncSource;
 
         if (roomName != null) {
+            showSpinner("正在连接服务器...");
             roomName = `observable-${roomName}`
             drone = new Scaledrone('DO4LDJ74Bp80Kcso');
             room = drone.subscribe(roomName);
             registerEvents();
         } else {
-            let modalOverlay = document.getElementById('modal-overlay');
-            modalOverlay.style.display = 'none';
+            hideSpinner();
         }
 
         function sendSyncData(cell, color) {
@@ -381,8 +406,7 @@
                 }
                 console.log('Connected to room');
                 connected = true;
-                let modalOverlay = document.getElementById('modal-overlay');
-                modalOverlay.style.display = 'none';
+                hideSpinner();
             });
 
             function askFromSyncMembers(timeout) {
@@ -470,15 +494,13 @@
 
             drone.on('disconnect', () => {
                 console.log('Connection lost');
-                let modalOverlay = document.getElementById('modal-overlay');
-                modalOverlay.style.display = 'flex';
+                showSpinner("正在重连...");
                 connected = false;
                 sync = false;
             });
             drone.on('reconnect', () => {
                 console.log('Connection reestablished');
-                let modalOverlay = document.getElementById('modal-overlay');
-                modalOverlay.style.display = 'none';
+                hideSpinner();
                 connected = true;
                 sync = false;
                 askFromSyncMembers(syncTimeout);
