@@ -369,12 +369,12 @@
             }
             params = "id=" + boardIds.map(id => id).join(",");
             if (settings["player"].length > 0) {
-                params += "&" + new URLSearchParams({ "room": settings["room"] }).toString();
+                params += "&" + new URLSearchParams({ "player": settings["player"] }).toString();
             }
             if (settings["room"].length > 0) {
                 params += "&" + new URLSearchParams({ "room": settings["room"] }).toString();
             }
-            window.open('popup.html?' + params, 'Bingo', 'width=780,height=650');
+            window.open('popup.html?' + params, 'Bingo', 'width=600,height=600');
         }
     </script>
 </body>
