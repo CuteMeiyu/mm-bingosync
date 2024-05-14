@@ -18,9 +18,23 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-gap: 1px;
-            width: min(100vw, 120vh);
-            height: min(100vh, 120vw);
             background-color: black;
+        }
+
+        .scoreboard {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            position: fixed;
+            bottom: 0;
+            background-color: #7f7f7f;
+            width: 100vw;
+        }
+
+        .scoreboard-item {
+            display: inline-block;
+            padding: 2px;
+            padding-inline: 10px;
         }
 
         .cell {
@@ -323,7 +337,8 @@
             <span class="cell-star">★</span>
         </div>
     </div>
-    <input type="color" style="display: none;" id="color-picker"></input>
+    <div class="scoreboard" id="scoreboard" onclick="document.getElementById('color-picker').click();"></div>
+    <input type="color" style="display: none;" id="color-picker" input="onColorChange" value="#000000"></input>
 
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
@@ -368,16 +383,21 @@
             hideSpinner();
         }
 
-        function sendSyncData(cell, color) {
+        function sendSyncData(cell, player, sendPlayerColors = false, sendHistoryEvents = false) {
             let message = {}
             if (cell != null) {
                 message.cell = cell;
             }
-            if (color != null) {
-                message.color = color;
+            if (player != null) {
+                message.player = player;
             }
-            message.history = historyEvents;
-            message.sync = sync;
+            if (sendPlayerColors) {
+                message.players = playerColors;
+            }
+            if (sendHistoryEvents) {
+                message.history = historyEvents;
+                message.sync = sync;
+            }
             drone.publish({
                 room: roomName,
                 message: message
@@ -454,19 +474,24 @@
                 for (let event of events) {
                     if (!historyIncludes(event)) {
                         historyEvents.push(event);
-                        toggleCellColor(event.cell, event.color);
+                        toggleCell(event.cell, event.player);
                     }
                 }
             }
 
             room.on('message', message => {
                 console.log("Message", message);
-                if (message.data.color != null && message.data.cell != null) {
-                    toggleCellColor(message.data.cell, message.data.color);
+                if (message.data.players !== undefined) {
+                    for (let [player, color] of Object.entries(message.data.players)) {
+                        playerColors[player] = color;
+                    }
+                }
+                if (message.data.player != null && message.data.cell != null) {
+                    toggleCell(message.data.cell, message.data.player);
                     historyEvents.push({
                         id: message.id,
                         cell: message.data.cell,
-                        color: message.data.color
+                        player: message.data.player
                     });
                 }
                 if (message.data.history !== undefined) {
@@ -479,7 +504,7 @@
                     }
                 }
                 if (message.data.syncSource === drone.clientId) {
-                    sendSyncData(null, null)
+                    sendSyncData(null, null, true, true);
                     console.log(`Answered sync request from ${message.member.id}`);
                     return;
                 }
@@ -512,21 +537,45 @@
                 return;
             }
             let cell = event.target.closest(".cell");
+            let colorPicker = document.getElementById("color-picker");
+            if (playerName == undefined) {
+                playerName = "Player";
+            }
+            playerColors[playerName] = colorPicker.value;
+            if (playerColors[playerName] === "#000000") {
+                document.getElementById("color-picker").click()
+                return;
+            }
             if (roomName == null) {
-                toggleCellColor(cell.id, playerColor);
+                toggleCell(cell.id, playerName);
                 return;
             }
             if (!connected) {
                 return;
             }
-            sendSyncData(cell.id, playerColor);
+            sendSyncData(cell.id, playerName, true, true);
         }
     </script>
 
     <script>
-        function setBackground(id, colors) {
+        function updateBoardColors() {
+            for (let cell of document.querySelectorAll(".cell")) {
+                if (cell.players != undefined) {
+                    updateCellColors(cell.id);
+                }
+            }
+        }
+
+        function updateCellColors(id) {
             let element = document.getElementById(id);
-            element.colors = colors;
+            let colors = [];
+            for (let player of element.players) {
+                if (playerColors[player] !== undefined) {
+                    colors.push(playerColors[player]);
+                } else {
+                    colors.push("#000000");
+                }
+            }
             if (colors.length == 0) {
                 element.style.background = null;
             }
@@ -543,33 +592,83 @@
             element.style.background = gradient;
         }
 
-        function toggleCellColor(id, color) {
+        function toggleCell(id, player) {
             let cell = document.getElementById(id);
-            if (cell.colors === undefined) {
-                cell.colors = [color];
-            } else if (cell.colors.indexOf(color) == -1) {
-                cell.colors.push(color);
+            if (cell.players === undefined) {
+                cell.players = [player];
+            } else if (cell.players.indexOf(player) == -1) {
+                cell.players.push(player);
             } else {
-                cell.colors.splice(cell.colors.indexOf(color), 1);
+                cell.players.splice(cell.players.indexOf(player), 1);
             }
-            cell.colors.sort();
-            setBackground(id, cell.colors);
+            cell.players.sort();
+            updateBoardColors();
+            updateScoreboard();
         }
     </script>
-
+    <script>
+        function updateScoreboard() {
+            let scoreboard = document.getElementById("scoreboard");
+            scoreboard.innerHTML = "";
+            let scores = {};
+            for (let cell of document.querySelectorAll(".cell")) {
+                if (cell.players === undefined) {
+                    continue;
+                }
+                for (let player of cell.players) {
+                    if (scores[player] === undefined) {
+                        scores[player] = 1;
+                    } else {
+                        scores[player] += 1;
+                    }
+                }
+            }
+            for (let [player, color] of Object.entries(playerColors)) {
+                let item = document.createElement("div");
+                item.classList.add("scoreboard-item");
+                item.style.color = color;
+                let score = scores[player];
+                item.innerHTML = `${player}: ${score == undefined ? 0 : score}`;
+                scoreboard.appendChild(item);
+            }
+            if (scoreboard.childNodes.length == 0) {
+                let item = document.createElement("div");
+                item.classList.add("scoreboard-item");
+                item.style.color = "#ffffff";
+                item.innerText = "记分板"
+                scoreboard.appendChild(item);
+            }
+            onResize();
+        }
+    </script>
     <script>
         var data;
 
-        function resizeTextToFitGrid() {
-            var cellTexts = document.querySelectorAll('.cell-text');
-            cellTexts.forEach(function (cellText) {
-                var cell = cellText.closest('.cell');
-                var cellGame = cell.querySelector('.cell-game');
-                var cellWidth = cell.offsetWidth;
-                var cellHeight = cell.offsetHeight;
-                var fontSize = 100;
-                var textWidth, textHeight;
+        function resizeBoardToFitWindow() {
+            let board = document.getElementById("board");
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            let scoreboard = document.getElementById("scoreboard");
+            let scoreboardHeight = scoreboard.offsetHeight;
+            h = Math.min(h, h - scoreboardHeight);
+            if (w / h > 1.2) {
+                w = h * 1.2;
+            } else if (h / w > 1.2) {
+                h = w * 1.2;
+            }
+            board.style.width = w + "px";
+            board.style.height = h + "px";
+        }
 
+        function resizeTextToFitCell() {
+            let cellTexts = document.querySelectorAll('.cell-text');
+            cellTexts.forEach(function (cellText) {
+                let cell = cellText.closest('.cell');
+                let cellGame = cell.querySelector('.cell-game');
+                let cellWidth = cell.offsetWidth;
+                let cellHeight = cell.offsetHeight;
+                let fontSize = 100;
+                let textWidth, textHeight;
                 do {
                     cellText.style.fontSize = fontSize + '%';
                     cellGame.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
@@ -580,8 +679,13 @@
             });
         }
 
+        function onResize() {
+            resizeBoardToFitWindow();
+            resizeTextToFitCell();
+        }
+
         window.addEventListener('resize', function () {
-            resizeTextToFitGrid();
+            onResize();
         });
 
         function onMouseIn(event) {
@@ -692,7 +796,8 @@
                             cellGame.style.display = 'none';
                         }
                     }
-                    resizeTextToFitGrid();
+                    updateScoreboard();
+                    // onResize();
                 });
         });
     </script>
