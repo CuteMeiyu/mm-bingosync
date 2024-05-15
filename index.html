@@ -244,6 +244,9 @@
             for (let goal of goals) {
                 totalWeight += goal.weight;
             }
+            if (totalWeight == 0) {
+                return null;
+            }
             let weight = random() * totalWeight;
             for (let i = 0; i < goals.length; i++) {
                 weight -= goals[i].weight;
@@ -281,6 +284,9 @@
                 let goals = [...data];
                 while (goals.length > 0) {
                     let goal = drawGoal(goals);
+                    if (goal === null) {
+                        break;
+                    }
                     if (diffIndexes[goal.diff] === undefined || diffIndexes[goal.diff].length === 0) {
                         continue;
                     }
