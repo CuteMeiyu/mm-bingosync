@@ -23,6 +23,7 @@
 
         .scoreboard {
             display: flex;
+            box-sizing: border-box;
             flex-direction: row;
             flex-wrap: wrap-reverse;
             position: fixed;
@@ -156,6 +157,23 @@
             100% {
                 transform: rotate(0deg);
             }
+        }
+
+        @keyframes flashing-border {
+
+            0%,
+            100% {
+                border-color: red;
+            }
+
+            50% {
+                border-color: yellow;
+            }
+        }
+
+        .flashing-border {
+            border: 2px solid red;
+            animation: flashing-border 2s infinite;
         }
     </style>
 </head>
@@ -344,9 +362,8 @@
             <span class="cell-star">★</span>
         </div>
     </div>
-    <div class="scoreboard" id="scoreboard" onclick="showColorPicker();"></div>
-    <input type="color" style="display: none;" id="color-picker" onchange="onColorChange(event)" value="#000000"
-        aria-label="颜色选择器">
+    <label for="color-picker" class="scoreboard" id="scoreboard" onclick="onScoreboardClick();"></label>
+    <input type="color" style="display: none;" id="color-picker" onchange="onColorChange(event);" value="#000000">
 
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
@@ -362,6 +379,14 @@
             let spinnerText = document.getElementById('spinner-text');
             spinnerText.innerHTML = "";
             modalOverlay.style.display = 'none';
+        }
+
+        function showClickOverlay() {
+            document.getElementById("click-overlay").style.display = "flex";
+        }
+
+        function hideClickOverlay() {
+            document.getElementById("click-overlay").style.display = "none";
         }
     </script>
     <script>
@@ -551,7 +576,9 @@
                 playerName = "Player";
             }
             if (playerColors[playerName] === undefined) {
-                showColorPicker();
+                let scoreboard = document.getElementById("scoreboard");
+                scoreboard.classList.add("flashing-border");
+                alert("请先点击计分板来设置颜色");
                 return;
             }
             if (roomName == null) {
@@ -588,15 +615,6 @@
             return { h: h, s: s, l: l, y: y };
         }
 
-        function showColorPicker() {
-            document.getElementById("click-overlay").style.display = "flex";
-            document.getElementById("color-picker").click()
-        }
-
-        function hideClickOverlay() {
-            document.getElementById("click-overlay").style.display = "none";
-        }
-
         function onColorChange(event) {
             let hexColor = event.target.value;
             let color = convertColor(hexColor);
@@ -609,6 +627,9 @@
                 alert("请使用更暗的颜色");
                 hideClickOverlay();
                 return;
+            }
+            if (playerName == undefined) {
+                playerName = "Player";
             }
             playerColors[playerName] = hexColor;
             if (roomName == null) {
@@ -706,6 +727,12 @@
             }
             onResize();
         }
+
+        function onScoreboardClick() {
+            let scoreboard = document.getElementById("scoreboard");
+            scoreboard.classList.remove("flashing-border")
+            showClickOverlay();
+        }
     </script>
     <script>
         var data;
@@ -801,8 +828,31 @@
             star.classList.toggle("show");
         }
 
-        for (let cell of document.querySelectorAll('.cell')) {
-            cell.addEventListener('contextmenu', onContextMenu);
+        var longTouchTimer = 0;
+
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        if (isIOS) {
+            for (let cell of document.querySelectorAll('.cell')) {
+                cell.addEventListener('touchstart', function (event) {
+                    longTouchTimer = setTimeout(onContextMenu, 500, event);
+                });
+                cell.addEventListener('touchend', function (event) {
+                    clearTimeout(longTouchTimer);
+                });
+                cell.addEventListener('touchcancel', function (event) {
+                    clearTimeout(longTouchTimer);
+                });
+                cell.addEventListener('contextmenu', function (event) {
+                    event.preventDefault();
+                })
+            }
+        } else {
+            for (let cell of document.querySelectorAll('.cell')) {
+                cell.addEventListener('contextmenu', onContextMenu);
+            }
         }
 
         window.addEventListener('DOMContentLoaded', function () {
