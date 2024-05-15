@@ -2298,7 +2298,8 @@
         ],
         "name": "使用1.5倍速完成任意一个关卡",
         "password": "可以开启模拟器1.5倍速\n从READY开始加速，到击败BOSS为止\n中途不能恢复原速",
-        "type": "any"
+        "type": "any",
+        "weight": 0.0
     },
     {
         "games": [
@@ -2335,23 +2336,8 @@
         "games": [
             "10"
         ],
-        "groups": [
-            "reboundskill"
-        ],
         "name": "在一个关卡中用几何弹球击败三种不同类型的敌人",
         "notes": "至少需要反弹两次"
-    },
-    {
-        "diff": 1,
-        "games": [
-            "10"
-        ],
-        "groups": [
-            "reboundskill"
-        ],
-        "name": "在一个关卡中用闪光弹球击败两种不同类型的敌人",
-        "notes": "弹球每反弹一次伤害+1\n弹到最大伤害时会闪光",
-        "weight": 0.0
     },
     {
         "games": [
@@ -2991,7 +2977,7 @@
             "protodark"
         ],
         "name": "击败真假布鲁斯",
-        "notes": "3代：关卡中途出现的布鲁斯\n5代：假布鲁斯城堡的任意一个BOSS皆可",
+        "notes": "3代：关卡中途出现的布鲁斯\n5代：布鲁斯城堡的任意一个BOSS皆可",
         "password": "<img src=\"img/mm5-pw.png\"/>",
         "type": "all"
     },
@@ -3079,7 +3065,7 @@
         "name": "击败一个圆眼飞碟",
         "notes": "<img src=\"img/rounder1and2.png\"/>\n5代：Dark1的末尾。\n6代：X1的BOSS。",
         "password": "<img src=\"img/mm5+6-pw.png\"/>",
-        "type": "any"
+        "type": "all"
     },
     {
         "games": [
@@ -3488,7 +3474,7 @@
             "ownweapon"
         ],
         "name": "纯用一种BOSS武器完成他自身的关卡",
-        "notes": "通常需要打一个关卡两次\n1代还需要把BOSS再打一遍",
+        "notes": "1代还需要打Boss",
         "type": "any"
     },
     {
@@ -3563,7 +3549,7 @@
             "protodark"
         ],
         "name": "击败真假布鲁斯各两次",
-        "notes": "3代：关卡中途出现的布鲁斯\n5代：假布鲁斯城堡的任意一个BOSS皆可",
+        "notes": "3代：关卡中途出现的布鲁斯\n5代：布鲁斯城堡的任意一个BOSS皆可",
         "password": "<img src=\"img/mm5-pw.png\"/>",
         "type": "all"
     },
@@ -3684,7 +3670,7 @@
             "protodark"
         ],
         "name": "击败真假布鲁斯各4次",
-        "notes": "3代：关卡中途出现的布鲁斯\n5代：假布鲁斯城堡的任意一个BOSS皆可",
+        "notes": "3代：关卡中途出现的布鲁斯\n5代：布鲁斯城堡的任意一个BOSS皆可",
         "password": "<img src=\"img/mm3-break.png\"/><img src=\"img/mm5-pw.png\"/>",
         "type": "all"
     },
@@ -4235,7 +4221,7 @@
         ],
         "name": "在任意关卡的每一面都放一次狗",
         "notes": "每次切屏。包括BOSS房和BOSS走廊。",
-        "type": "any"
+        "type": "any2"
     },
     {
         "games": [
@@ -6871,7 +6857,7 @@
         "games": [
             "3"
         ],
-        "name": "用飞镖、电火花和磁铁的任意组合攻击击败破坏人",
+        "name": "仅用飞镖+电火花+磁铁击败破坏人",
         "password": "<img src=\"img/mm3-docs-pw.png\"/>"
     },
     {
@@ -6882,7 +6868,7 @@
         "groups": [
             "docgemini"
         ],
-        "name": "用激光、拳头和陀螺的任意组合攻击击败泡泡人",
+        "name": "仅用激光+拳头+陀螺击败泡泡人",
         "password": "<img src=\"img/mm3-docs-pw.png\"/>"
     },
     {
@@ -6949,7 +6935,7 @@
         "games": [
             "3"
         ],
-        "name": "仅用激光和火花的任意组合攻击击败暗影人"
+        "name": "仅用激光+火花击败暗影人"
     },
     {
         "diff": 2,
@@ -8314,7 +8300,6 @@
             "mothraya"
         ],
         "name": "击败大蝴蝶",
-        "notes": "A1, A4, B5, E2, F1, F3",
         "password": "y"
     },
     {
@@ -8327,7 +8312,6 @@
             "squaremachine"
         ],
         "name": "击败大方块",
-        "notes": "A1, A4, B5, E2, F1, F3",
         "password": "y"
     },
     {
@@ -8340,7 +8324,6 @@
             "cossackcatcher"
         ],
         "name": "击败哥萨克娃娃机",
-        "notes": "A1, A4, B5, E2, F1, F3",
         "password": "y"
     },
     {
@@ -8353,7 +8336,6 @@
             "metalldaddy"
         ],
         "name": "通关威利城堡1",
-        "notes": "A1, A4, B5, E2, F1, F3",
         "password": "y"
     },
     {
@@ -8396,7 +8378,7 @@
             "mm5stomper"
         ],
         "name": "仅用强化滑铲击败一个超人",
-        "notes": "MM5 stomper"
+        "notes": "<img src=\"img/5-powermuscler.png\">"
     },
     {
         "games": [
@@ -8406,7 +8388,7 @@
             "mm5stomper"
         ],
         "name": "用重力闪光给一个超人最后一击",
-        "notes": "Power Musclers have 13 health and Gravity does 1 damage"
+        "notes": "<img src=\"img/5-powermuscler.png\">\n13血。重力能造成1点伤害。"
     },
     {
         "games": [
@@ -8428,14 +8410,13 @@
             "mtank5"
         ],
         "name": "使用M罐将至少5个敌人变成1up",
-        "notes": "Health and ammo for all weapons must be full!"
+        "notes": "血和所有武器能量全满的情况下使用M罐\n可以把全屏敌人变成1up"
     },
     {
         "games": [
             "5"
         ],
-        "name": "在两个不同的关卡上踩到旋转平台",
-        "notes": "Spinning platforms"
+        "name": "在两个不同的关卡上踩到旋转平台"
     },
     {
         "games": [
@@ -8450,7 +8431,7 @@
         "games": [
             "5"
         ],
-        "name": "用一发重力击败7个敌人"
+        "name": "用一发重力击败至少7个敌人"
     },
     {
         "games": [
@@ -8475,7 +8456,7 @@
             "5"
         ],
         "name": "用不蓄力P弹击败重力关的每一个敌人",
-        "notes": "Ball-and-chain enemies can't be defeated"
+        "notes": "除了大摆锤"
     },
     {
         "games": [
@@ -8485,14 +8466,14 @@
             "enemy5"
         ],
         "name": "击败一个导弹",
-        "notes": "Gray torpedo that comes up from pits. Appears in Star and Napalm"
+        "notes": "<img src=\"img/5-mizzile.png\">\nStar, Napalm"
     },
     {
         "games": [
             "5"
         ],
         "name": "在两个不同的关卡击败一个投弹手（或投石手）",
-        "notes": "Enemies that throw bombs (or rocks) out of their heads in a vertical arc. Appears in Napalm, Stone, and Charge."
+        "notes": "<img src=\"img/5-bombthrown.png\">\nNapalm, Stone, Charge"
     },
     {
         "games": [
@@ -8502,7 +8483,7 @@
             "catandmouse2"
         ],
         "name": "在两个不同的关卡击败一个老鼠",
-        "notes": "Appears in Stone, Crystal, Charge, Wily 2"
+        "notes": "<img src=\"img/5-mousubeil.png\">\nStone, Crystal, Charge, Wily 2"
     },
     {
         "games": [
@@ -8512,7 +8493,7 @@
             "enemy5"
         ],
         "name": "用任意特武击败一个大脚",
-        "notes": "AT-ST type walkers"
+        "notes": "<img src=\"img/5-dachone.png\">"
     },
     {
         "games": [
@@ -8522,20 +8503,20 @@
             "enemy5"
         ],
         "name": "用一发石头的全部3块飞石全中一个老虎",
-        "notes": "Tigers"
+        "notes": "<img src=\"img/5-sumatran.png\">"
     },
     {
         "games": [
             "5"
         ],
-        "name": "在旋翼关使用飞箭飞越下落砖块"
+        "name": "在旋翼关使用飞箭飞越下落砖块区域"
     },
     {
         "games": [
             "5"
         ],
         "name": "在水晶关第一个版面上让全部4个分头行动的头落入洞中",
-        "notes": "One from each individual enemy - no repeats"
+        "notes": "<img src=\"img/5-pukapuckerheads.gif\">\n4个不同的个体——拖屏刷出来的只能算同一个"
     },
     {
         "games": [
@@ -8547,7 +8528,7 @@
         "games": [
             "5"
         ],
-        "name": "从火车鸡版面的梯子返回版面开头"
+        "name": "从火车鸡版面最后的梯子返回版面开头"
     },
     {
         "games": [
@@ -8556,7 +8537,7 @@
         "groups": [
             "letters"
         ],
-        "name": "收集任意字母"
+        "name": "收集任意一个字母"
     },
     {
         "games": [
@@ -8575,26 +8556,27 @@
             "letters"
         ],
         "name": "收集3个字母",
-        "notes": "They do not have to be held simultaneously."
+        "notes": "中途可以重启"
     },
     {
         "games": [
             "5"
         ],
-        "name": "用一发波浪击败3个敌人或弹射物"
+        "name": "用一发波浪击败3个敌人或子弹"
     },
     {
         "games": [
             "5"
         ],
-        "name": "通过旋翼掉落方块让跳狗在空中悬浮，然后从它身上弹跳一下并存活",
-        "notes": "Yoshi Time"
+        "name": "通过落块让跳狗在空中悬浮，然后弹跳一下且平安落地",
+        "notes": "<img src=\"img/5-gyroblockscoil.gif\">"
     },
     {
         "games": [
             "5"
         ],
-        "name": "用P弹以100%命中率连续摧毁一个投弹机掉落的全部3枚炸弹"
+        "name": "用P弹连续摧毁一个投弹机掉落的全部3枚炸弹",
+        "notes": "<img src=\"img/5-rembakun.png\">"
     },
     {
         "games": [
@@ -8615,8 +8597,8 @@
             "stonepacifist",
             "escortquest5"
         ],
-        "name": "在石头关存档点聚集所有13个双翼飞行器并用1发蓄力炮摧毁它们",
-        "notes": "Lyrics are the telly-like enemies in Gyro, Stone, and Charge"
+        "name": "在石头关存档点聚集全部13个双翼飞行器并用1发蓄力炮摧毁它们",
+        "notes": "<img src=\"img/5-lyric.png\">"
     },
     {
         "games": [
@@ -8632,33 +8614,33 @@
             "mtank5"
         ],
         "name": "使用M罐将一个摆锤变成1up",
-        "notes": "Ball-and-chains. Health and ammo for all weapons must be full!"
+        "notes": "<img src=\"img/5-teckyun.gif\">\n需要血和所有武器能量全满"
     },
     {
         "games": [
             "5"
         ],
-        "name": "用任意武器伤害躲进云里的旋翼人"
+        "name": "对躲进云里的旋翼人造成伤害"
     },
     {
         "games": [
             "5"
         ],
-        "name": "让榴弹关的超人站在尖刺上"
+        "name": "让榴弹关的超人站在尖刺上",
+        "notes": "<img src=\"img/5-powermuscler.png\">\n"
     },
     {
         "games": [
             "5"
         ],
         "name": "让一个掉落物卡在墙内",
-        "notes": "You'll need to defeat an enemy while it's inside solid terrain"
+        "notes": "需要引一个敌人到墙里击杀"
     },
     {
         "games": [
             "5"
         ],
-        "name": "在星星关乘坐飞狗穿越陨石雨且不跳跃或掉下去",
-        "notes": "From beneath the planet to the screen border on the right side"
+        "name": "在星星关乘坐飞狗穿越陨石雨，保持不跳跃和不掉下去"
     },
     {
         "games": [
@@ -8670,15 +8652,15 @@
         "games": [
             "5"
         ],
-        "name": "用星星盾挡住Boss的子弹"
+        "name": "用星星盾抵挡一次Boss的子弹"
     },
     {
         "games": [
             "5"
         ],
         "name": "从布鲁斯城堡1投弹机房间的末端返回到起始点",
-        "notes": "Rembakun = red missile droppers.\nMust make it back to the start in one life, no checkpoint respawning.",
-        "password": "y"
+        "notes": "<img src=\"img/5-rembakun.png\">\n需要跑回去，不能通过死亡复活的方式返回",
+        "password": "<img src=\"img/mm5-pw.png\">"
     },
     {
         "diff": 1,
@@ -8691,8 +8673,8 @@
             "crystalpacifist",
             "wavepacifist"
         ],
-        "name": "在前八关击败每种型号的狙击手乔",
-        "notes": "Crystal, Napalm, Wave"
+        "name": "在前八关击败每种型号的乔",
+        "notes": "<img src=\"img/5-sniperjoes.png\">\nCrystal, Napalm, Wave"
     },
     {
         "diff": 1,
@@ -8703,31 +8685,31 @@
             "catandmouse2",
             "mousubeil"
         ],
-        "name": "击败前八关所有的Mousubeil",
-        "notes": "Appears in Stone, Crystal, and Charge"
+        "name": "击败前八关所有的老鼠",
+        "notes": "<img src=\"img/5-mousubeil.png\">\nStone, Crystal, and Charge"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "使用凝固汽油弹击败一个Yudon",
-        "notes": "Big red enemy that raises its fists and fires slow missiles.\nAppears in Charge and Napalm."
+        "name": "使用榴弹击败一个猩猩",
+        "notes": "<img src=\"img/5-yudon.png\">\nCharge, Napalm."
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在空中站在跳狗上时对任意一个机器人Boss造成最后一击",
-        "notes": "Fire from on Rush in the air, boss dies before you land"
+        "name": "在空中站在跳狗上时对任意机器人Boss造成最后一击",
+        "notes": "<img src=\"img/5-coilbossdefeat.gif\">\n空中站在跳狗上攻击，落地之前击杀Boss\n视频是正确和错误的两个示范"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "全程装备Gyro的情况下，到达除了Wave以外的任意一个机器人Boss的大门"
+        "name": "全程装备旋翼武器，抵达前八任意关底Boss门（波浪人除外）"
     },
     {
         "diff": 1,
@@ -8737,15 +8719,15 @@
         "groups": [
             "chargeman"
         ],
-        "name": "全程装备凝固汽油弹的情况下，到达Charge Man的Boss大门"
+        "name": "全程装备榴弹武器，抵达火车人Boss门"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在不击败任何敌人的情况下完成Wave Man的船部分",
-        "notes": "Octoper must be defeated to progress"
+        "name": "完成波浪人关卡的船部分（和平主义）",
+        "notes": "只能击杀小Boss"
     },
     {
         "diff": 1,
@@ -8765,8 +8747,8 @@
         "groups": [
             "letters"
         ],
-        "name": "收集4个字母(允许重启)",
-        "notes": "They do not have to be held simultaneously"
+        "name": "收集4个字母",
+        "notes": "允许中途重启"
     },
     {
         "diff": 1,
@@ -8780,22 +8762,45 @@
         "games": [
             "5"
         ],
-        "name": "全程装备Super Arrow完成Star Man的关卡"
+        "groups": [
+            "gravity"
+        ],
+        "name": "用波浪击败重力人",
+        "notes": "可以补刀"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "用Water Wave给Gravity Man最后一击"
+        "groups": [
+            "pacifist5",
+            "gravitypacifist"
+        ],
+        "name": "抵达重力人Boss门（和平主义）"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在Gyro关卡中，从掉落砖块后方的平台返回到第一个电梯",
-        "notes": "You will likely need Super Arrow or Rush Jet to get back across the blocks"
+        "name": "全程装备飞箭完成星星人关卡"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "5"
+        ],
+        "name": "用Water Wave给Gravity Man最后一击",
+        "weight": 0.0
+    },
+    {
+        "diff": 1,
+        "games": [
+            "5"
+        ],
+        "name": "在旋翼关卡中，从掉落砖块后方的平台返回到第一个电梯的位置",
+        "notes": "可能需要飞箭或飞狗来穿越掉落平台"
     },
     {
         "diff": 1,
@@ -8805,8 +8810,8 @@
         "groups": [
             "mtank5"
         ],
-        "name": "用M-Tank摧毁一个Giree",
-        "notes": "They appear in Gyro, Wave, Dark 1, Dark 2, Wily 1, and Wily 2"
+        "name": "用M罐摧毁一个齿轮",
+        "notes": "<img src=\"img/Mm5cogsprite.png\">\nGyro, Wave, Dark 1, Dark 2, Wily 1, Wily 2"
     },
     {
         "diff": 1,
@@ -8816,30 +8821,31 @@
         "groups": [
             "mtank5"
         ],
-        "name": "拾取M-Tank并在另一关卡让至少5个敌人转化成1UP"
+        "name": "拾取M罐并在另一关卡让至少5个敌人转化成1UP"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在两个不同的关卡各收集一个M-Tank",
-        "notes": "M-Tanks appear in Stone, Crystal, Dark 2, Wily 1, Wily 2, and Wily 3. You must use the M-Tank you're carrying before entering the screen where one appears, or it won't be there!"
+        "name": "在两个不同的关卡各收集一个M罐",
+        "notes": "M罐存在于以下关卡：\nCrystal, Dark 2, Wily 1, Wily 2, Wily 3\n如果你携带有M罐，那你在进入另一个有M罐的房间之前必须先把它用掉，否则那个M罐不会出现"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在Gravity Man的关卡，让Power Muscler站在尖刺上"
+        "name": "在重力人关卡中，让超人站在尖刺上",
+        "notes": "<img src=\"img/5-powermusclerspikes.png\">"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在Star Man的关卡中，用2发蓄力炮摧毁所有Space Metall",
-        "notes": "One for the mets in the checkpoint, one for the mets in the large health room"
+        "name": "在星星人关卡中，用两发蓄力炮击败所有宇航员安全帽",
+        "notes": "共两批宇航员安全帽，分别在存档点和大血房间"
     },
     {
         "diff": 1,
@@ -8849,16 +8855,16 @@
         "groups": [
             "stonepacifist2"
         ],
-        "name": "在Stone Man的关卡中，击败所有的敌人",
-        "notes": "Don't forget about the 2 enemies in the M-Tank room!\nEnemies that escape the screen can be respawned to be defeated."
+        "name": "清理石头人关卡的所有敌人",
+        "notes": "不要漏掉了M罐房间的两只\n逃跑的敌人可以通过拖屏刷出来重新打"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "站在一支全速飞行的飞箭上，用另一支飞箭击败一个敌人",
-        "notes": "You must shoot the enemy point-blank as you fly toward it!"
+        "name": "站在一支全速飞行的飞箭上时用另一支飞箭击败一个敌人",
+        "notes": "<img src=\"img/5-arrowarrow.gif\">\n可能需要贴脸射击"
     },
     {
         "diff": 1,
@@ -8868,24 +8874,24 @@
         "groups": [
             "mtank5"
         ],
-        "name": "使用M-Tank将Power Muscler变成1up",
-        "notes": "Power Muscler = MM5 stomper.\nHealth and ammo for all weapons must be full!"
+        "name": "使用M罐将超人变成1up",
+        "notes": "<img src=\"img/5-powermuscler.png\">\n需要在血量和所有武器能量全满的情况下使用M罐"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在Gyro的每个有\"云\"的版面上完全隐藏在云后",
-        "notes": "Super Arrow required for the top of the spike elevator!"
+        "name": "在旋翼人关卡每个有前景云的版面完全隐藏在云后",
+        "notes": "需要飞箭来完成刺电梯房间顶部的云"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在Dark Man第一关和第二关进行全收集",
-        "password": "y"
+        "name": "在布鲁斯城堡1和2收集所有放置的拾取品",
+        "password": "<img src=\"img/mm5-pw.png\">"
     },
     {
         "diff": 1,
@@ -8895,9 +8901,9 @@
         "groups": [
             "castle5"
         ],
-        "name": "在Dark Man第一关和第二关击败每一个敌人",
-        "notes": "Includes Girees, the rolling spines, which must be defeated with Beat!",
-        "password": "y"
+        "name": "在布鲁斯城堡1和2清理所有敌人",
+        "notes": "包括<img src=\"img/Mm5cogsprite.png\">，需要比特鸟才能造成伤害。",
+        "password": "<img src=\"img/mm5-pw.png\">"
     },
     {
         "diff": 1,
@@ -8907,17 +8913,17 @@
         "groups": [
             "dark2boss"
         ],
-        "name": "用任意组合的Crystal Eye或Napalm Bomb击败Dark Man 2",
-        "password": "y"
+        "name": "仅用水晶+榴弹击败布鲁斯城堡2Boss",
+        "password": "<img src=\"img/mm5-pw.png\">"
     },
     {
         "diff": 1,
         "games": [
             "5"
         ],
-        "name": "在一个完整的非Wave机器人Boss关卡中，保持Beat召唤状态而不耗尽能量",
-        "notes": "Summon Beat at the start of every screen and shoot enemies before he can get to them! \nHint: MEGAMAN V letters refill his energy. M-Tanks are allowed once per stage.",
-        "password": "y"
+        "name": "在前八任意一关全程召唤比特且不耗尽能量（波浪人除外）",
+        "notes": "需要在进入每个版面之后马上召唤比特\n在比特碰到敌人之前抢先击败敌人可以避免消耗能量\n字母可以补充比特的能量\n允许使用一次M罐",
+        "password": "<img src=\"img/mm5-beatonly-pw.png\">"
     },
     {
         "diff": 2,
@@ -8930,15 +8936,15 @@
             "pacifist5",
             "mousubeil"
         ],
-        "name": "到达Stone Man的Boss门（和平主义）",
-        "notes": "Shooting open walls is allowed. Shooting enemy projectiles is not!"
+        "name": "抵达石头人关卡Boss门（和平主义）",
+        "notes": "允许破坏墙壁\n但不允许破坏敌人发射的子弹"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "只用非蓄力P弹击败Charge Man"
+        "name": "只用非蓄力P弹击败火车人"
     },
     {
         "diff": 2,
@@ -8951,8 +8957,8 @@
             "napalmpacifist",
             "wavepacifist"
         ],
-        "name": "击败前八关中的每一个Crystal Joe、Heli Joe和Rider Joe",
-        "notes": "Crystal, Napalm, Wave"
+        "name": "击败前八关中的每一个水晶乔、直升机乔和骑手乔",
+        "notes": "<img src=\"img/5-sniperjoes.png\">\nCrystal, Napalm, Wave"
     },
     {
         "diff": 2,
@@ -8962,30 +8968,32 @@
         "groups": [
             "3differentspecial"
         ],
-        "name": "打一下Metall Mommy，然后用三种不同的特殊武器击败三个小的"
+        "name": "击败安全帽妈妈，然后用三种特武分别击败三个宝宝",
+        "notes": "<img src=\"img/Mm5fissionmetsprite.png\">"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "仅用Crystal Eye完成任意一个前八关卡及其Boss（Wave/Napalm除外）",
-        "notes": "M-Tank likely required"
+        "name": "仅用水晶通关任意一个前八（波浪/榴弹除外）",
+        "notes": "不允许跳过Boss\n可能需要M罐"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "仅用Power Stone完成任意一个前八关卡及其Boss（Wave/Charge除外）",
-        "notes": "Gyro, Gravity, Star, Crystal, Napalm are eligible for this challenge.\nM-Tank likely required!"
+        "name": "仅用石头通关任意一个前八（波浪/火车除外）",
+        "notes": "不允许跳过Boss\n可能需要M罐"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "用任何除了Gravity的特殊武器组合击败Gyro Man"
+        "name": "仅用特武击败旋翼人（除了重力）",
+        "notes": "可以切换多个特武\n但不能用P弹和重力"
     },
     {
         "diff": 2,
@@ -8996,8 +9004,8 @@
             "pacifist5",
             "napalmpacifist"
         ],
-        "name": "抵达Napalm Man的Boss门（和平主义）",
-        "notes": "Defeating 2 Rolling Drills is required.\nYou cannot destroy enemy projectiles, either!"
+        "name": "抵达榴弹人的Boss门（和平主义）",
+        "notes": "允许击败两个秒杀钻头\n不能破坏敌人发射的子弹"
     },
     {
         "diff": 2,
@@ -9008,8 +9016,8 @@
             "pacifist5",
             "mousubeil"
         ],
-        "name": "抵达Charge Man的Boss门（和平主义）",
-        "notes": "You cannot destroy enemy projectiles, either!"
+        "name": "抵达火车人的Boss门（和平主义）",
+        "notes": "不能破坏敌人发射的子弹"
     },
     {
         "diff": 2,
@@ -9019,7 +9027,7 @@
         "groups": [
             "letters"
         ],
-        "name": "收集并同时持有4个字母"
+        "name": "收集并持有4个字母"
     },
     {
         "diff": 2,
@@ -9029,23 +9037,22 @@
         "groups": [
             "letters"
         ],
-        "name": "收集5个字母（允许重启）",
-        "notes": "They do not have the be held simultaneously"
+        "name": "收集5个字母",
+        "notes": "允许中途重启"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "从第三个Shield Attacker回到水晶掉落房间的开头",
-        "notes": "From the end of the shield attacker screen, before falling into the checkpoint"
+        "name": "从第三个盾牌飞行器的位置回到掉落水晶房间的开头"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "在前八关收集每一个放置的1UP",
+        "name": "收集放置在前八关的所有1up",
         "notes": "Gyro (1), Gravity (1), Napalm (1), Stone (1), Wave (1)"
     },
     {
@@ -9053,15 +9060,15 @@
         "games": [
             "5"
         ],
-        "name": "全程装备Star的情况下到达除了Wave以外的任意一个机器人Boss门"
+        "name": "全程装备星星武器，抵达前八任意关底Boss门（波浪关除外）"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "使用Power Stone或Crystal Eye对任意Boss造成双重打击",
-        "notes": "A double hit means the boss takes damage twice from one firing of the weapon. This can be done most easily against Gravity Man with either weapon."
+        "name": "使用石头或水晶对任意Boss造成双重打击",
+        "notes": "一发攻击命中两次"
     },
     {
         "diff": 2,
@@ -9071,7 +9078,7 @@
         "groups": [
             "gravity"
         ],
-        "name": "仅使用反弹的Crystal Eye击败Gravity Man"
+        "name": "仅用反弹的水晶击败重力人"
     },
     {
         "diff": 2,
@@ -9081,15 +9088,15 @@
         "groups": [
             "chargekick"
         ],
-        "name": "全程装备Charge Kick的情况下，抵达除了Wave Man以外任意一个机器人Boss门",
-        "notes": "Boss can be defeated with another weapon"
+        "name": "全程装备火车武器，抵达前八任意关底Boss门（波浪关除外）",
+        "notes": "不包括Boss"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "将两个Heli Joes从梯子带回Napalm洞穴房间的开头"
+        "name": "将榴弹关的两个直升机乔从梯子带回洞穴房间的开头"
     },
     {
         "diff": 2,
@@ -9101,8 +9108,8 @@
             "crystalpacifist",
             "gravitypacifist"
         ],
-        "name": "在前八关击败所有的Power Muscler",
-        "notes": "MM5 Stomper.\nLocated in Gravity, Gyro, Crystal, Napalm."
+        "name": "击败前八关所有的超人",
+        "notes": "<img src=\"img/5-powermuscler.png\">\nGravity, Gyro, Crystal, Napalm."
     },
     {
         "diff": 2,
@@ -9113,7 +9120,7 @@
             "dark1pacifist",
             "dark1boss"
         ],
-        "name": "抵达Dark Man 1的Boss门（和平主义）"
+        "name": "抵达布鲁斯城堡1的Boss门（和平主义）"
     },
     {
         "diff": 2,
@@ -9125,9 +9132,9 @@
             "dark2pacifist",
             "9pukapellys"
         ],
-        "name": "在Dark 2，集合全部9个pukapelly，用1发Mega Buster同时摧毁它们",
-        "notes": "The orb enemies that float up and down and then move toward you on the Train Met screen",
-        "password": "y"
+        "name": "在布鲁斯城堡2，集合全部9个绿蛋，用一发蓄力炮摧毁它们",
+        "notes": "<img src=\"img/5-pukapelly.png\">",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 2,
@@ -9137,17 +9144,17 @@
         "groups": [
             "dark3boss"
         ],
-        "name": "仅使用特殊武器，完成Dark 3的关卡和Boss战，击败所有敌人",
-        "password": "y"
+        "name": "仅用特武，清理布鲁斯城堡3所有敌人，包括Boss",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 2,
         "games": [
             "5"
         ],
-        "name": "从终点房间回到Dark Man 3的开头",
-        "notes": "The return trip must be done from the right-side ladder back to the first screen - no deaths.\nIt is possible to trigger a left-screen transition on the first spinning platform room.",
-        "password": "y"
+        "name": "从布鲁斯城堡3的终点房间回到关卡开头",
+        "notes": "必须从右边的梯子返回到第一个版面，且不能去世\n在第一个旋转平台的房间可以触发向左切屏",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 2,
@@ -9158,8 +9165,8 @@
             "dark1boss",
             "dark3boss2"
         ],
-        "name": "仅用Beat击败Dark Man 1和Dark Man 3（仅限Boss）",
-        "password": "y"
+        "name": "仅用比特击败布鲁斯城堡1和3的Boss",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9169,8 +9176,8 @@
         "groups": [
             "wavepacifist"
         ],
-        "name": "完成Wave的船部分（和平主义）无伤且不跳船",
-        "notes": "Octoper must be defeated to progress.\nUpon taking damage, the player may take a death and continue from the nearest checkpoint."
+        "name": "无伤完成波浪人关卡的船部分（和平主义）",
+        "notes": "只能打小Boss\n不能用bug跳过乘船"
     },
     {
         "diff": 3,
@@ -9180,31 +9187,31 @@
         "groups": [
             "letters"
         ],
-        "name": "收集全部8个字母（允许重启）",
-        "notes": "They do not all have to be held simultaneously."
+        "name": "收集全部8个字母",
+        "notes": "允许中途重启"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "收集全部8个字母并召唤Beat"
+        "name": "收集全部8个字母并召唤比特"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "在不使用Rush Jet或Super Arrow的情况下，两次穿过Gyro关卡的坠落砖块区域",
-        "notes": "Forwards and then backwards in the same life. Rush Coil required!"
+        "name": "不用飞狗和飞箭，往返穿过旋翼关坠落砖块区域",
+        "notes": "需要在一条命完成\n需要跳狗"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "在不死亡和不补血的情况下抵达Star Man的Boss门（和平主义）",
-        "notes": "You can slide past the green cannons while they're in the floor.\nYou can continue after dying before reaching the checkpoint."
+        "name": "一命且不补血的情况下抵达星星人Boss门（和平主义）",
+        "notes": "<img src=\"img5-bbitterslide.gif“>\n允许使用复活点"
     },
     {
         "diff": 3,
@@ -9216,8 +9223,8 @@
             "mousubeil",
             "crystalpacifist"
         ],
-        "name": "抵达Crystal Man的Boss门（和平主义）",
-        "notes": "Crystal Warp is not allowed!"
+        "name": "抵达水晶人Boss门（和平主义）",
+        "notes": "不允许用bug直接跳到boss门口"
     },
     {
         "diff": 3,
@@ -9227,8 +9234,8 @@
         "groups": [
             "chargekickboss"
         ],
-        "name": "仅用Charge Kick击败Star Man",
-        "notes": "M-Tank likely required."
+        "name": "仅用火车滑铲击败星星人",
+        "notes": "可能需要M罐"
     },
     {
         "diff": 3,
@@ -9239,36 +9246,25 @@
             "chargekick",
             "chagekickboss"
         ],
-        "name": "使用Charge Kick，击败Wave Man以外的任意一个Boss",
-        "notes": "Eligible robot masters: Gyro, Crystal, Star. Castle bosses count if done in tandem with a password goal. M-Tank is useful for insurance!"
+        "name": "仅用火车滑铲击败波浪人以外的任意一个Boss",
+        "notes": "可能需要M罐"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "从Wily 2水域最后的梯子回到开头",
-        "password": "y"
+        "name": "从威利城堡2水域最后的梯子回到开头",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "在三轮内摧毁Dark Man 4的塔楼",
-        "notes": "Hint: You will need Super Arrow to climb up and shoot out blocks",
-        "password": "y"
-    },
-    {
-        "diff": 3,
-        "games": [
-            "5"
-        ],
-        "groups": [
-            "dark4boss"
-        ],
-        "name": "仅用Star Crash击败Dark Man 4",
-        "password": "y"
+        "name": "在三轮内拆完布鲁斯城堡4的塔楼",
+        "notes": "需要飞箭到高处开始拆",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9278,8 +9274,19 @@
         "groups": [
             "dark4boss"
         ],
-        "name": "仅用Power Stone（不暂停）击败Dark Man 4",
-        "password": "y"
+        "name": "仅用星星击败布鲁斯城堡4Boss",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "dark4boss"
+        ],
+        "name": "仅用石头击败布鲁斯城堡4Boss（禁暂停）",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9290,8 +9297,8 @@
             "castle5a",
             "castle5b"
         ],
-        "name": "完成任意两个城堡关卡（和平;主义），不包括Dark 4, Wily 3和Wily 4",
-        "password": "y"
+        "name": "和平主义完成任意两个城堡关卡（不包括布鲁斯4, 威利3, 威利4）",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9301,9 +9308,9 @@
         "groups": [
             "castle5a"
         ],
-        "name": "在Wily 1和2关卡中击败所有敌人",
-        "notes": "If an enemy explodes, it counts. If it goes offscreen, it doesn't count and must be respawned. \nIncludes Girees, which must be defeated with Beat!",
-        "password": "y"
+        "name": "在威利城堡1和2中击败所有敌人",
+        "notes": "允许敌人自爆，但不允许敌人逃跑\n逃跑的敌人需要拖屏重新刷出来\n包括<img src=\"img/Mm5cogsprite.png\">，需要比特鸟才能造成伤害。",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9315,7 +9322,7 @@
             "dark2boss",
             "castle5b"
         ],
-        "name": "抵达Dark Man 2的Boss门（和平主义）"
+        "name": "抵达布鲁斯城堡2的Boss门（和平主义）"
     },
     {
         "diff": 3,
@@ -9325,9 +9332,9 @@
         "groups": [
             "castle5b"
         ],
-        "name": "在Dark 1, 2和3关卡中击败每一个敌人",
-        "notes": "If an enemy explodes, it counts. If it goes offscreen, it doesn't count and must be respawned. \nIncludes Girees, which must be defeated with Beat!",
-        "password": "y"
+        "name": "在布鲁斯城堡1, 2和3中清理所有敌人",
+        "notes": "允许敌人自爆，但不允许敌人逃跑\n逃跑的敌人需要拖屏重新刷出来\n包括<img src=\"img/Mm5cogsprite.png\">，需要比特鸟才能造成伤害",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9337,35 +9344,36 @@
         "groups": [
             "q9"
         ],
-        "name": "仅用Power Stone击败Circring Q9",
-        "password": "y"
+        "name": "仅用石头击败Q9",
+        "notes": "<img src=\"img/Mm5circlingq9sprite.png\">",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "收集并使用Mega Man 5中的所有M-Tank",
-        "notes": "Crystal, Stone, Dark 2, Wily 1, Wily 2, Wily 3.\nM-Tanks must be used in order for them to appear in other stages!",
-        "password": "y"
+        "name": "收集并使用洛克人5中的所有M罐",
+        "notes": "Crystal, Stone, Dark 2, Wily 1, Wily 2, Wily 3.\n身上的M罐必须用掉后，新的M罐才会在另一版面出现",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "使用Beat击败一个机器人Boss",
-        "notes": "M-Tank is required!\nPassword for this goal provides Beat with 0 robot masters defeated.\nCan also be done in Wily 3.",
-        "password": "y"
+        "name": "使用比特击败一个机器人Boss",
+        "notes": "需要M罐",
+        "password": "<img src=\"img/mm5-beatonly-pw.png\">"
     },
     {
         "diff": 3,
         "games": [
             "5"
         ],
-        "name": "从Wily 1压饼机的起点回到长尖刺坑底部",
-        "notes": "Don't enter the crusher room or you won't be able to turn around.\nDying on the spikes is not required.",
-        "password": "y"
+        "name": "从威利城堡1压饼机的起点回到长尖刺坑底部",
+        "notes": "不要进入压饼机房间，不然无法返回\n不需要碰到尖刺",
+        "password": "<img src=\"img/mm5.png\">"
     },
     {
         "diff": 3,
@@ -9375,7 +9383,132 @@
         "groups": [
             "bigpets"
         ],
-        "name": "仅使用未蓄力P弹且禁方向键击败Big Pets",
-        "password": "y"
+        "name": "仅使用未蓄力P弹且禁方向键击败大叠叠乐",
+        "notes": "<img src=\"img/Mm5towerrobotsprite.png\">",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "name": "通关星星人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "name": "通关重力人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "name": "通关旋翼人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "name": "通关水晶人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "name": "通关榴弹人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "stoneman"
+        ],
+        "name": "通关石头人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "chargeman"
+        ],
+        "name": "通关冲锋人关卡（火车人）"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "name": "通关波浪人关卡"
+    },
+    {
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "darkmanstages",
+            "dark1boss"
+        ],
+        "name": "通关布鲁斯城堡1",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "darkmanstages",
+            "dark2boss"
+        ],
+        "name": "通关布鲁斯城堡2",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "darkmanstages",
+            "dark3boss",
+            "dark3boss2"
+        ],
+        "name": "通关布鲁斯城堡3",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "darkmanstages",
+            "dark4boss"
+        ],
+        "name": "通关布鲁斯城堡4",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "bigpets"
+        ],
+        "name": "通关威利城堡1",
+        "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "5"
+        ],
+        "groups": [
+            "q9"
+        ],
+        "name": "通关威利城堡2",
+        "password": "<img src=\"img/mm5.png\">"
     }
 ]
