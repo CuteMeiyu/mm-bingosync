@@ -374,6 +374,9 @@
             if (settings["room"].length > 0) {
                 params += "&" + new URLSearchParams({ "room": settings["room"] }).toString();
             }
+            if (settings["games"].length > 1) {
+                params += "&multi";
+            }
             window.open('popup.html?' + params, 'Bingo', 'width=600,height=600');
         }
     </script>

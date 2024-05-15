@@ -863,8 +863,6 @@
                     let indexes = queryParams.get('id').split(',').map(function (item) {
                         return parseInt(item);
                     });
-                    let showGames = false;
-                    let previousGame = null;
                     for (let i = 0; i < indexes.length; i++) {
                         let goal = data[indexes[i]];
                         let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
@@ -880,12 +878,6 @@
                             cellGame.innerHTML = "MM" + goal.games.join(',');
                         } else {
                             cellGame.innerHTML = "";
-                        }
-                        if (!showGames && previousGame != null && previousGame != cellGame.innerHTML) {
-                            showGames = true;
-                        }
-                        if (previousGame == null) {
-                            previousGame = cellGame.innerHTML;
                         }
 
                         let cellInfo = cell.querySelector(".cell-info");
@@ -907,7 +899,7 @@
                     for (let img of document.querySelectorAll("img")) {
                         img.alt = "[图片]";
                     }
-                    if (!showGames) {
+                    if (queryParams.get("multi") == null) {
                         for (let cellGame of document.querySelectorAll('.cell-game')) {
                             cellGame.style.display = 'none';
                         }
