@@ -28,6 +28,8 @@
             flex-wrap: wrap-reverse;
             position: fixed;
             bottom: 0;
+            color: #fff;
+            font-weight: bold;
             background-color: #333;
             width: 100vw;
         }
@@ -183,7 +185,7 @@
         <div class="spinner"></div>
         <span class="spinner-text" id="spinner-text">正在加载...</span>
     </div>
-    <div class="modal-overlay" style="display: none;" id="click-overlay" onclick="hideClickOverlay(event)"></div>
+    <div class="modal-overlay" style="display: none;" id="click-overlay" onclick="onClickOverlay();"></div>
     <span id="tooltip" class="tooltip"></span>
     <div id="board" class="board-container">
         <div id="cell_0_0" class="cell" onclick="onCellClick(event)">
@@ -363,7 +365,7 @@
         </div>
     </div>
     <label for="color-picker" class="scoreboard" id="scoreboard" onclick="onScoreboardClick();"></label>
-    <input type="color" style="display: none;" id="color-picker" onchange="onColorChange(event);" value="#000000">
+    <input type="color" style="transform: scale(0);" id="color-picker" value="#000000">
 
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
@@ -405,6 +407,8 @@
         var syncMemberIds = [];
         var syncTimer = 0;
         var syncSource;
+
+        var previousColorPickerValue = "#000000";
 
         if (roomName != null) {
             showSpinner("正在连接服务器...");
@@ -578,7 +582,7 @@
             if (playerColors[playerName] === undefined) {
                 let scoreboard = document.getElementById("scoreboard");
                 scoreboard.classList.add("flashing-border");
-                alert("请先点击计分板来设置颜色");
+                scoreboard.innerHTML = "请先设置颜色";
                 return;
             }
             if (roomName == null) {
@@ -615,16 +619,20 @@
             return { h: h, s: s, l: l, y: y };
         }
 
-        function onColorChange(event) {
-            let hexColor = event.target.value;
+        function onColorChange() {
+            let hexColor = document.getElementById("color-picker").value;
             let color = convertColor(hexColor);
             if (color.s < 0.2 || color.l < 0.2 || color.l > 0.9) {
-                alert("请使用更特别的颜色");
+                let scoreboard = document.getElementById("scoreboard");
+                scoreboard.classList.add("flashing-border");
+                scoreboard.innerHTML = "请使用更特别的颜色";
                 hideClickOverlay();
                 return;
             }
             if (color.y >= 0.5) {
-                alert("请使用更暗的颜色");
+                let scoreboard = document.getElementById("scoreboard");
+                scoreboard.classList.add("flashing-border");
+                scoreboard.innerHTML = "请使用更暗的颜色";
                 hideClickOverlay();
                 return;
             }
@@ -780,6 +788,14 @@
         window.addEventListener('resize', function () {
             onResize();
         });
+
+        function onClickOverlay() {
+            if (document.getElementById("color-picker").value != previousColorPickerValue) {
+                previousColorPickerValue = document.getElementById("color-picker").value
+                onColorChange();
+            }
+            hideClickOverlay();
+        }
 
         function onMouseIn(event) {
             let tooltip = document.getElementById('tooltip');
