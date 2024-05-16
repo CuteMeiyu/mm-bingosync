@@ -837,33 +837,45 @@
             cellPassword.addEventListener('mouseout', onMouseOut);
         }
 
+        var longTouchTimer = 0;
+        var longPressDetected = false;
+
         function onContextMenu(event) {
             event.preventDefault();
+            longPressDetected = true;
             let cell = event.target.closest(".cell");
             let star = cell.querySelector(".cell-star");
             star.classList.toggle("show");
         }
 
-        var longTouchTimer = 0;
-
         function isIOS() {
             return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
         }
 
-        if (isIOS) {
+        if (isIOS()) {
             for (let cell of document.querySelectorAll('.cell')) {
                 cell.addEventListener('touchstart', function (event) {
                     longTouchTimer = setTimeout(onContextMenu, 500, event);
                 });
                 cell.addEventListener('touchend', function (event) {
                     clearTimeout(longTouchTimer);
+                    if (!longPressDetected) {
+                        onCellClick(event);
+                    }
+                    setTimeout(() => { longPressDetected = false; }, 0);
                 });
                 cell.addEventListener('touchcancel', function (event) {
                     clearTimeout(longTouchTimer);
+                    setTimeout(() => { longPressDetected = false; }, 0);
+                });
+                cell.addEventListener('click', function (event) {
+                    if (longPressDetected) {
+                        event.preventDefault();
+                    }
                 });
                 cell.addEventListener('contextmenu', function (event) {
                     event.preventDefault();
-                })
+                });
             }
         } else {
             for (let cell of document.querySelectorAll('.cell')) {
