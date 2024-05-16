@@ -234,7 +234,7 @@
         "games": [
             "9"
         ],
-        "name": "在任何关卡的每个屏幕上放狗",
+        "name": "在任意一关的每个屏幕上放狗",
         "notes": "每次切屏就算一面，包括BOSS走廊和BOSS房"
     },
     {
@@ -365,6 +365,9 @@
         "games": [
             "9"
         ],
+        "groups": [
+            "specialweapononly"
+        ],
         "name": "纯电通关水泥人关卡",
         "notes": "如果有Boss，那么Boss也要打"
     },
@@ -386,6 +389,9 @@
         "diff": 1,
         "games": [
             "9"
+        ],
+        "groups": [
+            "specialweapononly"
         ],
         "name": "纯火通关宝石人关卡",
         "notes": "如果有Boss，那么Boss也要打"
@@ -675,7 +681,8 @@
             "9"
         ],
         "groups": [
-            "rushjet9"
+            "rushjet9",
+            "4continuousstages"
         ],
         "name": "获取飞狗"
     },
@@ -1815,7 +1822,8 @@
             "10"
         ],
         "groups": [
-            "rushjet10"
+            "rushjet10",
+            "4continuousstages"
         ],
         "name": "获取飞狗"
     },
@@ -2257,7 +2265,8 @@
         ],
         "groups": [
             "rushjet9",
-            "rushjet10"
+            "rushjet10",
+            "4continuousstages"
         ],
         "name": "获取一个飞狗",
         "type": "all"
@@ -4377,7 +4386,9 @@
     },
     {
         "groups": [
-            "4bosses"
+            "4bosses",
+            "3continuousstages",
+            "4continuousstages"
         ],
         "name": "不重启连续完成4个关卡",
         "weight": 0.75
@@ -4415,6 +4426,9 @@
         "notes": "比如：3代蛇打尖刺, 4代环打法老\n注意有的BOSS免疫逆克制武器"
     },
     {
+        "groups": [
+            "specialweapononly"
+        ],
         "name": "纯特武完成一个关卡",
         "notes": "包括BOSS\n可以切换多种特武，但不能用P弹\n不能用特殊道具和狗，除非在游戏中不得不用的地方"
     },
@@ -4451,7 +4465,8 @@
     {
         "diff": 1,
         "groups": [
-            "castle"
+            "castle",
+            "3continuousstages"
         ],
         "name": "在单个游戏中完成3个城堡关卡",
         "password": "<img src=\"img/multi-allpasswords.png\"/>\n1-6代：可以使用上述密码\n7-11代：可以从城堡1开始"
@@ -7286,7 +7301,7 @@
             "3"
         ],
         "name": "全程按住尖刺自带连发，到达闪光人Boss门",
-        "notes": "开局按住攻击键不松手，直到进入闪光人Boss房",
+        "notes": "开局按住攻击键不松手，直到进入闪光人Boss房\n需要利用好滑铲",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -7383,7 +7398,6 @@
             "mm3castlebosses"
         ],
         "name": "通关城堡1",
-        "notes": "(blue) A1, A3, B2, B5, D3, F4\n(red) C5, E1",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -7396,7 +7410,6 @@
             "yellowdevilmkii"
         ],
         "name": "通关城堡2",
-        "notes": "(blue) A1, A3, B2, B5, D3, F4\n(red) C5, E1",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -7409,7 +7422,6 @@
             "holographmegamans"
         ],
         "name": "通关城堡3",
-        "notes": "(blue) A1, A3, B2, B5, D3, F4\n(red) C5, E1",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -7421,7 +7433,6 @@
             "mm3castlebosses"
         ],
         "name": "通关城堡4",
-        "notes": "(blue) A1, A3, B2, B5, D3, F4\n(red) C5, E1",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -7439,8 +7450,8 @@
         "games": [
             "4"
         ],
-        "name": "激活游戏中的每个蝙蝠和子弹平台",
-        "notes": "Grasshoppers and floating-head platforms"
+        "name": "激活游戏中的每个蝗虫和子弹平台",
+        "notes": "灯泡关：<img src=\"img/Mm4robotgrasshoppersprite.png\">\n发老关：<img src=\"img/Mm4hoversprite.png\">"
     },
     {
         "games": [
@@ -7449,14 +7460,15 @@
         "groups": [
             "wire4"
         ],
-        "name": "仅使用钩爪，击败圆环关的两只河马"
+        "name": "仅用钩爪击败圆环关的两只河马",
+        "notes": "<img src=\"img/4-hippowire.png\">"
     },
     {
         "games": [
             "4"
         ],
-        "name": "在不冻结或击败任何敌人的情况下，通过法老第一面的流沙3次",
-        "notes": "Start -> End -> Start again"
+        "name": "在不冻结或击败任何敌人的情况下，来回穿过法老第一面的流沙",
+        "notes": "起点 -> 终点 -> 起点"
     },
     {
         "games": [
@@ -7475,7 +7487,7 @@
             "4"
         ],
         "name": "骷髅关全收集",
-        "notes": "2 E-Tanks, 2 Large Refills, 6 Small Refills, 1 Eddie item"
+        "notes": "E罐x2, 大能量x2, 小能量x6, 艾迪x1"
     },
     {
         "games": [
@@ -7491,14 +7503,14 @@
             "4"
         ],
         "name": "使用骷髅盾击败一个独轮车",
-        "notes": "Monoroaders appear in Ring, Drill, Cossack 1, and Cossack 2"
+        "notes": "<img src=\"img/4-monoroader.png\">\nRing, Drill, Cossack 1, Cossack 2"
     },
     {
         "games": [
             "4"
         ],
         "name": "击败一个扫地机器人",
-        "notes": "Buzzsaw spine enemies"
+        "notes": "<img src=\"img/4-garyoby.png\">"
     },
     {
         "games": [
@@ -7507,7 +7519,8 @@
         "groups": [
             "jumbig"
         ],
-        "name": "在两个不同的关卡中击败一个压饼机器人"
+        "name": "在两个不同的关卡中击败一个压饼机器人",
+        "notes": "<img src=\"img/4-jumbig.png\">"
     },
     {
         "games": [
@@ -7517,7 +7530,7 @@
             "jumbig"
         ],
         "name": "让一个压饼机器人在任意关卡中落坑",
-        "notes": "Jumping down into a screen transition counts for this goal"
+        "notes": "<img src=\"img/4-jumbig.png\">\n不要求是致死坑，切屏坑也算"
     },
     {
         "games": [
@@ -7527,7 +7540,7 @@
             "miniboss4a"
         ],
         "name": "使用导弹击败一个大蜗牛",
-        "notes": "Big snail in Toad Man"
+        "notes": "<img src=\"img/4-escaroo.png\">"
     },
     {
         "games": [
@@ -7536,8 +7549,8 @@
         "groups": [
             "miniboss4a"
         ],
-        "name": "使用除闪光定时器之外的任何特武击败一名小boss",
-        "notes": "\"Special weapon\" means a unique robot master weapon. Rush and Wire Adapter do not count for this goal."
+        "name": "使用除闪光定时器之外的任意特武击败一名小boss",
+        "notes": "<img src=\"img/4-miniboss.gif\">\n“特武”指的是从Boss那里拿到的武器\n钩爪和狗不算"
     },
     {
         "games": [
@@ -7547,7 +7560,7 @@
             "skipminiboss4"
         ],
         "name": "使用气球跳过一个鲸鱼",
-        "notes": "Dive Man whales"
+        "notes": "<img src=\"img/4-moby.png“>"
     },
     {
         "games": [
@@ -7558,7 +7571,7 @@
             "kabatoncuefloor"
         ],
         "name": "跳过一个小Boss",
-        "notes": "Escaroo, Kabatoncue, Moby, Whopper"
+        "notes": "<img src=\"img/4-miniboss.gif\">"
     },
     {
         "games": [
@@ -7567,20 +7580,22 @@
         "groups": [
             "kabatoncuefloor"
         ],
-        "name": "在同一场战斗中，将一个河马从最高点带到地面3次",
-        "notes": "Hippo miniboss in Ring. Its platform must touch the floor."
+        "name": "在一场战斗中，将河马从最高点带到地面3次",
+        "notes": "<img src=\"img/4-kabatoncue.png\">"
     },
     {
         "games": [
             "4"
         ],
-        "name": "使用一种特武击败一个骷髅"
+        "name": "使用一种特武击败一个骷髅乔",
+        "notes": "<img src=\"img/4-skeletonjoe.png\">"
     },
     {
         "games": [
             "4"
         ],
-        "name": "用一发蓄力炮击败3个蝙蝠"
+        "name": "用一发蓄力炮击败3只蝙蝠",
+        "notes": "<img src=\"img/4-battonton.png\">"
     },
     {
         "games": [
@@ -7593,7 +7608,7 @@
             "4"
         ],
         "name": "激活圆环关卡的每一座移动桥",
-        "notes": "Rainbow and ringed versions!"
+        "notes": "<img src=\"img/MM4RainbowPlatform.png\">\n<img src=\"img/MM4CoilPlatform.png\">"
     },
     {
         "games": [
@@ -7616,7 +7631,7 @@
             "4"
         ],
         "name": "击败每一种类型的安全帽小兵各一只",
-        "notes": "Metall have 1 HP and jump.\nMetall EX are the ones that have 3 HP and spin+shoot.\nMetall Swim have flippers."
+        "notes": "<img src=\"img/4-metalls.png\">\n共3种，分别在：钻头、垃圾、潜水关卡\n威利1每种都有"
     },
     {
         "games": [
@@ -7632,20 +7647,20 @@
             "dustpacifist"
         ],
         "name": "击败灯泡和垃圾关卡中的两台糖豆机",
-        "notes": "Big red pill bottles"
+        "notes": "<img src=\"img/4-gachappon.png\">"
     },
     {
         "games": [
             "4"
         ],
-        "name": "在骷髅头部回位时将其冻结（参考提示）",
-        "notes": "Mega Man Snap"
+        "name": "在骷髅头部回位时将其冻结",
+        "notes": "<img src=\"img/4-snapskeletonjoe.png\">"
     },
     {
         "games": [
             "4"
         ],
-        "name": "在潜水升降平台让一个安全帽在空中浮动"
+        "name": "用潜水升降平台让一个安全帽在空中悬浮"
     },
     {
         "games": [
@@ -7661,7 +7676,8 @@
             "marine",
             "moby"
         ],
-        "name": "在潜水艇中战斗并击败一个鲸鱼"
+        "name": "在潜水艇中战斗并击败一个鲸鱼",
+        "notes": "<img src=\"img/4-moby.png“>"
     },
     {
         "games": [
@@ -7671,14 +7687,14 @@
             "brightmanringskull1"
         ],
         "name": "灯泡关全收集",
-        "notes": "Don't forget about the room underneath the checkpoint!"
+        "notes": "不要忘了岔路"
     },
     {
         "games": [
             "4"
         ],
-        "name": "用任何武器一枪击败5个直升机",
-        "notes": "Ladybug copters - Drill (long screen below the bats), Dust, Pharaoh"
+        "name": "用任意武器一枪击败5个直升机",
+        "notes": "<img src=\"img/4-taketento.png\">\nDrill, Dust, Pharaoh"
     },
     {
         "games": [
@@ -7687,15 +7703,15 @@
         "groups": [
             "drillballoon"
         ],
-        "name": "只使用钻头和气球，完成哥萨克1关卡",
-        "password": "y"
+        "name": "只使用钻头和气球，完成哥萨克城堡1",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "games": [
             "4"
         ],
-        "name": "在他躲进房间时，偷偷无伤经过一个木乃伊",
-        "notes": "Mummies appear in Pharaoh and Wily 2"
+        "name": "在一个木乃伊躲进房间时，偷偷无伤路过",
+        "notes": "Pharaoh, Wily 2"
     },
     {
         "games": [
@@ -7705,35 +7721,37 @@
             "pharaohnoshot"
         ],
         "name": "击败钻头人关卡的每一个敌人",
-        "notes": "You only have to shoot one boulder from every dispenser"
+        "notes": "每个落石机需要打掉一块落石"
     },
     {
         "games": [
             "4"
         ],
-        "name": "在圆环关卡中，让独轮车通过一个滚动平台"
+        "name": "在圆环关卡中，让独轮车通过一个滚动平台",
+        "notes": "<img src=\"img/4-monoroader.png\">"
     },
     {
         "games": [
             "4"
         ],
         "name": "在骷髅关卡第一屏中，引导一个弹跳的炮弹通过蜿蜒的走廊",
-        "notes": "You only have to see it exit the corridor and out into the starting room, not all the way to the left screen border. Flash Stopper helpful but not required."
+        "notes": "你只需要看到它离开走廊并飞进起始房间即可\n而不是一直飞到左边屏幕的边缘\n闪光定时器很有用，但不是必需"
     },
     {
         "diff": 1,
         "games": [
             "4"
         ],
-        "name": "从钻头关的巨石或其碎片中获得每种掉落物",
-        "notes": "Small health, large health, small ammo, large ammo, 1up.\nShoot fragments to get more drop rolls quickly!"
+        "name": "从钻头关的落石或其碎片中刷取每种掉落物",
+        "notes": "共5种：大小血包，大小能量，1up"
     },
     {
         "diff": 1,
         "games": [
             "4"
         ],
-        "name": "击败法老、骷髅和钻头关卡中的每一只蝙蝠"
+        "name": "击败法老、骷髅和钻头关卡中的每一只蝙蝠",
+        "notes": "<img src=\"img/4-battonton.png\">"
     },
     {
         "diff": 1,
@@ -7750,7 +7768,8 @@
         "groups": [
             "wire4"
         ],
-        "name": "使用钩爪给大蜗牛造成最后一击"
+        "name": "使用钩爪给大蜗牛造成最后一击",
+        "notes": "<img src=\"img/4-escaroo.png\">"
     },
     {
         "diff": 1,
@@ -7758,7 +7777,7 @@
             "4"
         ],
         "name": "纯P禁蓄力禁滑铲，完成骷髅人关卡和Boss",
-        "notes": "Can restart from the nearest checkpoint after an accidental slide or charge shot."
+        "notes": "如果不慎违规，可以就近自杀，从上一个复活点重来"
     },
     {
         "diff": 1,
@@ -7766,7 +7785,7 @@
             "4"
         ],
         "name": "从圆环人Boss门返回到存档点",
-        "notes": "Balloon or Jet required"
+        "notes": "需要气球或飞狗"
     },
     {
         "diff": 1,
@@ -7802,7 +7821,7 @@
             "etank4"
         ],
         "name": "同时拥有4个E罐",
-        "notes": "Pharaoh (1), Bright (1), Ring (Eddie), Dust (Eddie), Skull (2, Eddie), Dive (Eddie), Drill (1)"
+        "notes": "Pharaoh (1), Bright (1), Ring (艾迪), Dust (艾迪), Skull (2, 艾迪), Dive (艾迪), Drill (1)"
     },
     {
         "diff": 1,
@@ -7813,7 +7832,7 @@
             "jumbig"
         ],
         "name": "击败前八关每一个压饼机器人",
-        "notes": "Dust (2), Dive (1), Drill (1)"
+        "notes": "<img src=\"img/4-jumbig.png\">\nDust (2), Dive (1), Drill (1)"
     },
     {
         "diff": 1,
@@ -7821,7 +7840,7 @@
             "4"
         ],
         "name": "当法老人呈蓝色时，用闪光冻结他",
-        "notes": "Mega Man Snap"
+        "notes": "<img src=\"img/4-snappharaoh.png\">"
     },
     {
         "diff": 1,
@@ -7829,7 +7848,7 @@
             "4"
         ],
         "name": "同时用闪光冻结跳跃中的两种颜色的飞跃鱼",
-        "notes": "Gyotots appear in Dive and Toad"
+        "notes": "<img src=\"img/4-snapgyotot.png\">\nDive, Toad"
     },
     {
         "diff": 1,
@@ -7837,7 +7856,7 @@
             "4"
         ],
         "name": "用闪光冻结两种不同颜色的独轮车",
-        "notes": "Monoroaders appear in Drill, Ring, Cossack 1, and Cossack 2"
+        "notes": "<img src=\"img/4-snapmonoroader.png\">\nDrill, Ring, Cossack 1, Cossack 2"
     },
     {
         "diff": 1,
@@ -7848,7 +7867,7 @@
             "dustpacifist"
         ],
         "name": "击败前八关的每一个直升机",
-        "notes": "Ladybug copters - Drill, Dust, Pharaoh"
+        "notes": "<img src=\"img/4-taketento.png\">\nDrill, Dust, Pharaoh"
     },
     {
         "diff": 1,
@@ -7856,7 +7875,7 @@
             "4"
         ],
         "name": "全程装备气球抵达任意机器人Boss门",
-        "notes": "Possible stages: Pharaoh, Bright, Skull, Dive, Drill"
+        "notes": "可以做到的关卡：\nPharaoh, Bright, Skull, Dive, Drill"
     },
     {
         "diff": 1,
@@ -7874,14 +7893,15 @@
             "brightmanringskull2"
         ],
         "name": "从灯泡关存档点上方的房间返回存档点的起点",
-        "notes": "Balloon or Rush Jet required!"
+        "notes": "需要气球或飞狗"
     },
     {
         "diff": 1,
         "games": [
             "4"
         ],
-        "name": "从跳狗弹起并在落地前击败两个敌人"
+        "name": "从跳狗弹起并在落地前击败两个敌人",
+        "notes": "<img src=\"img/4-coil2defeat.gif\">"
     },
     {
         "diff": 1,
@@ -7909,7 +7929,7 @@
             "4"
         ],
         "name": "让4个直升罐头降落在同一屏",
-        "notes": "Helipons are the small blue floating enemies in the last screen of Drill that land on the ground and start shooting"
+        "notes": "<img src=\"img/4-helipon.png\">\n钻头关卡"
     },
     {
         "diff": 1,
@@ -7920,7 +7940,7 @@
             "ringbusteronly"
         ],
         "name": "只用击中其导弹产生的垃圾碎屑击败河马",
-        "notes": "Hippo miniboss in Ring"
+        "notes": "<img src=\"img/4-kabatoncue.png\">"
     },
     {
         "diff": 1,
@@ -7928,8 +7948,8 @@
             "4"
         ],
         "name": "哥萨克1,2全收集",
-        "notes": "Don't forget the E-Tank buried in the snow in Cossack 1!",
-        "password": "y"
+        "notes": "不要忘了哥萨克城堡1埋在雪里的E罐",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 1,
@@ -7937,7 +7957,7 @@
             "4"
         ],
         "name": "从哥萨克1的Boss门口返回到起点",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 1,
@@ -7945,7 +7965,7 @@
             "4"
         ],
         "name": "当大方块完全组合时站在其顶部",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 2,
@@ -7953,7 +7973,7 @@
             "4"
         ],
         "name": "通过钻头关最后一个版面而不触碰任何开关",
-        "notes": "Rush Jet required!"
+        "notes": "需要飞狗"
     },
     {
         "diff": 2,
@@ -7964,7 +7984,7 @@
             "pharaohnoshot"
         ],
         "name": "只用法老球以满能量完成任意关卡（包括Boss战）",
-        "notes": "Hold B, touch an enemy with the shot above your head, and pause/unpause!"
+        "notes": "按住攻击键不松手\n按暂停可以重置"
     },
     {
         "diff": 2,
@@ -7977,7 +7997,7 @@
             "ringbusteronly"
         ],
         "name": "纯P禁蓄力禁滑铲完成圆环人关卡和Boss",
-        "notes": "Can restart from the nearest checkpoint after an accidental slide or charge shot."
+        "notes": "如果不慎违规，可以就近自杀，从上一个复活点重来"
     },
     {
         "diff": 2,
@@ -7989,7 +8009,7 @@
             "skipminiboss4"
         ],
         "name": "跳过每种类型的小Boss而不击败它们",
-        "notes": "Escaroo, Kabatoncue, Moby, Whopper. Flash Stopper and Balloon required"
+        "notes": "<img src=\"img/4-miniboss.gif\">\n需要闪光定时器和气球"
     },
     {
         "diff": 2,
@@ -8000,7 +8020,7 @@
             "miniboss4"
         ],
         "name": "击败前八关卡中的每一个小Boss",
-        "notes": "Toad (2), Ring (4), Dive (2) "
+        "notes": "<img src=\"img/4-miniboss.gif\">\nToad (2), Ring (4), Dive (2) "
     },
     {
         "diff": 2,
@@ -8012,7 +8032,7 @@
             "escortquesthard"
         ],
         "name": "从两个方向完整地护送一把飞行雨伞穿过蛤蟆关第一个版面",
-        "notes": "Bring the first enemy's umbrella to the right wall, and the last enemy's umbrella to the left wall. They can be done on separate attempts."
+        "notes": "<img src=\"img/4-umbrella.gif\">\n两个方向可以分开完成"
     },
     {
         "diff": 2,
@@ -8023,7 +8043,7 @@
             "3differentspecial"
         ],
         "name": "在用3种不同特殊武器攻击节节高后击败它",
-        "notes": "If the 3rd special weapon shot defeats it, that counts for this challenge."
+        "notes": "<img src=\"img/4-totempolen.gif\">\n第三种特武直接造成最后一击也算"
     },
     {
         "diff": 2,
@@ -8037,7 +8057,7 @@
             "brightmanringskull4"
         ],
         "name": "只用圆环和骷髅击败灯泡人关卡和Boss",
-        "notes": "Bright Man takes 2 damage from Skull and 1 damage from Ring"
+        "notes": "骷髅2点伤害，圆环1点伤害"
     },
     {
         "diff": 2,
@@ -8045,7 +8065,7 @@
             "4"
         ],
         "name": "不使用飞狗且不按方向键，反跑蛤蟆关第一个版面",
-        "notes": "The d-pad is allowed in menus for this goal. Hint: Balloon makes this much easier!"
+        "notes": "允许第一个转身\n打开菜单的时候可以按方向键\n有气球会容易得多"
     },
     {
         "diff": 2,
@@ -8053,15 +8073,15 @@
             "4"
         ],
         "name": "在一场战斗中，只用P弹在中线以上击落6枚潜水导弹",
-        "notes": "You do not need to win the fight afterward. Above the top of the 5th row of circles if done in Wily 3."
+        "notes": "<img src=\"img/4-divemanmissiles.gif\">"
     },
     {
         "diff": 2,
         "games": [
             "4"
         ],
-        "name": "从法老关卡最后的Boss门返回到起点",
-        "notes": "The last mummy's head can be helpful in giving you a damage boost for the spikes. You will need Balloon or Rush Jet!"
+        "name": "反跑法老关卡的最后一个房间",
+        "notes": "从Boss门口返回版面边缘\n最后一只木乃伊可以用来帮忙卖血过刺\n需要气球或飞狗"
     },
     {
         "diff": 2,
@@ -8081,8 +8101,8 @@
         "groups": [
             "escortquest4"
         ],
-        "name": "让圆环关最后一个版面上的所有8个环环同时出现在屏幕上",
-        "notes": "Floating Saturn enemies"
+        "name": "让圆环关最后一个版面上的全部8个小土星同屏出现",
+        "notes": "<img src=\"img/Mm4ringaringasprite.png\">"
     },
     {
         "diff": 2,
@@ -8093,7 +8113,7 @@
             "mothraya"
         ],
         "name": "在大蝴蝶刺穿3个完整的洞后击败它",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 2,
@@ -8105,7 +8125,7 @@
             "drillballoon2"
         ],
         "name": "只用钻头和气球完成哥萨克1和2",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 2,
@@ -8113,8 +8133,8 @@
             "4"
         ],
         "name": "从哥萨克2的Boss门返回到起点",
-        "notes": "You can continue backwards from checkpoints if you die after traveling back to them for this goal.",
-        "password": "y"
+        "notes": "复活点只有在返回经过了复活点之后才允许使用",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 2,
@@ -8125,7 +8145,8 @@
             "cockroachtwins"
         ],
         "name": "仅使用圆环击败双蟑螂",
-        "password": "y"
+        "notes": "哥萨克3Boss",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 2,
@@ -8133,7 +8154,7 @@
             "4"
         ],
         "name": "不激活任何上升平台到达哥萨克3的Boss门",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8154,7 +8175,7 @@
             "diveman"
         ],
         "name": "使用法老球击败潜水人",
-        "notes": "E-Tanks highly recommended!"
+        "notes": "建议备好E罐"
     },
     {
         "diff": 3,
@@ -8162,7 +8183,7 @@
             "4"
         ],
         "name": "用一发蓄力炮摧毁4个独轮车",
-        "notes": "You'll need to damage each of them once ahead of time. 4 of them appear together in Ring and Drill."
+        "notes": "<img src=\"img/4-monoroader.png\">\n你需要提前对它们每一个都造成一次伤害.\n圆环和钻头关卡能找到4只"
     },
     {
         "diff": 3,
@@ -8173,7 +8194,7 @@
             "toad"
         ],
         "name": "禁跳跃键通关蛤蟆人关卡（和Boss）",
-        "notes": "Requires Rush Coil bounces from the ground and ammo farming.\nRequires Pharaoh or Dive."
+        "notes": "需要跳狗，需要刷点能量\n需要法老球或潜水导弹"
     },
     {
         "diff": 3,
@@ -8181,7 +8202,7 @@
             "4"
         ],
         "name": "禁跳跃键通关骷髅人关卡（和Boss）",
-        "notes": "Wire and Rush Coil ground bounces required"
+        "notes": "需要钩爪或跳狗"
     },
     {
         "diff": 3,
@@ -8191,8 +8212,8 @@
         "groups": [
             "hover"
         ],
-        "name": "只用气球返回法老关存档点起始处",
-        "notes": "Hovers CAN be activated for this challenge. Takes creative damage boosting!"
+        "name": "仅用气球返回法老关存档房间的开头",
+        "notes": "可以激活子弹平台\n需要创造性地利用卖血"
     },
     {
         "diff": 3,
@@ -8210,7 +8231,7 @@
             "4"
         ],
         "name": "只用潜水导弹和钩爪抵达并进入垃圾人Boss门",
-        "notes": "Expert goal. Good luck!"
+        "notes": "有丶难度\n祝你好运"
     },
     {
         "diff": 3,
@@ -8218,7 +8239,7 @@
             "4"
         ],
         "name": "击败灯泡关第一只飞行灯泡并黑屏抵达切屏点",
-        "notes": "The lights come back 10 seconds after hitting the enemy no matter what you do. You can't respawn the enemy from the other side for this goal."
+        "notes": "需要在10秒内完成，否则灯会亮起来\n你不能反方向拖出这个灯泡来完成"
     },
     {
         "diff": 3,
@@ -8229,8 +8250,8 @@
             "4castlepacifist"
         ],
         "name": "完成任一城堡的关卡（和平主义）",
-        "notes": "Shooting Skeleton Joes is not allowed for this challenge!",
-        "password": "y"
+        "notes": "也不允许攻击骷髅乔",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8241,8 +8262,8 @@
             "pacifist4",
             "mm4pacifistwily1"
         ],
-        "name": "完成城堡1和2（和平主义）",
-        "password": "y"
+        "name": "完成威利1, 2（和平主义）",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8250,8 +8271,8 @@
             "4"
         ],
         "name": "使用钩爪给任意2个城堡Boss最后一击",
-        "notes": "Robot master refights do not count. Wily Capsule does not take damage from Wire!",
-        "password": "y"
+        "notes": "BR不算\n最终BOSS不受钩爪伤害",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8261,9 +8282,9 @@
         "groups": [
             "cockroachtwins"
         ],
-        "name": "在平台下方用钩爪悬挂时射击并击败二号蟑螂",
-        "notes": "Must survive the stage. Spikes are safe after orbs are gone!",
-        "password": "y"
+        "name": "在平台下方用钩爪悬挂时射击并完成对双蟑螂的最后一击",
+        "notes": "哥萨克3Boss\n需要活着结算\n当BOSS的爆炸球离开屏幕之后刺就可以站了",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8274,8 +8295,7 @@
             "mm4wily1"
         ],
         "name": "从城堡1Boss门返回水下区域开始处",
-        "notes": "1-800-RUSH-MARINE",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8286,8 +8306,7 @@
             "mm4wily1"
         ],
         "name": "在城堡1的每个水体中进入潜水狗",
-        "notes": "1-800-RUSH-MARINE",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8299,7 +8318,7 @@
             "mm4pacifistwily1"
         ],
         "name": "击败城堡1、2和3中的每一位敌人",
-        "password": "y"
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "diff": 3,
@@ -8307,7 +8326,8 @@
             "4"
         ],
         "name": "用圆环给威利胶囊最后一击",
-        "password": "y"
+        "notes": "最终Boss",
+        "password": "<img src=\"img/mm4-pw.png\">"
     },
     {
         "games": [
