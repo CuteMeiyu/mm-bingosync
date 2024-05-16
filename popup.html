@@ -38,6 +38,7 @@
             display: inline-block;
             padding: 2px;
             padding-inline: 10px;
+            color: #000;
             font-weight: bold;
             text-shadow:
                 -1px -1px 0 #fff,
@@ -161,21 +162,21 @@
             }
         }
 
-        @keyframes flashing-border {
+        @keyframes border-flashing {
 
             0%,
             100% {
-                border-color: red;
+                outline-color: red;
             }
 
             50% {
-                border-color: yellow;
+                outline-color: yellow;
             }
         }
 
         .flashing-border {
-            border: 2px solid red;
-            animation: flashing-border 2s infinite;
+            outline: 2px solid red;
+            animation: border-flashing 2s infinite;
         }
     </style>
 </head>
@@ -390,6 +391,17 @@
         function hideClickOverlay() {
             document.getElementById("click-overlay").style.display = "none";
         }
+
+        function setStatusBarText(text) {
+            let scoreboard = document.getElementById("scoreboard");
+            scoreboard.innerHTML = "";
+            let item = document.createElement("div");
+            item.classList.add("scoreboard-item");
+            item.style.color = "red";
+            item.innerText = text;
+            scoreboard.appendChild(item);
+            scoreboard.classList.add("flashing-border");
+        }
     </script>
     <script>
         const queryParams = new URLSearchParams(window.location.search);
@@ -580,9 +592,7 @@
                 playerName = "Player";
             }
             if (playerColors[playerName] === undefined) {
-                let scoreboard = document.getElementById("scoreboard");
-                scoreboard.classList.add("flashing-border");
-                scoreboard.innerHTML = "请先设置颜色";
+                setStatusBarText("请先设置颜色");
                 return;
             }
             if (roomName == null) {
@@ -623,16 +633,12 @@
             let hexColor = document.getElementById("color-picker").value;
             let color = convertColor(hexColor);
             if (color.s < 0.2 || color.l < 0.2 || color.l > 0.9) {
-                let scoreboard = document.getElementById("scoreboard");
-                scoreboard.classList.add("flashing-border");
-                scoreboard.innerHTML = "请使用更特别的颜色";
+                setStatusBarText("请使用更特别的颜色");
                 hideClickOverlay();
                 return;
             }
             if (color.y >= 0.5) {
-                let scoreboard = document.getElementById("scoreboard");
-                scoreboard.classList.add("flashing-border");
-                scoreboard.innerHTML = "请使用更暗的颜色";
+                setStatusBarText("请使用更暗的颜色");
                 hideClickOverlay();
                 return;
             }
@@ -729,7 +735,6 @@
             if (scoreboard.childNodes.length == 0) {
                 let item = document.createElement("div");
                 item.classList.add("scoreboard-item");
-                item.style.color = "#000000";
                 item.innerText = "记分板"
                 scoreboard.appendChild(item);
             }
@@ -837,50 +842,15 @@
             cellPassword.addEventListener('mouseout', onMouseOut);
         }
 
-        var longTouchTimer = 0;
-        var longPressDetected = false;
-
         function onContextMenu(event) {
             event.preventDefault();
-            longPressDetected = true;
             let cell = event.target.closest(".cell");
             let star = cell.querySelector(".cell-star");
             star.classList.toggle("show");
         }
 
-        function isIOS() {
-            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-        }
-
-        if (isIOS()) {
-            for (let cell of document.querySelectorAll('.cell')) {
-                cell.addEventListener('touchstart', function (event) {
-                    longTouchTimer = setTimeout(onContextMenu, 500, event);
-                });
-                cell.addEventListener('touchend', function (event) {
-                    clearTimeout(longTouchTimer);
-                    if (!longPressDetected) {
-                        onCellClick(event);
-                    }
-                    setTimeout(() => { longPressDetected = false; }, 0);
-                });
-                cell.addEventListener('touchcancel', function (event) {
-                    clearTimeout(longTouchTimer);
-                    setTimeout(() => { longPressDetected = false; }, 0);
-                });
-                cell.addEventListener('click', function (event) {
-                    if (longPressDetected) {
-                        event.preventDefault();
-                    }
-                });
-                cell.addEventListener('contextmenu', function (event) {
-                    event.preventDefault();
-                });
-            }
-        } else {
-            for (let cell of document.querySelectorAll('.cell')) {
-                cell.addEventListener('contextmenu', onContextMenu);
-            }
+        for (let cell of document.querySelectorAll('.cell')) {
+            cell.addEventListener('contextmenu', onContextMenu);
         }
 
         window.addEventListener('DOMContentLoaded', function () {
