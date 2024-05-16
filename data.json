@@ -366,7 +366,7 @@
             "9"
         ],
         "name": "纯电通关水泥人关卡",
-        "notes": "包括BOSS！"
+        "notes": "如果有Boss，那么Boss也要打"
     },
     {
         "diff": 1,
@@ -388,7 +388,7 @@
             "9"
         ],
         "name": "纯火通关宝石人关卡",
-        "notes": "包括BOSS！"
+        "notes": "如果有Boss，那么Boss也要打"
     },
     {
         "diff": 1,
@@ -442,8 +442,7 @@
         "games": [
             "9"
         ],
-        "name": "用一发黑洞吸收两个不同类型的小兵",
-        "notes": "一般要求贴图不同。"
+        "name": "用一发黑洞吸收两个不同类型的小兵"
     },
     {
         "diff": 1,
@@ -2804,7 +2803,7 @@
             "5",
             "6"
         ],
-        "name": "用BOSS武器击败这个BOSS",
+        "name": "仅用BOSS自己的武器击败自己",
         "notes": "1代或6代可以在前八完成\n其他代只能在BR完成",
         "password": "<img src=\"img/multi-allpasswords.png\"/>",
         "type": "all"
@@ -4413,7 +4412,7 @@
     },
     {
         "name": "逆克制击败一个BOSS",
-        "notes": "比如：蛇打尖刺, 环打法老\n注意有的BOSS免疫逆克制武器"
+        "notes": "比如：3代蛇打尖刺, 4代环打法老\n注意有的BOSS免疫逆克制武器"
     },
     {
         "name": "纯特武完成一个关卡",
@@ -4837,7 +4836,7 @@
         "groups": [
             "guts"
         ],
-        "name": "用火焰武器反方向攻击击败气力人",
+        "name": "仅用火焰武器反方向攻击击败气力人",
         "notes": "禁暂停"
     },
     {
@@ -5056,7 +5055,7 @@
         "games": [
             "1"
         ],
-        "name": "用剪刀击败火人（禁暂停）",
+        "name": "仅用剪刀击败火人（禁暂停）",
         "notes": "拾取过关球结算"
     },
     {
@@ -5067,7 +5066,7 @@
         "groups": [
             "ice"
         ],
-        "name": "用炸弹击败冰人（禁暂停）",
+        "name": "仅用炸弹击败冰人（禁暂停）",
         "notes": "拾取过关球结算"
     },
     {
@@ -5078,7 +5077,7 @@
         "groups": [
             "ice"
         ],
-        "name": "用剪刀击败冰人（禁暂停）",
+        "name": "仅用剪刀击败冰人（禁暂停）",
         "notes": "拾取过关球结算"
     },
     {
@@ -5086,7 +5085,7 @@
         "games": [
             "1"
         ],
-        "name": "纯炸弹击败一个压饼机器人",
+        "name": "仅用炸弹造成伤害击败一个压饼机器人",
         "notes": "<img src=\"img/1-bigeye.png\"/>\n允许冻结"
     },
     {
@@ -5187,7 +5186,7 @@
         "groups": [
             "guts"
         ],
-        "name": "用剪刀击败气力人（禁暂停）",
+        "name": "仅用剪刀击败气力人（禁暂停）",
         "notes": "拾取过关球结算"
     },
     {
@@ -5296,7 +5295,7 @@
         "groups": [
             "copyrobot"
         ],
-        "name": "用炸弹击败复制人"
+        "name": "仅用炸弹击败复制人"
     },
     {
         "diff": 3,
@@ -5326,7 +5325,7 @@
         "games": [
             "1"
         ],
-        "name": "用冰击败威利1阶段（禁暂停）"
+        "name": "仅用冰击败威利1阶段（禁暂停）"
     },
     {
         "games": [
@@ -5922,6 +5921,30 @@
             "2"
         ],
         "groups": [
+            "gameboy"
+        ],
+        "name": "击败GB洛克人1中登场的全部机器人BOSS",
+        "notes": "Heat, Flash, Quick, Bubble",
+        "weight": 0.0
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "gameboy"
+        ],
+        "name": "击败GB洛克人2中登场的全部机器人BOSS",
+        "notes": "Metal, Wood, Crash, Air",
+        "weight": 0.0
+    },
+    {
+        "diff": 2,
+        "games": [
+            "2"
+        ],
+        "groups": [
             "heatair2a"
         ],
         "name": "向左飞行且一次性用光整管2号道具能量"
@@ -6063,6 +6086,14 @@
         "games": [
             "2"
         ],
+        "name": "仅用炸弹击败泡泡人",
+        "notes": "<img src=\"img/2-bubblecrash.gif\"/>\n提示：爆炸可以造成多次判定"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
         "groups": [
             "woodpacifist",
             "woodpacifist2",
@@ -6091,7 +6122,36 @@
         "games": [
             "2"
         ],
-        "name": "用齿轮击败三个机器人BOSS",
+        "groups": [
+            "petitgoblintier4",
+            "airpacifist2",
+            "heatair2d",
+            "escortquest2",
+            "escortquesthard"
+        ],
+        "name": "把空气人最后版面第一只小怪带到BOSS门口，且不伤害鸟和蛋",
+        "notes": "<img src=\"img/2-petitgoblin.png\"/>\n在正确的位置可以让鸟和蛋安全离开屏幕\n有E罐会更保险"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "groups": [
+            "petitgoblintier4",
+            "airpacifist2",
+            "escortquest2",
+            "escortquesthard"
+        ],
+        "name": "把空气人开头第一只小怪带到版面最右边",
+        "notes": "<img src=\"img/2-petitgoblin.png\"/>\n没有1号道具的话极度困难\n有1号道具也极度困难（"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "仅用齿轮击败三个机器人BOSS",
         "notes": "Bubble, Flash, Heat, Wood, Metal可以受到齿轮伤害"
     },
     {
@@ -6138,7 +6198,6 @@
             "2"
         ],
         "name": "用齿轮击败金属人",
-        "notes": "有时候我们需要尊重传统（",
         "password": "<img src=\"img/mm2-pw.png\"/>"
     },
     {
@@ -6151,6 +6210,16 @@
         ],
         "name": "用炸弹击败气力坦克",
         "notes": "在正确的时机把炸弹贴到他的胸上可以让爆炸产生多次判定",
+        "password": "<img src=\"img/mm2-pw.png\"/>",
+        "weight": 0.0
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2"
+        ],
+        "name": "拆掉洛克人2的所有可破坏墙壁",
+        "notes": "Flash, Heat, Wily 2, Wily 3, Wily 4.",
         "password": "<img src=\"img/mm2-pw.png\"/>"
     },
     {
@@ -6158,7 +6227,7 @@
         "games": [
             "2"
         ],
-        "name": "用炸弹击败大龙",
+        "name": "仅用炸弹击败大龙",
         "notes": "把炸弹贴到他的胸上可以让爆炸产生多次判定",
         "password": "<img src=\"img/mm2-pw.png\"/>"
     },
@@ -6613,7 +6682,7 @@
         "groups": [
             "docmetal"
         ],
-        "name": "仅用拳头击败金属人",
+        "name": "用拳头击败金属人",
         "password": "<img src=\"img/mm3-docs-pw.png\"/>"
     },
     {
@@ -6772,7 +6841,7 @@
             "3"
         ],
         "name": "仅用特武击败布鲁斯",
-        "notes": "免疫蛇和陀螺\n磁铁能量刚好够\n激光只能打到半血"
+        "notes": "可以切换多种特武\n免疫蛇和陀螺\n磁铁能量刚好够\n激光只能打到半血"
     },
     {
         "diff": 1,
@@ -6946,7 +7015,7 @@
             "top"
         ],
         "name": "全程用蛇击败陀螺人关卡和Boss",
-        "notes": "能量管理"
+        "notes": "注意能量管理"
     },
     {
         "diff": 2,
@@ -6984,7 +7053,7 @@
             "3differentspecial"
         ],
         "name": "在3个不同关卡使用不同特武击败布鲁斯",
-        "notes": "有4种武器可以单独击败：\n磁铁, 拳头, 尖刺, 飞镖"
+        "notes": "有4种武器可以单独完成：\n磁铁, 拳头, 尖刺, 飞镖"
     },
     {
         "diff": 2,
@@ -7127,7 +7196,7 @@
             "3"
         ],
         "name": "仅用Boss自己克自己完成BR",
-        "notes": "Be very careful with Top Man - learn how to hit him in a way that doesn't burn Top ammo before using your E-Tanks.",
+        "notes": "陀螺战中要小心——学会怎样命中他但是不让能量一泄而空\n可能需要E罐",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -7152,7 +7221,7 @@
             "holographshadow"
         ],
         "name": "使用拳头击败每一个能受到拳头伤害的城堡Boss",
-        "notes": "Kamegoro, Yellow Devil, Holographs, Wily Machine, Gamma Phase 1",
+        "notes": "包括：\n龟龟制造机, 黄泥人, 全息投影洛克人, 威利飞船, 最终Boss1阶段",
         "password": "<img src=\"img/mm3-pw.png\"/>"
     },
     {
@@ -8299,7 +8368,7 @@
             "cossackstages",
             "mothraya"
         ],
-        "name": "击败大蝴蝶",
+        "name": "通关哥萨克城堡1",
         "password": "y"
     },
     {
@@ -8311,7 +8380,7 @@
             "cossackstages",
             "squaremachine"
         ],
-        "name": "击败大方块",
+        "name": "通关哥萨克城堡2",
         "password": "y"
     },
     {
@@ -8323,7 +8392,7 @@
             "cossackstages",
             "cossackcatcher"
         ],
-        "name": "击败哥萨克娃娃机",
+        "name": "通关哥萨克城堡4",
         "password": "y"
     },
     {
@@ -9433,7 +9502,7 @@
         "groups": [
             "chargeman"
         ],
-        "name": "通关冲锋人关卡（火车人）"
+        "name": "通关火车人关卡"
     },
     {
         "games": [
@@ -9510,5 +9579,1238 @@
         ],
         "name": "通关威利城堡2",
         "password": "<img src=\"img/mm5.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "gamarn"
+        ],
+        "name": "在大和人关卡中击败青蛙骑士",
+        "notes": "<img src=\"img/6-gamarn.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "gamarn"
+        ],
+        "name": "通过反弹炸弹来击败青蛙骑士",
+        "notes": "<img src=\"img/6-gamarn.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pow"
+        ],
+        "name": "用拳头打击一个冰壶，使其撞到另一个冰壶",
+        "notes": "<img src=\"img/6-curlinger.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pow"
+        ],
+        "name": "用拳头打击一个Molier，使它向后飞出去",
+        "notes": "<img src=\"img/6-molier.png\">\nKnight, Tomahawk, Mr. X-2"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "获取能量均衡器"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "用一发人马闪光击败5个敌人"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "用植物盾给任意一个小Boss最后一击",
+        "notes": "<img src=\"img/6-miniboss.gif\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "使用矛从正面击败一个盾牌飞行器",
+        "notes": "<img src=\"img/6-shieldattackergtr.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "切换一个关卡的调色板",
+        "notes": "以下关卡击败Boss后会切换调色板：\nTomahawk, Yamato, Knight, Centaur"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "在风人关卡中击败所有大熊猫",
+        "notes": "<img src=\"img/6-pandeeta.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "击败两个位于不同关卡的食人鱼",
+        "notes": "<img src=\"img/6-gabgyo.png\">\n游泳和跳跃的版本都可以\nPlant, Centaur, Yamato, Wily 3"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "使用暴风雪击败愤怒头",
+        "notes": "<img src=\"img/6-brainbreak.png\">\nKnight, Wily 2"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "击败扫地机器人",
+        "notes": "<img src=\"img/6-cybergabyoall.png\">\n可以用暴风雪和拳头造成伤害"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "从背后给猩猩坦克最后一击",
+        "notes": "<img src=\"img/6-gorillatank.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "在不射击狸猫炮弹的情况下收集其掉落物",
+        "notes": "<img src=\"img/6-shigaraky.png\">\n要耐心"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "squidon"
+        ],
+        "name": "击败一个鱿鱼",
+        "notes": "<img src=\"img/6-squidon.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "squidon",
+            "wind storm"
+        ],
+        "name": "用风将鱿鱼送入太空",
+        "notes": "<img src=\"img/6-squidon.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "wind storm"
+        ],
+        "name": "用风将一只食人鱼送入太空",
+        "notes": "<img src=\"img/6-gabgyo.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "将所有位于战斧关存档点的骷髅引导至最后的凹房间",
+        "notes": "<img src=\"img/Mm6skullwalkersprite.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "击败两个位于不同关卡的爆米花机",
+        "notes": "<img src=\"img/6-pooker.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "6jet"
+        ],
+        "name": "站在安全帽售货机的顶部",
+        "notes": "<img src=\"img/6-metallpotton.png\">\n需要飞甲"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "从风关第一个带坑的房间尾部返回到关卡起点"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "从暴雪潜艇第一颗炸弹之后的位置返回到潜艇前部",
+        "notes": "触碰房间的左边缘"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "在骑士关唤醒所有的瓮中敌人且不击败它们",
+        "notes": "<img src=\"img/6-brown.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "在大和关击败两个武士",
+        "notes": "<img src=\"img/6-benk.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "用火焰的尾焰击败一个敌人",
+        "notes": "先把火焰放到地面或墙上，再让敌人碰到"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "boomerangreturning"
+        ],
+        "name": "用骑士锤球的返程攻击击败一个敌人"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pelicanu"
+        ],
+        "name": "连续击败6条从同一个大嘴鸭出来的鱼，不让任何一条触地",
+        "notes": "<img src=\"img/6-pelicanu.png\">\n当然也不能触水"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "blizzardbombs"
+        ],
+        "name": "引爆暴雪关的每一个定时炸弹",
+        "notes": "必须亲眼看到它们炸掉"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "noslide6",
+            "tomahawkbusteronly"
+        ],
+        "name": "仅用P弹禁蓄力禁滑铲抵达战斧人Boss门",
+        "notes": "这个任务允许使用飞行\n且飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "miniboss6"
+        ],
+        "name": "击败任意两种不同的小Boss",
+        "notes": "<img src=\"img/6-miniboss.gif\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6"
+        ],
+        "name": "仅使用不蓄力P弹击败任意Boss",
+        "notes": "飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6"
+        ],
+        "name": "仅使用不蓄力P弹击败风人",
+        "notes": "飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6"
+        ],
+        "name": "仅使用不蓄力P弹击败火焰人",
+        "notes": "飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6",
+            "yamato"
+        ],
+        "name": "仅使用不蓄力P弹击败大和人",
+        "notes": "飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6"
+        ],
+        "name": "仅使用不蓄力P弹击败骑士人",
+        "notes": "飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6"
+        ],
+        "name": "仅使用不蓄力P弹击败人马人",
+        "notes": "飞甲子弹也视为P弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "在植物关踩遍每一个弹簧"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "blizzardpacifist"
+        ],
+        "name": "击败暴雪关的每一个敌人"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "flamepacifist"
+        ],
+        "name": "在火焰和人马两个关卡中击败每一个挂壁炮塔",
+        "notes": "<img src=\"img/multi-wallblasters.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "brainbreak",
+            "knightpacifist"
+        ],
+        "name": "引导一个愤怒头到梯子旁，让它跳进洞里",
+        "notes": "<img src=\"img/6-brainbreak.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "brainbreak",
+            "knightpacifist3"
+        ],
+        "name": "激怒一个愤怒头，让它在不接触梯子的情况下自己爆炸",
+        "notes": "<img src=\"img/6-brainbreak.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "chokeroh"
+        ],
+        "name": "引导一个蹦蹦到人马水天花板房间的左侧边缘",
+        "notes": "他们会跳过从一定距离发射的子弹\n仅从他们身下掠过的子弹"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "在两个不同的关卡中，当处于无敌时间内用头撞到尖刺上",
+        "notes": "在以下关卡可行：\nWind, Blizzard, Plant, Yamato, Knight, Centaur"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "bonkspikes6"
+        ],
+        "name": "在火焰关碰到尖刺并存活下来"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "knightman"
+        ],
+        "name": "让骑士人笔直向上扔一个锤球"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "movingceilings"
+        ],
+        "name": "完成每一个天花板或地板会上下移动的部分",
+        "notes": "Blizzard (潜艇), Centaur (水天花板), Knight (刺天花板)"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "收集任意一个字母"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "击败前八关所有的压饼机器人",
+        "notes": "<img src=\"img/6-powerslam.png\">\nPlant (1), Tomahawk (1), Wind (1)"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "无伤击败大和人",
+        "notes": "不可能任务……"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "用特殊武器打开一个平台",
+        "notes": "<img src=\"img/6-plantform.png\">\nBlizzard, Yamato, Tomahawk, Plant"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "无伤完成人马关第一个版面（和平主义）"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "blizzard",
+            "blizzardbombs"
+        ],
+        "name": "在暴雪关摧毁所有可破坏物",
+        "notes": "<img src=\"img/6-blizzardbreakables.png\">\n易碎砖块, 冰墙, 定时炸弹.\n必须见证定时炸弹爆炸"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "blizzard",
+            "blizzardpacifist"
+        ],
+        "name": "不死且不补血抵达暴雪人Boss门（和平主义）"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "flame"
+        ],
+        "name": "在火焰关第一个版面点燃所有油坑",
+        "notes": "需要飞甲"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "jetpowonly"
+        ],
+        "name": "仅用力甲或仅用飞甲完成前八任意关卡（包括Boss）",
+        "notes": "二选一，而不是两者都用"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "jetpowonly"
+        ],
+        "name": "仅用力甲完成前八任意一关（包括Boss）"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "jetpowonly"
+        ],
+        "name": "仅用飞甲完成前八任意一关（包括Boss）"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "jetpowonly"
+        ],
+        "name": "仅用飞甲击败任意机器人Boss"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "从火焰人Boss门口返回到关卡开头",
+        "notes": "需要飞甲"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "flamepacifist"
+        ],
+        "name": "抵达火焰人Boss门（和平主义）",
+        "notes": "需要飞甲\n不能攻击这个<img src=\"img/6-pooker.png\">"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pacifist6"
+        ],
+        "name": "抵达风人Boss门（和平主义）"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "etank6"
+        ],
+        "name": "收集并持有3个E罐",
+        "notes": "Flame (1), Knight (1, 艾迪), Tomahawk (2, 艾迪), Yamato (1), Plant (艾迪), Blizzard (2), Wind (1), Centaur (艾迪)"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pelicanu"
+        ],
+        "name": "在人马关第一面让最后一只大嘴鸭把鱼丢进在最左侧的水坑中",
+        "notes": "<img src=\"img/6-pelicanu.png\">"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "使用拳头连续三次阻止大和人拾取他的矛",
+        "notes": "满蓄拳击会让他短暂停顿"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "在尖刺上完成一次完整的滑铲并活着回到地面"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "在《洛克人6》中击败每种炮塔各一次",
+        "notes": "<img src=\"img/6-turrets.png\">\nWind, Flame, Centuar, Plant, Yamato, Knight"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "使用能量均衡器将任意一个特武从零开始全部填满",
+        "notes": "所有能量都必须通过P弹或装甲状态拾取能量补给"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "name": "在风扇上悬浮时，从每个飞行炮台射击6个炮弹",
+        "notes": "总共3个不同的飞行炮台，从每个炮台那里分别完成累计6发炮弹即可\n不需要一次性连续完成，可以分开多次尝试累计"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "tomahawkpacifist",
+            "tomahawkbusteronly"
+        ],
+        "name": "用任意特武一枪摧毁4个骷髅",
+        "notes": "<img src=\"img/Mm6skullwalkersprite.png\">\n可选武器：锤球，战斧，闪光，火焰\n在战斧关卡或X2关卡可以做到"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "chokeroh"
+        ],
+        "name": "让蹦蹦跳过一个无底洞，然后再跳进去",
+        "notes": "<img src=\"img/6-chokeroh.png\">\n必须先让它越过一个坑并着陆，再让它跳入坑中"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "bonkspikes6"
+        ],
+        "name": "在三个不同的关卡中，处于无敌时间内用头撞到尖刺上",
+        "notes": "以下关卡可以做到：\nWind, Blizzard, Plant, Yamato, Knight, Centaur"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "uncharged6"
+        ],
+        "name": "仅用未蓄力P弹击败暴雪人"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "x1"
+        ],
+        "name": "使用不同的特武分别击败X1的每个飞行炮台",
+        "notes": "<img src=\"img/6-cannonpeller.png\">\n共8个",
+        "password": "<img src=\"img/mm6.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "收集并持有两个字母"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "flame2",
+            "2spec6"
+        ],
+        "name": "仅用风以外的任意两种特武击败火焰人",
+        "notes": "需要两种特武"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "tomahawk",
+            "2spec6"
+        ],
+        "name": "仅用植物以外的任意两种特武击败战斧人",
+        "notes": "需要两种特武"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "knight",
+            "2spec6"
+        ],
+        "name": "仅用矛以外的任意两种特武击败骑士人",
+        "notes": "需要两种特武"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "yamato",
+            "2spec6"
+        ],
+        "name": "仅用战斧以外的任意两种特武击败大和人",
+        "notes": "需要两种特武"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "knightpacifist2"
+        ],
+        "name": "触摸骑士关最后房间的每一个弹簧",
+        "notes": "<img src=\"img/6-bumper.png\">\n建议用暴雪或拳头干掉扫地机器人\n飞甲很有用，但不是必要的"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "etank6"
+        ],
+        "name": "收集并持有4个E罐",
+        "notes": "Flame (1), Knight (1, 艾迪), Tomahawk (2, 艾迪), Yamato (1), Plant (艾迪), Blizzard (2), Wind (1), Centaur (艾迪)"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "tomahawk"
+        ],
+        "name": "仅用未蓄力P弹击败战斧人（禁E罐）"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "3differentspecial"
+        ],
+        "name": "击败任意一个敌人，但是需要先用3种不同特武攻击它",
+        "notes": "这个任务Boss也算"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "全收集植物人关卡",
+        "notes": "需要飞甲和力甲"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "plant"
+        ],
+        "name": "抵达植物人Boss门（和平主义）",
+        "notes": "允许打开浮空平台\n允许击败小Boss\n可以二次进入该关卡（为了飞甲）"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "escortquest6",
+            "escortquesthard"
+        ],
+        "name": "带领4只飞行摄像头到暴雪关开头（和平主义）",
+        "notes": "<img src=\"img/6-propellereyeblizz.png\">\n要求拖屏到最左边，且此时让4只同屏"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pacifist6",
+            "knightpacifist",
+            "knightpacifist2",
+            "knightpacifist3"
+        ],
+        "name": "不死且不补血抵达骑士人Boss门（和平主义）",
+        "notes": "也不许磕E罐！\n提示: 为了避免吃到最后一面的小血包，可以从第一个悬崖走下去并且按住右"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pacifist6"
+        ],
+        "name": "不死且不补血抵达风人Boss门（和平主义）",
+        "notes": "也不许磕E罐！"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "敲开三个在不同关卡中的易碎砖块"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "miniboss6"
+        ],
+        "name": "击败前八关所有小Boss",
+        "notes": "<img src=\"img/6-miniboss.gif\">\nYamato, Plant (2), Tomahawk (2)"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "站在前八关的每种类型的浮动平台上",
+        "notes": "<img src=\"img/6-platforms.png\">\n刺平台和火箭平台出现在战斧关的岔路中，可以通过飞甲到达"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "escortquest6"
+        ],
+        "name": "从X2第一面的最后一个安全帽那里带领一颗子弹回到起点",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "用一发人马闪光消灭威利2骷髅面的所有敌人",
+        "notes": "包括：\n4个<img src=\"img/Mm6skullwalkersprite.png\">\n3个<img src=\"img/Mm6staplercoptersprite.png\">",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "firetelly",
+            "escortquest6"
+        ],
+        "name": "将火罐头从X3的第一个摆动房间的末尾带回到开头",
+        "notes": "<img src=\"img/Mm6firetellysprite.png\">",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "firetelly",
+            "escortquest6"
+        ],
+        "name": "将火罐头从X3的最后一个房间的末尾带回到开头",
+        "notes": "<img src=\"img/Mm6firetellysprite.png\">",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "摧毁X3和X4所有POW和X块",
+        "notes": "X4的上路也有一块！",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "name": "用比特鸟击败匹特鸟",
+        "notes": "<img src=\"img/6-peat.png\">\nX4关卡出现的愤怒的小鸟",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "收集全部4个字母并召唤比特"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "etank6",
+            "powerpistonadapter"
+        ],
+        "name": "收集并同时持有6个E罐",
+        "notes": "Flame (1), Knight (1, 艾迪), Tomahawk (2, 艾迪), Yamato (1), Plant (艾迪), Blizzard (2), Wind (1), Centaur (艾迪).\n城堡共有7个, 另外还有W4的艾迪."
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "robotwice"
+        ],
+        "name": "击败任意一个机器人Boss两次",
+        "notes": "可以在前八或BR完成\n需要在击败持有字母的Boss之前先击败那个“假”的版本"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "flame"
+        ],
+        "name": "不点燃任何油坑的情况下进入火焰人Boss门",
+        "notes": "备注: 油坑在续关前不会熄灭!\n没有闪光的话风险比较大"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "pacifist6"
+        ],
+        "name": "不死且不补血抵达人马人Boss门（和平主义）",
+        "notes": "也不许磕E罐！"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "摧毁前八关所有易碎砖块",
+        "notes": "Wind (1), Flame (1), Blizzard (5), Plant (2), Tomahawk (5), Yamato (3), Knight (4)"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "plant"
+        ],
+        "name": "从植物人Boss门口返回到弹簧房间的起点",
+        "notes": "需要飞甲或极其精确的跳跃"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "chokeroh",
+            "escortquest6",
+            "escortquesthard"
+        ],
+        "name": "同时将每一个蹦蹦带到人马关尖刺坑右侧",
+        "notes": "<img src=\"img/6-3chokerohs.png\">\n推荐备个E罐，但不是必要的",
+        "weight": 0.0
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "不使用飞甲抵达X4的Boss门（和平主义）",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "飞越X摆球并且无伤落地",
+        "notes": "X4 Boss",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "击败威利1的每一个敌人",
+        "notes": "速通路线不适用，因为有一个怪在易碎砖块房间",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "仅通过反弹平台击败大龙",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "x1"
+        ],
+        "name": "全程装备飞甲完成X1（和平主义）",
+        "notes": "这个任务要求对飞甲的油门机制有一定理解",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "powerpistonadapter"
+        ],
+        "name": "仅使用力甲或飞甲击败震楼器",
+        "notes": "<img src=\"img/Mm6powerpistonsprite.png\">\n推荐准备E罐",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "不使用飞甲从威利3炮塔房间返回关卡起点（和平主义）",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "全程装备长矛完成威利2",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "和平主义完成任意3个城堡关卡",
+        "notes": "允许摧毁易碎砖块",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "brainbreakw2"
+        ],
+        "name": "让威利2上路的6个愤怒头追逐你到起点的梯子",
+        "notes": "<img src=\"img/6-brainbreak.png\">\n需要走上路\n必须让6个同屏",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "brainbreakw2"
+        ],
+        "name": "让愤怒头跳进威利2最后房间的每一个洞",
+        "notes": "<img src=\"img/6-brainbreak.png\">",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "用飞甲对付4个Boss并用力甲对付另外4个Boss完成BR",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "仅用战斧以外的多种特武完成威利4",
+        "notes": "不包括P弹\n能量管理很重要",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关风人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关火焰人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关暴雪人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关植物人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关战斧人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关大和人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "knightman"
+        ],
+        "name": "通关骑士人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "name": "通关人马人关卡"
+    },
+    {
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "rounderii"
+        ],
+        "name": "通关X城堡1",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "powerpiston"
+        ],
+        "name": "通关X城堡2",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "metongerz"
+        ],
+        "name": "通关X城堡3",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "xcrusher"
+        ],
+        "name": "通关X城堡4",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "6"
+        ],
+        "groups": [
+            "mechazaurus"
+        ],
+        "name": "通关威利城堡1",
+        "password": "<img src=\"img/mm6-pw.png\">"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "6"
+        ],
+        "name": "通关威利城堡2",
+        "password": "<img src=\"img/mm6-pw.png\">"
     }
 ]
