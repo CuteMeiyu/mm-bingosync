@@ -3078,7 +3078,7 @@
         ],
         "name": "击败一个圆眼飞碟",
         "notes": "<img src=\"img/rounder1and2.png\"/>\n5代：Dark1的末尾。\n6代：X1的BOSS。",
-        "password": "<img src=\"img/mm5+6-pw.png\"/>",
+        "password": "<img src=\"img/mm5+6.png\">",
         "type": "all"
     },
     {
@@ -3327,7 +3327,7 @@
         ],
         "name": "击败5代和6代的圆眼飞碟",
         "notes": "<img src=\"img/rounder1and2.png\"/>\n5代：Dark1关卡末尾\n6代：X1BOSS",
-        "password": "<img src=\"img/mm5+6.png\"/>",
+        "password": "<img src=\"img/mm5+6.png\">",
         "type": "all"
     },
     {
