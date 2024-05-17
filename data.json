@@ -2368,7 +2368,7 @@
             "5",
             "6"
         ],
-        "name": "每代击败三种不同的小兵",
+        "name": "在每个游戏中各击败三种不同类型的小兵",
         "type": "all"
     },
     {
@@ -2464,7 +2464,7 @@
         "groups": [
             "spikes"
         ],
-        "name": "每代完成一次碰刺不死",
+        "name": "在每个游戏中完成一次碰刺不死",
         "notes": "一些有刺的关卡：\n2代：Bubble\n3代：Top, Spark",
         "type": "all"
     },
@@ -2481,9 +2481,10 @@
         "groups": [
             "spikes"
         ],
-        "name": "每代碰刺爆炸一次",
+        "name": "在每代游戏中完成一次碰刺爆炸",
         "notes": "一些有刺的关卡：\n1代：Bomb\n2代：Bubble\n3代：Top, Spark",
-        "type": "all"
+        "type": "all",
+        "weight": 0.5
     },
     {
         "diff": 2,
@@ -2496,7 +2497,7 @@
         "groups": [
             "noslide"
         ],
-        "name": "每代禁滑铲完成一关",
+        "name": "在每个滑铲游戏中禁滑铲完成一关",
         "notes": "允许在必须滑铲的地方滑铲最短距离",
         "type": "all"
     },
@@ -2513,7 +2514,7 @@
         "groups": [
             "square"
         ],
-        "name": "完成每代选关界面相同位置的关卡",
+        "name": "完成每代选关界面相同位置的一个关卡",
         "notes": "比如←方向：Elec, Heat, Hard, Pharaoh, Charge, Plant.\n1代上/下方向的两关可以二选一",
         "type": "all"
     },
@@ -2526,8 +2527,8 @@
             "4",
             "6"
         ],
-        "name": "每代用特武拆墙一次",
-        "notes": "3代的墙最早出现在城堡1\n4代的墙最早出现在哥萨克2",
+        "name": "在每个游戏中完成一次特殊武器拆墙",
+        "notes": "3代的墙最早出现在城堡1\n4代的墙最早出现在哥萨克2\n6代的力量装甲也包括在这个任务中",
         "password": "<img src=\"img/mm3+4.png\"/>",
         "type": "all"
     },
@@ -2535,11 +2536,13 @@
         "groups": [
             "fullrefill"
         ],
-        "name": "从0补满一个特武或道具能量"
+        "name": "从0补满一个特武或道具能量",
+        "type": "any"
     },
     {
         "name": "被打进BOSS门",
         "notes": "小BOSS门也可以",
+        "type": "any",
         "weight": 0.25
     },
     {
@@ -2552,7 +2555,8 @@
             "6"
         ],
         "name": "从梯子上被击落，空中重新抓住梯子",
-        "notes": "1代禁暂停大法\n期间脚不能碰地"
+        "notes": "1代禁暂停\n期间脚不能碰地或碰道具",
+        "type": "any2"
     },
     {
         "games": [
@@ -2575,7 +2579,7 @@
             "6"
         ],
         "name": "完成一个没有坑的关卡",
-        "notes": "如果跳下去产生了爆炸特效就不算坑\n必须是玩家能正常能够得到的才算\n2代：Flash, Crash, Quick\n3代：Hard\n4代：Dive\n5代：Star, Charge, Wave\n6代：Knight",
+        "notes": "如果跳下去产生了爆炸特效就不算坑\n必须是玩家能正常能够得到的才算\n满足条件的关卡：\n2代：Flash, Crash, Quick\n3代：Hard\n4代：Dive\n5代：Star, Charge, Wave\n6代：Knight",
         "type": "any3"
     },
     {
@@ -2583,7 +2587,7 @@
             "underwater"
         ],
         "name": "完成一个有水下区域的关卡",
-        "notes": "必须是有水下物理效果的关卡。所以波浪人不算。\n<table><tr><th>1代</th><td>Ice, W3</td><th>5代</th><td>W2</td></tr><tr><th>2代</th><td>Bubble, W3, W5</td><th>6代</th><td>Centaur, W3</td></tr><tr><th>3代</th><td>Gemini, Doc Gemini, W1</td><th>9代</th><td>Splash, W2</td></tr><tr><th>4代</th><td>Dive, Toad, W1, W3</td><th>10代</th><td>Pump, W3</td></tr></table>",
+        "notes": "指的是有水下物理效果的关卡——波浪人关卡不算\n满足条件的关卡：\n<table><tr><th>1代</th><td>Ice, W3</td><th>5代</th><td>W2</td></tr><tr><th>2代</th><td>Bubble, W3, W5</td><th>6代</th><td>Centaur, W3</td></tr><tr><th>3代</th><td>Gemini, Doc Gemini, W1</td><th>9代</th><td>Splash, W2</td></tr><tr><th>4代</th><td>Dive, Toad, W1, W3</td><th>10代</th><td>Pump, W3</td></tr></table>",
         "type": "any2"
     },
     {
@@ -2631,7 +2635,7 @@
             "noslide6"
         ],
         "name": "禁滑铲完成一关",
-        "notes": "允许在必须滑铲的地方滑铲最短距离",
+        "notes": "仅允许在必须滑铲的地方滑铲最短距离",
         "type": "any2"
     },
     {
@@ -2644,7 +2648,7 @@
             "6"
         ],
         "name": "分别用走路人和滑铲人击败一个机器人BOSS",
-        "notes": "走路人：1-2代\n滑铲人：3-6代\n机器人BOSS：特指前八BOSS外加3代四天王。",
+        "notes": "走路人：1-2代\n滑铲人：3-6代\n机器人BOSS：特指前八BOSS外加3代四天王。BR也算。",
         "type": "all"
     },
     {
@@ -2672,7 +2676,7 @@
         "groups": [
             "non-aerial"
         ],
-        "name": "击败一个不会跳/飞的机器人BOSS",
+        "name": "击败一个不会跳的机器人BOSS",
         "notes": "Fire, Heat, Top, Dive, Charge, Centaur",
         "type": "any4"
     },
@@ -2711,8 +2715,9 @@
             "5",
             "6"
         ],
-        "name": "在一个游戏中用光前八BOSS的全部特武能量",
-        "password": "<img src=\"img/multi-allpasswords.png\"/>"
+        "name": "在一个游戏中用光所有可获取的特武能量",
+        "password": "<img src=\"img/multi-allpasswords.png\"/>",
+        "type": "any2"
     },
     {
         "games": [
@@ -2723,7 +2728,10 @@
             "5",
             "6"
         ],
-        "name": "纯用一种特武完成一个关卡",
+        "groups": [
+            "specialweapononly"
+        ],
+        "name": "全程装备一种特武完成一个关卡",
         "notes": "Hard, Gemini关卡中强制使用狗的地方可以例外"
     },
     {
@@ -2751,9 +2759,7 @@
         "groups": [
             "breakable"
         ],
-        "name": "拆一道墙",
-        "notes": "1代：气力人搬砖或闪电拆墙\n2代：炸弹拆墙\n6代：力量装甲拆墙或火焰穿冰",
-        "type": "all"
+        "name": "拆一道墙"
     },
     {
         "diff": 1,
@@ -2767,7 +2773,7 @@
             "skycolor",
             "memory"
         ],
-        "name": "在两个游戏中完成天空会变色的一关",
+        "name": "在两个游戏中各完成一个天空会变色的关卡",
         "notes": "2代：Crash\n4代：Skull, Ring, Cossack 1\n5代：Crystal\n6代：Tomahawk, Yamato, Knight",
         "type": "any3"
     },
@@ -2784,7 +2790,7 @@
             "skycolor",
             "memory"
         ],
-        "name": "在两个游戏中完成天上有星星的一关",
+        "name": "在两个游戏中各完成一个天上有星星的关卡",
         "notes": "2代：Crash, Wily 6\n3代：Gemini, Doc Gemini, Doc Needle\n4代：Ring, Cossack 1, Cossack 4\n5代：Star, Dark 3\n6代：Mr. X-1, Mr. X-2",
         "password": "<img src=\"img/multi-allpasswords-docs.png\"/>",
         "type": "any3"
@@ -2854,7 +2860,7 @@
             "1",
             "4"
         ],
-        "name": "分别乘坐一次1代和4代的平台怪",
+        "name": "乘坐两个不同游戏中的子弹平台",
         "notes": "<img src=\"img/multi-footolderhover.png\"/>\n1代：Ice, W1\n4代：Pharaoh",
         "type": "all"
     },
@@ -2863,7 +2869,7 @@
             "1",
             "5"
         ],
-        "name": "分别击败一个冒出来的剪刀和导弹",
+        "name": "分别击败一个剪刀和导弹",
         "notes": "1代剪刀：<img src=\"img/1-supercutter.png\"/>在Cut关卡\n5代导弹：<img src=\"img/5-mizzile.png\"/>在Star和Napalm关卡",
         "type": "all"
     },
@@ -2872,7 +2878,7 @@
             "1",
             "6"
         ],
-        "name": "分别在1代和6代击败两个位于不同版面的火球怪",
+        "name": "分别击败一个小火球和火罐头",
         "notes": "<img src=\"img/multi-changkeyfiretelly.png\"/>\n1代：Fire\n6代：Flame",
         "type": "all"
     },
@@ -2914,8 +2920,8 @@
         "groups": [
             "allfrogs"
         ],
-        "name": "击败2代泡泡关所有大青蛙和4代蛤蟆人",
-        "notes": "<img src=\"img/2-kerog.png\"/>",
+        "name": "击败2代和4代所有青蛙",
+        "notes": "<img src=\"img/2-kerog.png\"/>\n2代：泡泡人关卡的所有青蛙\n4代：蛤蟆人",
         "type": "all"
     },
     {
@@ -2926,7 +2932,7 @@
         "groups": [
             "chickens"
         ],
-        "name": "在2代和5代各击败一只鸡",
+        "name": "分别在2代和5代击败一只鸡",
         "notes": "<img src=\"img/multi-chickens.png\"/>\n2代：Wood\n5代：Charge, Gyro, W1, W2",
         "type": "all"
     },
@@ -2964,7 +2970,7 @@
             "3",
             "4"
         ],
-        "name": "在3代和4代各打爆一块从天而降的石头",
+        "name": "分别在3代和4代打爆一块落石",
         "notes": "<img src=\"img/multi-junkboulder.png\"/>\n3代：Spark, Doc Spark\n4代：Drill",
         "type": "all"
     },
@@ -2973,7 +2979,7 @@
             "3",
             "4"
         ],
-        "name": "分别用潜水导弹和磁铁的跟踪效果击败一个你头上的敌人",
+        "name": "分别用潜水导弹和磁铁的跟踪效果击败一个位于你上方的敌人",
         "type": "all"
     },
     {
@@ -3008,7 +3014,7 @@
         ],
         "name": "用3代陀螺兵或5代大白鸡刷一个1up",
         "notes": "<img src=\"img/multi-generators2.png\"/>",
-        "type": "any"
+        "type": "any2"
     },
     {
         "games": [
@@ -3084,7 +3090,7 @@
         "groups": [
             "monkey"
         ],
-        "name": "在两个游戏中各击败一只猴子",
+        "name": "分别在两个游戏中击败一只猴子",
         "type": "all"
     },
     {
@@ -3132,7 +3138,7 @@
         "groups": [
             "shieldattacker"
         ],
-        "name": "分别在两个游戏中击败一次盾牌飞行器",
+        "name": "分别在两个游戏中击败一个盾牌飞行器",
         "notes": "<img src=\"img/shieldattackers.png\"/>\n4代：Dust, Skull\n5代：Crystal\n6代：Blizzard, Tomahawk\n还有4代和6代的各个城堡",
         "type": "any2"
     },
@@ -3200,7 +3206,7 @@
             "2",
             "3"
         ],
-        "name": "获取回旋镖和尖刺武器，并用一发攻击键用光能量",
+        "name": "获取快速回旋镖和尖刺武器，分别一键清空全部能量",
         "type": "all"
     },
     {
@@ -3292,7 +3298,7 @@
         "groups": [
             "wallblaster"
         ],
-        "name": "击败前八所有的挂壁大炮",
+        "name": "击败4代和6代前八所有的挂壁大炮",
         "notes": "<img src=\"img/multi-wallblasters.png\"/>\n4代：Ring\n6代：Flame, Centaur",
         "type": "all"
     },
@@ -3305,7 +3311,7 @@
         "groups": [
             "shieldattacker"
         ],
-        "name": "击败前八所有的盾牌飞行器",
+        "name": "击败4代和6代前八所有的盾牌飞行器",
         "notes": "<img src=\"img/shieldattackers.png\"/>\n4代：Dust, Skull（不要忘了艾迪上方的隐藏房间）\n6代：Blizzard, Tomahaw！",
         "type": "all"
     },
@@ -3393,7 +3399,7 @@
             "frozen"
         ],
         "name": "被前八所有BOSS定住一次",
-        "notes": "Flash, Bright, Centaur\n不包括3代的四天王",
+        "notes": "Flash, Bright, Centaur",
         "type": "all"
     },
     {
@@ -3409,7 +3415,7 @@
         "groups": [
             "non-aerial"
         ],
-        "name": "击败3个不会跳/飞的机器人BOSS",
+        "name": "击败3个不会跳的机器人BOSS",
         "notes": "Fire, Heat, Top, Dive, Charge, Centaur",
         "type": "any3"
     },
@@ -3449,7 +3455,7 @@
             "4",
             "6"
         ],
-        "name": "在两个游戏击败扫地机器人",
+        "name": "在两个游戏中击败扫地机器人",
         "notes": "<img src=\"img/spines.png\"/>",
         "type": "any2"
     },
@@ -3467,7 +3473,7 @@
             "underwater"
         ],
         "name": "完成3个有水下区域的关卡",
-        "notes": "1代：Ice, Wily 3\n2代：Bubble, Wily 3, Wily 5\n3代：Gemini, Doc Gemini, Wily 1\n4代：Dive, Toad, Wily 1, Wily 3\n5代：Wily 2\n6代Centaur, Wily 3",
+        "notes": "1代：Ice, Wily 3\n2代：Bubble, Wily 3, Wily 5\n3代：Gemini, Doc Gemini, Wily 1\n4代：Dive, Toad, Wily 1, Wily 3\n5代：Wily 2\n6代：Centaur, Wily 3",
         "type": "any4"
     },
     {
@@ -3481,7 +3487,7 @@
         "groups": [
             "ownweapon"
         ],
-        "name": "纯用一种BOSS武器完成他自身的关卡",
+        "name": "全程装备一个BOSS武器完成他自身的关卡",
         "notes": "1代还需要打Boss",
         "type": "any"
     },
@@ -3533,8 +3539,7 @@
             "1",
             "2"
         ],
-        "name": "分别纯用剪刀和齿轮在一个关卡中抵达BOSS门",
-        "notes": "只需要从关卡开头全程使用该武器抵达BOSS门\n不一定要用这个武器打BOSS",
+        "name": "分别全程使用剪刀和齿轮抵达任意关底BOSS门",
         "type": "all"
     },
     {
@@ -3579,6 +3584,22 @@
         "diff": 2,
         "games": [
             "1",
+            "2",
+            "3"
+        ],
+        "groups": [
+            "yoku1",
+            "yoku2",
+            "yoku3"
+        ],
+        "name": "踏足前八所有优酷砖",
+        "notes": "闪现砖块\n1代：Ice, Elec\n2代：Heat\n3代：Magnet",
+        "type": "all"
+    },
+    {
+        "diff": 2,
+        "games": [
+            "1",
             "3",
             "4",
             "5",
@@ -3605,6 +3626,7 @@
             "robotwice"
         ],
         "name": "击败同一个机器人BOSS两次",
+        "notes": "四天王不算",
         "type": "all"
     },
     {
@@ -3613,7 +3635,7 @@
             "1",
             "3"
         ],
-        "name": "击败两个黄恶魔",
+        "name": "击败两个黄恶魔（黄泥人）",
         "password": "<img src=\"img/mm3-pw.png\"/>",
         "type": "all"
     },
@@ -3643,6 +3665,17 @@
         "name": "击败4个2代BOSS和对应的复制体",
         "password": "<img src=\"img/mm3-docs-pw.png\"/>",
         "type": "all"
+    },
+    {
+        "diff": 3,
+        "games": [
+            "2",
+            "4"
+        ],
+        "name": "击败一个罐头和大方块",
+        "password": "<img src=\"img/mm2-pw.png\"/><img src=\"img/mm4-pw.png\"/>",
+        "type": "all",
+        "weight": 0.0
     },
     {
         "diff": 3,
@@ -3678,7 +3711,7 @@
             "protodark"
         ],
         "name": "击败真假布鲁斯各4次",
-        "notes": "3代：关卡中途出现的布鲁斯\n5代：布鲁斯城堡的任意一个BOSS皆可",
+        "notes": "3代：关卡中途出现的布鲁斯。包括Break Man\n5代：布鲁斯城堡的任意一个BOSS皆可",
         "password": "<img src=\"img/mm3-break.png\"/><img src=\"img/mm5-pw.png\"/>",
         "type": "all"
     },
@@ -3716,7 +3749,7 @@
             "5",
             "6"
         ],
-        "name": "通关前八所有有树的关卡",
+        "name": "通关每一作前八所有有树的关卡",
         "notes": "Ice, Wood, Napalm, Plant",
         "type": "all"
     },
@@ -3731,7 +3764,7 @@
         "groups": [
             "allfrogs"
         ],
-        "name": "击败所有青蛙",
+        "name": "击败每一作的所有青蛙",
         "notes": "<img src=\"img/multi-allfrogs.gif\"/>\n2代：Bubble\n3代：Gemini, Shadow, Top\n4代：Toad Man\n6代：Yamato",
         "type": "all"
     },
@@ -3758,7 +3791,7 @@
             "6"
         ],
         "name": "获取所有回旋镖武器",
-        "notes": "Cut, Quick, Shadow, Ring, Knight",
+        "notes": "剪刀, 快速回旋镖, 暗影飞镖, 圆环, 骑士锤球",
         "type": "all"
     },
     {
@@ -3774,7 +3807,7 @@
         "groups": [
             "non-aerial"
         ],
-        "name": "击败所有不会跳/飞的机器人BOSS",
+        "name": "击败所有不会跳的机器人BOSS",
         "notes": "从来不会离开地板的BOSS。\nFire, Heat, Top, Dive, Charge, Centaur",
         "type": "all"
     },
@@ -3830,7 +3863,7 @@
         "groups": [
             "skipminiboss"
         ],
-        "name": "在两个游戏中跳过小BOSS",
+        "name": "在两个游戏中各跳过一次小BOSS",
         "notes": "<img src=\"img/miniboss-skippable(some).gif\"/>",
         "type": "all"
     },
@@ -3862,7 +3895,7 @@
         "groups": [
             "miniboss"
         ],
-        "name": "击败5种小BOSS",
+        "name": "击败5种不同类型的小BOSS",
         "notes": "<img src=\"img/miniboss.gif\"/>",
         "type": "any3"
     },
@@ -3895,7 +3928,7 @@
         "groups": [
             "skipminiboss"
         ],
-        "name": "在3个游戏中跳过小BOSS",
+        "name": "在3个游戏中各跳过一次小BOSS",
         "notes": "<img src=\"img/miniboss-skippable(some).gif\"/>",
         "type": "all"
     },
@@ -3928,7 +3961,7 @@
         "groups": [
             "miniboss"
         ],
-        "name": "每个游戏击败一个小BOSS",
+        "name": "在每个游戏中各击败一个小BOSS",
         "notes": "<img src=\"img/miniboss.gif\"/>",
         "type": "all"
     },
@@ -3942,7 +3975,7 @@
         "groups": [
             "skipminiboss"
         ],
-        "name": "跳过每种可跳过小BOSS",
+        "name": "跳过每种可跳过的小BOSS各一次",
         "notes": "<img src=\"img/miniboss-skippable(all).gif\"/>",
         "type": "all"
     },
@@ -3958,7 +3991,7 @@
         "groups": [
             "miniboss"
         ],
-        "name": "击败每种小BOSS一次",
+        "name": "击败每种小BOSS各一次",
         "notes": "<img src=\"img/miniboss.gif\"/>",
         "password": "<img src=\"img/mm3-docs-pw.png\"/>",
         "type": "all"
@@ -3976,7 +4009,8 @@
             "weapon"
         ],
         "name": "获得一个能耗大于1的武器",
-        "notes": "蓄力和闪光也算"
+        "notes": "蓄力和闪光也算",
+        "type": "any2"
     },
     {
         "games": [
@@ -3991,7 +4025,8 @@
             "boomerangreturning"
         ],
         "name": "用回旋武器的返程击败一个敌人",
-        "notes": "Cut, Quick, Shadow, Ring, Knight.\n允许用往程命中敌人，但必须用返程的那段伤害击败敌人"
+        "notes": "Cut, Quick, Shadow, Ring, Knight.\n允许用往程命中敌人，但必须用返程的那段伤害击败敌人",
+        "type": "any2"
     },
     {
         "games": [
@@ -4004,7 +4039,8 @@
             "weapon"
         ],
         "name": "用特武冻结一个敌人",
-        "notes": "Ice, Flash, Spark, Bright"
+        "notes": "Ice, Flash, Spark, Bright",
+        "type": "any2"
     },
     {
         "games": [
@@ -4017,7 +4053,8 @@
             "weapon"
         ],
         "name": "获得一个护盾型武器",
-        "notes": "Wood, Skull, Star, Plant"
+        "notes": "Wood, Skull, Star, Plant",
+        "type": "any2"
     },
     {
         "games": [
@@ -4030,7 +4067,8 @@
             "weapon"
         ],
         "name": "获得一个贴地武器",
-        "notes": "Bubble, Snake, Wave, Wind"
+        "notes": "Bubble, Snake, Wave, Wind",
+        "type": "any2"
     },
     {
         "games": [
@@ -4043,7 +4081,8 @@
             "weapon"
         ],
         "name": "获得一个炸弹武器",
-        "notes": "Bomb, Crash, Drill, Napalm"
+        "notes": "Bomb, Crash, Drill, Napalm",
+        "type": "any2"
     },
     {
         "games": [
@@ -4055,7 +4094,8 @@
             "weapon"
         ],
         "name": "获得一个全屏攻击武器",
-        "notes": "Toad, Gravity, Centaur"
+        "notes": "Toad, Gravity, Centaur",
+        "type": "any2"
     },
     {
         "diff": 1,
@@ -4250,7 +4290,8 @@
         "groups": [
             "rushmarine"
         ],
-        "name": "用潜水狗击败一个敌人"
+        "name": "用潜水狗击败一个敌人",
+        "type": "any"
     },
     {
         "games": [
@@ -4382,7 +4423,8 @@
         "type": "all"
     },
     {
-        "name": "完成同一个任务两次"
+        "name": "完成同一个任务两次",
+        "type": "any"
     },
     {
         "groups": [
@@ -4391,6 +4433,7 @@
             "4continuousstages"
         ],
         "name": "不重启连续完成4个关卡",
+        "type": "any",
         "weight": 0.75
     },
     {
@@ -4398,6 +4441,7 @@
             "4bosses"
         ],
         "name": "在一个游戏中击败4个BOSS",
+        "type": "any",
         "weight": 0.25
     },
     {
@@ -4423,14 +4467,16 @@
     },
     {
         "name": "逆克制击败一个BOSS",
-        "notes": "比如：3代蛇打尖刺, 4代环打法老\n注意有的BOSS免疫逆克制武器"
+        "notes": "比如：3代蛇打尖刺, 4代环打法老\n注意有的BOSS免疫逆克制武器",
+        "type": "any"
     },
     {
         "groups": [
             "specialweapononly"
         ],
         "name": "纯特武完成一个关卡",
-        "notes": "包括BOSS\n可以切换多种特武，但不能用P弹\n不能用特殊道具和狗，除非在游戏中不得不用的地方"
+        "notes": "包括BOSS\n可以切换多种特武，但不能用P弹\n不能用特殊道具和狗，除非在游戏中不得不用的地方",
+        "type": "any"
     },
     {
         "diff": 1,
@@ -4469,7 +4515,8 @@
             "3continuousstages"
         ],
         "name": "在单个游戏中完成3个城堡关卡",
-        "password": "<img src=\"img/multi-allpasswords.png\"/>\n1-6代：可以使用上述密码\n7-11代：可以从城堡1开始"
+        "password": "<img src=\"img/multi-allpasswords.png\"/>\n1-6代：可以使用上述密码\n7-11代：可以从城堡1开始",
+        "type": "any"
     },
     {
         "diff": 2,
@@ -10199,6 +10246,9 @@
         "diff": 1,
         "games": [
             "6"
+        ],
+        "groups": [
+            "fullrefill"
         ],
         "name": "使用能量均衡器将任意一个特武从零开始全部填满",
         "notes": "所有能量都必须通过P弹或装甲状态拾取能量补给"
