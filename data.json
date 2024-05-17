@@ -9498,7 +9498,7 @@
         "games": [
             "5"
         ],
-        "name": "使用比特击败一个机器人Boss",
+        "name": "仅用比特击败一个机器人Boss",
         "notes": "需要M罐",
         "password": "<img src=\"img/mm5-beatonly-pw.png\">"
     },
