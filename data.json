@@ -94,6 +94,9 @@
         "games": [
             "9"
         ],
+        "groups": [
+            "concreteman"
+        ],
         "name": "站在水泥人的水泥上打败水泥人"
     },
     {
@@ -375,6 +378,9 @@
         "diff": 1,
         "games": [
             "9"
+        ],
+        "groups": [
+            "concreteman"
         ],
         "name": "在你被凝固时让水泥人爆炸"
     },
@@ -936,7 +942,7 @@
         "games": [
             "9"
         ],
-        "name": "用BOSS武器击败这个BOSS",
+        "name": "仅用一种BOSS武器击败这个BOSS自己",
         "notes": "只能在BR完成。\n推荐这些BOSS可以不用W罐：人鱼、插头、火",
         "password": "y"
     },
@@ -1259,15 +1265,23 @@
         "games": [
             "10"
         ],
+        "groups": [
+            "mm10etank"
+        ],
         "name": "收集两个放置E罐",
-        "notes": "Pump, Solar, Nitro, Commando, Wily 1, Wily 2, Wily 3, Wily 4, Wily 5"
+        "notes": "Pump, Solar, Nitro, Commando, Wily 1, Wily 2, Wily 3, Wily 4, Wily 5",
+        "weight": 0.2
     },
     {
         "games": [
             "10"
         ],
+        "groups": [
+            "mm10wtank"
+        ],
         "name": "收集两个放置W罐",
-        "notes": "Chill, Nitro, Blade(需要拆墙), Sheep, Wily 2, Wily 5"
+        "notes": "Chill, Nitro, Blade(需要拆墙), Sheep, Wily 2, Wily 5",
+        "weight": 0.2
     },
     {
         "games": [
@@ -2313,18 +2327,43 @@
         "games": [
             "9"
         ],
-        "name": "用一发黑洞吸收至少6个东西",
-        "weight": 0.0
+        "groups": [
+            "specialstage9"
+        ],
+        "name": "通关特殊关卡",
+        "password": "可以进入特殊关卡"
     },
     {
         "games": [
             "9"
         ],
         "groups": [
-            "specialstage9"
+            "mm9placed1up"
         ],
-        "name": "通关特殊关卡",
-        "password": "可以进入特殊关卡"
+        "name": "收集两个放置的1up（不重启）",
+        "notes": "在不重启/读档的情况下连续收集两个放置的1up\nConcrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1), Wily 1 (2), Wily 2 (2), Wily 3 (1?), Wily 4 (1)"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "mm9placed1up"
+        ],
+        "name": "收集三个放置的1up（不重启）",
+        "notes": "在不重启/读档的情况下连续收集三个放置的1up\nConcrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1), Wily 1 (2), Wily 2 (2), Wily 3 (1?), Wily 4 (1)"
+    },
+    {
+        "diff": 1,
+        "games": [
+            "9"
+        ],
+        "groups": [
+            "mm9placed1up"
+        ],
+        "name": "收集四个放置的1up（不重启）",
+        "notes": "在不重启/读档的情况下连续收集四个放置的1up\nConcrete (1), Magma (1), Hornet (2), Jewel (1需蜜蜂), Splash (1), Plug (2), Tornado (1), Wily 1 (2), Wily 2 (2), Wily 3 (1?), Wily 4 (1)"
     },
     {
         "games": [
@@ -2339,6 +2378,26 @@
         "password": "可以进入无尽模式",
         "type": "any",
         "weight": 0.0
+    },
+    {
+        "games": [
+            "10"
+        ],
+        "groups": [
+            "mm10etank"
+        ],
+        "name": "收集两个E罐（不重启）",
+        "notes": "在不重启/读档的情况下连续收集两个E罐\nPump, Solar, Nitro, Commando, Wily 1, Wily 2, Wily 3, Wily 4, Wily 5"
+    },
+    {
+        "games": [
+            "10"
+        ],
+        "groups": [
+            "mm10wtank"
+        ],
+        "name": "收集两个W罐（不重启）",
+        "notes": "在不重启/读档的情况下连续收集两个W罐\nChill, Nitro, Blade(需要拆墙), Sheep, Wily 2, Wily 5"
     },
     {
         "games": [
