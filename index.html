@@ -276,11 +276,14 @@
             for (let game of games) {
                 gamesCount[game] = 0;
             }
-            let leniencyConditions = ["允许同组任务同时出现"];
+            let leniencyConditions = ["无", "允许同组任务同时出现"];
 
             let chooseCount = 0;
             let boardIds = [];
             for (let leniency = 0; leniency < leniencyConditions.length; leniency++) {
+                if (leniency > 0) {
+                    console.log(`任务数量不足，尝试放宽条件：${leniencyConditions[leniency]}`);
+                }
                 let goals = [...data];
                 while (goals.length > 0) {
                     let goal = drawGoal(goals);
@@ -316,7 +319,6 @@
                         return boardIds;
                     }
                 }
-                console.log(`任务数量不足，尝试放宽条件：${leniencyConditions[leniency]}`);
             }
             throw new Error("没有足够数量的符合条件的任务");
         }
