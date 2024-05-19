@@ -162,21 +162,21 @@
             }
         }
 
-        @keyframes border-flashing {
+        @keyframes font-flashing {
 
             0%,
             100% {
-                outline-color: red;
+                color: red;
             }
 
-            50% {
-                outline-color: yellow;
+            20% {
+                color: yellow;
             }
         }
 
-        .flashing-border {
-            outline: 2px solid red;
-            animation: border-flashing 2s infinite;
+        .flashing-font {
+            color: red;
+            animation: font-flashing 2s infinite;
         }
     </style>
 </head>
@@ -366,7 +366,7 @@
         </div>
     </div>
     <label for="color-picker" class="scoreboard" id="scoreboard" onclick="onScoreboardClick();"></label>
-    <input type="color" style="transform: scale(0);" id="color-picker" value="#000000", onblur="onColorPicked();">
+    <input type="color" style="transform: scale(0);" id="color-picker" value="#000000" , onblur="onColorPicked();">
 
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
@@ -397,10 +397,9 @@
             scoreboard.innerHTML = "";
             let item = document.createElement("div");
             item.classList.add("scoreboard-item");
-            item.style.color = "red";
+            item.classList.add("flashing-font");
             item.innerText = text;
             scoreboard.appendChild(item);
-            scoreboard.classList.add("flashing-border");
         }
     </script>
     <script>
@@ -743,7 +742,6 @@
 
         function onScoreboardClick() {
             let scoreboard = document.getElementById("scoreboard");
-            scoreboard.classList.remove("flashing-border")
             showClickOverlay();
         }
     </script>
