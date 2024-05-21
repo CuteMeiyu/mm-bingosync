@@ -167,10 +167,20 @@
             0%,
             100% {
                 color: red;
+                text-shadow:
+                    -1px -1px 0 #fff,
+                    1px -1px 0 #fff,
+                    -1px 1px 0 #fff,
+                    1px 1px 0 #fff;
             }
 
-            20% {
+            50% {
                 color: yellow;
+                text-shadow:
+                    -1px -1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
             }
         }
 
@@ -366,7 +376,7 @@
         </div>
     </div>
     <label for="color-picker" class="scoreboard" id="scoreboard" onclick="onScoreboardClick();"></label>
-    <input type="color" style="transform: scale(0);" id="color-picker" value="#000000" , onblur="onColorPicked();">
+    <input type="color" style="transform: scale(0);" id="color-picker" value="#000000" onblur="onColorPicked();">
 
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
