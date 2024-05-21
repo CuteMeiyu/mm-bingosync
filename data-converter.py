@@ -20,15 +20,17 @@ def get_regular_goal_list(df: pd.DataFrame):
         goal = {"name": name}
         if not pd.isna(row["games"]):
             goal["games"] = [part.strip() for part in str(row["games"]).replace("，", ",").split(",")]
-        diff = int(row["rank"]) - 1
-        if diff > 0:
-            goal["diff"] = diff
+        rank = int(row["rank"]) - 1
+        if rank > 0:
+            goal["rank"] = rank
+        if not pd.isna(row["diff"]):
+            goal["diff"] = str(row["diff"])
         if not pd.isna(row["group"]):
             goal["groups"] = [part.strip() for part in str(row["group"]).replace("，", ",").split(",")]
         if not pd.isna(row["type"]):
             goal["type"] = str(row["type"])
         if not pd.isna(row["pw"]):
-            goal["password"] = str(row["pw"])
+            goal["pw"] = str(row["pw"])
         if not pd.isna(row["notes"]):
             goal["notes"] = str(row["notes"])
         if not pd.isna(row["weight"]):

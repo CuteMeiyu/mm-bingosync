@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>洛克人Bingo工具</title>
     <style>
+        .hidden {
+            display: none;
+        }
+
         .external-links {
             font-size: small;
         }
@@ -18,22 +22,33 @@
 <body>
     <label for="games">游戏编号</label>
     <input type="text" id="games" value="9,10" title="多代用逗号隔开。目前支持1-6, 9-10代"><br>
-    <label for="diffs">版面难度</label>
-    <input type="text" id="diffs" value="1,2" title="每条线的任务难度。最低0级, 最高3级。比如: 1,1,2表示每条线各有两个1级任务和一个2级任务, 其余的都是0级。"><br>
+    <label for="ranks" data-generator="rank">卡片等级</label>
+    <input type="text" id="ranks" value="1,2" title="每条线的任务等级。最低0级, 最高3级。比如: 1,1,2表示每条线各有两个1级任务和一个2级任务, 其余的都是0级。" data-generator="rank"><br data-generator="rank">
+    <label for="average" data-generator="diff">平均难度</label>
+    <input type="text" id="average" value="1.5" title="每条线的平均难度。可以近似地看作单个任务必须完成的关卡数" data-generator="diff"><br data-generator="diff">
+    <label for="min" data-generator="diff">最低难度</label>
+    <input type="text" id="min" title="最低任务难度。留空不限制" data-generator="diff"><br data-generator="diff">
+    <label for="max" data-generator="diff">最高难度</label>
+    <input type="text" id="max" title="最高任务难度。留空不限制" data-generator="diff"><br data-generator="diff">
     <label for="seed">随机种子</label>
     <input type="number" id="seed" title="决定生成结果。默认随机。">
-    <button onclick="rollSeed()">重投</button><br>
-    <label for="balance">平衡多代</label>
-    <input type="checkbox" id="balance" title="让版面上的每代游戏的数量尽可能相等"><br>
+    <button id="rollButton">重投</button><br>
+    <label for="generator">卡片生成算法</label>
+    <select id="generator">
+        <option value="rank" title="保证每条线的每种颜色任务的数量相同">按等级</option>
+        <option value="diff" title="使得每条线的任务平均难度尽可能接近">按难度</option>
+    </select>
+    <br>
+    <!-- <label for="balance">平衡多代</label>
+    <input type="checkbox" id="balance" title="让版面上的每代游戏的数量尽可能相等"><br> -->
     <label for="center">中心最难</label>
     <input type="checkbox" id="center" title="把最难的任务放到中心"><br>
     <br>
-
     <label for="player">玩家名</label>
     <input type="text" id="player" name="player" title="单人模式留空"><br>
     <label for="room">房间名</label>
     <input type="text" id="room" title="单人模式留空"><br>
-    <button onclick="createOrJoinRoom()">创建/加入房间</button>
+    <button id="createJoinButton">创建/加入房间</button>
     <span id="error" style="color: red;"></span><br>
     <a id="share-link" href=""></a><br><br>
     <div class="external-links">
@@ -41,360 +56,7 @@
         <a href="https://revned77.github.io/" target="_blank">游戏地图</a>
     </div>
     <pre>图片资源来自<a href="https://github.com/cleartonic/mm_bingo" target="_blank">mm_bingo</a>和<a href="https://megaman.fandom.com/wiki/Mega_Man_Knowledge_Base" target="_blank">MMKB</a></pre>
-
-    <script>
-        var data;
-        var randomSeed = Date.now();
-        var previousGoalList = [];
-        const queryParams = new URLSearchParams(window.location.search);
-
-        document.addEventListener('DOMContentLoaded', function () {
-            fetch('data.json?' + new Date().getTime())
-                .then(response => response.json())
-                .then(d => {
-                    data = d;
-                    for (let i = 0; i < data.length; i++) {
-                        let item = data[i];
-                        item.index = i;
-                        if (item.games === undefined) {
-                            item.games = [];
-                        }
-                        if (item.groups === undefined) {
-                            item.groups = [];
-                        }
-                        if (item.diff === undefined) {
-                            item.diff = 0;
-                        }
-                        if (item.weight === undefined) {
-                            item.weight = 1.0;
-                        }
-                        if (item.type !== undefined && item.type.startsWith("any")) {
-                            item.minGameIntersection = parseInt(item.type.substring(3));
-                            item.minGameIntersection = isNaN(item.minGameIntersection) ? 1 : item.minGameIntersection;
-                        } else {
-                            item.minGameIntersection = item.games.length;
-                        }
-                    }
-
-                    for (let [key, value] of queryParams) {
-                        key = key.toLowerCase();
-                        element = document.getElementById(key);
-                        if (!element) {
-                            continue;
-                        }
-                        if (element.type == "checkbox") {
-                            element.checked = true;
-                            continue;
-                        }
-                        if (element.id != "room") {
-                            value = value.toUpperCase();
-                        }
-                        element.value = value;
-                    }
-
-                    let seed = document.getElementById("seed");
-                    if (seed.value.length == 0) {
-                        rollSeed();
-                    }
-                    onInput();
-                });
-        });
-
-        for (let input of document.getElementsByTagName("input")) {
-            input.addEventListener("input", onInput);
-        }
-
-        function onInput(event) {
-            let target;
-            if (event === undefined) {
-                target = document.getElementById("seed");
-            } else {
-                target = event.target;
-            }
-            target.classList.remove("missing");
-            document.getElementById("error").innerHTML = "";
-
-            let shareLink = document.getElementById("share-link");
-            let query = "?";
-            for (let input of document.getElementsByTagName("input")) {
-                if (input.id === "player") {
-                    continue;
-                }
-                if (input.type == "checkbox") {
-                    if (input.checked) {
-                        query += input.id + "&";
-                    }
-                    continue;
-                }
-                if (input.value.length > 0) {
-                    query += input.id + "=" + input.value + "&";
-                }
-            }
-            query = query.substring(0, query.length - 1);
-            shareLink.href = window.location.origin + window.location.pathname + query;
-            shareLink.innerHTML = shareLink.href.replace(/&/g, "&amp;");
-        }
-
-        function random() {
-            const a = 1664525;
-            const c = 1013904223;
-            const m = Math.pow(2, 32);
-            randomSeed = (a * randomSeed + c) % m;
-            return randomSeed / m;
-        }
-
-        function rollSeed() {
-            let seed = document.getElementById("seed");
-            seed.value = Math.floor(Math.random() * 1000000).toString();
-            randomSeed = parseInt(seed.value);
-            onInput();
-        }
-
-        function swapRows(matrix, row1, row2) {
-            let temp = matrix[row1];
-            matrix[row1] = matrix[row2];
-            matrix[row2] = temp;
-        }
-
-        function swapColumns(matrix, col1, col2) {
-            for (let i = 0; i < matrix.length; i++) {
-                let temp = matrix[i][col1];
-                matrix[i][col1] = matrix[i][col2];
-                matrix[i][col2] = temp;
-            }
-        }
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                let j = Math.floor(random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // A是B的子集
-        function isSubset(setA, setB) {
-            for (let elem of setA) {
-                if (setB.indexOf(elem) < 0) {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        function getIntersection(setA, setB) {
-            return setA.filter(item => setB.includes(item));
-        }
-
-        function generateDiffMatrix(diffs, centerHardest) {
-            let diffMatrix;
-            if (random() < 0.5) {
-                diffMatrix = [
-                    [3, 1, 2, 0, 4],
-                    [0, 4, 3, 1, 2],
-                    [1, 2, 0, 4, 3],
-                    [4, 3, 1, 2, 0],
-                    [2, 0, 4, 3, 1]
-                ];
-            } else {
-                diffMatrix = [
-                    [1, 0, 2, 3, 4],
-                    [0, 3, 4, 2, 1],
-                    [4, 2, 0, 1, 3],
-                    [2, 1, 3, 4, 0],
-                    [3, 4, 1, 0, 2]
-                ]
-            }
-            if (random() < 0.5) {
-                swapRows(diffMatrix, 0, 4);
-                swapRows(diffMatrix, 1, 3);
-            }
-
-            for (let i = 0; diffs.length < 5; i++) { diffs.push(0); }
-            shuffleArray(diffs);
-            if (centerHardest) {
-                argmax = diffs.indexOf(Math.max(...diffs));
-                temp = diffs[0];
-                diffs[0] = diffs[argmax];
-                diffs[argmax] = temp;
-            }
-
-            if (random() < 0.5) {
-                swapRows(diffMatrix, 0, 4);
-                swapColumns(diffMatrix, 0, 4);
-            }
-
-            for (let row = 0; row < 5; row++) {
-                for (let col = 0; col < 5; col++) {
-                    diffMatrix[row][col] = diffs[diffMatrix[row][col]];
-                }
-            }
-            return diffMatrix
-        }
-
-        function getDiffIndexes(diffMatrix) {
-            let diffIndexes = [];
-            for (let row = 0; row < 5; row++) {
-                for (let col = 0; col < 5; col++) {
-                    diff = diffMatrix[row][col];
-                    if (diffIndexes[diff] === undefined) {
-                        diffIndexes[diff] = [];
-                    }
-                    diffIndexes[diff].push(row * 5 + col);
-                }
-            }
-            return diffIndexes;
-        }
-
-        function drawGoal(goals) {
-            let totalWeight = 0;
-            for (let goal of goals) {
-                totalWeight += goal.weight;
-            }
-            if (totalWeight == 0) {
-                return null;
-            }
-            let weight = random() * totalWeight;
-            for (let i = 0; i < goals.length; i++) {
-                weight -= goals[i].weight;
-                if (weight < 0) {
-                    return goals.splice(i, 1)[0];
-                }
-            }
-        }
-
-        function goalGamesCheck(goal, games) {
-            let intersectionCount;
-            if (goal.games.length == 0) {
-                intersectionCount = games.length;
-            } else {
-                intersectionCount = getIntersection(goal.games, games).length;
-            }
-            return intersectionCount >= goal.minGameIntersection
-        }
-
-        function generateBoardIds(diffMatrix, games, balanceGames) {
-            let diffIndexes = getDiffIndexes(diffMatrix);
-            for (let indexes of diffIndexes) {
-                if (indexes !== undefined) shuffleArray(indexes);
-            }
-            let groupUsed = [];
-            let gamesCount = {};
-            for (let game of games) {
-                gamesCount[game] = 0;
-            }
-            let leniencyConditions = ["无", "允许同组任务同时出现"];
-
-            let chooseCount = 0;
-            let boardIds = [];
-            for (let leniency = 0; leniency < leniencyConditions.length; leniency++) {
-                if (leniency > 0) {
-                    console.log(`任务数量不足，尝试放宽条件：${leniencyConditions[leniency]}`);
-                }
-                let goals = [...data];
-                while (goals.length > 0) {
-                    let goal = drawGoal(goals);
-                    if (goal === null) {
-                        break;
-                    }
-                    if (diffIndexes[goal.diff] === undefined || diffIndexes[goal.diff].length === 0) {
-                        continue;
-                    }
-                    if (!goalGamesCheck(goal, games)) {
-                        continue;
-                    }
-                    if (leniency < 1 && getIntersection(goal.groups, groupUsed).length > 0) {
-                        continue;
-                    }
-                    if (balanceGames) {
-                        for (let game of goal.games) {
-                            gamesCount[game] += 1;
-                        }
-                        gamesCountValues = Object.values(gamesCount)
-                        if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
-                            for (let game of goal.games) {
-                                gamesCount[game] -= 1;
-                            }
-                            continue;
-                        }
-                    }
-                    groupUsed = groupUsed.concat(goal.groups);
-                    let index = diffIndexes[goal.diff].pop();
-                    boardIds[index] = goal.index;
-                    chooseCount += 1;
-                    if (chooseCount >= 25) {
-                        return boardIds;
-                    }
-                }
-            }
-            throw new Error("没有足够数量的符合条件的任务");
-        }
-
-        const regularFuncs = {
-            "games": function (x) { return x.value.split(/[,，]\s*/); },
-            "diffs": function (x) { return x.value.split(/[,，]\s*/).map(function (item) { return parseInt(item); }); },
-            "seed": function (x) { return parseInt(x.value); },
-            "balance": function (x) { return x.checked; },
-            "center": function (x) { return x.checked; },
-            "room": function (x) { return x.value; },
-            "player": function (x) { return x.value; }
-        };
-
-        function parseSettings() {
-            let settings = {};
-            for (let setting in regularFuncs) {
-                let regularFunc = regularFuncs[setting];
-                let element = document.getElementById(setting);
-                settings[setting] = regularFunc(element);
-                if (element.type == "text" && element.value.length == 0) {
-                    if (setting === "room") {
-                        let playerInput = document.getElementById("player");
-                        if (playerInput.value.length == 0) {
-                            continue;
-                        }
-                    } else if (setting === "player") {
-                        let roomInput = document.getElementById("room");
-                        if (roomInput.value.length == 0) {
-                            continue;
-                        }
-                    }
-                    let associatedLabel = document.querySelector(`label[for="${setting}"]`);
-                    let error = document.getElementById("error");
-                    error.innerHTML = "*" + associatedLabel.innerText + "必填";
-                    element.classList.add("missing");
-                    return;
-                }
-            }
-            return settings
-        }
-
-        function createOrJoinRoom() {
-            let settings = parseSettings();
-            if (settings === undefined) {
-                return;
-            }
-            randomSeed = settings["seed"];
-            let diffMatrix = generateDiffMatrix(settings["diffs"], settings["center"]);
-            let boardIds;
-            try {
-                boardIds = generateBoardIds(diffMatrix, settings["games"], settings["balance"]);
-            } catch (error) {
-                document.getElementById("error").innerHTML = "*" + error.message;
-                return;
-            }
-            params = "id=" + boardIds.map(id => id).join(",");
-            if (settings["player"].length > 0) {
-                params += "&" + new URLSearchParams({ "player": settings["player"] }).toString();
-            }
-            if (settings["room"].length > 0) {
-                params += "&" + new URLSearchParams({ "room": settings["room"] }).toString();
-            }
-            if (settings["games"].length > 1) {
-                params += "&multi";
-            }
-            window.open('popup.html?' + params, 'Bingo', 'width=800,height=800');
-        }
-    </script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
