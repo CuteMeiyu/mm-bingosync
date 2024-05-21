@@ -1,6 +1,7 @@
 import { setRandomSeed } from './random.js';
 import { readDataJson } from './goals.js';
 import rankCardGenerator from './generators/rankCardGenerator.js';
+import diffCardGenerator from './generators/diffCardGenerator.js';
 
 var data;
 const queryParams = new URLSearchParams(window.location.search);
@@ -100,13 +101,17 @@ function rollSeed() {
 }
 
 const regularFuncs = {
+    "generator": function (x) { return x.value; },
     "games": function (x) { return x.value.split(/[,，]\s*/); },
     "ranks": function (x) { return x.value.split(/[,，]\s*/).map(function (item) { return parseInt(item); }); },
     "seed": function (x) { return parseInt(x.value); },
     // "balance": function (x) { return x.checked; },
     "center": function (x) { return x.checked; },
     "room": function (x) { return x.value; },
-    "player": function (x) { return x.value; }
+    "player": function (x) { return x.value; },
+    "average": function (x) { return parseFloat(x.value); },
+    "min": function (x) { return x.value.length === 0 ? undefined : parseFloat(x.value); },
+    "max": function (x) { return x.value.length === 0 ? undefined : parseFloat(x.value); },
 };
 
 function parseSettings() {
@@ -115,7 +120,7 @@ function parseSettings() {
         let regularFunc = regularFuncs[setting];
         let element = document.getElementById(setting);
         settings[setting] = regularFunc(element);
-        if (element.type == "text" && element.value.length == 0) {
+        if (element.value.length == 0) {
             if (setting === "room") {
                 let playerInput = document.getElementById("player");
                 if (playerInput.value.length == 0) {
@@ -126,6 +131,9 @@ function parseSettings() {
                 if (roomInput.value.length == 0) {
                     continue;
                 }
+            }
+            if (!element.required || element.classList.contains("hidden")) {
+                continue;
             }
             let associatedLabel = document.querySelector(`label[for="${setting}"]`);
             let error = document.getElementById("error");
@@ -142,25 +150,39 @@ function createOrJoinRoom() {
     if (settings === undefined) {
         return;
     }
-    setRandomSeed(settings["seed"]);
-    let card;
+
+    setRandomSeed(settings.seed);
     try {
-        card = rankCardGenerator.generate(data, settings["games"], settings["ranks"], false, settings["center"]);
+        let card;
+        switch (settings.generator) {
+            case "rank":
+                card = rankCardGenerator.generate(data, settings.games, settings.ranks, settings.center);
+                break;
+            case "diff":
+                card = diffCardGenerator.generate(data, settings.games, settings.average, settings.min, settings.max, settings.center);
+                break;
+            default:
+                throw new Error("未知生成器：" + settings.generator);
+        }
+
+        let params = "id=" + card.map(id => id).join(",");
+        if (settings.player.length > 0) {
+            params += "&" + new URLSearchParams({ "player": settings.player }).toString();
+        }
+        if (settings.room.length > 0) {
+            params += "&" + new URLSearchParams({ "room": settings.room }).toString();
+        }
+        if (settings.games.length > 1) {
+            params += "&multi";
+        }
+        if (settings.generator == "rank") {
+            params += "&rank";
+        }
+        window.open('popup.html?' + params, 'Bingo', 'width=800,height=800');
     } catch (error) {
         document.getElementById("error").innerHTML = "*" + error.message;
         return;
     }
-    let params = "id=" + card.map(id => id).join(",");
-    if (settings["player"].length > 0) {
-        params += "&" + new URLSearchParams({ "player": settings["player"] }).toString();
-    }
-    if (settings["room"].length > 0) {
-        params += "&" + new URLSearchParams({ "room": settings["room"] }).toString();
-    }
-    if (settings["games"].length > 1) {
-        params += "&multi";
-    }
-    window.open('popup.html?' + params, 'Bingo', 'width=800,height=800');
 }
 
 document.getElementById("createJoinButton").addEventListener("click", createOrJoinRoom);

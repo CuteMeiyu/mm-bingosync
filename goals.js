@@ -14,9 +14,13 @@ async function readDataJson() {
         }
         if (item.rank === undefined) {
             item.rank = 0;
+        } else {
+            item.rank = parseInt(item.rank);
         }
         if (item.diff === undefined) {
-            item.diff = 0.0;
+            item.diff = item.rank + 1.0;
+        } else {
+            item.diff = parseFloat(item.diff);
         }
         if (item.weight === undefined) {
             item.weight = 1.0;

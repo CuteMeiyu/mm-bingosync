@@ -82,7 +82,7 @@ function getRankIndexes(rankMatrix) {
     return rankIndexes;
 }
 
-function generate(goals, games, ranks, balanceGames, centerHardest) {
+function generate(goals, games, ranks, centerHardest) {
     let rankMatrix = generateRankMatrix(ranks, centerHardest);
     let rankIndexes = getRankIndexes(rankMatrix);
     for (let indexes of rankIndexes) {
@@ -116,18 +116,18 @@ function generate(goals, games, ranks, balanceGames, centerHardest) {
             if (leniency < 1 && !goalGroupsCheck(goal, groupUsed)) {
                 continue;
             }
-            if (balanceGames) {
-                for (let game of goal.games) {
-                    gamesCount[game] += 1;
-                }
-                gamesCountValues = Object.values(gamesCount)
-                if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
-                    for (let game of goal.games) {
-                        gamesCount[game] -= 1;
-                    }
-                    continue;
-                }
-            }
+            // if (balanceGames) {
+            //     for (let game of goal.games) {
+            //         gamesCount[game] += 1;
+            //     }
+            //     gamesCountValues = Object.values(gamesCount)
+            //     if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
+            //         for (let game of goal.games) {
+            //             gamesCount[game] -= 1;
+            //         }
+            //         continue;
+            //     }
+            // }
             groupUsed = groupUsed.concat(goal.groups);
             let index = rankIndexes[goal.rank].pop();
             boardIds[index] = goal.index;

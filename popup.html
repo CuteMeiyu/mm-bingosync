@@ -108,6 +108,15 @@
             opacity: 0;
         }
 
+        .cell-diff {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            text-align: center;
+            word-break: break-all;
+            opacity: 0;
+        }
+
         .tooltip {
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
@@ -198,186 +207,51 @@
     </div>
     <div class="modal-overlay" style="display: none;" id="click-overlay" onclick="hideClickOverlay();"></div>
     <span id="tooltip" class="tooltip"></span>
-    <div id="board" class="board-container">
-        <div id="cell_0_0" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_0_1" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_0_2" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_0_3" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_0_4" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_1_0" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_1_1" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_1_2" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_1_3" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_1_4" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_2_0" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_2_1" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_2_2" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_2_3" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_2_4" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_3_0" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_3_1" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_3_2" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_3_3" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_3_4" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_4_0" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_4_1" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_4_2" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_4_3" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-        <div id="cell_4_4" class="cell" onclick="onCellClick(event)">
-            <span class="cell-text"></span>
-            <span class="cell-game"></span>
-            <span class="cell-info"></span>
-            <span class="cell-password"></span>
-            <span class="cell-star">★</span>
-        </div>
-    </div>
+    <div id="board" class="board-container"></div>
     <label for="color-picker" class="scoreboard" id="scoreboard" onclick="onScoreboardClick();"></label>
     <input type="color" style="transform: scale(0);" id="color-picker" value="#000000" onblur="onColorPicked();">
 
+    <script>
+        function createCell(row, col) {
+            let cell = document.createElement("div");
+            cell.id = `cell_${row}_${col}`;
+            cell.classList.add("cell");
+            cell.addEventListener("click", onCellClick);
+            cell.addEventListener('contextmenu', onContextMenu);
+            let cellText = document.createElement("span");
+            cellText.classList.add("cell-text");
+            cell.appendChild(cellText);
+            let cellGame = document.createElement("span");
+            cellGame.classList.add("cell-game");
+            cell.appendChild(cellGame);
+            let cellInfo = document.createElement("span");
+            cellInfo.classList.add("cell-info");
+            cellInfo.addEventListener('mousemove', onMouseIn);
+            cellInfo.addEventListener('mouseout', onMouseOut);
+            cell.appendChild(cellInfo);
+            let cellPassword = document.createElement("span");
+            cellPassword.classList.add("cell-password");
+            cellPassword.addEventListener('mousemove', onMouseIn);
+            cellPassword.addEventListener('mouseout', onMouseOut);
+            cell.appendChild(cellPassword);
+            let cellStar = document.createElement("span");
+            cellStar.classList.add("cell-star");
+            cellStar.innerHTML = "⭐️";
+            cell.appendChild(cellStar);
+            let cellDiff = document.createElement("span");
+            cellDiff.classList.add("cell-diff");
+            cell.appendChild(cellDiff);
+            return cell;
+        }
+        function initBoardCells() {
+            for (let row = 0; row < 5; row++) {
+                for (let col = 0; col < 5; col++) {
+                    let cell = createCell(row, col);
+                    document.getElementById("board").appendChild(cell);
+                }
+            }
+        }
+    </script>
     <script src='https://cdn.scaledrone.com/scaledrone-lite.min.js'></script>
     <script>
         function showSpinner(text) {
@@ -840,15 +714,7 @@
             tooltip.innerHTML = "";
         }
 
-        for (let cellInfo of document.querySelectorAll('.cell-info')) {
-            cellInfo.addEventListener('mousemove', onMouseIn);
-            cellInfo.addEventListener('mouseout', onMouseOut);
-        }
 
-        for (let cellPassword of document.querySelectorAll('.cell-password')) {
-            cellPassword.addEventListener('mousemove', onMouseIn);
-            cellPassword.addEventListener('mouseout', onMouseOut);
-        }
 
         function onContextMenu(event) {
             event.preventDefault();
@@ -857,8 +723,9 @@
             star.classList.toggle("show");
         }
 
-        for (let cell of document.querySelectorAll('.cell')) {
-            cell.addEventListener('contextmenu', onContextMenu);
+        function getColor(diff, minDiff, maxDiff) {
+            let normalDiff = 1.0 - (diff - minDiff) / (maxDiff - minDiff);
+            return `hsl(${parseInt((((normalDiff * 180) + 300) % 360))}, 100%, 50%)`;
         }
 
         window.addEventListener('DOMContentLoaded', function () {
@@ -866,15 +733,33 @@
                 .then(response => response.json())
                 .then(d => {
                     data = d;
+                    initBoardCells();
                     let indexes = queryParams.get('id').split(',').map(function (item) {
                         return parseInt(item);
                     });
+                    let minDiff;
+                    let maxDiff;
                     for (let i = 0; i < indexes.length; i++) {
                         let goal = data[indexes[i]];
                         let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
-                        if (goal.rank > 0) {
-                            cell.classList.add('rank' + goal.rank);
+                        if (queryParams.get('rank') != undefined) {
+                            if (goal.rank > 0) {
+                                cell.classList.add('rank' + goal.rank);
+                            }
                         }
+
+                        if (goal.diff == undefined) {
+                            goal.diff = goal.rank == undefined ? 1.0 : parseInt(goal.rank) + 1.0;
+                        } else {
+                            goal.diff = parseFloat(goal.diff);
+                        }
+                        if (minDiff == undefined || goal.diff < minDiff) {
+                            minDiff = goal.diff;
+                        }
+                        if (maxDiff == undefined || goal.diff > maxDiff) {
+                            maxDiff = goal.diff;
+                        }
+                        cell.dataset.diff = goal.diff;
 
                         let cellText = cell.querySelector(".cell-text");
                         cellText.innerHTML = goal.name;
@@ -908,6 +793,14 @@
                     if (queryParams.get("multi") == null) {
                         for (let cellGame of document.querySelectorAll('.cell-game')) {
                             cellGame.style.display = 'none';
+                        }
+                    }
+                    if (queryParams.get("rank") == null) {
+                        for (let cell of document.querySelectorAll('.cell')) {
+                            let cellDiff = cell.querySelector('.cell-diff');
+                            cellDiff.style.color = getColor(cell.dataset.diff, minDiff, maxDiff);
+                            cellDiff.innerHTML = cell.dataset.diff;
+                            cellDiff.classList.add('show');
                         }
                     }
                     updateScoreboard();
