@@ -110,8 +110,8 @@
 
         .cell-diff {
             position: absolute;
-            bottom: 2%;
-            right: 2%;
+            bottom: 0%;
+            right: 1%;
             text-align: center;
             word-break: break-all;
             opacity: 0;
@@ -653,6 +653,8 @@
             cellTexts.forEach(function (cellText) {
                 let cell = cellText.closest('.cell');
                 let cellGame = cell.querySelector('.cell-game');
+                let cellStar = cell.querySelector('.cell-star');
+                let cellDiff = cell.querySelector('.cell-diff');
                 let cellWidth = cell.offsetWidth;
                 let cellHeight = cell.offsetHeight;
                 let fontSize = 100;
@@ -660,6 +662,8 @@
                 do {
                     cellText.style.fontSize = fontSize + '%';
                     cellGame.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
+                    cellStar.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
+                    cellDiff.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
                     textWidth = cellText.offsetWidth;
                     textHeight = cellText.offsetHeight;
                     fontSize -= 1;
