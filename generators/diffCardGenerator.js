@@ -13,7 +13,7 @@ function calculateError(matrix, targetSum) {
             rowSum += matrix[i][j].diff;
             colSum += matrix[j][i].diff;
         }
-        error += Math.abs(rowSum - targetSum) + Math.abs(colSum - targetSum);
+        error += (rowSum - targetSum) * (rowSum - targetSum) + (colSum - targetSum) * (colSum - targetSum);
     }
 
     let diag1Sum = 0;
@@ -22,9 +22,38 @@ function calculateError(matrix, targetSum) {
         diag1Sum += matrix[i][i].diff;
         diag2Sum += matrix[i][n - 1 - i].diff;
     }
-    error += Math.abs(diag1Sum - targetSum) + Math.abs(diag2Sum - targetSum);
+    error += (diag1Sum - targetSum) * (diag1Sum - targetSum) + (diag2Sum - targetSum) * (diag2Sum - targetSum);
 
     return error;
+}
+
+function optimizeSimulatedAnnealing(matrix, targetSum, centerFixed, initialTemp = 100.0, coolingRate = 0.997) {
+    const n = matrix.length;
+    let currentMatrix = matrix.map(row => row.slice());
+    let currentError = calculateError(currentMatrix, targetSum);
+    let temp = initialTemp;
+
+    while (temp > 1.0) {
+        let i1 = Math.floor(random() * n);
+        let j1 = Math.floor(random() * n);
+        let i2 = Math.floor(random() * n);
+        let j2 = Math.floor(random() * n);
+        if (i1 == i2 && j1 == j2) {
+            continue;
+        }
+        if (centerFixed && (i1 == 2 && j1 == 2) || (i2 == 2 && j2 == 2)) {
+            continue;
+        }
+        let newMatrix = currentMatrix.map(row => row.slice());
+        [newMatrix[i1][j1], newMatrix[i2][j2]] = [newMatrix[i2][j2], newMatrix[i1][j1]];
+        let newError = calculateError(newMatrix, targetSum);
+        if (newError < currentError || Math.exp((currentError - newError) / temp) > random()) {
+            currentMatrix = newMatrix;
+            currentError = newError;
+        }
+        temp *= coolingRate;
+    }
+    return currentMatrix;
 }
 
 function optimize(matrix, targetSum, centerFixed) {
@@ -39,7 +68,7 @@ function optimize(matrix, targetSum, centerFixed) {
             for (let j1 = 0; j1 < n; j1++) {
                 for (let i2 = 0; i2 < n; i2++) {
                     for (let j2 = 0; j2 < n; j2++) {
-                        if (i1 !== i2 && j1 !== j2) {
+                        if (i1 !== i2 || j1 !== j2) {
                             if (centerFixed && (i1 === 2 && j1 === 2) || (i2 === 2 && j2 === 2)) {
                                 continue;
                             }
@@ -69,9 +98,12 @@ function generateCard(goals, targetAverage, centerFixed) {
         }
     }
     let targetSum = targetAverage * 5;
+    console.log("Target Sum:", targetSum);
     console.log("Error:", calculateError(matrix, targetSum));
     let optimizedMatrix = optimize(matrix, targetSum, centerFixed);
     console.log("Optimized Error:", calculateError(optimizedMatrix, targetSum));
+    // let optimizedMatrixAnnealing = optimizeSimulatedAnnealing(matrix, targetSum, centerFixed);
+    // console.log("Optimized Error (SA):", calculateError(optimizedMatrixAnnealing, targetSum));
     return optimizedMatrix.flat().map(goal => goal.index);
 }
 
@@ -98,7 +130,7 @@ function generate(goals, games, averageDiff, minDiff, maxDiff, centerHardest) {
         let goalsRemain = [...filterGoals];
         while (goalsRemain.length > 0) {
             let goal = null;
-            if (usedAverage == null) {
+            if (usedAverage == null || averageDiff == NaN) {
                 goal = drawGoal(goalsRemain);
             } else if (usedAverage > averageDiff) {
                 goal = drawGoal(goalsRemain, 0.0, averageDiff);
