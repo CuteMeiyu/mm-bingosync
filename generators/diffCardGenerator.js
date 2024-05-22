@@ -27,13 +27,13 @@ function calculateError(matrix, targetSum) {
     return error;
 }
 
-function optimizeSimulatedAnnealing(matrix, targetSum, centerFixed, initialTemp = 100.0, coolingRate = 0.997) {
+function optimizeSA(matrix, targetSum, centerFixed, initialTemp = 50.0, coolingRate = 0.996) {
     const n = matrix.length;
     let currentMatrix = matrix.map(row => row.slice());
     let currentError = calculateError(currentMatrix, targetSum);
     let temp = initialTemp;
 
-    while (temp > 1.0) {
+    while (temp > 0.01) {
         let i1 = Math.floor(random() * n);
         let j1 = Math.floor(random() * n);
         let i2 = Math.floor(random() * n);
@@ -56,7 +56,7 @@ function optimizeSimulatedAnnealing(matrix, targetSum, centerFixed, initialTemp 
     return currentMatrix;
 }
 
-function optimize(matrix, targetSum, centerFixed) {
+function optimizeGreedy(matrix, targetSum, centerFixed) {
     const n = matrix.length;
     let currentMatrix = matrix.map(row => row.slice());
     let currentError = calculateError(currentMatrix, targetSum);
@@ -90,7 +90,7 @@ function optimize(matrix, targetSum, centerFixed) {
     return currentMatrix;
 }
 
-function generateCard(goals, targetAverage, centerFixed) {
+function generateCard(goals, targetAverage, centerFixed, optimizer=optimizeSA) {
     let matrix = [[], [], [], [], []];
     for (let row = 0; row < 5; row++) {
         for (let col = 0; col < 5; col++) {
@@ -100,10 +100,8 @@ function generateCard(goals, targetAverage, centerFixed) {
     let targetSum = targetAverage * 5;
     console.log("Target Sum:", targetSum);
     console.log("Error:", calculateError(matrix, targetSum));
-    let optimizedMatrix = optimize(matrix, targetSum, centerFixed);
+    let optimizedMatrix = optimizer(matrix, targetSum, centerFixed);
     console.log("Optimized Error:", calculateError(optimizedMatrix, targetSum));
-    // let optimizedMatrixAnnealing = optimizeSimulatedAnnealing(matrix, targetSum, centerFixed);
-    // console.log("Optimized Error (SA):", calculateError(optimizedMatrixAnnealing, targetSum));
     return optimizedMatrix.flat().map(goal => goal.index);
 }
 
