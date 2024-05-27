@@ -728,6 +728,8 @@
         }
 
         function getColor(diff, minDiff, maxDiff) {
+            diff = Math.max(diff, minDiff);
+            diff = Math.min(diff, maxDiff);
             let normalDiff = 1.0 - (diff - minDiff) / (maxDiff - minDiff);
             return `hsl(${parseInt((((normalDiff * 180) + 300) % 360))}, 100%, 50%)`;
         }
@@ -741,8 +743,6 @@
                     let indexes = queryParams.get('id').split(',').map(function (item) {
                         return parseInt(item);
                     });
-                    let minDiff;
-                    let maxDiff;
                     for (let i = 0; i < indexes.length; i++) {
                         let goal = data[indexes[i]];
                         let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
@@ -756,12 +756,6 @@
                             goal.diff = goal.rank == undefined ? 1.0 : parseInt(goal.rank) + 1.0;
                         } else {
                             goal.diff = parseFloat(goal.diff);
-                        }
-                        if (minDiff == undefined || goal.diff < minDiff) {
-                            minDiff = goal.diff;
-                        }
-                        if (maxDiff == undefined || goal.diff > maxDiff) {
-                            maxDiff = goal.diff;
                         }
                         cell.dataset.diff = goal.diff;
 
@@ -802,7 +796,7 @@
                     if (queryParams.get("rank") == null) {
                         for (let cell of document.querySelectorAll('.cell')) {
                             let cellDiff = cell.querySelector('.cell-diff');
-                            cellDiff.style.color = getColor(cell.dataset.diff, minDiff, maxDiff);
+                            cellDiff.style.color = getColor(cell.dataset.diff, 0.0, 5.0);
                             cellDiff.innerHTML = cell.dataset.diff;
                             cellDiff.classList.add('show');
                         }
