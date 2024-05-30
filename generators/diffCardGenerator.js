@@ -2,8 +2,8 @@ import { random } from "../random.js";
 import { goalGamesCheck, goalGroupsCheck, drawGoal } from "../goals.js";
 
 
-function calculateError(matrix, targetSum) {
-    let error = 0;
+function calculateError(matrix) {
+    let diffs = [];
     const n = matrix.length;
 
     for (let i = 0; i < n; i++) {
@@ -13,7 +13,7 @@ function calculateError(matrix, targetSum) {
             rowSum += matrix[i][j].diff;
             colSum += matrix[j][i].diff;
         }
-        error += (rowSum - targetSum) * (rowSum - targetSum) + (colSum - targetSum) * (colSum - targetSum);
+        diffs.push(rowSum, colSum);
     }
 
     let diag1Sum = 0;
@@ -22,18 +22,21 @@ function calculateError(matrix, targetSum) {
         diag1Sum += matrix[i][i].diff;
         diag2Sum += matrix[i][n - 1 - i].diff;
     }
-    error += (diag1Sum - targetSum) * (diag1Sum - targetSum) + (diag2Sum - targetSum) * (diag2Sum - targetSum);
+    diffs.push(diag1Sum, diag2Sum);
 
-    return error;
+    let mean = diffs.reduce((a, b) => a + b) / diffs.length;
+    let variance = diffs.reduce((a, b) => a + (b - mean) * (b - mean)) / diffs.length;
+
+    return variance;
 }
 
-function optimizeSA(matrix, targetSum, centerFixed, initialTemp = 50.0, coolingRate = 0.996) {
+function optimize(matrix, centerFixed, initialTemp = 10.0, endTemp = 0.002, coolingRate = 0.998) {
     const n = matrix.length;
     let currentMatrix = matrix.map(row => row.slice());
-    let currentError = calculateError(currentMatrix, targetSum);
+    let currentError = calculateError(currentMatrix);
     let temp = initialTemp;
 
-    while (temp > 0.01) {
+    while (temp > endTemp) {
         let i1 = Math.floor(random() * n);
         let j1 = Math.floor(random() * n);
         let i2 = Math.floor(random() * n);
@@ -46,7 +49,7 @@ function optimizeSA(matrix, targetSum, centerFixed, initialTemp = 50.0, coolingR
         }
         let newMatrix = currentMatrix.map(row => row.slice());
         [newMatrix[i1][j1], newMatrix[i2][j2]] = [newMatrix[i2][j2], newMatrix[i1][j1]];
-        let newError = calculateError(newMatrix, targetSum);
+        let newError = calculateError(newMatrix);
         if (newError < currentError || Math.exp((currentError - newError) / temp) > random()) {
             currentMatrix = newMatrix;
             currentError = newError;
@@ -56,52 +59,16 @@ function optimizeSA(matrix, targetSum, centerFixed, initialTemp = 50.0, coolingR
     return currentMatrix;
 }
 
-function optimizeGreedy(matrix, targetSum, centerFixed) {
-    const n = matrix.length;
-    let currentMatrix = matrix.map(row => row.slice());
-    let currentError = calculateError(currentMatrix, targetSum);
-    let improved = true;
-
-    while (improved) {
-        improved = false;
-        for (let i1 = 0; i1 < n; i1++) {
-            for (let j1 = 0; j1 < n; j1++) {
-                for (let i2 = 0; i2 < n; i2++) {
-                    for (let j2 = 0; j2 < n; j2++) {
-                        if (i1 !== i2 || j1 !== j2) {
-                            if (centerFixed && (i1 === 2 && j1 === 2) || (i2 === 2 && j2 === 2)) {
-                                continue;
-                            }
-                            let newMatrix = currentMatrix.map(row => row.slice());
-                            [newMatrix[i1][j1], newMatrix[i2][j2]] = [newMatrix[i2][j2], newMatrix[i1][j1]];
-                            let newError = calculateError(newMatrix, targetSum);
-                            if (newError < currentError) {
-                                currentMatrix = newMatrix;
-                                currentError = newError;
-                                improved = true;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    return currentMatrix;
-}
-
-function generateCard(goals, targetAverage, centerFixed, optimizer=optimizeSA) {
+function generateCard(goals, centerFixed) {
     let matrix = [[], [], [], [], []];
     for (let row = 0; row < 5; row++) {
         for (let col = 0; col < 5; col++) {
             matrix[row][col] = goals[row * 5 + col];
         }
     }
-    let targetSum = targetAverage * 5;
-    console.log("Target Sum:", targetSum);
-    console.log("Error:", calculateError(matrix, targetSum));
-    let optimizedMatrix = optimizer(matrix, targetSum, centerFixed);
-    console.log("Optimized Error:", calculateError(optimizedMatrix, targetSum));
+    console.log("Error:", calculateError(matrix));
+    let optimizedMatrix = optimize(matrix, centerFixed);
+    console.log("Optimized Error:", calculateError(optimizedMatrix));
     return optimizedMatrix.flat().map(goal => goal.index);
 }
 
@@ -165,7 +132,7 @@ function generate(goals, games, averageDiff, minDiff, maxDiff, centerHardest) {
                     let maxIndex = argmax(usedGoals.map(goal => goal.diff));
                     [usedGoals[12], usedGoals[maxIndex]] = [usedGoals[maxIndex], usedGoals[12]];
                 }
-                return generateCard(usedGoals, usedAverage, centerHardest);
+                return generateCard(usedGoals, centerHardest);
             }
         }
     }
