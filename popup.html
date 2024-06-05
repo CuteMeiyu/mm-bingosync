@@ -211,6 +211,8 @@
     <label for="color-picker" class="scoreboard" id="scoreboard" onclick="onScoreboardClick();"></label>
     <input type="color" style="transform: scale(0);" id="color-picker" value="#000000" onblur="onColorPicked();">
 
+    <script src="papaparse.min.js"></script>
+    <script src="goals.js"></script>
     <script>
         function createCell(row, col) {
             let cell = document.createElement("div");
@@ -735,75 +737,71 @@
         }
 
         window.addEventListener('DOMContentLoaded', function () {
-            fetch('data.json?' + new Date().getTime())
-                .then(response => response.json())
-                .then(d => {
-                    data = d;
-                    initBoardCells();
-                    let indexes = queryParams.get('id').split(',').map(function (item) {
-                        return parseInt(item);
-                    });
-                    for (let i = 0; i < indexes.length; i++) {
-                        let goal = data[indexes[i]];
-                        let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
-                        if (queryParams.get('rank') != undefined) {
-                            if (goal.rank > 0) {
-                                cell.classList.add('rank' + goal.rank);
-                            }
-                        }
-
-                        if (goal.diff == undefined) {
-                            goal.diff = goal.rank == undefined ? 1.0 : parseInt(goal.rank) + 1.0;
-                        } else {
-                            goal.diff = parseFloat(goal.diff);
-                        }
-                        cell.dataset.diff = goal.diff;
-
-                        let cellText = cell.querySelector(".cell-text");
-                        cellText.innerHTML = goal.name;
-
-                        let cellGame = cell.querySelector(".cell-game");
-                        if (goal.games !== undefined && goal.games.length > 0) {
-                            cellGame.innerHTML = "MM" + goal.games.join(',');
-                        } else {
-                            cellGame.innerHTML = "";
-                        }
-
-                        let cellInfo = cell.querySelector(".cell-info");
-                        if (goal.notes != undefined) {
-                            cellInfo.innerHTML = "<img src='img/info.png'/>";
-                            cellInfo.dataset.tooltip = goal.notes.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
-                        }
-
-                        let cellPassword = cell.querySelector(".cell-password");
-                        if (goal.pw != undefined) {
-                            cellPassword.innerHTML = "<img src='img/pw.png'/>";
-                            if (goal.pw == "y") {
-                                cellPassword.dataset.tooltip = "可以从城堡1开始"
-                            } else {
-                                cellPassword.dataset.tooltip = goal.pw.replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
-                            }
-                        }
-                    }
-                    for (let img of document.querySelectorAll("img")) {
-                        img.alt = "[图片]";
-                    }
-                    if (queryParams.get("multi") == null) {
-                        for (let cellGame of document.querySelectorAll('.cell-game')) {
-                            cellGame.style.display = 'none';
-                        }
-                    }
-                    if (queryParams.get("rank") == null) {
-                        for (let cell of document.querySelectorAll('.cell')) {
-                            let cellDiff = cell.querySelector('.cell-diff');
-                            cellDiff.style.color = getColor(cell.dataset.diff, 0.0, 5.0);
-                            cellDiff.innerHTML = cell.dataset.diff;
-                            cellDiff.classList.add('show');
-                        }
-                    }
-                    updateScoreboard();
-                    // onResize();
+            loadData().then(d => {
+                data = d;
+                initBoardCells();
+                let indexes = queryParams.get('id').split(',').map(function (item) {
+                    return parseInt(item);
                 });
+                for (let i = 0; i < indexes.length; i++) {
+                    let goal = data[indexes[i]];
+                    let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
+                    if (goal.rank > 0) {
+                        cell.classList.add('rank' + goal.rank);
+                    }
+
+                    if (goal.diff == undefined) {
+                        goal.diff = goal.rank == undefined ? 1.0 : parseInt(goal.rank) + 1.0;
+                    } else {
+                        goal.diff = parseFloat(goal.diff);
+                    }
+                    cell.dataset.diff = goal.diff;
+
+                    let cellText = cell.querySelector(".cell-text");
+                    cellText.innerHTML = goal.goal;
+
+                    let cellGame = cell.querySelector(".cell-game");
+                    if (goal.games !== undefined && goal.games.length > 0) {
+                        cellGame.innerHTML = "MM" + goal.games.join(',');
+                    } else {
+                        cellGame.innerHTML = "";
+                    }
+
+                    let cellInfo = cell.querySelector(".cell-info");
+                    if (goal.notes != "") {
+                        cellInfo.innerHTML = "<img src='img/info.png'/>";
+                        cellInfo.dataset.tooltip = goal.notes.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
+                    }
+
+                    let cellPassword = cell.querySelector(".cell-password");
+                    if (goal.pw != "") {
+                        cellPassword.innerHTML = "<img src='img/pw.png'/>";
+                        if (goal.pw == "y") {
+                            cellPassword.dataset.tooltip = "可以从城堡1开始"
+                        } else {
+                            cellPassword.dataset.tooltip = goal.pw.replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
+                        }
+                    }
+                }
+                for (let img of document.querySelectorAll("img")) {
+                    img.alt = "[图片]";
+                }
+                if (queryParams.get("multi") == null) {
+                    for (let cellGame of document.querySelectorAll('.cell-game')) {
+                        cellGame.style.display = 'none';
+                    }
+                }
+                if (queryParams.get("diff") != null) {
+                    for (let cell of document.querySelectorAll('.cell')) {
+                        let cellDiff = cell.querySelector('.cell-diff');
+                        cellDiff.style.color = getColor(cell.dataset.diff, 0.0, 5.0);
+                        cellDiff.innerHTML = cell.dataset.diff;
+                        cellDiff.classList.add('show');
+                    }
+                }
+                updateScoreboard();
+                // onResize();
+            });
         });
     </script>
 </body>

@@ -1,23 +1,14 @@
-import { setRandomSeed } from './random.js';
-import { readDataJson } from './goals.js';
-import rankCardGenerator from './generators/rankCardGenerator.js';
-import diffCardGenerator from './generators/diffCardGenerator.js';
-
 var data;
 const queryParams = new URLSearchParams(window.location.search);
 
 document.addEventListener('DOMContentLoaded', function () {
-    readDataJson().then(d => {
+    loadData().then(d => {
         data = d;
-        let generator = null;
         for (let [key, value] of queryParams) {
             key = key.toLowerCase();
             let element = document.getElementById(key);
             if (!element) {
                 continue;
-            }
-            if (element.dataset.generator != undefined) {
-                generator = element.dataset.generator;
             }
             if (element.type == "checkbox") {
                 element.checked = true;
@@ -34,10 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             rollSeed();
         }
 
-        if (generator != null) {
-            document.getElementById("generator").value = generator;
-        }
-        onGeneratorChange();
+        onInput();
     });
 });
 
@@ -55,13 +43,9 @@ function onInput(event) {
     target.classList.remove("missing");
     document.getElementById("error").innerHTML = "";
 
-    let generator = document.getElementById("generator").value;
     let shareLink = document.getElementById("share-link");
     let query = "?";
     for (let input of document.getElementsByTagName("input")) {
-        if (input.dataset.generator != undefined && input.dataset.generator != generator) {
-            continue;
-        }
         if (input.id === "player") {
             continue;
         }
@@ -75,22 +59,9 @@ function onInput(event) {
             query += input.id + "=" + input.value + "&";
         }
     }
-    query = query.substring(0, query.length - 1);
+    query = query.substring(0, query.length - 1).replace(/，/g, ",");
     shareLink.href = window.location.origin + window.location.pathname + query;
     shareLink.innerHTML = shareLink.href.replace(/&/g, "&amp;");
-}
-
-document.getElementById("generator").addEventListener("change", onGeneratorChange);
-
-function onGeneratorChange() {
-    for (let element of document.querySelectorAll("[data-generator]")) {
-        if (element.dataset.generator == document.getElementById("generator").value) {
-            element.classList.remove("hidden");
-        } else {
-            element.classList.add("hidden");
-        }
-    }
-    onInput();
 }
 
 function rollSeed() {
@@ -101,7 +72,6 @@ function rollSeed() {
 }
 
 const regularFuncs = {
-    "generator": function (x) { return x.value; },
     "games": function (x) { return x.value.split(/[,，]\s*/); },
     "ranks": function (x) { return x.value.split(/[,，]\s*/).map(function (item) { return parseInt(item); }); },
     "seed": function (x) { return parseInt(x.value); },
@@ -109,9 +79,6 @@ const regularFuncs = {
     "center": function (x) { return x.checked; },
     "room": function (x) { return x.value; },
     "player": function (x) { return x.value; },
-    "average": function (x) { return parseFloat(x.value); },
-    "min": function (x) { return x.value.length === 0 ? undefined : parseFloat(x.value); },
-    "max": function (x) { return x.value.length === 0 ? undefined : parseFloat(x.value); },
 };
 
 function parseSettings() {
@@ -153,18 +120,7 @@ function createOrJoinRoom() {
 
     setRandomSeed(settings.seed);
     try {
-        let card;
-        switch (settings.generator) {
-            case "rank":
-                card = rankCardGenerator.generate(data, settings.games, settings.ranks, settings.center);
-                break;
-            case "diff":
-                card = diffCardGenerator.generate(data, settings.games, settings.average, settings.min, settings.max, settings.center);
-                break;
-            default:
-                throw new Error("未知生成器：" + settings.generator);
-        }
-
+        let card = generateCard(data, settings.games, settings.ranks, settings.center);
         let params = "id=" + card.map(id => id).join(",");
         if (settings.player.length > 0) {
             params += "&" + new URLSearchParams({ "player": settings.player }).toString();
@@ -174,9 +130,6 @@ function createOrJoinRoom() {
         }
         if (settings.games.length > 1) {
             params += "&multi";
-        }
-        if (settings.generator == "rank") {
-            params += "&rank";
         }
         window.open('popup.html?' + params, 'Bingo', 'width=800,height=800');
     } catch (error) {

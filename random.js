@@ -1,5 +1,13 @@
 var randomSeed = Date.now();
 
+function getIntersection(setA, setB) {
+    return setA.filter(item => setB.includes(item));
+}
+
+function argmax(array) {
+    return array.map((x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
+}
+
 function random() {
     const a = 1664525;
     const c = 1013904223;
@@ -11,5 +19,3 @@ function random() {
 function setRandomSeed(seed) {
     randomSeed = seed;
 }
-
-export { random, setRandomSeed }

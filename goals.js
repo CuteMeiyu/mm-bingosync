@@ -1,42 +1,31 @@
-import { random } from "./random.js";
-
-async function readDataJson() {
-    const response = await fetch('data.json?' + new Date().getTime());
-    const data = await response.json();
+async function loadData() {
+    const response = await fetch("data.csv");
+    const text = await response.text();
+    const data = await new Promise((resolve) => {
+        Papa.parse(text, {
+            header: true,
+            complete: function (results) {
+                resolve(results.data);
+            },
+        });
+    });
+    data.pop()
     for (let i = 0; i < data.length; i++) {
-        let item = data[i];
-        item.index = i;
-        if (item.games === undefined) {
-            item.games = [];
-        }
-        if (item.groups === undefined) {
-            item.groups = [];
-        }
-        if (item.rank === undefined) {
-            item.rank = 0;
+        let goal = data[i];
+        goal.index = i;
+        goal.games = goal.games == "" ? [] : goal.games.split(",").map((game) => game.trim());
+        goal.groups = goal.groups == "" ? [] : goal.groups.split(",").map((group) => group.trim());
+        goal.pw = goal.pw == "y" ? "可以从城堡1开始" : goal.pw
+        goal.rank = parseInt(goal.rank) - 1;
+        if (goal.type.startsWith("any")) {
+            goal.minGameIntersection = parseInt(goal.type.substring(3));
+            goal.minGameIntersection = isNaN(goal.minGameIntersection) ? 1 : goal.minGameIntersection;
         } else {
-            item.rank = parseInt(item.rank);
+            goal.minGameIntersection = goal.games.length;
         }
-        if (item.diff === undefined) {
-            item.diff = item.rank + 1.0;
-        } else {
-            item.diff = parseFloat(item.diff);
-        }
-        if (item.weight === undefined) {
-            item.weight = 1.0;
-        }
-        if (item.type !== undefined && item.type.startsWith("any")) {
-            item.minGameIntersection = parseInt(item.type.substring(3));
-            item.minGameIntersection = isNaN(item.minGameIntersection) ? 1 : item.minGameIntersection;
-        } else {
-            item.minGameIntersection = item.games.length;
-        }
+        goal.weight = goal.weight == "" ? 1.0 : parseFloat(goal.weight);
     }
     return data;
-}
-
-function getIntersection(setA, setB) {
-    return setA.filter(item => setB.includes(item));
 }
 
 function goalGamesCheck(goal, games) {
@@ -53,34 +42,17 @@ function goalGroupsCheck(goal, usedGroups) {
     return getIntersection(goal.groups, usedGroups).length == 0;
 }
 
-function drawGoal(goals, minDiff, maxDiff) {
+function drawGoal(goals) {
     let totalWeight = 0;
-    let started = false;
-    let startIndex;
-    let endIndex;
     for (let i = 0; i < goals.length; i++) {
         let goal = goals[i];
-        if (minDiff != undefined && goal.diff < minDiff) {
-            continue;
-        }
-        if (!started) {
-            startIndex = i;
-            started = true;
-        }
-        if (maxDiff != undefined && goal.diff > maxDiff) {
-            endIndex = i;
-            break;
-        }
         totalWeight += goal.weight;
     }
-    if (totalWeight == 0 || !started) {
+    if (totalWeight == 0) {
         return null;
     }
-    if (endIndex == undefined) {
-        endIndex = goals.length;
-    }
     let weight = random() * totalWeight;
-    for (let i = startIndex; i < endIndex; i++) {
+    for (let i = 0; i < goals.length; i++) {
         weight -= goals[i].weight;
         if (weight < 0) {
             return goals.splice(i, 1)[0];
@@ -88,5 +60,3 @@ function drawGoal(goals, minDiff, maxDiff) {
     }
     return null;
 }
-
-export { readDataJson, goalGamesCheck, goalGroupsCheck, drawGoal };

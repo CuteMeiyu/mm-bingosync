@@ -1,6 +1,3 @@
-import { random } from "../random.js";
-import { goalGamesCheck, goalGroupsCheck, drawGoal } from "../goals.js";
-
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(random() * (i + 1));
@@ -45,10 +42,6 @@ function solve(matrix, row, col) {
     return false;
 }
 
-function argmax(array) {
-    return array.map((x, i) => [x, i]).reduce((r, a) => (a[0] > r[0] ? a : r))[1];
-}
-
 function generateRankMatrix(ranks, centerHardest) {
     for (let i = ranks.length; i < 5; i++) {
         ranks.push(0);
@@ -82,7 +75,7 @@ function getRankIndexes(rankMatrix) {
     return rankIndexes;
 }
 
-function generate(goals, games, ranks, centerHardest) {
+function generateCard(goals, games, ranks, centerHardest) {
     let rankMatrix = generateRankMatrix(ranks, centerHardest);
     let rankIndexes = getRankIndexes(rankMatrix);
     for (let indexes of rankIndexes) {
@@ -139,5 +132,3 @@ function generate(goals, games, ranks, centerHardest) {
     }
     throw new Error("没有足够数量的符合条件的任务");
 }
-
-export default { generate }
