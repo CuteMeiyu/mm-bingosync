@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (seed.value.length == 0) {
             rollSeed();
         }
+
+        onInput();
     });
 });
 
@@ -57,9 +59,9 @@ function onInput(event) {
             query += input.id + "=" + input.value + "&";
         }
     }
-    query = query.substring(0, query.length - 1);
+    query = query.substring(0, query.length - 1).replace(/，/g, ",");
     shareLink.href = window.location.origin + window.location.pathname + query;
-    shareLink.innerHTML = shareLink.href.replace(/&/g, "&amp;").replace(/，/g, ",");
+    shareLink.innerHTML = shareLink.href.replace(/&/g, "&amp;");
 }
 
 function rollSeed() {
