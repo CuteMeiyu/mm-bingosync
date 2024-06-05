@@ -13,10 +13,10 @@ async function loadData() {
     for (let i = 0; i < data.length; i++) {
         let goal = data[i];
         goal.index = i;
-        goal.games = goal.games.split(",").map((game) => game.trim());
-        goal.groups = goal.groups.split(",").map((group) => group.trim());
+        goal.games = goal.games == "" ? [] : goal.games.split(",").map((game) => game.trim());
+        goal.groups = goal.groups == "" ? [] : goal.groups.split(",").map((group) => group.trim());
         goal.pw = goal.pw == "y" ? "可以从城堡1开始" : goal.pw
-        goal.rank = parseInt(goal.rank);
+        goal.rank = parseInt(goal.rank) - 1;
         if (goal.type.startsWith("any")) {
             goal.minGameIntersection = parseInt(goal.type.substring(3));
             goal.minGameIntersection = isNaN(goal.minGameIntersection) ? 1 : goal.minGameIntersection;
@@ -42,34 +42,17 @@ function goalGroupsCheck(goal, usedGroups) {
     return getIntersection(goal.groups, usedGroups).length == 0;
 }
 
-function drawGoal(goals, minDiff, maxDiff) {
+function drawGoal(goals) {
     let totalWeight = 0;
-    let started = false;
-    let startIndex;
-    let endIndex;
     for (let i = 0; i < goals.length; i++) {
         let goal = goals[i];
-        if (minDiff != undefined && goal.diff < minDiff) {
-            continue;
-        }
-        if (!started) {
-            startIndex = i;
-            started = true;
-        }
-        if (maxDiff != undefined && goal.diff > maxDiff) {
-            endIndex = i;
-            break;
-        }
         totalWeight += goal.weight;
     }
-    if (totalWeight == 0 || !started) {
+    if (totalWeight == 0) {
         return null;
     }
-    if (endIndex == undefined) {
-        endIndex = goals.length;
-    }
     let weight = random() * totalWeight;
-    for (let i = startIndex; i < endIndex; i++) {
+    for (let i = 0; i < goals.length; i++) {
         weight -= goals[i].weight;
         if (weight < 0) {
             return goals.splice(i, 1)[0];
