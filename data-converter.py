@@ -1,5 +1,4 @@
 import pandas as pd
-import json
 
 
 def contains_chinese(text):
@@ -9,47 +8,25 @@ def contains_chinese(text):
     return False
 
 
-def get_regular_goal_list(df: pd.DataFrame):
-    goal_list = []
-    for _, row in df.iterrows():
+def prune(df: pd.DataFrame):
+    df2 = df.copy()
+    for index, row in df.iterrows():
         name = row["goal"]
-        if pd.isna(name) or not contains_chinese(name):
+        if pd.isna(name) or not contains_chinese(name) or pd.isna(row["rank"]):
+            df2.drop(index, inplace=True)
             continue
-        if pd.isna(row["rank"]):
-            continue
-        goal = {"name": name}
-        if not pd.isna(row["games"]):
-            goal["games"] = [part.strip() for part in str(row["games"]).replace("，", ",").split(",")]
-        rank = int(row["rank"]) - 1
-        if rank > 0:
-            goal["rank"] = rank
-        if not pd.isna(row["diff"]):
-            goal["diff"] = str(row["diff"])
-        if not pd.isna(row["group"]):
-            goal["groups"] = [part.strip() for part in str(row["group"]).replace("，", ",").split(",")]
-        if not pd.isna(row["type"]):
-            goal["type"] = str(row["type"])
-        if not pd.isna(row["pw"]):
-            goal["pw"] = str(row["pw"])
-        if not pd.isna(row["notes"]):
-            goal["notes"] = str(row["notes"])
-        if not pd.isna(row["weight"]):
-            goal["weight"] = float(row["weight"])
-        goal_list.append(goal)
-    return goal_list
+    df2.drop("hidden notes", axis=1, inplace=True)
+    return df2
 
 
 def main():
     df = pd.concat(
         [
-            pd.read_excel("bingo.xlsx", sheet_name="7-11任务表"),
-            pd.read_excel("bingo.xlsx", sheet_name="1-6任务表"),
+            prune(pd.read_excel("bingo.xlsx", sheet_name="7-11任务表")),
+            prune(pd.read_excel("bingo.xlsx", sheet_name="1-6任务表")),
         ]
     )
-    goal_list = get_regular_goal_list(df)
-
-    with open("data.json", "w", encoding="utf-8") as f:
-        f.write(json.dumps(goal_list, ensure_ascii=False, indent=4, sort_keys=True))
+    df.to_csv("data.csv", index=False)
 
 
 if __name__ == "__main__":
