@@ -1,12 +1,8 @@
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+var rankedGenerator = {}
+rankedGenerator.matrixGenerator = {}
 
-function isValid(matrix, row, col, num) {
+
+rankedGenerator.matrixGenerator.isValid = (matrix, row, col, num) => {
     if (matrix[row].includes(num)) return false;
     for (let i = 0; i < matrix.length; i++) {
         if (matrix[i][col] === num) return false;
@@ -24,25 +20,24 @@ function isValid(matrix, row, col, num) {
     return true;
 }
 
-function solve(matrix, row, col) {
+rankedGenerator.matrixGenerator.solve = (matrix, row, col) => {
     const n = matrix.length;
     if (row === n) return true;
-    if (col === n) return solve(matrix, row + 1, 0);
+    if (col === n) return rankedGenerator.matrixGenerator.solve(matrix, row + 1, 0);
     if (matrix[row][col] != -1) return solve(matrix, row, col + 1);
-
     let nums = Array.from({ length: n }, (_, i) => i);
     shuffleArray(nums);
     for (let num of nums) {
-        if (isValid(matrix, row, col, num)) {
+        if (rankedGenerator.matrixGenerator.isValid(matrix, row, col, num)) {
             matrix[row][col] = num;
-            if (solve(matrix, row, col + 1)) return true;
+            if (rankedGenerator.matrixGenerator.solve(matrix, row, col + 1)) return true;
             matrix[row][col] = -1;
         }
     }
     return false;
 }
 
-function generateRankMatrix(ranks, centerHardest) {
+rankedGenerator.matrixGenerator.generate = (ranks, centerHardest) => {
     for (let i = ranks.length; i < 5; i++) {
         ranks.push(0);
     }
@@ -50,7 +45,8 @@ function generateRankMatrix(ranks, centerHardest) {
     if (centerHardest) {
         rankMatrix[2][2] = argmax(ranks);
     }
-    if (!solve(rankMatrix, 0, 0)) {
+
+    if (!rankedGenerator.matrixGenerator.solve(rankMatrix, 0, 0)) {
         throw new Error("生成难度卡片时找不到满足条件的解");
     }
     for (let row = 0; row < 5; row++) {
@@ -61,26 +57,31 @@ function generateRankMatrix(ranks, centerHardest) {
     return rankMatrix
 }
 
-function getRankIndexes(rankMatrix) {
-    let rankIndexes = [];
+rankedGenerator.getIndexes = (matrix) => {
+    let indexes = [];
     for (let row = 0; row < 5; row++) {
         for (let col = 0; col < 5; col++) {
-            let rank = rankMatrix[row][col];
-            if (rankIndexes[rank] === undefined) {
-                rankIndexes[rank] = [];
+            let rank = matrix[row][col];
+            if (indexes[rank] === undefined) {
+                indexes[rank] = [];
             }
-            rankIndexes[rank].push(row * 5 + col);
+            indexes[rank].push(row * 5 + col);
         }
     }
-    return rankIndexes;
-}
+    return indexes;
+};
 
-function generateCard(goals, games, ranks, centerHardest) {
-    let rankMatrix = generateRankMatrix(ranks, centerHardest);
-    let rankIndexes = getRankIndexes(rankMatrix);
+rankedGenerator.generate = (goalPool, settings) => {
+    let games = settings.games;
+    let ranks = settings.ranks;
+    let centerHardest = settings.center;
+
+    let rankMatrix = rankedGenerator.matrixGenerator.generate(ranks, centerHardest);
+    let rankIndexes = rankedGenerator.getIndexes(rankMatrix);
     for (let indexes of rankIndexes) {
         if (indexes !== undefined) shuffleArray(indexes);
     }
+    
     let groupUsed = [];
     let gamesCount = {};
     for (let game of games) {
@@ -94,33 +95,18 @@ function generateCard(goals, games, ranks, centerHardest) {
         if (leniency > 0) {
             console.log(`任务数量不足，尝试放宽条件：${leniencyConditions[leniency]}`);
         }
-        let goalsRemain = [...goals];
-        while (goalsRemain.length > 0) {
-            let goal = drawGoal(goalsRemain);
+        let filterGoalPool = goalPool.filter(games);
+        while (filterGoalPool.length > 0) {
+            let goal = filterGoalPool.draw();
             if (goal === null) {
                 break;
             }
             if (rankIndexes[goal.rank] === undefined || rankIndexes[goal.rank].length === 0) {
                 continue;
             }
-            if (!goalGamesCheck(goal, games)) {
+            if (leniency < 1 && !goal.checkGroups(groupUsed)) {
                 continue;
             }
-            if (leniency < 1 && !goalGroupsCheck(goal, groupUsed)) {
-                continue;
-            }
-            // if (balanceGames) {
-            //     for (let game of goal.games) {
-            //         gamesCount[game] += 1;
-            //     }
-            //     gamesCountValues = Object.values(gamesCount)
-            //     if (Math.max(...gamesCountValues) - Math.min(...gamesCountValues) > 1) {
-            //         for (let game of goal.games) {
-            //             gamesCount[game] -= 1;
-            //         }
-            //         continue;
-            //     }
-            // }
             groupUsed = groupUsed.concat(goal.groups);
             let index = rankIndexes[goal.rank].pop();
             boardIds[index] = goal.index;

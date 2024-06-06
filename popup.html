@@ -632,7 +632,7 @@
         }
     </script>
     <script>
-        var data;
+        var goalPool;
 
         function resizeBoardToFitWindow() {
             let board = document.getElementById("board");
@@ -664,7 +664,6 @@
                 do {
                     cellText.style.fontSize = fontSize + '%';
                     cellGame.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
-                    cellStar.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
                     cellDiff.style.fontSize = Math.max(Math.floor(fontSize * 0.5), 1) + '%';
                     textWidth = cellText.offsetWidth;
                     textHeight = cellText.offsetHeight;
@@ -737,14 +736,14 @@
         }
 
         window.addEventListener('DOMContentLoaded', function () {
-            loadData().then(d => {
-                data = d;
+            loadGoalPool().then(d => {
+                goalPool = d;
                 initBoardCells();
                 let indexes = queryParams.get('id').split(',').map(function (item) {
                     return parseInt(item);
                 });
                 for (let i = 0; i < indexes.length; i++) {
-                    let goal = data[indexes[i]];
+                    let goal = goalPool[indexes[i]];
                     let cell = document.getElementById('cell_' + Math.floor(i / 5) + '_' + i % 5)
                     if (goal.rank > 0) {
                         cell.classList.add('rank' + goal.rank);

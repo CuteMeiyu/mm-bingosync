@@ -1,5 +1,13 @@
 var randomSeed = Date.now();
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 function getIntersection(setA, setB) {
     return setA.filter(item => setB.includes(item));
 }

@@ -1,9 +1,9 @@
-var data;
+var goalPool;
 const queryParams = new URLSearchParams(window.location.search);
 
 document.addEventListener('DOMContentLoaded', function () {
-    loadData().then(d => {
-        data = d;
+    loadGoalPool().then(d => {
+        goalPool = d;
         for (let [key, value] of queryParams) {
             key = key.toLowerCase();
             let element = document.getElementById(key);
@@ -120,7 +120,7 @@ function createOrJoinRoom() {
 
     setRandomSeed(settings.seed);
     try {
-        let card = generateCard(data, settings.games, settings.ranks, settings.center);
+        let card = rankedGenerator.generate(goalPool, settings);
         let params = "id=" + card.map(id => id).join(",");
         if (settings.player.length > 0) {
             params += "&" + new URLSearchParams({ "player": settings.player }).toString();
