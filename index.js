@@ -120,7 +120,7 @@ function createOrJoinRoom() {
 
     setRandomSeed(settings.seed);
     try {
-        let card = rankedGenerator.generate(goalPool, settings);
+        let card = RankedGenerator.generate(goalPool, settings);
         let params = "id=" + card.map(id => id).join(",");
         if (settings.player.length > 0) {
             params += "&" + new URLSearchParams({ "player": settings.player }).toString();
