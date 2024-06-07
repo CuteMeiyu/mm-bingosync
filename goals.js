@@ -1,7 +1,7 @@
-async function loadData() {
+async function loadGoalPool() {
     const response = await fetch("data.csv");
     const text = await response.text();
-    const data = await new Promise((resolve) => {
+    let data = await new Promise((resolve) => {
         Papa.parse(text, {
             header: true,
             complete: function (results) {
@@ -10,6 +10,7 @@ async function loadData() {
         });
     });
     data.pop()
+
     for (let i = 0; i < data.length; i++) {
         let goal = data[i];
         goal.index = i;
@@ -24,39 +25,55 @@ async function loadData() {
             goal.minGameIntersection = goal.games.length;
         }
         goal.weight = goal.weight == "" ? 1.0 : parseFloat(goal.weight);
+        goal.checkGames = (games) => {
+            let intersectionCount;
+            if (goal.games.length == 0) {
+                intersectionCount = games.length;
+            } else {
+                intersectionCount = getIntersection(goal.games, games).length;
+            }
+            return intersectionCount >= goal.minGameIntersection;
+        }
+        goal.checkGroups = (groups) => getIntersection(goal.groups, groups).length == 0;
     }
-    return data;
-}
 
-function goalGamesCheck(goal, games) {
-    let intersectionCount;
-    if (goal.games.length == 0) {
-        intersectionCount = games.length;
-    } else {
-        intersectionCount = getIntersection(goal.games, games).length;
-    }
-    return intersectionCount >= goal.minGameIntersection;
-}
+    function setupMethods(goalPool) {
+        goalPool.draw = () => {
+            let totalWeight = 0;
+            for (let i = 0; i < goalPool.length; i++) {
+                let goal = goalPool[i];
+                totalWeight += goal.weight;
+            }
+            if (totalWeight == 0) {
+                return null;
+            }
+            let weight = random() * totalWeight;
+            for (let i = 0; i < goalPool.length; i++) {
+                weight -= goalPool[i].weight;
+                if (weight < 0) {
+                    return goalPool.splice(i, 1)[0];
+                }
+            }
+            return null;
+        };
+        goalPool.copy = () => {
+            let newGoalPool = [...goalPool];
+            setupMethods(newGoalPool);
+            return newGoalPool;
+        }
 
-function goalGroupsCheck(goal, usedGroups) {
-    return getIntersection(goal.groups, usedGroups).length == 0;
-}
-
-function drawGoal(goals) {
-    let totalWeight = 0;
-    for (let i = 0; i < goals.length; i++) {
-        let goal = goals[i];
-        totalWeight += goal.weight;
-    }
-    if (totalWeight == 0) {
-        return null;
-    }
-    let weight = random() * totalWeight;
-    for (let i = 0; i < goals.length; i++) {
-        weight -= goals[i].weight;
-        if (weight < 0) {
-            return goals.splice(i, 1)[0];
+        goalPool.filter = (games, groups) => {
+            let newGoalPool = [];
+            for (let goal of goalPool) {
+                if (games != undefined && !goal.checkGames(games)) continue;
+                if (groups != undefined && !goal.checkGroups(groups)) continue;
+                newGoalPool.push(goal); 
+            }
+            setupMethods(newGoalPool);
+            return newGoalPool;
         }
     }
-    return null;
+
+    setupMethods(data);
+    return data;
 }
