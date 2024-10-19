@@ -480,6 +480,9 @@
                 setStatusBarText("请先设置颜色");
                 return;
             }
+            if (queryParams.get("lockout") != null && cell.players != undefined && cell.players.length > 0 && !cell.players.includes(playerName)) {
+                return;
+            }
             if (roomName == null) {
                 toggleCell(cell.id, playerName);
                 return;

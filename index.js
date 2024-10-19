@@ -76,6 +76,7 @@ const regularFuncs = {
     "ranks": function (x) { return x.value.split(/[,，]\s*/).map(function (item) { return parseInt(item); }); },
     "seed": function (x) { return parseInt(x.value); },
     // "balance": function (x) { return x.checked; },
+    "lockout": function (x) { return x.checked; },
     "center": function (x) { return x.checked; },
     "room": function (x) { return x.value; },
     "player": function (x) { return x.value; },
@@ -130,6 +131,9 @@ function createOrJoinRoom() {
         }
         if (settings.games.length > 1) {
             params += "&multi";
+        }
+        if (settings.lockout) {
+            params += "&lockout";
         }
         window.open('popup.html?' + params, 'Bingo', 'width=800,height=800');
     } catch (error) {
