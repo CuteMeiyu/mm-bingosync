@@ -1,5 +1,5 @@
 async function loadGoalPool() {
-    const response = await fetch("data.csv");
+    const response = await fetch(`data.csv?timestamp=${new Date().getTime()}`);
     const text = await response.text();
     let data = await new Promise((resolve) => {
         Papa.parse(text, {
